@@ -1,0 +1,1627 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ECON 5360 Tutorial 1 &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/1_Implement_Real_Business_Cycle_Model_in_MATLAB_and_Dynare';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../0_Tutorial_Introduction.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="My sample book - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../0_Tutorial_Introduction.html">
+                    Tutorial Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../1_Implement_Real_Business_Cycle_Model_in_MATLAB_and_Dynare.html">1. Implement Real Business Cycle Model in MATLAB, Dynare, Python and Julia</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_Implement_Real_Business_Cycle_Model_in_Python.html">1.6 RBC Model in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_Implement_Real_Business_Cycle_Model_in_Julia.html">1.7 RBC Model in Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_New_Keynesian_Model_and_Tractable_Heterogneity.html">2. New Keynesian Model and Tractable Heterogeneity</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_Numerical_Method_in_MATLAB.html">3. Numerical Methods in MATLAB</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../4_Algorithm_Comparison_in_Optimal_Consumption_Problem.html">4. Algorithm Comparison in Optimal Consumption Problem</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../5_From_Optimal_Consumption_to_Aiyagari_Model.html">5. From Optimal Consumption to Aiyagari Model</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_Heterogeneous_Agent_Model_in_Continous_Time.html">6. Heterogeneous Agent Model in Continous Time</a></li>
+
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/1_Implement_Real_Business_Cycle_Model_in_MATLAB_and_Dynare.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/content/1_Implement_Real_Business_Cycle_Model_in_MATLAB_and_Dynare.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ECON 5360 Tutorial 1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">ECON 5360 Tutorial 1</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#implement-real-business-cycle-model-in-matlab-dynare-python-and-julia">Implement Real Business Cycle Model in MATLAB, Dynare, Python and Julia</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ding-minjie-spring-2025">DING Minjie, Spring 2025</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-rbc-model-setting">1. A Simple RBC Model Setting</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#households">Households</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#firm">Firm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursive-competitive-equilibrium">Recursive competitive equilibrium</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimality-conditions-consist-of-a-system-of-8-equations">Optimality conditions consist of a system of 8 equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calibration-and-solve-steady-state">Calibration and solve steady state</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#real-business-cycle-model-in-matlab">2. Real Business Cycle Model in MATLAB</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-dynare">3. Introduction to Dynare</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps-to-install-dynare">Steps to install Dynare</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-choice">Version Choice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mod-file">.mod file</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#real-business-cycle-model-in-dynare">4. Real Business Cycle Model in Dynare</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#rbc-model-with-occasional-binding">5. RBC Model with Occasional Binding</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">Reference</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="econ-5360-tutorial-1">
+<h1>ECON 5360 Tutorial 1<a class="headerlink" href="#econ-5360-tutorial-1" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="implement-real-business-cycle-model-in-matlab-dynare-python-and-julia">
+<h1>Implement Real Business Cycle Model in MATLAB, Dynare, Python and Julia<a class="headerlink" href="#implement-real-business-cycle-model-in-matlab-dynare-python-and-julia" title="Link to this heading">#</a></h1>
+<section id="ding-minjie-spring-2025">
+<h2>DING Minjie, Spring 2025<a class="headerlink" href="#ding-minjie-spring-2025" title="Link to this heading">#</a></h2>
+<p>In this tutorial, we will talk about:</p>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>A Simple RBC Model Setting</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>RBC Model in MATLAB</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>Introduction to Dynare</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p>RBC Model in Dynare</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p>RBC Model with Occasional Binding</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="6">
+<li><p>RBC Model in Python</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="7">
+<li><p>RBC Model in Julia</p></li>
+</ol>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="a-simple-rbc-model-setting">
+<h1>1. A Simple RBC Model Setting<a class="headerlink" href="#a-simple-rbc-model-setting" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<section id="households">
+<h2>Households<a class="headerlink" href="#households" title="Link to this heading">#</a></h2>
+<p>The households maximize:
+$<span class="math notranslate nohighlight">\(
+\max E_{t}\left[\sum_{j=0}^{\infty} \beta^{j}\left\{\frac{C_{t+j}^{1-1 / \sigma}}{1-1 / \sigma}-\phi \frac{N_{t+j}^{1+1 / \eta}}{1+1 / \eta}\right\}\right],
+\)</span>$
+where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(C\)</span> is consumption.</p></li>
+<li><p><span class="math notranslate nohighlight">\(N\)</span> is labor.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma\)</span> is the intertemporal elasticity of substitution (IES).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\eta\)</span> is the Frisch elasticity of labor supply (the elasticity of hours worked to the wage rate).</p></li>
+</ul>
+<p>Households face two constraints:
+$<span class="math notranslate nohighlight">\(
+\begin{aligned}
+\lambda: &amp; C_{t}+I_{t}=W_{t} N_{t}+R_{t} K_{t} \\
+q: &amp; K_{t+1}=K_{t}(1-\delta)+I_{t}
+\end{aligned}
+\)</span>$
+where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(K\)</span> is total investment in physical capital.</p></li>
+</ul>
+</section>
+<section id="firm">
+<h2>Firm<a class="headerlink" href="#firm" title="Link to this heading">#</a></h2>
+<p>Firms maximize:
+$<span class="math notranslate nohighlight">\(
+\Pi_{t}=Y_{t}-W_{t} N_{t}-R_{t} K_{t}
+\)</span>$</p>
+<p>where the production function is:</p>
+<div class="math notranslate nohighlight">
+\[
+Y_{t}=A_{t} K_{t}^{\alpha} N_{t}^{1-\alpha}
+\]</div>
+<p>We assume total factor productivity (TFP) evolves in an AR(1) process:
+$<span class="math notranslate nohighlight">\(
+log(A_t) = \rho log(A_{t-1}) + \sigma \epsilon_t
+\)</span>$</p>
+</section>
+<section id="recursive-competitive-equilibrium">
+<h2>Recursive competitive equilibrium<a class="headerlink" href="#recursive-competitive-equilibrium" title="Link to this heading">#</a></h2>
+<p>A Recursive Competitive Equilibrium consists of:</p>
+<ul class="simple">
+<li><p>Pricing functions: <span class="math notranslate nohighlight">\(W(K, A), R(K, A)\)</span></p></li>
+<li><p>Policy functions of individual households: <span class="math notranslate nohighlight">\(K^{\prime}(K, A), N(K, A), C(K, A)\)</span></p></li>
+<li><p>Law of motion of TFP: <span class="math notranslate nohighlight">\(A^{\prime} \sim Q\left(A^{\prime} \mid A\right)\)</span></p></li>
+</ul>
+<p>which satisfy:</p>
+<ol class="arabic simple">
+<li><p>Given <span class="math notranslate nohighlight">\(W(K, A), R(K, A)\)</span> and rational expectations about future aggregates, <span class="math notranslate nohighlight">\(K^{\prime}(K, A), N(K, A), C(K, A)\)</span> are optimal.</p></li>
+<li><p>Given <span class="math notranslate nohighlight">\(W(K, A), R(K, A)\)</span>, firms solve the maximization problem.</p></li>
+<li><p>Markets clear: Labor market (trivial); Capital market (trivial); Goods market: <span class="math notranslate nohighlight">\(Y_{t}=C_{t}+I_{t}\)</span>.</p></li>
+</ol>
+<p>An possible way to solve the model is to get a system of difference equations that govern the dynamical system, and then analyze those difference equations directly as we did before (without solving for the full equilibrium).</p>
+<p>In particular, from the first-order conditions (FOCs) from maximization problems and constraints (including goods market clearing condition), we can derive the following 9 equations for 9 endogenous variables: <span class="math notranslate nohighlight">\( N_{t}, W_{t}, C_{t}, Y_{t}, I_{t}, K_{t+1}, Z_{t}, q_{t}, R_{t} \)</span>. Note that some of the variables can be consolidated <span class="math notranslate nohighlight">\( N_{t}, W_{t}, Y_{t}, I_{t}, q_{t}, R_{t} \)</span>.</p>
+</section>
+<section id="optimality-conditions-consist-of-a-system-of-8-equations">
+<h2>Optimality conditions consist of a system of 8 equations<a class="headerlink" href="#optimality-conditions-consist-of-a-system-of-8-equations" title="Link to this heading">#</a></h2>
+<p>FOCs from households’ maximization problem:
+$<span class="math notranslate nohighlight">\(
+\begin{align*}
+ C_{t}^{-1 / \sigma} = \beta \mathbb{E} [(1+ R_t -\delta) C_{t+1}^{-1 / \sigma}] \tag{1}
+\end{align*}
+\)</span>$</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+\phi N_{t}^{1 / \eta} = W_{t} C_{t}^{-1 / \sigma} \tag{2}
+\end{align*}
+\]</div>
+<p>FOCs from firms’ maximization problem:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+ Y_{t} = A_{t} K_{t}^{\alpha} N_{t}^{1-\alpha} \tag{3}
+ \end{align*}
+ \]</div>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+ R_{t}K_t = \alpha A_{t} K_{t}^{\alpha} N_{t}^{1-\alpha} = \alpha Y_t \tag{4}
+\end{align*}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*} 
+W_{t} N_t = (1-\alpha) A_{t} K_{t}^{\alpha} N_{t}^{1 -\alpha} = (1-\alpha) Y_t \tag{5}
+\end{align*}
+\]</div>
+<p>Law of motions and market clearing:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+ K_{t+1} = K_{t}(1-\delta) + I_{t} \tag{6}
+ \end{align*}
+ \]</div>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+ Y_{t} = C_{t} + I_{t} \tag{7}
+ \end{align*}
+ \]</div>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*} 
+log(A_t) = \rho log(A_{t-1}) + \sigma \epsilon_t \tag{8}
+\end{align*}
+\]</div>
+<p>Sometimes, law of motion of TFP is set as follows:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A_{t+1} = \rho A_{t} + (1-\rho) \bar{A} + \varepsilon_{t+1} \)</span></p></li>
+</ul>
+</section>
+<section id="calibration-and-solve-steady-state">
+<h2>Calibration and solve steady state<a class="headerlink" href="#calibration-and-solve-steady-state" title="Link to this heading">#</a></h2>
+<p>Usually, we try to solve steady state first, and then impulse response function.</p>
+<p>It is clear that the quantitative result of the model depends on the value of parameters used. So we need to “calibrate” these parameters appropriately.</p>
+<p>The central idea of calibration is to pin down as many deep parameters as possible.</p>
+<ul class="simple">
+<li><p>Directly estimated from the data: Hall’s estimation about IES (0.2).
+For simplicity, I set <strong><span class="math notranslate nohighlight">\(\sigma=1\)</span></strong>, in this way <span class="math notranslate nohighlight">\(\frac{1}{\sigma}=1\)</span> as well.</p></li>
+<li><p>Match the moments from the data: <strong><span class="math notranslate nohighlight">\( \beta=0.99 \)</span></strong> to match the capital-output ratio, which is about 10 in quarterly data.</p></li>
+<li><p>Commonly used parameter values (for a quarterly model):</p>
+<ul>
+<li><p><strong><span class="math notranslate nohighlight">\( \delta=0.025 \)</span></strong> (10 percent annual depreciation rate).</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\( \alpha=0.35 \)</span></strong> (Share of labor income in the aggregate data).</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\( \rho=0.95 \)</span></strong> (TFP process is estimated to be very persistent).</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\( \eta=1 \)</span></strong> (for simplicity).</p></li>
+</ul>
+</li>
+</ul>
+<p>How about <strong><span class="math notranslate nohighlight">\(\phi\)</span></strong>?</p>
+<p>We set it so that <span class="math notranslate nohighlight">\(N\)</span> equals to 1/3 in steady state.</p>
+<p>Besides, we set <span class="math notranslate nohighlight">\(A=1\)</span> (sometimes people set <span class="math notranslate nohighlight">\(Y=1\)</span>).</p>
+<p><strong>Step 1: solve intertemporal price</strong></p>
+<p>From equation <span class="math notranslate nohighlight">\(2\)</span>, we have:</p>
+<div class="math notranslate nohighlight">
+\[\beta * (1 + R - \delta) = 1\]</div>
+<p><strong>Step 2: get ratio between <span class="math notranslate nohighlight">\(K\)</span>, <span class="math notranslate nohighlight">\(N\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> in production side</strong></p>
+<p>Equation 4 over equation 3, and we get relation between capital <span class="math notranslate nohighlight">\(K\)</span> and labor <span class="math notranslate nohighlight">\(N\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{N}{K} = (\frac{R}{A\alpha})^{\frac{1}{1-\alpha}} = (\frac{\frac{1}{\beta}+\delta-1 }{A\alpha})^{\frac{1}{1-\alpha}}\]</div>
+<p>Combined with equation 3, we have relation between output <span class="math notranslate nohighlight">\(Y\)</span>, capital <span class="math notranslate nohighlight">\(K\)</span> and labor <span class="math notranslate nohighlight">\(N\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{Y}{K} = A (\frac{N}{K})^{1-\alpha}\]</div>
+<p><strong>Step 3: together with <span class="math notranslate nohighlight">\(C\)</span> in households</strong></p>
+<p>From equation 6 and equation 7, in steady state:</p>
+<div class="math notranslate nohighlight">
+\[Y-C=\delta K\]</div>
+<p>Based on what we get in step 2:</p>
+<div class="math notranslate nohighlight">
+\[\frac{C}{K} = A (\frac{N}{K})^{1-\alpha}-\delta \]</div>
+<p><strong>Step 4: get <span class="math notranslate nohighlight">\(\phi\)</span></strong></p>
+<p>From equation 5:</p>
+<div class="math notranslate nohighlight">
+\[ W = (1-\alpha) \frac{Y}{N} = (1-\alpha)\frac{Y}{K} \frac{K}{N}\]</div>
+<p>Add information from equation 2:</p>
+<div class="math notranslate nohighlight">
+\[
+\phi N^{\frac{\sigma}{\eta}+1} = (1-\alpha) A (\frac{N}{K})^{1-\alpha} \frac{K}{C}
+\]</div>
+<p>The RHS right hand side is what we already know.</p>
+<p>The LHS, we have value for <span class="math notranslate nohighlight">\(\sigma\)</span> and <span class="math notranslate nohighlight">\(\eta\)</span>.</p>
+<p>All we need is to choose a value for <span class="math notranslate nohighlight">\(\phi\)</span>, so that <span class="math notranslate nohighlight">\(N=\frac{1}{3}\)</span>.</p>
+<p>Now, we can get steady state.</p>
+<p>From <span class="math notranslate nohighlight">\(\beta * (1 + R - \delta) = 1\)</span>, <span class="math notranslate nohighlight">\(\beta=0.99\)</span>, <span class="math notranslate nohighlight">\(\delta=0.25\)</span>, we get: <strong><span class="math notranslate nohighlight">\(R=0.0351\)</span></strong>.</p>
+<p>From <span class="math notranslate nohighlight">\(\frac{N}{K} = (\frac{R}{A\alpha})^{\frac{1}{1-\alpha}}\)</span>, <span class="math notranslate nohighlight">\(A=1\)</span>, <span class="math notranslate nohighlight">\(N=\frac{1}{3}\)</span>, we have: <span class="math notranslate nohighlight">\(K=11.3\)</span>.</p>
+<p>From <span class="math notranslate nohighlight">\(\frac{Y}{K} = A (\frac{N}{K})^{1-\alpha}\)</span>, we have: <span class="math notranslate nohighlight">\(Y=1.13\)</span>.</p>
+<p>From <span class="math notranslate nohighlight">\(Y-C=\delta K\)</span>, we have: <span class="math notranslate nohighlight">\(C=0.86\)</span>.</p>
+<p>And then, <span class="math notranslate nohighlight">\(W=2.20\)</span>, <span class="math notranslate nohighlight">\(\phi=7.8\)</span>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="real-business-cycle-model-in-matlab">
+<h1>2. Real Business Cycle Model in MATLAB<a class="headerlink" href="#real-business-cycle-model-in-matlab" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<p>Now I am going to implement RBC model in MATLAB.</p>
+<p>You can skip this part if you prefer Dynare.</p>
+<p>First, let’s set the working directory and clear the environment.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="s">&quot;C:\Users\ading\A_TA_Notes&quot;</span>
+<span class="nb">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>ans = 'C:\Users\ading\A_TA_Notes'</pre></body></html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">clear</span><span class="w"> </span><span class="nb">all</span><span class="p">;</span>
+<span class="nb">clc</span><span class="p">;</span>
+<span class="n">close</span><span class="w"> </span><span class="s">all</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then, let’s set the parameters.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">nX</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w">          </span><span class="c">% Number of variables</span>
+<span class="n">nEps</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">       </span><span class="c">% Number of epsilon variables</span>
+
+<span class="c">% Define indices, which will be used for plot</span>
+<span class="c">% I arranged them according to the order </span>
+<span class="c">% in which they appear in the equilibrium solution</span>
+<span class="n">iA</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">         </span>
+<span class="n">iR</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="n">iN</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="n">iK</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<span class="n">iY</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="n">iC</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+<span class="n">iI</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+<span class="n">iW</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% parameters </span>
+<span class="nb">alpha</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.35</span><span class="p">;</span><span class="w">    </span><span class="c">% capital share</span>
+<span class="nb">beta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.99</span><span class="p">;</span><span class="w">     </span><span class="c">% discount factor</span>
+<span class="nb">gamma</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">       </span><span class="c">% risk aversion</span>
+<span class="n">eta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">         </span><span class="c">% labor elasticity</span>
+<span class="n">delta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.025</span><span class="p">;</span><span class="w">   </span><span class="c">% depreciation rate</span>
+<span class="n">rho</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.95</span><span class="p">;</span><span class="w">      </span><span class="c">% TFP persistency</span>
+<span class="n">phi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">7.8</span><span class="p">;</span><span class="w">       </span><span class="c">% labor disutility</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is steady state solution.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%%file SteadyState.m</span>
+
+<span class="k">function</span><span class="w"> </span>X<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">SteadyState</span><span class="p">(</span>beta, delta, alpha, nX<span class="p">)</span>
+<span class="w">    </span><span class="n">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">R</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nb">beta</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">delta</span><span class="p">;</span>
+<span class="w">    </span><span class="n">N</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">;</span>
+<span class="w">    </span><span class="n">K</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">R</span><span class="o">/</span><span class="n">A</span><span class="o">/</span><span class="nb">alpha</span><span class="p">)</span><span class="o">^</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="nb">alpha</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+<span class="w">    </span><span class="n">Y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">K</span><span class="o">^</span><span class="nb">alpha</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">N</span><span class="o">^</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="nb">alpha</span><span class="p">);</span>
+<span class="w">    </span><span class="n">C</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">delta</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">K</span><span class="p">;</span>
+<span class="w">    </span><span class="n">I</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">delta</span><span class="o">*</span><span class="n">K</span><span class="p">;</span>
+<span class="w">    </span><span class="n">W</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="nb">alpha</span><span class="p">)</span><span class="o">*</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">X</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">nX</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c">% Initialize X as a column vector</span>
+<span class="w">    </span><span class="n">X</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">])</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">A</span><span class="p">;</span><span class="w"> </span><span class="n">R</span><span class="p">;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">K</span><span class="p">;</span><span class="w"> </span><span class="n">Y</span><span class="p">;</span><span class="w"> </span><span class="n">C</span><span class="p">;</span><span class="w"> </span><span class="n">I</span><span class="p">;</span><span class="w"> </span><span class="n">W</span><span class="p">];</span><span class="w">  </span><span class="c">% Assign values to X (adjust indices for MATLAB)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>File SteadyState.m created successfully.</pre></body></html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Call the SteadyState function</span>
+<span class="n">X_SS</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">SteadyState</span><span class="p">(</span><span class="nb">beta</span><span class="p">,</span><span class="w"> </span><span class="n">delta</span><span class="p">,</span><span class="w"> </span><span class="nb">alpha</span><span class="p">,</span><span class="w"> </span><span class="n">nX</span><span class="p">);</span><span class="w">  </span><span class="c">% Ensure you provide the required parameters</span>
+
+<span class="n">epsilon_SS</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+
+<span class="c">% Display the steady state</span>
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;Steady state: %s\n&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">mat2str</span><span class="p">(</span><span class="n">X_SS</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Steady state: [1;0.0351010101010102;0.333333333333333;11.4660753507223;1.14991664772756;0.863264763959503;0.286651883768057;2.24233746306874]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then, construct jacobian matrix.</p>
+<p>A_jacobian_raw measures how a small change in future variable affect system equilibrium.</p>
+<p>B_jacobian_raw measures how a small change in current variable affect system equilibrium.</p>
+<p>C_jacobian_raw measures how a small change in past variable affect system equilibrium.</p>
+<p>E_jacobian_raw measures how a small change in TFP shock affect system equilibrium.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">A</span><span class="w"> </span><span class="s">R</span><span class="w"> </span><span class="s">N</span><span class="w"> </span><span class="s">K</span><span class="w"> </span><span class="s">Y</span><span class="w"> </span><span class="s">C</span><span class="w"> </span><span class="s">I</span><span class="w"> </span><span class="s">W</span><span class="w"> </span><span class="s">A_P</span><span class="w"> </span><span class="s">R_P</span><span class="w"> </span><span class="s">N_P</span><span class="w"> </span><span class="s">K_P</span><span class="w"> </span><span class="s">Y_P</span><span class="w"> </span><span class="s">C_P</span><span class="w"> </span><span class="s">I_P</span><span class="w"> </span><span class="s">W_P</span><span class="w"> </span><span class="s">A_L</span><span class="w"> </span><span class="s">R_L</span><span class="w"> </span><span class="s">N_L</span><span class="w"> </span><span class="s">K_L</span><span class="w"> </span><span class="s">Y_L</span><span class="w"> </span><span class="s">C_L</span><span class="w"> </span><span class="s">I_L</span><span class="w"> </span><span class="s">W_L</span><span class="w"> </span><span class="s">epsilon</span>
+
+<span class="n">residuals</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="k">...</span>
+<span class="w">        </span><span class="nb">beta</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">R</span><span class="o">-</span><span class="n">delta</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">C_P</span><span class="o">^</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="nb">gamma</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">C</span><span class="o">^</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="nb">gamma</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w"> </span><span class="c">% Euler equation</span>
+<span class="w">        </span><span class="n">phi</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">N</span><span class="o">^</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">eta</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">W</span><span class="o">*</span><span class="n">C</span><span class="o">^</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="nb">gamma</span><span class="p">);</span><span class="w">   </span>
+<span class="w">        </span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">K_L</span><span class="o">^</span><span class="nb">alpha</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">N</span><span class="o">^</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="nb">alpha</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Y</span><span class="p">;</span><span class="w"> </span><span class="c">% Production function</span>
+<span class="w">        </span><span class="nb">alpha</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">K_L</span><span class="o">^</span><span class="p">(</span><span class="nb">alpha</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">N</span><span class="o">^</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="nb">alpha</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">R</span><span class="p">;</span><span class="w"> </span><span class="c">% MPK</span>
+<span class="w">        </span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="nb">alpha</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">K_L</span><span class="o">^</span><span class="nb">alpha</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">N</span><span class="o">^</span><span class="p">(</span><span class="o">-</span><span class="nb">alpha</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">W</span><span class="p">;</span><span class="w"> </span><span class="c">% MPN</span>
+<span class="w">        </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">delta</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">K_L</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">I_L</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">K</span><span class="p">;</span><span class="w"> </span><span class="c">% Aggregate resource constraint </span>
+<span class="w">        </span><span class="c">% Do not use (1 - delta) * K + I - K_P</span>
+<span class="w">        </span><span class="n">Y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">I</span><span class="p">;</span><span class="w"> </span><span class="c">% Aggregate resource constraint</span>
+<span class="w">        </span><span class="n">rho</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">log</span><span class="p">(</span><span class="n">A_L</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">epsilon</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">log</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="w"> </span><span class="c">% TFP evolution</span>
+<span class="w">    </span><span class="p">];</span>
+
+<span class="n">A_jacobian_raw</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">jacobian</span><span class="p">(</span><span class="n">residuals</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">A_P</span><span class="p">,</span><span class="n">R_P</span><span class="p">,</span><span class="n">N_P</span><span class="p">,</span><span class="n">K_P</span><span class="p">,</span><span class="n">Y_P</span><span class="p">,</span><span class="n">C_P</span><span class="p">,</span><span class="n">I_P</span><span class="p">,</span><span class="n">W_P</span><span class="p">])</span>
+<span class="n">B_jacobian_raw</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">jacobian</span><span class="p">(</span><span class="n">residuals</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">A</span><span class="p">,</span><span class="w">  </span><span class="n">R</span><span class="p">,</span><span class="w">  </span><span class="n">N</span><span class="p">,</span><span class="w">  </span><span class="n">K</span><span class="p">,</span><span class="w">  </span><span class="n">Y</span><span class="p">,</span><span class="w">  </span><span class="n">C</span><span class="p">,</span><span class="w">  </span><span class="n">I</span><span class="p">,</span><span class="w">  </span><span class="n">W</span><span class="w">  </span><span class="p">])</span>
+<span class="n">C_jacobian_raw</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">jacobian</span><span class="p">(</span><span class="n">residuals</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">A_L</span><span class="p">,</span><span class="n">R_L</span><span class="p">,</span><span class="n">N_L</span><span class="p">,</span><span class="n">K_L</span><span class="p">,</span><span class="n">Y_L</span><span class="p">,</span><span class="n">C_L</span><span class="p">,</span><span class="n">I_L</span><span class="p">,</span><span class="n">W_L</span><span class="p">])</span><span class="w">   </span><span class="c">% don&#39;t name it C, otherwise confused with consumption C</span>
+<span class="n">E_jacobian_raw</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">jacobian</span><span class="p">(</span><span class="n">residuals</span><span class="p">,</span><span class="w"> </span><span class="n">epsilon</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}A_jacobian_raw =\left(\begin{array}{cccccccc}
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; -\frac{C\,{\left(\frac{99\,R}{100}+\frac{3861}{4000}\right)}}{{C_P }^2 } &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0
+\end{array}\right)\end{split}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}B_jacobian_raw =\begin{array}{l}
+\left(\begin{array}{cccccccc}
+0 &amp; \frac{99\,C}{100\,C_P } &amp; 0 &amp; 0 &amp; 0 &amp; \frac{\frac{99\,R}{100}+\frac{3861}{4000}}{C_P } &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; \frac{39}{5} &amp; 0 &amp; 0 &amp; \frac{W}{C^2 } &amp; 0 &amp; -\frac{1}{C}\\
+{K_L }^{7/20} \,N^{13/20}  &amp; 0 &amp; \frac{13\,A\,{K_L }^{7/20} }{\sigma_1 } &amp; 0 &amp; -1 &amp; 0 &amp; 0 &amp; 0\\
+\frac{7\,N^{13/20} }{20\,{K_L }^{13/20} } &amp; -1 &amp; \frac{91\,A}{400\,{K_L }^{13/20} \,N^{7/20} } &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+\frac{13\,{K_L }^{7/20} }{\sigma_1 } &amp; 0 &amp; -\frac{91\,A\,{K_L }^{7/20} }{400\,N^{27/20} } &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; -1\\
+0 &amp; 0 &amp; 0 &amp; -1 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; -1 &amp; -1 &amp; 0\\
+-\frac{1}{A} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0
+\end{array}\right)\\
+\mathrm{}\\
+\textrm{where}\\
+\mathrm{}\\
+\;\;\sigma_1 =20\,N^{7/20} 
+\end{array}\end{split}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}C_jacobian_raw =\left(\begin{array}{cccccccc}
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; \frac{7\,A\,N^{13/20} }{20\,{K_L }^{13/20} } &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; -\frac{91\,A\,N^{13/20} }{400\,{K_L }^{33/20} } &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; \frac{91\,A}{400\,{K_L }^{13/20} \,N^{7/20} } &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; \frac{39}{40} &amp; 0 &amp; 0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+\frac{19}{20\,A_L } &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0
+\end{array}\right)\end{split}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}E_jacobian_raw =\left(\begin{array}{c}
+0\\
+0\\
+0\\
+0\\
+0\\
+0\\
+0\\
+1
+\end{array}\right)\end{split}\]</div>
+</div>
+</div>
+<p>Plug in values to get jacobian matrix.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">X</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">SteadyState</span><span class="p">(</span><span class="nb">beta</span><span class="p">,</span><span class="w"> </span><span class="n">delta</span><span class="p">,</span><span class="w"> </span><span class="nb">alpha</span><span class="p">,</span><span class="w"> </span><span class="n">nX</span><span class="p">);</span>
+<span class="n">A_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">R_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">N_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">K_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="n">Y_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="n">C_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+<span class="n">I_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+<span class="n">W_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+
+<span class="n">X_Lag</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">SteadyState</span><span class="p">(</span><span class="nb">beta</span><span class="p">,</span><span class="w"> </span><span class="n">delta</span><span class="p">,</span><span class="w"> </span><span class="nb">alpha</span><span class="p">,</span><span class="w"> </span><span class="n">nX</span><span class="p">);</span>
+<span class="n">A_L_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X_Lag</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">R_L_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X_Lag</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">N_L_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X_Lag</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">K_L_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X_Lag</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="n">Y_L_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X_Lag</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="n">C_L_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X_Lag</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+<span class="n">I_L_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X_Lag</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+<span class="n">W_L_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X_Lag</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+
+<span class="n">X_Prime</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">SteadyState</span><span class="p">(</span><span class="nb">beta</span><span class="p">,</span><span class="w"> </span><span class="n">delta</span><span class="p">,</span><span class="w"> </span><span class="nb">alpha</span><span class="p">,</span><span class="w"> </span><span class="n">nX</span><span class="p">);</span>
+<span class="n">A_P_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X_Prime</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">R_P_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X_Prime</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">N_P_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X_Prime</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">K_P_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X_Prime</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="n">Y_P_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X_Prime</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="n">C_P_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X_Prime</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+<span class="n">I_P_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X_Prime</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+<span class="n">W_P_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X_Prime</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">A_jacobian</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">subs</span><span class="p">(</span><span class="n">A_jacobian_raw</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">A</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="n">Y</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">I</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="n">A_P</span><span class="w"> </span><span class="n">R_P</span><span class="w"> </span><span class="n">N_P</span><span class="w"> </span><span class="n">K_P</span><span class="w"> </span><span class="n">Y_P</span><span class="w"> </span><span class="n">C_P</span><span class="w"> </span><span class="n">I_P</span><span class="w"> </span><span class="n">W_P</span><span class="w"> </span><span class="n">A_L</span><span class="w"> </span><span class="n">R_L</span><span class="w"> </span><span class="n">N_L</span><span class="w"> </span><span class="n">K_L</span><span class="w"> </span><span class="n">Y_L</span><span class="w"> </span><span class="n">C_L</span><span class="w"> </span><span class="n">I_L</span><span class="w"> </span><span class="n">W_L</span><span class="w"> </span><span class="n">epsilon</span><span class="p">},</span><span class="w"> </span><span class="k">...</span>
+<span class="p">{</span><span class="n">A_s</span><span class="w"> </span><span class="n">R_s</span><span class="w"> </span><span class="n">N_s</span><span class="w"> </span><span class="n">K_s</span><span class="w"> </span><span class="n">Y_s</span><span class="w"> </span><span class="n">C_s</span><span class="w"> </span><span class="n">I_s</span><span class="w"> </span><span class="n">W_s</span><span class="w"> </span><span class="n">A_P_s</span><span class="w"> </span><span class="n">R_P_s</span><span class="w"> </span><span class="n">N_P_s</span><span class="w"> </span><span class="n">K_P_s</span><span class="w"> </span><span class="n">Y_P_s</span><span class="w"> </span><span class="n">C_P_s</span><span class="w"> </span><span class="n">I_P_s</span><span class="w"> </span><span class="n">W_P_s</span><span class="w"> </span><span class="n">A_L_s</span><span class="w"> </span><span class="n">R_L_s</span><span class="w"> </span><span class="n">N_L_s</span><span class="w"> </span><span class="n">K_L_s</span><span class="w"> </span><span class="n">Y_L_s</span><span class="w"> </span><span class="n">C_L_s</span><span class="w"> </span><span class="n">I_L_s</span><span class="w"> </span><span class="n">W_L_s</span><span class="w"> </span><span class="mi">0</span><span class="p">});</span>
+<span class="n">A_jacobian</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">round</span><span class="p">(</span><span class="nb">double</span><span class="p">(</span><span class="n">A_jacobian</span><span class="p">),</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
+
+<span class="n">B_jacobian</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">subs</span><span class="p">(</span><span class="n">B_jacobian_raw</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">A</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="n">Y</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">I</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="n">A_P</span><span class="w"> </span><span class="n">R_P</span><span class="w"> </span><span class="n">N_P</span><span class="w"> </span><span class="n">K_P</span><span class="w"> </span><span class="n">Y_P</span><span class="w"> </span><span class="n">C_P</span><span class="w"> </span><span class="n">I_P</span><span class="w"> </span><span class="n">W_P</span><span class="w"> </span><span class="n">A_L</span><span class="w"> </span><span class="n">R_L</span><span class="w"> </span><span class="n">N_L</span><span class="w"> </span><span class="n">K_L</span><span class="w"> </span><span class="n">Y_L</span><span class="w"> </span><span class="n">C_L</span><span class="w"> </span><span class="n">I_L</span><span class="w"> </span><span class="n">W_L</span><span class="w"> </span><span class="n">epsilon</span><span class="p">},</span><span class="w"> </span><span class="k">...</span>
+<span class="p">{</span><span class="n">A_s</span><span class="w"> </span><span class="n">R_s</span><span class="w"> </span><span class="n">N_s</span><span class="w"> </span><span class="n">K_s</span><span class="w"> </span><span class="n">Y_s</span><span class="w"> </span><span class="n">C_s</span><span class="w"> </span><span class="n">I_s</span><span class="w"> </span><span class="n">W_s</span><span class="w"> </span><span class="n">A_P_s</span><span class="w"> </span><span class="n">R_P_s</span><span class="w"> </span><span class="n">N_P_s</span><span class="w"> </span><span class="n">K_P_s</span><span class="w"> </span><span class="n">Y_P_s</span><span class="w"> </span><span class="n">C_P_s</span><span class="w"> </span><span class="n">I_P_s</span><span class="w"> </span><span class="n">W_P_s</span><span class="w"> </span><span class="n">A_L_s</span><span class="w"> </span><span class="n">R_L_s</span><span class="w"> </span><span class="n">N_L_s</span><span class="w"> </span><span class="n">K_L_s</span><span class="w"> </span><span class="n">Y_L_s</span><span class="w"> </span><span class="n">C_L_s</span><span class="w"> </span><span class="n">I_L_s</span><span class="w"> </span><span class="n">W_L_s</span><span class="w"> </span><span class="mi">0</span><span class="p">});</span>
+<span class="n">B_jacobian</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">round</span><span class="p">(</span><span class="nb">double</span><span class="p">(</span><span class="n">B_jacobian</span><span class="p">),</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
+
+<span class="n">C_jacobian</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">subs</span><span class="p">(</span><span class="n">C_jacobian_raw</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">A</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="n">Y</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">I</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="n">A_P</span><span class="w"> </span><span class="n">R_P</span><span class="w"> </span><span class="n">N_P</span><span class="w"> </span><span class="n">K_P</span><span class="w"> </span><span class="n">Y_P</span><span class="w"> </span><span class="n">C_P</span><span class="w"> </span><span class="n">I_P</span><span class="w"> </span><span class="n">W_P</span><span class="w"> </span><span class="n">A_L</span><span class="w"> </span><span class="n">R_L</span><span class="w"> </span><span class="n">N_L</span><span class="w"> </span><span class="n">K_L</span><span class="w"> </span><span class="n">Y_L</span><span class="w"> </span><span class="n">C_L</span><span class="w"> </span><span class="n">I_L</span><span class="w"> </span><span class="n">W_L</span><span class="w"> </span><span class="n">epsilon</span><span class="p">},</span><span class="w"> </span><span class="k">...</span>
+<span class="p">{</span><span class="n">A_s</span><span class="w"> </span><span class="n">R_s</span><span class="w"> </span><span class="n">N_s</span><span class="w"> </span><span class="n">K_s</span><span class="w"> </span><span class="n">Y_s</span><span class="w"> </span><span class="n">C_s</span><span class="w"> </span><span class="n">I_s</span><span class="w"> </span><span class="n">W_s</span><span class="w"> </span><span class="n">A_P_s</span><span class="w"> </span><span class="n">R_P_s</span><span class="w"> </span><span class="n">N_P_s</span><span class="w"> </span><span class="n">K_P_s</span><span class="w"> </span><span class="n">Y_P_s</span><span class="w"> </span><span class="n">C_P_s</span><span class="w"> </span><span class="n">I_P_s</span><span class="w"> </span><span class="n">W_P_s</span><span class="w"> </span><span class="n">A_L_s</span><span class="w"> </span><span class="n">R_L_s</span><span class="w"> </span><span class="n">N_L_s</span><span class="w"> </span><span class="n">K_L_s</span><span class="w"> </span><span class="n">Y_L_s</span><span class="w"> </span><span class="n">C_L_s</span><span class="w"> </span><span class="n">I_L_s</span><span class="w"> </span><span class="n">W_L_s</span><span class="w"> </span><span class="mi">0</span><span class="p">});</span>
+<span class="n">C_jacobian</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">round</span><span class="p">(</span><span class="nb">double</span><span class="p">(</span><span class="n">C_jacobian</span><span class="p">),</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
+
+<span class="n">E_jacobian</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">subs</span><span class="p">(</span><span class="n">E_jacobian_raw</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">A</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="n">Y</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">I</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="n">A_P</span><span class="w"> </span><span class="n">R_P</span><span class="w"> </span><span class="n">N_P</span><span class="w"> </span><span class="n">K_P</span><span class="w"> </span><span class="n">Y_P</span><span class="w"> </span><span class="n">C_P</span><span class="w"> </span><span class="n">I_P</span><span class="w"> </span><span class="n">W_P</span><span class="w"> </span><span class="n">A_L</span><span class="w"> </span><span class="n">R_L</span><span class="w"> </span><span class="n">N_L</span><span class="w"> </span><span class="n">K_L</span><span class="w"> </span><span class="n">Y_L</span><span class="w"> </span><span class="n">C_L</span><span class="w"> </span><span class="n">I_L</span><span class="w"> </span><span class="n">W_L</span><span class="w"> </span><span class="n">epsilon</span><span class="p">},</span><span class="w"> </span><span class="k">...</span>
+<span class="p">{</span><span class="n">A_s</span><span class="w"> </span><span class="n">R_s</span><span class="w"> </span><span class="n">N_s</span><span class="w"> </span><span class="n">K_s</span><span class="w"> </span><span class="n">Y_s</span><span class="w"> </span><span class="n">C_s</span><span class="w"> </span><span class="n">I_s</span><span class="w"> </span><span class="n">W_s</span><span class="w"> </span><span class="n">A_P_s</span><span class="w"> </span><span class="n">R_P_s</span><span class="w"> </span><span class="n">N_P_s</span><span class="w"> </span><span class="n">K_P_s</span><span class="w"> </span><span class="n">Y_P_s</span><span class="w"> </span><span class="n">C_P_s</span><span class="w"> </span><span class="n">I_P_s</span><span class="w"> </span><span class="n">W_P_s</span><span class="w"> </span><span class="n">A_L_s</span><span class="w"> </span><span class="n">R_L_s</span><span class="w"> </span><span class="n">N_L_s</span><span class="w"> </span><span class="n">K_L_s</span><span class="w"> </span><span class="n">Y_L_s</span><span class="w"> </span><span class="n">C_L_s</span><span class="w"> </span><span class="n">I_L_s</span><span class="w"> </span><span class="n">W_L_s</span><span class="w"> </span><span class="mi">0</span><span class="p">});</span>
+<span class="n">E_jacobian</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">round</span><span class="p">(</span><span class="nb">double</span><span class="p">(</span><span class="n">E_jacobian</span><span class="p">),</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>A_jacobian = 8×8 double
+         0         0         0         0         0   -1.1584         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+</pre></body></html></div><div class="output text_html"><html><body><pre>B_jacobian = 8×8 double
+         0    0.9900         0         0         0    1.1584         0         0
+         0         0    7.8000         0         0    3.0089         0   -1.1584
+    1.1499         0    2.2423         0   -1.0000         0         0         0
+    0.0351   -1.0000    0.0684         0         0         0         0         0
+    2.2423         0   -2.3545         0         0         0         0   -1.0000
+         0         0         0   -1.0000         0         0         0         0
+         0         0         0         0    1.0000   -1.0000   -1.0000         0
+   -1.0000         0         0         0         0         0         0         0
+</pre></body></html></div><div class="output text_html"><html><body><pre>C_jacobian = 8×8 double
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0    0.0351         0         0         0         0
+         0         0         0   -0.0020         0         0         0         0
+         0         0         0    0.0684         0         0         0         0
+         0         0         0    0.9750         0         0    1.0000         0
+         0         0         0         0         0         0         0         0
+    0.9500         0         0         0         0         0         0         0
+</pre></body></html></div><div class="output text_html"><html><body><pre>E_jacobian = 8×1 double
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     1
+</pre></body></html></div></div>
+</div>
+<p>Then solve for P and Q.</p>
+<p>Here P satisfies: <span class="math notranslate nohighlight">\(C + B*P + A*P*P = 0\)</span>,</p>
+<p>and Q satisfies: <span class="math notranslate nohighlight">\(Q = -inv(B + A * P) * E \)</span></p>
+<p>P measures how system absorbs changes over time.</p>
+<p>Q measures how eps shock affect system over time.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%%file SolveSystem.m</span>
+
+<span class="k">function</span><span class="w"> </span><span class="nf">[P, Q] = SolveSystem</span><span class="p">(</span>A, B, C, E<span class="p">)</span>
+<span class="w">    </span><span class="c">% Solve the system using linear time iteration as in Rendahl (2017)</span>
+<span class="w">    </span><span class="n">MAXIT</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w">    </span>
+<span class="w">    </span><span class="n">P</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="nb">size</span><span class="p">(</span><span class="n">A</span><span class="p">));</span><span class="w">  </span><span class="c">% Initialize P with the same size as A</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">MAXIT</span>
+<span class="w">        </span><span class="c">% Solve for P using least squares</span>
+<span class="w">        </span><span class="n">P</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">B</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">P</span><span class="p">)</span><span class="w"> </span><span class="o">\</span><span class="w"> </span><span class="n">C</span><span class="p">;</span><span class="w">  </span><span class="c">% Equivalent to np.linalg.lstsq in Python   </span>
+
+<span class="w">        </span><span class="c">% Test the convergence condition</span>
+<span class="w">        </span><span class="n">test</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">C</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">P</span><span class="p">));</span><span class="w">  </span><span class="c">% Check C + B*P + A*P*P = 0</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">1e-7</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="k">end</span>
+<span class="w">    </span><span class="k">end</span>
+
+<span class="w">    </span><span class="c">% Impact matrix</span>
+<span class="w">    </span><span class="c">% Solution is x_{t} = P*x_{t-1} + Q*eps_t</span>
+<span class="w">    </span><span class="n">Q</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="nb">inv</span><span class="p">(</span><span class="n">B</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">P</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="p">;</span><span class="w">  </span><span class="c">% Q = - E * (B + A*P)</span>
+
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>File SolveSystem.m created successfully.</pre></body></html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Assuming A, B, C, and E are defined matrices</span>
+<span class="p">[</span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="n">Q</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">SolveSystem</span><span class="p">(</span><span class="n">A_jacobian</span><span class="p">,</span><span class="w"> </span><span class="n">B_jacobian</span><span class="p">,</span><span class="w"> </span><span class="n">C_jacobian</span><span class="p">,</span><span class="w"> </span><span class="n">E_jacobian</span><span class="p">);</span>
+
+<span class="c">% Display the results</span>
+<span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Matrix P:&#39;</span><span class="p">);</span>
+<span class="nb">disp</span><span class="p">(</span><span class="n">P</span><span class="p">);</span>
+
+<span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Matrix Q:&#39;</span><span class="p">);</span>
+<span class="nb">disp</span><span class="p">(</span><span class="n">Q</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix P:
+    0.9500         0         0    0.0000         0         0    0.0000         0
+    0.0444         0         0   -0.0024         0         0   -0.0008         0
+    0.1611         0         0   -0.0052         0         0   -0.0121         0
+         0         0         0    0.9750         0         0    1.0000         0
+    1.4537         0         0    0.0234         0         0   -0.0272         0
+    0.2564         0         0    0.0446         0         0    0.0424         0
+    1.1973         0         0   -0.0212         0         0   -0.0695         0
+    1.7508         0         0    0.0807         0         0    0.0285         0
+
+Matrix Q:
+    1.0000
+    0.0467
+    0.1696
+         0
+    1.5302
+    0.2699
+    1.2604
+    1.8430
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, let’s plot the impulse response functions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Assuming nX, Q, and P are defined</span>
+<span class="n">IRF_RBC</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">nX</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span><span class="w">  </span><span class="c">% Initialize IRF_RBC with zeros</span>
+<span class="n">IRF_RBC</span><span class="p">(:,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.01</span><span class="p">;</span><span class="w">   </span><span class="c">% Set the first column</span>
+
+<span class="k">for</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="mi">100</span><span class="w">  </span><span class="c">% MATLAB indices start at 1</span>
+<span class="w">    </span><span class="n">IRF_RBC</span><span class="p">(:,</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">IRF_RBC</span><span class="p">(:,</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c">% Matrix multiplication</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">figure</span><span class="p">(</span><span class="s">&#39;Position&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">800</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">]);</span><span class="w">  </span>
+
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">IRF_RBC</span><span class="p">(</span><span class="n">iA</span><span class="p">,</span><span class="w"> </span><span class="p">:),</span><span class="w"> </span><span class="s">&#39;blue&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;DisplayName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Impulse Response of Output&#39;</span><span class="p">);</span><span class="w">  </span><span class="c">% Plot the data</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;TFP shock&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Time&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Response&#39;</span><span class="p">);</span>
+
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">IRF_RBC</span><span class="p">(</span><span class="n">iY</span><span class="p">,</span><span class="w"> </span><span class="p">:),</span><span class="w"> </span><span class="s">&#39;blue&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;DisplayName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Impulse Response of Output&#39;</span><span class="p">);</span><span class="w">  </span><span class="c">% Plot the data</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Output&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Time&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Response&#39;</span><span class="p">);</span>
+
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">IRF_RBC</span><span class="p">(</span><span class="n">iC</span><span class="p">,</span><span class="w"> </span><span class="p">:),</span><span class="w"> </span><span class="s">&#39;blue&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;DisplayName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Impulse Response of Output&#39;</span><span class="p">);</span><span class="w">  </span><span class="c">% Plot the data</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Consumption&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Time&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Response&#39;</span><span class="p">);</span>
+
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">IRF_RBC</span><span class="p">(</span><span class="n">iK</span><span class="p">,</span><span class="w"> </span><span class="p">:),</span><span class="w"> </span><span class="s">&#39;blue&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;DisplayName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Impulse Response of Output&#39;</span><span class="p">);</span><span class="w">  </span><span class="c">% Plot the data</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Capital&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Time&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Response&#39;</span><span class="p">);</span>
+
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">IRF_RBC</span><span class="p">(</span><span class="n">iN</span><span class="p">,</span><span class="w"> </span><span class="p">:),</span><span class="w"> </span><span class="s">&#39;blue&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;DisplayName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Impulse Response of Output&#39;</span><span class="p">);</span><span class="w">  </span><span class="c">% Plot the data</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Labor&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Time&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Response&#39;</span><span class="p">);</span>
+
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">IRF_RBC</span><span class="p">(</span><span class="n">iW</span><span class="p">,</span><span class="w"> </span><span class="p">:),</span><span class="w"> </span><span class="s">&#39;blue&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;DisplayName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Impulse Response of Output&#39;</span><span class="p">);</span><span class="w">  </span><span class="c">% Plot the data</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Wage&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Time&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Response&#39;</span><span class="p">);</span>
+
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">IRF_RBC</span><span class="p">(</span><span class="n">iI</span><span class="p">,</span><span class="w"> </span><span class="p">:),</span><span class="w"> </span><span class="s">&#39;blue&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;DisplayName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Impulse Response of Output&#39;</span><span class="p">);</span><span class="w">  </span><span class="c">% Plot the data</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Investment&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Time&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Response&#39;</span><span class="p">);</span>
+
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">IRF_RBC</span><span class="p">(</span><span class="n">iR</span><span class="p">,</span><span class="w"> </span><span class="p">:),</span><span class="w"> </span><span class="s">&#39;blue&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;DisplayName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Impulse Response of Output&#39;</span><span class="p">);</span><span class="w">  </span><span class="c">% Plot the data</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Interest Rate&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Time&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Response&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/ba264064afc0889b41faf53ba3c6683b2f0cebb105b726ee6e440369ded85c41.png" src="../_images/ba264064afc0889b41faf53ba3c6683b2f0cebb105b726ee6e440369ded85c41.png" />
+</div>
+</div>
+<p>As we can see, almost all variable increase after a positive TFP shock.</p>
+<p>These figures are the same as what we will get by Dynare, except for the magnitute, since we plot absolute value here, and plot percentage change in Dynare.</p>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="introduction-to-dynare">
+<h1>3. Introduction to Dynare<a class="headerlink" href="#introduction-to-dynare" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<p>Dynare is a software platform for handling a wide class of economic models, in particular dynamic stochastic general equilibrium (DSGE) and overlapping generations (OLG) models.</p>
+<p>We can use Dynare to:</p>
+<ul class="simple">
+<li><p>compute the steady state of a model;</p></li>
+<li><p>compute the first, second order, or higher order approximation to solutions of stochastic models;</p></li>
+<li><p>estimate parameters of DSGE models using either a maximum likelihood or a Bayesian approach.</p></li>
+</ul>
+<section id="steps-to-install-dynare">
+<h2>Steps to install Dynare<a class="headerlink" href="#steps-to-install-dynare" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Install Matlab.</p></li>
+<li><p>Download at <a class="reference external" href="https://www.dynare.org/download/">https://www.dynare.org/download/</a>.</p></li>
+<li><p>Install (manual 2.2.1).</p></li>
+<li><p>Configure (manual 2.4).</p></li>
+</ul>
+<p>To configure, personally I recommend to use ‘addpath d:/dynare/6.2/matlab’</p>
+<p>Sometimes people will use menu entries:</p>
+<p>“Set Path” &gt; “Add Folder… “ &gt;</p>
+<p>If you use this method, take care not to click “Add Folder and Sub Folder…”</p>
+</section>
+<section id="version-choice">
+<h2>Version Choice<a class="headerlink" href="#version-choice" title="Link to this heading">#</a></h2>
+<p>Dynare now has updated to version 6. While some literature’s replication package is based on version 4.</p>
+<p>A possible solution is to install MATLAB of different versions in your computer.</p>
+<p>For each MATLAB version, choose a Dynare version for it.</p>
+<p>In this way, you can replicate certain literature using Dynare 4, and try new functions using Dynare 6.</p>
+</section>
+<section id="mod-file">
+<h2>.mod file<a class="headerlink" href="#mod-file" title="Link to this heading">#</a></h2>
+<p>Structure of a .mod file:</p>
+<ul class="simple">
+<li><p>Preamble: parameters, variables</p></li>
+<li><p>Model</p></li>
+<li><p>Initial Value, End Value</p></li>
+<li><p>Steady State</p></li>
+<li><p>Shocks</p></li>
+<li><p>Computation</p></li>
+</ul>
+<p>To run a .mod code, type <code class="docutils literal notranslate"><span class="pre">dynare</span> <span class="pre">xxxx.mod</span></code> in the command window.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="real-business-cycle-model-in-dynare">
+<h1>4. Real Business Cycle Model in Dynare<a class="headerlink" href="#real-business-cycle-model-in-dynare" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<p>We follow the model setting in part 1.</p>
+<p>A typical .mod file consist of 7 parts:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. variable
+2. parameters
+3. model
+4. initial value
+5. shocks
+6. steady
+7. simulation
+</pre></div>
+</div>
+<p>Here is an example.</p>
+<span style="color:green">
+<p>var y I k a c w R n; <br>
+varexo e;</p>
+</span><span style="color:green">
+<p>parameters alpha beta delta rho gamma sigmae eta phi;<br>
+alpha=0.35;<br>
+beta=0.99;<br>
+delta=0.025;<br>
+rho=0.95;<br>
+gamma=1;<br>
+sigmae=0.01;<br>
+eta = 1;<br>
+phi = 7.6;<br></p>
+</span><p>In model part, there are 8 equations.</p>
+<p>They are exactly the equilibiurm conditions we get in part 8.</p>
+<p>Remember the 8 equations in tag 1~8.</p>
+<p>Note that here all variables are in log, so that we can get percentage change in the final result.</p>
+<span style="color:green">
+<p>model;<br></p>
+<p>exp(c)^(-1/gamma)=beta<em>exp(c(+1))^(-1/gamma)</em>(exp(R)+1-delta);</p>
+<p>exp(c)^(-1/gamma)<em>exp(w)=phi</em>exp(n)^(1/eta);</p>
+<p>exp(y)=exp(a)<em>exp(k(-1))^alpha</em>exp(n)^(1-alpha);</p>
+<p>exp(R)=alpha*exp(a)*exp(k(-1))^(alpha-1)*exp(n)^(1-alpha);</p>
+<p>exp(w)=(1-alpha)*exp(a)<em>exp(k(-1))^alpha</em>exp(n)^(-alpha);</p>
+<p>exp(k)=exp(I(-1))+(1-delta)*exp(k(-1));</p>
+<p>exp(y)=exp(c)+exp(I);</p>
+<p>a=rho*a(-1)+e;</p>
+<p>end;</p>
+</span><p>We had better give initial value to Dynare, so that we can get reasonable solution when there are multiple solutions.</p>
+<p>It can be numbers assigned, or formula based on parameters.</p>
+<p>In the following code, it’s the steady state that we get in part 1.</p>
+<p>Also, note that variables are in log.</p>
+<span style="color:green">
+<p>initval;<br></p>
+<p>a = 0; <br>
+n = log(1/3); <br>
+R = log(1/beta - 1 + delta);<br>
+k = log(exp(n)*(exp(R)/exp(a)/alpha)^(1/(alpha-1)));<br>
+y = log(exp(a)<em>exp(k)^alpha</em>exp(n)^(1-alpha));<br>
+I = log(delta)+k;<br>
+c = log(exp(y)-exp(I));<br>
+w = log(1-alpha) + y - n;<br></p>
+</span><span style="color:green">
+<p>shocks; <br>
+var e = sigmae^2; <br>
+end; <br></p>
+</span><span style="color:green">
+<p>steady;</p>
+</span><span style="color:green">
+<p>stoch_simul(order=1,irf=100);</p>
+</span><p>Let’s see the result from Dynare</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="s">&quot;C:\Users\ading\A_TA_Notes&quot;</span>
+<span class="nb">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>ans = 'C:\Users\ading\A_TA_Notes'</pre></body></html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">dynare</span><span class="w"> </span><span class="s">rbc_8equations.mod</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Starting Dynare (version 6.2).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ... 
+Found 8 equation(s). 
+Evaluating expressions... 
+Computing static model derivatives (order 1). 
+Normalizing the static model... 
+Finding the optimal block decomposition of the static model... 
+2 block(s) found: 
+  1 recursive block(s) and 1 simultaneous block(s). 
+  the largest simultaneous block has 7 equation(s) 
+                                 and 7 feedback variable(s). 
+Computing dynamic model derivatives (order 1). 
+Normalizing the dynamic model... 
+Finding the optimal block decomposition of the dynamic model... 
+2 block(s) found: 
+  1 recursive block(s) and 1 simultaneous block(s). 
+  the largest simultaneous block has 7 equation(s) 
+                                 and 7 feedback variable(s). 
+Preprocessing completed. 
+Preprocessing time: 0h00m00s.
+
+STEADY-STATE RESULTS:
+
+a 		 0
+y 		 0.0441673
+c 		 -0.226868
+k 		 2.29508
+n 		 -1.08129
+w 		 0.719991
+I 		 -1.3938
+R 		 -3.34953
+
+MODEL SUMMARY
+
+  Number of variables:         8
+  Number of stochastic shocks: 1
+  Number of state variables:   3
+  Number of jumpers:           1
+  Number of static variables:  4
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+Variables           e
+e            0.000100
+
+POLICY AND TRANSITION FUNCTIONS
+                                   a               y               c               k               n               w               I               R
+Constant                           0        0.044167       -0.226868        2.295080       -1.081289        0.719991       -1.393799       -3.349525
+a(-1)                       0.950000        1.271407        0.307186               0        0.482110        0.789297        4.368600        1.271407
+k(-1)                              0        0.212394        0.575213        0.975000       -0.181409        0.393803       -0.953025       -0.787606
+I(-1)                              0       -0.006815        0.013629        0.025000       -0.010222        0.003407       -0.072483       -0.006815
+e                           1.000000        1.338323        0.323354               0        0.507485        0.830838        4.598527        1.338323
+
+
+THEORETICAL MOMENTS
+VARIABLE         MEAN  STD. DEV.   VARIANCE
+a              0.0000     0.0320     0.0010
+y              0.0442     0.0499     0.0025
+c             -0.2269     0.0378     0.0014
+k              2.2951     0.0510     0.0026
+n             -1.0813     0.0114     0.0001
+w              0.7200     0.0428     0.0018
+I             -1.3938     0.1139     0.0130
+R             -3.3495     0.0343     0.0012
+
+
+
+MATRIX OF CORRELATIONS
+Variables          a        y        c        k        n        w        I        R
+a             1.0000   0.9857   0.8143   0.6841   0.8043   0.9350   0.9508   0.4681
+y             0.9857   1.0000   0.9002   0.7968   0.6933   0.9813   0.8854   0.3129
+c             0.8143   0.9002   1.0000   0.9804   0.3103   0.9672   0.5947  -0.1316
+k             0.6841   0.7968   0.9804   1.0000   0.1170   0.8982   0.4247  -0.3242
+n             0.8043   0.6933   0.3103   0.1170   1.0000   0.5416   0.9488   0.9008
+w             0.9350   0.9813   0.9672   0.8982   0.5416   1.0000   0.7794   0.1243
+I             0.9508   0.8854   0.5947   0.4247   0.9488   0.7794   1.0000   0.7181
+R             0.4681   0.3129  -0.1316  -0.3242   0.9008   0.1243   0.7181   1.0000
+
+
+
+COEFFICIENTS OF AUTOCORRELATION
+Order          1       2       3       4       5
+a         0.9500  0.9025  0.8574  0.8145  0.7738
+y         0.9633  0.9307  0.8989  0.8679  0.8378
+c         0.9958  0.9897  0.9818  0.9723  0.9613
+k         0.9987  0.9952  0.9895  0.9821  0.9729
+n         0.8952  0.8084  0.7275  0.6527  0.5834
+w         0.9809  0.9625  0.9435  0.9241  0.9043
+I         0.9146  0.8431  0.7760  0.7135  0.6553
+R         0.9179  0.8350  0.7584  0.6873  0.6214
+</pre></div>
+</div>
+<img alt="../_images/53a0562ab2f0c38e389dd3814ffbf00741a1737badd6e4629903137a7f67460a.png" src="../_images/53a0562ab2f0c38e389dd3814ffbf00741a1737badd6e4629903137a7f67460a.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total computing time : 0h00m01s
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="rbc-model-with-occasional-binding">
+<h1>5. RBC Model with Occasional Binding<a class="headerlink" href="#rbc-model-with-occasional-binding" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<p>Occasional Binding Constraints refer to situations in economic models where certain constraints are not always active but can become binding under specific conditions.</p>
+<p>OccBin is an important tool developed by Guerrieri and Iacoviello (JME, 2015).</p>
+<p>Dynare manual provides an example on how to set up occasional binding model.</p>
+<p>There are two occasionally binding constraints newly added into RBC model:</p>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>The INEG constraint implements quadratic capital adjustment costs if investment falls below its steady state. If investment is above steady state, there are no adjustment costs</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>The IRR constraint implements irreversible investment. Investment cannot be lower than a factor <span class="math notranslate nohighlight">\(phi\)</span> of its steady state.</p></li>
+</ol>
+</li>
+</ul>
+<p>We list all variables first.</p>
+<span style = "color:green">
+<p>var A           <span class="math notranslate nohighlight">\(A\)</span>         (long_name=’TFP’)<br>
+C           <span class="math notranslate nohighlight">\(C\)</span>         (long_name=’consumption’)<br>
+Invest      <span class="math notranslate nohighlight">\(I\)</span>         (long_name=’investment’)<br>
+K           <span class="math notranslate nohighlight">\(K\)</span>         (long_name=’capital’)<br>
+Lambda      <span class="math notranslate nohighlight">\(\lambda\)</span>   (long_name=’Lagrange multiplier’)<br>
+log_K       <span class="math notranslate nohighlight">\({\hat K}\)</span>  (long_name=’log capital’)<br>
+log_Invest  <span class="math notranslate nohighlight">\({\hat I}\)</span>  (long_name=’log investment’)<br>
+log_C       <span class="math notranslate nohighlight">\({\hat C}\)</span>  (long_name=’log consumption’)<br>
+;</p>
+<p>varexo epsilon <span class="math notranslate nohighlight">\(\varepsilon\)</span>        (long_name=’TFP shock’);</p>
+</span><p>Then we set parameters.</p>
+<span style = "color:green">
+parameters alpha    $\alpha$        (long_name='capital share') <br>
+        delta       $\delta$        (long_name='depreciation')<br>
+        beta        $\beta$         (long_name='discount factor')<br>
+        sigma       $\sigma$        (long_name='risk aversion')<br>
+        rho         $\rho$          (long_name='autocorrelation TFP')<br>
+        phi         $\phi$          (long_name='irreversibility fraction of steady state investment')<br>
+        psi         $\psi$          (long_name='capital adjustment cost')<br>
+        ;
+<p>beta=0.96;<br>
+alpha=0.33;<br>
+delta=0.10;<br>
+sigma=2;<br>
+rho = 0.9;<br>
+phi = 0.975;<br>
+psi = 5;<br></p>
+</span><p>The model is set as follows.</p>
+<p>In equation 2, when INEG binds, there is extra adjustment cost: psi(K/K(-1)-1)^2.</p>
+<p>In equation 4, when IRR binds, investment equals to phi*investment_steadystate, investment can’t be lower, and Lambda is larger than zero.</p>
+<span style = "color:green">
+model;<br>
+// 1.<br>
+[name='Euler', bind = 'INEG']<br>
+-C^(-sigma)*(1+2*psi*(K/K(-1)-1)/K(-1))+ beta*C(+1)^(-sigma)*((1-delta)-2*psi*(K(+1)/K-1)*<br>
+  (-K(+1)/K^2)+alpha*exp(A(+1))*K^(alpha-1))= -Lambda+beta*(1-delta)*Lambda(+1);<br>
+<p>[name=’Euler’, relax = ‘INEG’]<br>
+-C^(-sigma) + beta<em>C(+1)^(-sigma)</em>(1-delta+alpha*exp(A(+1))<em>K^(alpha-1))= -Lambda+beta</em>(1-delta)*Lambda(+1);<br></p>
+<p>// 2.<br>
+[name=’Budget constraint’,bind = ‘INEG’]<br>
+C+K-(1-delta)<em>K(-1)+psi</em>(K/K(-1)-1)^2=exp(A)*K(-1)^(alpha);<br></p>
+<p>[name=’Budget constraint’,relax = ‘INEG’]<br>
+C+K-(1-delta)*K(-1)=exp(A)*K(-1)^(alpha);<br></p>
+<p>// 3.<br>
+[name=’LOM capital’]<br>
+Invest = K-(1-delta)*K(-1);<br></p>
+<p>// 4.<br>
+[name=’investment’,bind=’IRR,INEG’]<br>
+(log_Invest - log(phi<em>steady_state(Invest))) = 0;<br>
+[name=’investment’,relax=’IRR’]<br>
+Lambda=0;<br>
+[name=’investment’,bind=’IRR’,relax=’INEG’]<br>
+(log_Invest - log(phi</em>steady_state(Invest))) = 0;<br></p>
+<p>// 5.<br>
+[name=’LOM TFP’]<br>
+A = rho*A(-1)+epsilon;<br></p>
+<p>// Definitions<br>
+[name=’Definition log capital’]<br>
+log_K=log(K);<br>
+[name=’Definition log consumption’]<br>
+log_C=log(C);<br>
+[name=’Definition log investment’]<br>
+log_Invest=log(Invest);<br>
+end;<br></p>
+<p>occbin_constraints;<br>
+name ‘IRR’; bind log_Invest-log(steady_state(Invest))&lt;log(phi); relax Lambda&lt;0;<br>
+name ‘INEG’; bind log_Invest-log(steady_state(Invest))&lt;-0.000001; %not exactly 0 for numerical reasons<br>
+end;<br></p>
+</span><p>The steady state solution is here.</p>
+<span style="color:green">
+steady_state_model;<br>
+K = ((1/beta-1+delta)/alpha)^(1/(alpha-1));<br>
+C = -delta*K +K^alpha;<br>
+Invest = delta*K;<br>
+log_K = log(K);<br>
+log_C = log(C);<br>
+log_Invest = log(Invest);<br>
+Lambda = 0;<br>
+A=0;<br>
+end;<br>
+</span><p>Assume there is negative TFP shock at period 1-9, 10 and 50,</p>
+<p>there is positive TFP shock at period 90 and 130.</p>
+<span style="color:green">
+shocks;<br>
+  var epsilon; stderr 0.015;<br>
+end;<br>
+<p>steady;<br></p>
+<p>shocks(surprise);<br>
+var epsilon;<br>
+periods 1:9, 10, 50, 90, 130, 131:169;<br>
+values -0.0001, -0.01,-0.02, 0.01, 0.02, 0;<br>
+end;<br></p>
+<p>occbin_setup;<br>
+occbin_solver(simul_periods=200,simul_check_ahead_periods=200);<br></p>
+<p>occbin_graph log_C epsilon Lambda log_K log_Invest A;<br>
+</span></p>
+<p>After 3 negative TFP shocks, at period 50, IRR condition binds, and there is difference between piecewise linear (occasional binding) and linear case.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="s">&quot;C:\Users\ading\A_TA_Notes&quot;</span>
+<span class="nb">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>ans = 'C:\Users\ading\A_TA_Notes'</pre></body></html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">dynare</span><span class="w"> </span><span class="s">Occbin_example.mod</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Starting Dynare (version 6.2).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ... 
+Found 8 equation(s). 
+Evaluating expressions... 
+Computing static model derivatives (order 1). 
+Normalizing the static model... 
+Finding the optimal block decomposition of the static model... 
+4 block(s) found: 
+  3 recursive block(s) and 1 simultaneous block(s). 
+  the largest simultaneous block has 2 equation(s) 
+                                 and 2 feedback variable(s). 
+Computing dynamic model derivatives (order 2). 
+Normalizing the dynamic model... 
+Finding the optimal block decomposition of the dynamic model... 
+3 block(s) found: 
+  2 recursive block(s) and 1 simultaneous block(s). 
+  the largest simultaneous block has 5 equation(s) 
+                                 and 4 feedback variable(s). 
+Preprocessing completed. 
+Preprocessing time: 0h00m00s.
+
+STEADY-STATE RESULTS:
+
+A          		 0
+C          		 1.16335
+Invest     		 0.353288
+K          		 3.53288
+Lambda     		 0
+log_K      		 1.26211
+log_Invest 		 -1.04047
+log_C      		 0.151306
+</pre></div>
+</div>
+<img alt="../_images/c36f1da98e63d59be6c86057765657b89e23c97d5149901ee1cd1758fa33275b.png" src="../_images/c36f1da98e63d59be6c86057765657b89e23c97d5149901ee1cd1758fa33275b.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total computing time : 0h00m02s
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="reference">
+<h1>Reference<a class="headerlink" href="#reference" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<ol class="arabic simple">
+<li><p>Dynare Manual, <a class="reference external" href="https://www.dynare.org/manual/">https://www.dynare.org/manual/</a></p></li>
+</ol>
+<ol class="arabic simple" start="2">
+<li><p>Pontus Rendahl, “Linear Time Iteration”, Institute for Advanced Studies</p></li>
+</ol>
+<ol class="arabic simple" start="3">
+<li><p>Alisdair Mckay, “Computational Notes on Heterogeneous-Agent Macroeconomics”, <a class="reference external" href="https://alisdairmckay.com/Notes/HetAgentsV2/">https://alisdairmckay.com/Notes/HetAgentsV2/</a></p></li>
+</ol>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "jupyter_matlab_kernel"
+        },
+        kernelOptions: {
+            name: "jupyter_matlab_kernel",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'jupyter_matlab_kernel'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">ECON 5360 Tutorial 1</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#implement-real-business-cycle-model-in-matlab-dynare-python-and-julia">Implement Real Business Cycle Model in MATLAB, Dynare, Python and Julia</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ding-minjie-spring-2025">DING Minjie, Spring 2025</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-rbc-model-setting">1. A Simple RBC Model Setting</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#households">Households</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#firm">Firm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursive-competitive-equilibrium">Recursive competitive equilibrium</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimality-conditions-consist-of-a-system-of-8-equations">Optimality conditions consist of a system of 8 equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calibration-and-solve-steady-state">Calibration and solve steady state</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#real-business-cycle-model-in-matlab">2. Real Business Cycle Model in MATLAB</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-dynare">3. Introduction to Dynare</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps-to-install-dynare">Steps to install Dynare</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-choice">Version Choice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mod-file">.mod file</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#real-business-cycle-model-in-dynare">4. Real Business Cycle Model in Dynare</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#rbc-model-with-occasional-binding">5. RBC Model with Occasional Binding</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">Reference</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

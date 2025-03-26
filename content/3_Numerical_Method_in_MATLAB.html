@@ -1,0 +1,2310 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ECON 5360 Tutorial 3 &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/3_Numerical_Method_in_MATLAB';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../0_Tutorial_Introduction.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="My sample book - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../0_Tutorial_Introduction.html">
+                    Tutorial Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../1_Implement_Real_Business_Cycle_Model_in_MATLAB_and_Dynare.html">1. Implement Real Business Cycle Model in MATLAB, Dynare, Python and Julia</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_Implement_Real_Business_Cycle_Model_in_Python.html">1.6 RBC Model in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_Implement_Real_Business_Cycle_Model_in_Julia.html">1.7 RBC Model in Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_New_Keynesian_Model_and_Tractable_Heterogneity.html">2. New Keynesian Model and Tractable Heterogeneity</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_Numerical_Method_in_MATLAB.html">3. Numerical Methods in MATLAB</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../4_Algorithm_Comparison_in_Optimal_Consumption_Problem.html">4. Algorithm Comparison in Optimal Consumption Problem</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../5_From_Optimal_Consumption_to_Aiyagari_Model.html">5. From Optimal Consumption to Aiyagari Model</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_Heterogeneous_Agent_Model_in_Continous_Time.html">6. Heterogeneous Agent Model in Continous Time</a></li>
+
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/3_Numerical_Method_in_MATLAB.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/content/3_Numerical_Method_in_MATLAB.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ECON 5360 Tutorial 3</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">ECON 5360 Tutorial 3</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-methods-in-matlab">Numerical Methods in MATLAB</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ding-minjie-spring-2025">DING Minjie, Spring 2025</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#set-working-directory">1.1 Set Working Directory</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#clear-work">1.2 Clear Work</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-type">2.1 Data Type</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-operations">2.2 Logical Operations</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#define-your-own-functions">2.3 Define Your Own Functions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-operator">Use @ operator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-local-function">Define local function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-function-file">Define function file</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing">3. Graphing</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-manipulation-and-calculation">4. Matrix Manipulation and Calculation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ndgrid">ndgrid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kron">kron</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reshape">reshape</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#permute">permute</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spdiags">spdiags</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#speye">speye</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backslash-operator-mldivide-and-division-operator">Backslash Operator <code class="docutils literal notranslate"><span class="pre">\</span></code> (mldivide) and Division Operator <code class="docutils literal notranslate"><span class="pre">/</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diff">diff</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repmat">repmat</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#solve-nonlinear-equations">5. Solve Nonlinear Equations</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fsolve">fsolve</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#fzero">fzero</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bisection-and-golden-section">bisection and golden section</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-optimization">6. Numerical Optimization</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#max">max</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fminunc">fminunc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fminsearch">fminsearch</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fminbnd">fminbnd</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fmincon">fmincon</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#function-approximation-with-interpolation">7. Function Approximation with Interpolation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interp1">interp1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#griddedinterpolant">griddedInterpolant</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#discretization">8. Discretization</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markov-chain-approximation-of-continuous-stochastic-process">8.1 Markov Chain Approximation of Continuous Stochastic Process</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-normal-distribution">8.2 Discrete normal distribution</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#simulation">9. Simulation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-number-generation">9.1 Random Number Generation</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">10. Reference</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="econ-5360-tutorial-3">
+<h1>ECON 5360 Tutorial 3<a class="headerlink" href="#econ-5360-tutorial-3" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="numerical-methods-in-matlab">
+<h1>Numerical Methods in MATLAB<a class="headerlink" href="#numerical-methods-in-matlab" title="Link to this heading">#</a></h1>
+<section id="ding-minjie-spring-2025">
+<h2>DING Minjie, Spring 2025<a class="headerlink" href="#ding-minjie-spring-2025" title="Link to this heading">#</a></h2>
+<hr class="docutils" />
+<p>In this tutorial, we will discuss basics and numerical methods in MATLAB, including:</p>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>Preparation for MATLAB</p>
+<ul>
+<li><p>Set Working Directory</p></li>
+<li><p>Clear Work</p></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>Basic of MATLAB</p>
+<ul>
+<li><p>Data Type</p></li>
+<li><p>Logical Operations</p></li>
+<li><p>Define Functions</p></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>Graph</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p>Matrix Manipulation and Calculation</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p>Solve Nonlinear Equations/Root Finding</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="6">
+<li><p>Numerical Optimization</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="7">
+<li><p>Function Approximation with Interpolation</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="8">
+<li><p>Discretization</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="9">
+<li><p>Simulation</p></li>
+</ol>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="set-working-directory">
+<h1>1.1 Set Working Directory<a class="headerlink" href="#set-working-directory" title="Link to this heading">#</a></h1>
+<p>We use “pwd” to get current working directory, and use “cd” to change working directory.</p>
+<p>When we work on MATLAB, we can also select working directory by right click with the mouse.</p>
+<p>If we use MATLAB as kernel on other platform, these two code instructions are indispensable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="s">&quot;C:\Users\ading\A_TA_Notes&quot;</span>
+<span class="nb">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>ans = 'C:\Users\ading\A_TA_Notes'</pre></body></html></div></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="clear-work">
+<h1>1.2 Clear Work<a class="headerlink" href="#clear-work" title="Link to this heading">#</a></h1>
+<p>Before starting the work, we need to clean up the previous work.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">clear</span><span class="w"> </span><span class="nb">all</span><span class="p">;</span><span class="w">  </span><span class="c">% Clears all variables from the workspace</span>
+<span class="nb">close</span><span class="w"> </span><span class="nb">all</span><span class="p">;</span><span class="w">  </span><span class="c">% Closes all open figure windows</span>
+<span class="nb">clc</span><span class="p">;</span><span class="w">        </span><span class="c">% Clears the Command Window</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="data-type">
+<h1>2.1 Data Type<a class="headerlink" href="#data-type" title="Link to this heading">#</a></h1>
+<p>Here are three concepts used to store and manipulate data: Variable, Matrix, and Structure.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Variable</span>
+<span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">          </span><span class="c">% Numeric variable</span>
+<span class="n">name</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;Alice&#39;</span><span class="p">;</span><span class="w">  </span><span class="c">% String variable</span>
+<span class="n">name</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>name = 'Alice'</pre></body></html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Matrix(Vector)</span>
+<span class="n">matrix_y</span><span class="p">=[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="c">% Create a 2x3 matrix</span>
+
+<span class="n">matrix_y</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w">           </span><span class="c">% Access the element in the 2nd row, 3rd column</span>
+<span class="n">matrix_y</span><span class="p">(:,</span><span class="mi">3</span><span class="p">)</span><span class="w">           </span><span class="c">% Access all elements in the 3rd column</span>
+<span class="n">matrix_y</span><span class="p">(</span><span class="mi">2</span><span class="p">,:)</span><span class="w">           </span><span class="c">% Access all elements in the 2nd row</span>
+
+<span class="n">matrix_y</span><span class="p">(</span><span class="n">matrix_y</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">)</span><span class="w">   </span><span class="c">% Retrieve elements greater than or equal to 3</span>
+<span class="n">matrix_y</span><span class="p">(</span><span class="n">matrix_y</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">)=</span><span class="mi">0</span><span class="w"> </span><span class="c">% Set elements greater than or equal to 3 to 0</span>
+
+<span class="n">matrix_y</span><span class="p">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w">     </span><span class="c">% Create a 3x2 matrix filled with zeros</span>
+<span class="n">matrix_y</span><span class="p">=</span><span class="nb">ones</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w">      </span><span class="c">% Create a 3x2 matrix filled with ones</span>
+<span class="n">matrix_y</span><span class="p">=</span><span class="nb">NaN</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w">       </span><span class="c">% Create a 3x2 matrix filled with NaN (Not a Number)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>matrix_y = 2×3 double
+     1     2     3
+     4     5     6
+</pre></body></html></div><div class="output text_html"><html><body><pre>ans = 6</pre></body></html></div><div class="output text_html"><html><body><pre>ans = 2×1 double
+     3
+     6
+</pre></body></html></div><div class="output text_html"><html><body><pre>ans = 1×3 double
+     4     5     6
+</pre></body></html></div><div class="output text_html"><html><body><pre>ans = 4×1 double
+     4
+     5
+     3
+     6
+</pre></body></html></div><div class="output text_html"><html><body><pre>matrix_y = 2×3 double
+     1     2     0
+     0     0     0
+</pre></body></html></div><div class="output text_html"><html><body><pre>matrix_y = 3×2 double
+     0     0
+     0     0
+     0     0
+</pre></body></html></div><div class="output text_html"><html><body><pre>matrix_y = 3×2 double
+     1     1
+     1     1
+     1     1
+</pre></body></html></div><div class="output text_html"><html><body><pre>matrix_y = 3×2 double
+   NaN   NaN
+   NaN   NaN
+   NaN   NaN
+</pre></body></html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Structure</span>
+<span class="n">person</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;Alice&#39;</span><span class="p">;</span><span class="w">  </span><span class="c">% Field &#39;name&#39;</span>
+<span class="n">person</span><span class="p">.</span><span class="n">age</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span><span class="w">        </span><span class="c">% Field &#39;age&#39;</span>
+<span class="n">person</span><span class="p">.</span><span class="n">height</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">5.5</span><span class="p">;</span><span class="w">    </span><span class="c">% Field &#39;height&#39;</span>
+<span class="n">person</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>person = 包含以下字段的 struct:
+      name: 'Alice'
+       age: 30
+    height: 5.5000
+</pre></body></html></div></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="logical-operations">
+<h1>2.2 Logical Operations<a class="headerlink" href="#logical-operations" title="Link to this heading">#</a></h1>
+<p>The following code demonstrates various logical and relational operations in MATLAB.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="w">         </span><span class="c">% Comparison: Is 2 greater than or equal to 1?</span>
+<span class="mi">2</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="w">          </span><span class="c">% Comparison: Is 2 less than 1?</span>
+
+<span class="mi">1</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">0</span><span class="w">          </span><span class="c">% Logical AND operation: 1 &amp; 0</span>
+<span class="mi">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">0</span><span class="w">          </span><span class="c">% Logical OR operation: 1 | 0</span>
+<span class="o">~</span><span class="w"> </span><span class="mi">1</span><span class="w">            </span><span class="c">% Logical NOT operation: ~1</span>
+<span class="o">~</span><span class="w"> </span><span class="mi">0</span><span class="w">            </span><span class="c">% Logical NOT operation: ~0</span>
+<span class="mi">1</span><span class="w"> </span><span class="o">~=</span><span class="w"> </span><span class="mi">2</span><span class="w">         </span><span class="c">% Comparison: Is 1 not equal to 2?</span>
+<span class="mi">0</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">2</span><span class="w">          </span><span class="c">% Logical OR operation with numbers: 0 | 2</span>
+
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">;</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">;</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">4</span>
+<span class="c">% Element-wise comparison with logical AND</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>ans = logical
+   1
+</pre></body></html></div><div class="output text_html"><html><body><pre>ans = logical
+   0
+</pre></body></html></div><div class="output text_html"><html><body><pre>ans = logical
+   0
+</pre></body></html></div><div class="output text_html"><html><body><pre>ans = logical
+   1
+</pre></body></html></div><div class="output text_html"><html><body><pre>ans = logical
+   0
+</pre></body></html></div><div class="output text_html"><html><body><pre>ans = logical
+   1
+</pre></body></html></div><div class="output text_html"><html><body><pre>ans = logical
+   1
+</pre></body></html></div><div class="output text_html"><html><body><pre>ans = logical
+   1
+</pre></body></html></div><div class="output text_html"><html><body><pre>ans = 2x2 logical 数组
+   0   1
+   1   0
+</pre></body></html></div></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="define-your-own-functions">
+<h1>2.3 Define Your Own Functions<a class="headerlink" href="#define-your-own-functions" title="Link to this heading">#</a></h1>
+<p>We can define our own function in three ways:</p>
+<ol class="arabic simple">
+<li><p>Use &#64; operator</p></li>
+<li><p>Define local function</p></li>
+<li><p>Define function file outside of current file</p></li>
+</ol>
+<section id="use-operator">
+<h2>Use &#64; operator<a class="headerlink" href="#use-operator" title="Link to this heading">#</a></h2>
+<p>Define a simple function directly.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">f_square_1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">;</span>
+<span class="n">f_square_1</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>ans = 4</pre></body></html></div></div>
+</div>
+</section>
+<section id="define-local-function">
+<h2>Define local function<a class="headerlink" href="#define-local-function" title="Link to this heading">#</a></h2>
+<p>These are functions defined within a script. They are only accessible from within the file in which they are defined.</p>
+<p>Ideal for organizing code within a single file, especially when the local function is only relevant to that file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="k">function</span><span class="w"> </span>output<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">f_square_2</span><span class="p">(</span>x<span class="p">)</span><span class="w">    </span>
+<span class="w">    </span><span class="n">output</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">;</span>
+<span class="k">end</span>
+
+<span class="n">f_square_2</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>ans = 4</pre></body></html></div></div>
+</div>
+<p>Another example with a parameter.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="k">function</span><span class="w"> </span><span class="nf">[ output ] = f_square_2</span><span class="p">(</span>x, c<span class="p">)</span>
+<span class="w">    </span><span class="n">output</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">c</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">;</span>
+<span class="k">end</span>
+
+<span class="n">f_square_2</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>ans = 4</pre></body></html></div></div>
+</div>
+</section>
+<section id="define-function-file">
+<h2>Define function file<a class="headerlink" href="#define-function-file" title="Link to this heading">#</a></h2>
+<p>This method genreate a separate .m files stored in current working directory.</p>
+<p>The filename must match the function name.</p>
+<p>In Jupyter, we use “<strong>%%file name.m</strong>” to generate a separate .m files.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%%file f_square_3.m</span>
+
+<span class="k">function</span><span class="w"> </span>output<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">f_square_3</span><span class="p">(</span>x<span class="p">)</span><span class="w">    </span>
+<span class="w">    </span><span class="n">output</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>File f_square_3.m created successfully.</pre></body></html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">f_square_3</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>ans = 4</pre></body></html></div></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="graphing">
+<h1>3. Graphing<a class="headerlink" href="#graphing" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<p>Here is a simple example.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">x_vec</span><span class="p">=(</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="mf">0.01</span><span class="p">:</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">y_vec1</span><span class="p">=(</span><span class="n">x_vec</span><span class="p">)</span><span class="o">.^</span><span class="mi">2</span><span class="p">;</span>
+<span class="n">y_vec2</span><span class="p">=(</span><span class="n">x_vec</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.^</span><span class="mi">2</span><span class="p">;</span>
+
+<span class="nb">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">x_vec</span><span class="p">,</span><span class="w"> </span><span class="n">y_vec1</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;-r&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">x_vec</span><span class="p">,</span><span class="w"> </span><span class="n">y_vec2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;--b&#39;</span><span class="p">)</span><span class="w">     </span>
+<span class="c">% solid red line (-r) and dashed blue line (--b)</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Graph of $y=x^{2}$&#39;</span><span class="p">,</span><span class="s">&#39;Interpreter&#39;</span><span class="p">,</span><span class="s">&#39;latex&#39;</span><span class="p">)</span>
+<span class="c">% use LaTeX interpreter for rendering the title text</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">)</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;y&#39;</span><span class="p">)</span>
+<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;y=x^{2}&#39;</span><span class="p">,</span><span class="s">&#39;y=(x-0.5)^{2}&#39;</span><span class="p">)</span><span class="w"> </span><span class="c">% adds a legend to the plot</span>
+<span class="nb">xlim</span><span class="p">([</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">]);</span><span class="w">                    </span><span class="c">% Set the x-axis range</span>
+
+<span class="c">% saveas(gcf,&#39;figure_1.pdf&#39;) </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/a82990229d594437e70954c652704ba54f891342fbe1f01acc7525d4d5b0aefc.png" src="../_images/a82990229d594437e70954c652704ba54f891342fbe1f01acc7525d4d5b0aefc.png" />
+</div>
+</div>
+<p>We can also put subplots together.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">x_vec</span><span class="p">=(</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mf">0.01</span><span class="p">:</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">y_vec</span><span class="p">=</span><span class="n">x_vec</span><span class="o">.^</span><span class="mi">2</span><span class="p">;</span>
+
+<span class="nb">figure</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">x_vec</span><span class="p">,</span><span class="n">y_vec</span><span class="p">)</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;1st Graph of $y=x^{2}$&#39;</span><span class="p">,</span><span class="s">&#39;Interpreter&#39;</span><span class="p">,</span><span class="s">&#39;latex&#39;</span><span class="p">)</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">)</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;y&#39;</span><span class="p">)</span>
+<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;y=x^{2}&#39;</span><span class="p">)</span>
+
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">x_vec</span><span class="p">,</span><span class="n">y_vec</span><span class="p">)</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;2nd Graph of $y=x^{2}$&#39;</span><span class="p">,</span><span class="s">&#39;Interpreter&#39;</span><span class="p">,</span><span class="s">&#39;latex&#39;</span><span class="p">)</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">)</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;y&#39;</span><span class="p">)</span>
+<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;y=x^{2}&#39;</span><span class="p">)</span>
+
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">x_vec</span><span class="p">,</span><span class="n">y_vec</span><span class="p">)</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;3rd Graph of $y=x^{2}$&#39;</span><span class="p">,</span><span class="s">&#39;Interpreter&#39;</span><span class="p">,</span><span class="s">&#39;latex&#39;</span><span class="p">)</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">)</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;y&#39;</span><span class="p">)</span>
+<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;y=x^{2}&#39;</span><span class="p">)</span>
+
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">x_vec</span><span class="p">,</span><span class="n">y_vec</span><span class="p">)</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;4th Graph of $y=x^{2}$&#39;</span><span class="p">,</span><span class="s">&#39;Interpreter&#39;</span><span class="p">,</span><span class="s">&#39;latex&#39;</span><span class="p">)</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">)</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;y&#39;</span><span class="p">)</span>
+<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;y=x^{2}&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/2a324de86a0c7907b1b0f46dd0b98127dd2f026d92e134b5aac57d1e120beafe.png" src="../_images/2a324de86a0c7907b1b0f46dd0b98127dd2f026d92e134b5aac57d1e120beafe.png" />
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="matrix-manipulation-and-calculation">
+<h1>4. Matrix Manipulation and Calculation<a class="headerlink" href="#matrix-manipulation-and-calculation" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<p>We need to manipulate matrix. And here are some commonly used instructions.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Purpose</p></th>
+<th class="head"><p>Input Type</p></th>
+<th class="head"><p>Output Type</p></th>
+<th class="head"><p>Use Case</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ndgrid</span></code></p></td>
+<td><p>Generates N-dimensional grids</p></td>
+<td><p>Vectors</p></td>
+<td><p>Coordinate matrices</p></td>
+<td><p>Evaluating functions over multi-dimensional grids</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">kron</span></code></p></td>
+<td><p>Computes Kronecker product</p></td>
+<td><p>Matrices</p></td>
+<td><p>Larger matrix</p></td>
+<td><p>Constructing larger matrices</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">reshape</span></code></p></td>
+<td><p>Reshapes arrays</p></td>
+<td><p>Array, new size</p></td>
+<td><p>Reshaped array</p></td>
+<td><p>Reorganizing data for processing</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">permute</span></code></p></td>
+<td><p>Reorders dimensions of an array</p></td>
+<td><p>Array, new order</p></td>
+<td><p>Permuted array</p></td>
+<td><p>Changing orientation of multi-dimensional arrays</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="ndgrid">
+<h2>ndgrid<a class="headerlink" href="#ndgrid" title="Link to this heading">#</a></h2>
+<p>Input: N vectors representing the grid points along each dimension.</p>
+<p>Output: N matrices containing the coordinates of the grid points.</p>
+<p>Use Case: Useful for evaluating functions over a grid in multiple dimensions, such as surface plots or mesh grids.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">;</span>
+<span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">;</span>
+<span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">ndgrid</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<span class="n">x</span>
+<span class="s">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>x = 5×3 double
+     1     1     1
+     2     2     2
+     3     3     3
+     4     4     4
+     5     5     5
+</pre></body></html></div><div class="output text_html"><html><body><pre>y = 5×3 double
+     1     2     3
+     1     2     3
+     1     2     3
+     1     2     3
+     1     2     3
+</pre></body></html></div></div>
+</div>
+</section>
+<section id="kron">
+<h2>kron<a class="headerlink" href="#kron" title="Link to this heading">#</a></h2>
+<p>Useful for constructing larger matrices from smaller ones, particularly in linear algebra and systems theory.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">3</span><span class="w"> </span><span class="s">4]</span><span class="p">;</span>
+<span class="n">B</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">6</span><span class="w"> </span><span class="s">7]</span><span class="p">;</span>
+<span class="n">C</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">kron</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="p">);</span>
+<span class="n">A</span>
+<span class="s">B</span>
+<span class="n">C</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>A = 2×2 double
+     1     2
+     3     4
+</pre></body></html></div><div class="output text_html"><html><body><pre>B = 2×2 double
+     0     5
+     6     7
+</pre></body></html></div><div class="output text_html"><html><body><pre>C = 4×4 double
+     0     5     0    10
+     6     7    12    14
+     0    15     0    20
+    18    21    24    28
+</pre></body></html></div></div>
+</div>
+</section>
+<section id="reshape">
+<h2>reshape<a class="headerlink" href="#reshape" title="Link to this heading">#</a></h2>
+<p>Output a new array with the specified dimensions</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="mi">6</span><span class="p">;</span><span class="w">                </span><span class="c">% A = [1 2 3 4 5 6]</span>
+<span class="n">B</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">]);</span><span class="w"> </span><span class="c">% return a matrix with 2 rows and 3 columns</span>
+<span class="n">C</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w">   </span><span class="c">% return a matrix with 2 rows and 3 columns</span>
+<span class="n">D</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w">  </span><span class="c">% return a matrix with 3 columns</span>
+<span class="n">A</span>
+<span class="s">B</span>
+<span class="n">C</span>
+<span class="s">D</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>A = 1×6 double
+     1     2     3     4     5     6
+</pre></body></html></div><div class="output text_html"><html><body><pre>B = 2×3 double
+     1     3     5
+     2     4     6
+</pre></body></html></div><div class="output text_html"><html><body><pre>C = 2×3 double
+     1     3     5
+     2     4     6
+</pre></body></html></div><div class="output text_html"><html><body><pre>D = 2×3 double
+     1     3     5
+     2     4     6
+</pre></body></html></div></div>
+</div>
+</section>
+<section id="permute">
+<h2>permute<a class="headerlink" href="#permute" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">rng</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">rand</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w">          </span><span class="c">% A 3D array</span>
+<span class="n">B</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">permute</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">]);</span><span class="w">  </span>
+<span class="c">% dimension order change from [1,2,3] to [3,1,2]</span>
+<span class="c">% so (2,3,4) change to (4,2,3)</span>
+<span class="c">% 2rows*3column*4matrice ==&gt; 4rows*2columns*3matrices</span>
+<span class="n">A</span>
+<span class="s">B</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>A = 
+A(:,:,1) =
+
+    0.5434    0.4245    0.0047
+    0.2784    0.8448    0.1216
+
+
+A(:,:,2) =
+
+    0.6707    0.1367    0.8913
+    0.8259    0.5751    0.2092
+
+
+A(:,:,3) =
+
+    0.1853    0.2197    0.8117
+    0.1084    0.9786    0.1719
+
+
+A(:,:,4) =
+
+    0.8162    0.4317    0.8176
+    0.2741    0.9400    0.3361
+</pre></body></html></div><div class="output text_html"><html><body><pre>B = 
+B(:,:,1) =
+
+    0.5434    0.2784
+    0.6707    0.8259
+    0.1853    0.1084
+    0.8162    0.2741
+
+
+B(:,:,2) =
+
+    0.4245    0.8448
+    0.1367    0.5751
+    0.2197    0.9786
+    0.4317    0.9400
+
+
+B(:,:,3) =
+
+    0.0047    0.1216
+    0.8913    0.2092
+    0.8117    0.1719
+    0.8176    0.3361
+</pre></body></html></div></div>
+</div>
+</section>
+<section id="spdiags">
+<h2>spdiags<a class="headerlink" href="#spdiags" title="Link to this heading">#</a></h2>
+<p>The spdiags function in MATLAB is used to create a sparse matrix from the diagonals specified in a given matrix.</p>
+<p>This is particularly useful when dealing with large matrices that are mostly sparse, as it allows for efficient storage and manipulation.</p>
+<p>One of the basic syntax is:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>S = spdiags(Bin, d, m, n)
+</pre></div>
+</div>
+<p>where:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Bin: A matrix where each column represents a diagonal of the resulting sparse matrix.
+d: A vector specifying the locations of the diagonals. For example, 0 refers to the main diagonal, 1 refers to the first upper diagonal, -1 refers to the first lower diagonal, and so forth.
+m: The number of rows in the resulting sparse matrix.
+n: The number of columns in the resulting sparse matrix.
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Define the diagonals</span>
+<span class="n">Bin</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">   </span><span class="c">% Main diagonal</span>
+<span class="w">       </span><span class="mi">4</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w">   </span><span class="c">% Upper diagonal</span>
+<span class="w">       </span><span class="mi">7</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">9</span><span class="p">];</span><span class="w">  </span><span class="c">% Lower diagonal</span>
+<span class="n">Bin</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Bin</span><span class="o">&#39;</span><span class="p">;</span>
+
+<span class="c">% Define the diagonal positions</span>
+<span class="n">d</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="c">% Main, Upper, and Lower</span>
+
+<span class="c">% Define the size of the sparse matrix</span>
+<span class="n">m</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c">% Number of rows</span>
+<span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c">% Number of columns</span>
+
+<span class="c">% Create the sparse matrix</span>
+<span class="n">S</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">spdiags</span><span class="p">(</span><span class="n">Bin</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+
+<span class="c">% Display the sparse matrix</span>
+<span class="nb">full</span><span class="p">(</span><span class="n">S</span><span class="p">)</span><span class="w">  </span><span class="c">% Convert to full matrix for display</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>ans = 3×3 double
+     1     5     0
+     7     2     6
+     0     8     3
+</pre></body></html></div></div>
+</div>
+<p>The main diagonal (0) contains values [1, 2, 3].</p>
+<p>The first upper diagonal (1) contains values [4, 5].</p>
+<p>The first lower diagonal (-1) contains values [7, 8].</p>
+<p>This results in a sparse matrix where only the specified diagonals are filled, making it memory efficient for large matrices.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Change diagonal position</span>
+
+<span class="n">Bin</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">   </span><span class="c">% Main diagonal</span>
+<span class="w">       </span><span class="mi">4</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w">   </span><span class="c">% Upper diagonal</span>
+<span class="w">       </span><span class="mi">7</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">9</span><span class="p">];</span><span class="w">  </span><span class="c">% Lower diagonal</span>
+<span class="n">Bin</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Bin</span><span class="o">&#39;</span><span class="p">;</span>
+
+<span class="c">% Define the diagonal positions</span>
+<span class="n">d</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="c">% Main, Upper, and Lower</span>
+
+<span class="c">% Define the size of the sparse matrix</span>
+<span class="n">m</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c">% Number of rows</span>
+<span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c">% Number of columns</span>
+
+<span class="c">% Create the sparse matrix</span>
+<span class="n">S</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">spdiags</span><span class="p">(</span><span class="n">Bin</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+
+<span class="c">% Display the sparse matrix</span>
+<span class="nb">full</span><span class="p">(</span><span class="n">S</span><span class="p">)</span><span class="w">  </span><span class="c">% Convert to full matrix for display</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>ans = 3×3 double
+     1     5     0
+     0     2     6
+     0     0     3
+</pre></body></html></div></div>
+</div>
+</section>
+<section id="speye">
+<h2>speye<a class="headerlink" href="#speye" title="Link to this heading">#</a></h2>
+<p>The speye function in MATLAB creates a sparse identity matrix. Sparse matrices are efficient for computations involving large matrices where most of the elements are zero, helping to save memory and speed up calculations.</p>
+<p>speye(n) creates an n×n sparse identity matrix.</p>
+<p>And identity matrix is a square matrix with ones on the diagonal and zeros elsewhere</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Create a 4x4 sparse identity matrix</span>
+<span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<span class="n">I</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">speye</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+
+<span class="c">% Display the matrix</span>
+<span class="nb">disp</span><span class="p">(</span><span class="n">I</span><span class="p">);</span>
+<span class="n">I</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   (1,1)        1
+   (2,2)        1
+   (3,3)        1
+   (4,4)        1
+</pre></div>
+</div>
+<div class="output text_html"><html><body><pre>I = 4x4 稀疏 double 矩阵 (4 个非零值)
+   (1,1)        1
+   (2,2)        1
+   (3,3)        1
+   (4,4)        1
+</pre></body></html></div></div>
+</div>
+</section>
+<section id="backslash-operator-mldivide-and-division-operator">
+<h2>Backslash Operator <code class="docutils literal notranslate"><span class="pre">\</span></code> (mldivide) and Division Operator <code class="docutils literal notranslate"><span class="pre">/</span></code><a class="headerlink" href="#backslash-operator-mldivide-and-division-operator" title="Link to this heading">#</a></h2>
+<p><strong><code class="docutils literal notranslate"><span class="pre">mldivide</span></code> (Backslash Operator <code class="docutils literal notranslate"><span class="pre">\</span></code>)</strong></p>
+<p>Used to solve linear systems of equations of the form <span class="math notranslate nohighlight">\(Ax = b\)</span>, where <span class="math notranslate nohighlight">\(A\)</span> is a matrix and <span class="math notranslate nohighlight">\(b\)</span> is a vector or matrix.</p>
+<p>The backslash operator computes <span class="math notranslate nohighlight">\(x = A \backslash b\)</span>, solving the equation <span class="math notranslate nohighlight">\(Ax = b\)</span> for <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>Backslash Operator is high recommended for solving linear system. Division Operator is not preferred.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">3</span><span class="w"> </span><span class="s">4]</span><span class="p">;</span>
+<span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="mi">6</span><span class="p">];</span>
+<span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">\</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">  </span><span class="c">% Solves Ax = b</span>
+<span class="n">A</span>
+<span class="s">b</span>
+<span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>A = 2×2 double
+     1     2
+     3     4
+</pre></body></html></div><div class="output text_html"><html><body><pre>b = 2×1 double
+     5
+     6
+</pre></body></html></div><div class="output text_html"><html><body><pre>x = 2×1 double
+   -4.0000
+    4.5000
+</pre></body></html></div></div>
+</div>
+<p><strong>Division Operator <code class="docutils literal notranslate"><span class="pre">/</span></code></strong></p>
+<p>Used for right division, which computes the solution to the equation <span class="math notranslate nohighlight">\(xA = b\)</span> or equivalently <span class="math notranslate nohighlight">\(x = b / A\)</span>.</p>
+<p>The division operator computes <span class="math notranslate nohighlight">\(x = b / A\)</span>. This is not a direct solution to a linear system but transforms the problem to the left side.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">3</span><span class="w"> </span><span class="s">4]</span><span class="p">;</span>
+<span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">5</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="n">7</span><span class="w"> </span><span class="s">8]</span><span class="p">;</span>
+<span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">A</span><span class="p">;</span><span class="w">  </span><span class="c">% Solves xA = b</span>
+<span class="n">A</span>
+<span class="s">b</span>
+<span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>A = 2×2 double
+     1     2
+     3     4
+</pre></body></html></div><div class="output text_html"><html><body><pre>b = 2×2 double
+     5     6
+     7     8
+</pre></body></html></div><div class="output text_html"><html><body><pre>x = 2×2 double
+   -1.0000    2.0000
+   -2.0000    3.0000
+</pre></body></html></div></div>
+</div>
+</section>
+<section id="diff">
+<h2>diff<a class="headerlink" href="#diff" title="Link to this heading">#</a></h2>
+<p>Y = diff(X,n,dim) is the nth difference calculated along the dimension specified by dim. The dim input is a positive integer scalar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">X</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="n">7</span><span class="w"> </span><span class="s">11</span><span class="w"> </span><span class="s">13</span><span class="p">;</span><span class="n">17</span><span class="w"> </span><span class="s">19</span><span class="w"> </span><span class="s">23]</span><span class="p">;</span>
+<span class="n">Y1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">diff</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">Y2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">diff</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">X</span>
+<span class="s">Y1</span>
+<span class="n">Y2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>X = 3×3 double
+     1     3     5
+     7    11    13
+    17    19    23
+</pre></body></html></div><div class="output text_html"><html><body><pre>Y1 = 2×3 double
+     6     8     8
+    10     8    10
+</pre></body></html></div><div class="output text_html"><html><body><pre>Y2 = 3×2 double
+     2     2
+     4     2
+     2     4
+</pre></body></html></div></div>
+</div>
+</section>
+<section id="repmat">
+<h2>repmat<a class="headerlink" href="#repmat" title="Link to this heading">#</a></h2>
+<p>repmat is a function in MATLAB that stands for “repeat matrix.” It is used to replicate and tile an array (matrix) a specified number of times along each dimension</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">diag</span><span class="p">([</span><span class="mi">100</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="mi">300</span><span class="p">])</span>
+<span class="n">B</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">repmat</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>A = 3×3 double
+   100     0     0
+     0   200     0
+     0     0   300
+</pre></body></html></div><div class="output text_html"><html><body><pre>B = 6×9 double
+   100     0     0   100     0     0   100     0     0
+     0   200     0     0   200     0     0   200     0
+     0     0   300     0     0   300     0     0   300
+   100     0     0   100     0     0   100     0     0
+     0   200     0     0   200     0     0   200     0
+     0     0   300     0     0   300     0     0   300
+</pre></body></html></div></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="solve-nonlinear-equations">
+<h1>5. Solve Nonlinear Equations<a class="headerlink" href="#solve-nonlinear-equations" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<section id="fsolve">
+<h2>fsolve<a class="headerlink" href="#fsolve" title="Link to this heading">#</a></h2>
+<p>fsolve is used to solve systems of nonlinear equations. It can handle multiple variables.</p>
+<p>The basicsyntaxr is:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>x = fsolve(fun,x0,options)
+
+[x,fval] = fsolve(___)
+</pre></div>
+</div>
+<p>It means: solve nonlinear equation fun=0, start from x=x0.</p>
+<p>x is solution. fval is value of function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">=@(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="p">;</span>
+
+<span class="n">x0</span><span class="p">=</span><span class="mf">0.5</span><span class="p">;</span><span class="w">                                </span><span class="c">% Initial Guess;</span>
+<span class="p">[</span><span class="n">x_zero_1</span><span class="p">,</span><span class="w"> </span><span class="n">fval_1</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">fsolve</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x0</span><span class="p">);</span><span class="w">     </span><span class="c">% Finding the Root</span>
+<span class="n">x_zero_1</span><span class="w">                               </span><span class="s">%</span><span class="w"> </span><span class="s">Show</span><span class="w"> </span><span class="s">the</span><span class="w"> </span><span class="s">result</span>
+<span class="n">fval_1</span><span class="w">                                 </span><span class="s">%</span><span class="w"> </span><span class="s">Show</span><span class="w"> </span><span class="s">the</span><span class="w"> </span><span class="s">result</span>
+
+<span class="n">options</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">optimset</span><span class="p">(</span><span class="s">&#39;Tolfun&#39;</span><span class="p">,</span><span class="mf">1e-8</span><span class="p">);</span><span class="w">     </span><span class="c">% Setting Options for fsolve</span>
+<span class="c">% The option Tolfun specifies the tolerance to 1e-8.</span>
+<span class="n">x_zero_2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">fsolve</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">options</span><span class="p">);</span><span class="w">       </span><span class="c">% Finding the Root</span>
+<span class="n">x_zero_2</span><span class="w">                               </span><span class="s">%</span><span class="w"> </span><span class="s">Get</span><span class="w"> </span><span class="s">a</span><span class="w"> </span><span class="s">more</span><span class="w"> </span><span class="s">precise</span><span class="w"> </span><span class="s">result</span><span class="w">  </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>方程已解。
+
+fsolve 已完成，因为按照函数容差的值衡量，
+函数值向量接近于零，并且按照梯度的值衡量，
+问题似乎为正则问题。
+</pre></div>
+</div>
+<div class="output text_html"><html><body><pre>x_zero_1 = 0.0078</pre></body></html></div><div class="output text_html"><html><body><pre>fval_1 = 6.1035e-05</pre></body></html></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>方程已解。
+
+fsolve 已完成，因为按照函数容差的值衡量，
+函数值向量接近于零，并且按照梯度的值衡量，
+问题似乎为正则问题。
+</pre></div>
+</div>
+<div class="output text_html"><html><body><pre>x_zero_2 = 9.7657e-04</pre></body></html></div></div>
+</div>
+<p>And an example of system of equations.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">F</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">[</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">)];</span><span class="w"> </span><span class="c">% System of equations</span>
+<span class="n">initial_guess</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
+<span class="n">solution</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">fsolve</span><span class="p">(</span><span class="n">F</span><span class="p">,</span><span class="w"> </span><span class="n">initial_guess</span><span class="p">);</span><span class="w">         </span><span class="c">% Solving the system</span>
+<span class="n">solution</span><span class="w">                                     </span><span class="s">%</span><span class="w"> </span><span class="s">Show</span><span class="w"> </span><span class="s">result</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>方程已解。
+
+fsolve 已完成，因为按照函数容差的值衡量，
+函数值向量接近于零，并且按照梯度的值衡量，
+问题似乎为正则问题。
+</pre></div>
+</div>
+<div class="output text_html"><html><body><pre>solution = 2×1 double
+    2.0000
+    2.0000
+</pre></body></html></div></div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="fzero">
+<h1>fzero<a class="headerlink" href="#fzero" title="Link to this heading">#</a></h1>
+<p>fzero is similar to fsolve, but it is used specifically for finding roots of single-variable functions.</p>
+<p>Another key difference is that fzero is suitable for functions that are continuous and have a sign changeie signs).</p>
+<p>Here is an example where fzero fails, since there is no sign change.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">=@(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="p">;</span>
+<span class="n">x0</span><span class="p">=</span><span class="mf">0.5</span><span class="p">;</span><span class="w">   </span>
+<span class="n">x_zero_3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fzero</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x0</span><span class="p">);</span>
+<span class="n">x_zero_3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>正在退出 fzero: 将中止搜索包含符号变化的区间
+ 因为在搜索期间遇到 NaN 或 Inf 函数值。
+(-1.7162e+154 处的函数值为 Inf。)
+请检查函数或使用其他起始值重试。
+</pre></div>
+</div>
+<div class="output text_html"><html><body><pre>x_zero_3 = NaN</pre></body></html></div></div>
+</div>
+<p>While fsolve works in this case.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">=@(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="p">;</span>
+<span class="n">x0</span><span class="p">=</span><span class="mf">0.5</span><span class="p">;</span><span class="w">   </span>
+<span class="n">x_zero_3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">fsolve</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x0</span><span class="p">);</span>
+<span class="n">x_zero_3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>方程已解。
+
+fsolve 已完成，因为按照函数容差的值衡量，
+函数值向量接近于零，并且按照梯度的值衡量，
+问题似乎为正则问题。
+</pre></div>
+</div>
+<div class="output text_html"><html><body><pre>x_zero_3 = 0.0078</pre></body></html></div></div>
+</div>
+<p>fzero works if there is sign change.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">f2</span><span class="p">=@(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">3</span><span class="p">;</span>
+<span class="n">x0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mf">0.5</span><span class="w"> </span><span class="mf">0.5</span><span class="p">]</span><span class="w">              </span><span class="c">% set initial guess a interval </span>
+<span class="c">% x0=0.5;                    % we can also guess a value</span>
+<span class="n">x_zero_4</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fzero</span><span class="p">(</span><span class="n">f2</span><span class="p">,</span><span class="n">x0</span><span class="p">);</span>
+<span class="n">x_zero_4</span>
+
+<span class="s">f3=@(x)</span><span class="w"> </span><span class="s">x^2-1</span><span class="p">;</span>
+<span class="n">x0</span><span class="p">=</span><span class="mf">0.5</span><span class="p">;</span><span class="w">   </span>
+<span class="n">x_zero_5</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fzero</span><span class="p">(</span><span class="n">f3</span><span class="p">,</span><span class="n">x0</span><span class="p">);</span>
+<span class="n">x_zero_5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>x0 = 1×2 double
+   -0.5000    0.5000
+</pre></body></html></div><div class="output text_html"><html><body><pre>x_zero_4 = 0</pre></body></html></div><div class="output text_html"><html><body><pre>x_zero_5 = 1</pre></body></html></div></div>
+</div>
+<p>When to Use fzero Over fsolve?</p>
+<p>Use fzero when:</p>
+<p>You are dealing with a single-variable nonlinear equato    n.</p>
+<p>You want faster performance for simple root-finding a    sks.</p>
+<p>You can easily identify an interval where the function changes sign.
+ign.</p>
+<section id="bisection-and-golden-section">
+<h2>bisection and golden section<a class="headerlink" href="#bisection-and-golden-section" title="Link to this heading">#</a></h2>
+<p>The bisection method and the golden section search are both used for finding roots of functions, particularly when the function is unimodal (has a single peak or trough) within a specified interval.</p>
+<p>There is no direct built-in function for the bisection nor golden section method.</p>
+<p>There are two possible solution.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>First, we write function files. Many professors provide their version, and we can use them.
+
+Second, some built-in functions based on idea of bisection and golden section. We can use them as a close substitute. 
+
+For example, &quot;fzero&quot; algorithm, created by T. Dekker, uses a combination of bisection, secant, and inverse quadratic interpolation methods.
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="numerical-optimization">
+<h1>6. Numerical Optimization<a class="headerlink" href="#numerical-optimization" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<p>Some commonly used optimization methods include:</p>
+<p>fminunc</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Purpose: finds the unconstrained local mininum of a function.
+Usage: suitable for unconstrained optimization problems.
+</pre></div>
+</div>
+<p>fminsearch</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Purpose: finds the unconstrained local mininum of a function.
+Usage: suitable for unconstrained optimization problems without the need for gradient information.
+</pre></div>
+</div>
+<p>fminbnd</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Purpose: finds the unconstrained local minimum of a single-variable function within a specified interval. 
+Usage: Ideal for simple optimization problems where the function is one-dimensional and bounded.
+</pre></div>
+</div>
+<p>fmincon</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Purpose: finds the minimum of a constrained nonlinear multivariable function.
+Usage: suitable for optimization problems with constraints, both equality and inequality.
+</pre></div>
+</div>
+<p>When we solve maximum A problem, that is to find the minimum of negative A.</p>
+<section id="max">
+<h2>max<a class="headerlink" href="#max" title="Link to this heading">#</a></h2>
+<p>The max function in MATLAB is used to find the maximum value in an array or between two arrays. It can operate on vectors, matrices, or multi-dimensional arrays</p>
+<p>The basic syntax is:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[M,I] = max(___)
+</pre></div>
+</div>
+<p>It returns the index into the operating dimension that corresponds to the first occurrence of the maximum value of A.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span><span class="w">  </span><span class="c">% Define a vector</span>
+<span class="p">[</span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">I</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="n">A</span><span class="p">);</span><span class="w">         </span><span class="c">% Find the maximum value and its index</span>
+<span class="nb">disp</span><span class="p">(</span><span class="n">M</span><span class="p">);</span><span class="w">                 </span><span class="c">% Display the maximum value</span>
+<span class="nb">disp</span><span class="p">(</span><span class="n">I</span><span class="p">);</span><span class="w">                 </span><span class="c">% Display the index of the first occurrence</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     9
+
+     4
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="fminunc">
+<h2>fminunc<a class="headerlink" href="#fminunc" title="Link to this heading">#</a></h2>
+<p>The basic syntax is:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>x = fminunc(fun,x0,options)
+[x,fval] = fminunc(___)
+</pre></div>
+</div>
+<p>which means find minimum of <em>fun</em>, start from <em>x0</em>,</p>
+<p>and get solution <em>x</em> and value <em>fval</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% fminunc</span>
+<span class="n">f</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="p">;</span><span class="w">                       </span><span class="c">% Objective function</span>
+<span class="n">x0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">                             </span><span class="c">% Initial guess</span>
+<span class="p">[</span><span class="n">x_min_1</span><span class="w"> </span><span class="n">f_min_1</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">fminunc</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x0</span><span class="p">);</span>
+<span class="n">x_min_1</span><span class="w"> </span>
+<span class="s">f_min_1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>找到局部最小值。
+
+优化已完成，因为梯度大小小于
+最优性容差的值。
+</pre></div>
+</div>
+<div class="output text_html"><html><body><pre>x_min_1 = 0</pre></body></html></div><div class="output text_html"><html><body><pre>f_min_1 = 0</pre></body></html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% fminunc</span>
+<span class="n">f</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c">% Objective function</span>
+<span class="n">x0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">];</span><span class="w">                      </span><span class="c">% Initial guess</span>
+<span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">fval</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">fminunc</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">x0</span><span class="p">);</span>
+<span class="n">x</span>
+<span class="s">fval</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>找到局部最小值。
+
+优化已完成，因为梯度大小小于
+最优性容差的值。
+</pre></div>
+</div>
+<div class="output text_html"><html><body><pre>x = 1×2 double
+    1.0000    2.0000
+</pre></body></html></div><div class="output text_html"><html><body><pre>fval = 4.4409e-16</pre></body></html></div></div>
+</div>
+</section>
+<section id="fminsearch">
+<h2>fminsearch<a class="headerlink" href="#fminsearch" title="Link to this heading">#</a></h2>
+<p>The basic syntax is:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>x = fminsearch(fun,x0,options)
+[x,fval] = fminsearch(___)
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% fminsearch</span>
+<span class="n">f</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c">% Objective function</span>
+<span class="n">x0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">];</span><span class="w">                      </span><span class="c">% Initial guess</span>
+<span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">fval</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fminsearch</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">x0</span><span class="p">);</span>
+<span class="n">x</span>
+<span class="s">fval</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>x = 1×2 double
+    1.0000    2.0000
+</pre></body></html></div><div class="output text_html"><html><body><pre>fval = 1.8692e-09</pre></body></html></div></div>
+</div>
+</section>
+<section id="fminbnd">
+<h2>fminbnd<a class="headerlink" href="#fminbnd" title="Link to this heading">#</a></h2>
+<p>The basic syntax is:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>x = fminbnd(fun,x1,x2,options)
+[x,fval] = fminbnd(___)
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Find the point of the minimum value of the </span>
+<span class="c">% function sin(x) in the range 0&lt;x&lt;2π</span>
+
+<span class="n">fun</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@</span><span class="nb">sin</span><span class="p">;</span>
+<span class="n">x1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">x2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="nb">pi</span><span class="p">;</span>
+<span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">fval</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fminbnd</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">);</span>
+<span class="n">x</span><span class="w">               </span><span class="s">%</span><span class="w"> </span><span class="s">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="nb">pi</span>
+<span class="n">fval</span><span class="w">            </span><span class="s">%</span><span class="w"> </span><span class="s">fval</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>x = 4.7124</pre></body></html></div><div class="output text_html"><html><body><pre>fval = -1.0000</pre></body></html></div></div>
+</div>
+</section>
+<section id="fmincon">
+<h2>fmincon<a class="headerlink" href="#fmincon" title="Link to this heading">#</a></h2>
+<p>The basic syntax is:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>x = fmincon(fun,x0,A,b,Aeq,beq,lb,ub,nonlcon,options)
+[x,fval] = fmincon(___)
+</pre></div>
+</div>
+<p>where:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>A, b: linear inequality constraints
+Aeq, beq: linear equality constraints
+lb, ub: lower bounds and upper bounds
+</pre></div>
+</div>
+<p>We want to minimize the following objective function:</p>
+<div class="math notranslate nohighlight">
+\[
+f(\mathbf{x}) = (x_1 - 1)^2 + (x_2 - 2)^2
+\]</div>
+<p>where $\mathbf{x} = \begin{bmatrix} x_1 \ x_2 \end{bmatriraints</p>
+<p>The optimization is subject to the following constraints:</p>
+<ol class="arabic simple">
+<li><p><strong>Inequality Constraint:</strong>
+$<span class="math notranslate nohighlight">\(
+x_1 + x_2 \leq 2
+\)</span>$</p></li>
+<li><p><strong>Equality Constraint:</strong>
+$<span class="math notranslate nohighlight">\(
+x_1 - x_2 = 0
+\)</span>$</p></li>
+</ol>
+<p>There are no specific bounds for the variables:</p>
+<div class="math notranslate nohighlight">
+\[
+-\infty &lt; x_1, x_2 &lt; \infty
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c">% Objective function</span>
+<span class="n">x0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">];</span><span class="w">                       </span><span class="c">% Initial guess</span>
+
+<span class="c">% Inequality constraints: x1 + x2 &lt;= 2</span>
+<span class="n">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span><span class="w">                        </span><span class="c">% Coefficients for the inequality</span>
+<span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">                             </span><span class="c">% Right-hand side of the inequality</span>
+
+<span class="c">% Equality constraints: x1 - x2 = 0</span>
+<span class="n">Aeq</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">];</span><span class="w">                     </span><span class="c">% Coefficients for the equality</span>
+<span class="n">beq</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">                           </span><span class="c">% Right-hand side of the equality</span>
+
+<span class="c">% Lower bounds</span>
+<span class="n">lb</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="nb">Inf</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="nb">Inf</span><span class="p">];</span><span class="w"> </span><span class="c">% No lower bounds</span>
+
+<span class="c">% Upper bounds</span>
+<span class="n">ub</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="nb">Inf</span><span class="p">,</span><span class="w"> </span><span class="nb">Inf</span><span class="p">];</span><span class="w">   </span><span class="c">% No upper bounds</span>
+
+<span class="c">% Call fmincon</span>
+<span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">fval</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">fmincon</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">x0</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">Aeq</span><span class="p">,</span><span class="w"> </span><span class="n">beq</span><span class="p">,</span><span class="w"> </span><span class="n">lb</span><span class="p">,</span><span class="w"> </span><span class="n">ub</span><span class="p">);</span>
+
+<span class="c">% Display results</span>
+<span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Optimal solution:&#39;</span><span class="p">);</span>
+<span class="nb">disp</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Objective function value at optimal solution:&#39;</span><span class="p">);</span>
+<span class="nb">disp</span><span class="p">(</span><span class="n">fval</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>找到满足约束的局部最小值。
+
+优化已完成，因为目标函数沿
+可行方向在最优性容差值范围内呈现非递减，
+并且在约束容差值范围内满足约束。
+
+Optimal solution:
+    1.0000    1.0000
+
+Objective function value at optimal solution:
+    1.0000
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="function-approximation-with-interpolation">
+<h1>7. Function Approximation with Interpolation<a class="headerlink" href="#function-approximation-with-interpolation" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<section id="interp1">
+<h2>interp1<a class="headerlink" href="#interp1" title="Link to this heading">#</a></h2>
+<p>interp1 is a function used for one-dimensional interpolation of data points.</p>
+<p>It allows us to estimate the values of a function at specific query points based on known data points.</p>
+<p>This is particularly useful in scenarios when you want to estimate values between known data points.</p>
+<p>The basic syntax is:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>vq = interp1(x, v, xq, method)
+</pre></div>
+</div>
+<p>Where:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>x is a vector of known n x-coordinates (the __points__ at which the values are know).
+v is a vector of known __values__ corresponding to the x coordinates.
+xq is a vector of query __points__ where you want to evaluate the interpolated values.
+vq is the output vector containing the interpolated __values__ at the query points.
+</pre></div>
+</div>
+<p>interp1 supports various interpolation methods:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;linear&#39;: Linear interpolation (default).
+&#39;nearest&#39;: Nearest neighbor interpolation.
+&#39;spline&#39;: Cubic spline interpolation.
+&#39;pchip&#39;: Piecewise cubic Hermite interpolating polynomial.
+&#39;cubic&#39;: Cubic interpolation. 
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% 1. Sine Function</span>
+<span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">5</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">                         </span><span class="c">% Known data points</span>
+<span class="n">v</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w">                            </span><span class="c">% Known data values  </span>
+<span class="n">xq</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">5</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">0.01</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">                     </span><span class="c">% Query points</span>
+
+<span class="c">% Different methods of interpolation</span>
+<span class="n">vq_lin</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">interp1</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">xq</span><span class="p">,</span><span class="s">&#39;linear&#39;</span><span class="p">);</span>
+<span class="n">vq_cubic</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">interp1</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">xq</span><span class="p">,</span><span class="s">&#39;pchip&#39;</span><span class="p">);</span>
+<span class="n">vq_nearest</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">interp1</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">xq</span><span class="p">,</span><span class="s">&#39;nearest&#39;</span><span class="p">);</span>
+
+<span class="c">% True solution</span>
+<span class="n">vq_true</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="n">xq</span><span class="p">);</span>
+
+<span class="c">% Plot results</span>
+<span class="nb">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">xq</span><span class="p">,</span><span class="n">vq_true</span><span class="p">,</span><span class="n">xq</span><span class="p">,</span><span class="n">vq_lin</span><span class="p">,</span><span class="n">xq</span><span class="p">,</span><span class="n">vq_cubic</span><span class="p">,</span><span class="n">xq</span><span class="p">,</span><span class="n">vq_nearest</span><span class="p">)</span>
+<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;sin x&#39;</span><span class="p">,</span><span class="s">&#39;linear&#39;</span><span class="p">,</span><span class="s">&#39;cubic&#39;</span><span class="p">,</span><span class="s">&#39;nearest&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/278cefd41d6e2bf582126145254fb22aa859033dc69c380b292f03966d3b1bdc.png" src="../_images/278cefd41d6e2bf582126145254fb22aa859033dc69c380b292f03966d3b1bdc.png" />
+</div>
+</div>
+<p>With a finer grid, we get better result.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% 2. Sine Function with a finer grid</span>
+<span class="n">x1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">5</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">                            </span><span class="c">% Known data points</span>
+<span class="n">y1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="n">x1</span><span class="p">);</span><span class="w">                                 </span><span class="c">% Known data values</span>
+<span class="n">xint</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">5</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">0.01</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">                         </span><span class="c">% Query points</span>
+
+<span class="c">% Repeating interpolation with the finer grid</span>
+<span class="n">yint_lin</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">interp1</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">xint</span><span class="p">,</span><span class="s">&#39;linear&#39;</span><span class="p">);</span>
+<span class="n">yint_cubic</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">interp1</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">xint</span><span class="p">,</span><span class="s">&#39;pchip&#39;</span><span class="p">);</span>
+<span class="n">yint_nearest</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">interp1</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">xint</span><span class="p">,</span><span class="s">&#39;nearest&#39;</span><span class="p">);</span>
+
+<span class="c">% Exact solution</span>
+<span class="n">yint_sol</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="n">xint</span><span class="p">);</span>
+
+<span class="c">% Plot results</span>
+<span class="nb">figure</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">xint</span><span class="p">,</span><span class="n">yint_sol</span><span class="p">,</span><span class="n">xint</span><span class="p">,</span><span class="n">yint_lin</span><span class="p">,</span><span class="n">xint</span><span class="p">,</span><span class="n">yint_cubic</span><span class="p">,</span><span class="n">xint</span><span class="p">,</span><span class="n">yint_nearest</span><span class="p">)</span>
+<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;sin x&#39;</span><span class="p">,</span><span class="s">&#39;linear&#39;</span><span class="p">,</span><span class="s">&#39;cubic&#39;</span><span class="p">,</span><span class="s">&#39;nearest&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5364b43720a0e27e1de0b8493e17e636ec8c50ac456f0e3b559a00d4348df7b6.png" src="../_images/5364b43720a0e27e1de0b8493e17e636ec8c50ac456f0e3b559a00d4348df7b6.png" />
+</div>
+</div>
+</section>
+<section id="griddedinterpolant">
+<h2>griddedInterpolant<a class="headerlink" href="#griddedinterpolant" title="Link to this heading">#</a></h2>
+<p>griddedInterpolant is used for n-dimensional interpolation on a grid.</p>
+<p>Compared with interp1, griddedInterpolant has two main differences.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>It can create a object, so is more flexible. 
+It can handle multi-dimensional data.
+</pre></div>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Feature</p></th>
+<th class="head"><p>interp1</p></th>
+<th class="head"><p>griddedInterpolant</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Dimensionality</strong></p></td>
+<td><p>One-dimensional</p></td>
+<td><p>N-dimensional</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Input Structure</strong></p></td>
+<td><p>Two vectors (x, y)</p></td>
+<td><p>Grid vectors and grid data</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Flexibility</strong></p></td>
+<td><p>Less flexible for repeated use</p></td>
+<td><p>More flexible, allows multiple evaluations</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Methods</strong></p></td>
+<td><p>Limited to specified methods</p></td>
+<td><p>Multiple methods including extrapolation</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Usage</strong></p></td>
+<td><p>Simple function call</p></td>
+<td><p>Creates an object for interpolation</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">ndgrid</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">:</span><span class="mf">0.8</span><span class="p">:</span><span class="mi">5</span><span class="p">);</span><span class="w">               </span>
+<span class="c">% generates a grid of points in N-dimensional space</span>
+<span class="n">z</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="n">x</span><span class="o">.^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="o">.^</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">./</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="o">.^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="o">.^</span><span class="mi">2</span><span class="p">);</span>
+<span class="nb">surf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">)</span><span class="w">                             </span>
+<span class="c">% creates a 3D surface plot</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/de85d701eac793d1215d87e01b24c21c362777ee01f1058fe0b95d968a7c7808.png" src="../_images/de85d701eac793d1215d87e01b24c21c362777ee01f1058fe0b95d968a7c7808.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">F</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">griddedInterpolant</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">);</span><span class="w">  </span>
+<span class="c">% creates an interpolant object F from the input data x, y, and z</span>
+<span class="p">[</span><span class="n">xq</span><span class="p">,</span><span class="n">yq</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">ndgrid</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">:</span><span class="mf">0.4</span><span class="p">:</span><span class="mi">5</span><span class="p">);</span><span class="w">    </span>
+<span class="c">% creates a new grid of points for querying the interpolant</span>
+<span class="n">vq</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="n">xq</span><span class="p">,</span><span class="n">yq</span><span class="p">);</span><span class="w">    </span>
+<span class="c">% uses the interpolant object F to compute interpolated values </span>
+<span class="nb">surf</span><span class="p">(</span><span class="n">xq</span><span class="p">,</span><span class="n">yq</span><span class="p">,</span><span class="n">vq</span><span class="p">)</span><span class="w">    </span>
+<span class="c">% creates a 3D surface plot </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/83d9f22975b58e43d419477d5b113297b7b331f918bce1964fb94275e62028d3.png" src="../_images/83d9f22975b58e43d419477d5b113297b7b331f918bce1964fb94275e62028d3.png" />
+</div>
+</div>
+<p>From the example above, we can find that one distinction of griddedInterpolant is that, it creates an object, the “F” in example above.</p>
+<p>So, people may prefer <strong>griddedInterpolant</strong> over <strong>interp1</strong> even in 1-dimension case, due to its object characteristic.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="discretization">
+<h1>8. Discretization<a class="headerlink" href="#discretization" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<section id="markov-chain-approximation-of-continuous-stochastic-process">
+<h2>8.1 Markov Chain Approximation of Continuous Stochastic Process<a class="headerlink" href="#markov-chain-approximation-of-continuous-stochastic-process" title="Link to this heading">#</a></h2>
+<p>The Rouwenhorst and Tauchen methods are both techniques to approximate continuous stochastic processes, particularly for Markov processes</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Feature</p></th>
+<th class="head"><p>Rouwenhorst Method</p></th>
+<th class="head"><p>Tauchen Method</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Origin</strong></p></td>
+<td><p>Rouwenhorst (1995)</p></td>
+<td><p>Tauchen (1986)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Focus</strong></p></td>
+<td><p>highly persistent processes (<span class="math notranslate nohighlight">\(\rho\)</span> &gt; 0.9)</p></td>
+<td><p>Primarily AR(1) processes</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Here is a rouwenhorst example provided by professor Benjamin Moll.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%%file rouwenhorst.m</span>
+
+<span class="k">function</span><span class="w"> </span><span class="nf">[grid, trans, dist] = rouwenhorst</span><span class="p">(</span>n, mu, sigma, rho<span class="p">)</span>
+
+<span class="w">    </span><span class="c">% Inputs:</span>
+<span class="w">    </span><span class="c">% n: Number of discrete states.</span>
+<span class="w">    </span><span class="c">% mu: Mean of the underlying continuous process.</span>
+<span class="w">    </span><span class="c">% sigma: Standard deviation of the underlying continuous process.</span>
+<span class="w">    </span><span class="c">% rho: Autocorrelation coefficient of the process.</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">% Outputs:</span>
+<span class="w">    </span><span class="c">% grid: A vector containing the discrete points.</span>
+<span class="w">    </span><span class="c">% trans: The transition matrix that describes the probabilities of moving between states.</span>
+<span class="w">    </span><span class="c">% dist: The ergodic distribution of the Markov chain.</span>
+
+<span class="w">    </span><span class="c">% grid</span>
+<span class="w">    </span><span class="nb">width</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">((</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sigma</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">rho</span><span class="o">^</span><span class="mi">2</span><span class="p">));</span>
+<span class="w">    </span><span class="nb">grid</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="w"> </span><span class="n">mu</span><span class="o">-</span><span class="nb">width</span><span class="p">,</span><span class="w"> </span><span class="n">mu</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">width</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="o">&#39;</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">%transition matrix</span>
+<span class="w">    </span><span class="n">p0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rho</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">    </span><span class="n">trans</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">p0</span><span class="w"> </span><span class="mi">1</span><span class="o">-</span><span class="n">p0</span><span class="p">;</span><span class="w"> </span><span class="mi">1</span><span class="o">-</span><span class="n">p0</span><span class="w"> </span><span class="n">p0</span><span class="p">];</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span>
+<span class="w">            </span><span class="n">cstr_temp</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="nb">length</span><span class="p">(</span><span class="n">trans</span><span class="p">(:,</span><span class="mi">1</span><span class="p">)),</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">            </span><span class="n">trans</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">p0</span><span class="w"> </span><span class="o">.*</span><span class="w"> </span><span class="p">[</span><span class="n">trans</span><span class="w"> </span><span class="n">cstr_temp</span><span class="p">;</span><span class="w"> </span><span class="n">cstr_temp</span><span class="p">.</span><span class="o">&#39;</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">.*</span><span class="w"> </span><span class="p">[</span><span class="n">cstr_temp</span><span class="w"> </span><span class="n">trans</span><span class="p">;</span><span class="w"> </span><span class="n">cstr_temp</span><span class="p">.</span><span class="o">&#39;</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">.*</span><span class="w">  </span><span class="p">[</span><span class="w"> </span><span class="n">cstr_temp</span><span class="p">.</span><span class="o">&#39;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">trans</span><span class="w"> </span><span class="s">cstr_temp]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p0</span><span class="w"> </span><span class="o">.*</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">cstr_temp</span><span class="p">.</span><span class="o">&#39;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">cstr_temp</span><span class="w"> </span><span class="s">trans]</span><span class="p">;</span>
+<span class="w">        </span><span class="k">end</span>
+<span class="w">        </span><span class="n">trans</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">bsxfun</span><span class="p">(@</span><span class="n">rdivide</span><span class="p">,</span><span class="w"> </span><span class="n">trans</span><span class="p">,</span><span class="w"> </span><span class="nb">sum</span><span class="p">(</span><span class="n">trans</span><span class="p">,</span><span class="mi">2</span><span class="p">));</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">% ergodic distribution</span>
+<span class="w">    </span><span class="n">dist</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span><span class="o">./</span><span class="n">n</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span>
+<span class="w">        </span><span class="n">dist</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">dist</span><span class="o">*</span><span class="p">(</span><span class="n">trans</span><span class="o">^</span><span class="nb">i</span><span class="p">);</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">    </span><span class="n">dist</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">dist</span><span class="o">&#39;</span><span class="p">;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>File rouwenhorst.m created successfully.</pre></body></html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="n">mu</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">sigma</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">rho</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.9</span><span class="p">;</span>
+<span class="p">[</span><span class="nb">grid</span><span class="p">,</span><span class="w"> </span><span class="n">trans</span><span class="p">,</span><span class="w"> </span><span class="n">dist</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">rouwenhorst</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">mu</span><span class="p">,</span><span class="w"> </span><span class="n">sigma</span><span class="p">,</span><span class="w"> </span><span class="n">rho</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>grid = 3×1 double
+   -3.2444
+         0
+    3.2444
+</pre></body></html></div><div class="output text_html"><html><body><pre>trans = 3×3 double
+    0.9025    0.0950    0.0025
+    0.0475    0.9050    0.0475
+    0.0025    0.0950    0.9025
+</pre></body></html></div><div class="output text_html"><html><body><pre>dist = 3×1 double
+    0.2500
+    0.5000
+    0.2500
+</pre></body></html></div></div>
+</div>
+</section>
+<section id="discrete-normal-distribution">
+<h2>8.2 Discrete normal distribution<a class="headerlink" href="#discrete-normal-distribution" title="Link to this heading">#</a></h2>
+<p>Sometimes, we need to approximates a normal distribution using discrete points. Here is a function written by Professor Greg Kaplan. The function computes the probabilities for discrete points, and calculates the expected value and standard deviation.</p>
+<p>This can be useful where a continuous distribution needs to be handled in a discrete manner</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%%file discrete_normal.m</span>
+
+<span class="k">function</span><span class="w"> </span>[f,x,p]<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">discrete_normal</span><span class="p">(</span>n,mu,sigma,width<span class="p">)</span>
+<span class="c">% creates equally spaced approximation to normal distribution</span>
+<span class="c">% n is number of points</span>
+<span class="c">% mu is mean</span>
+<span class="c">% sigma is standard deviation</span>
+<span class="c">% width is the multiple of stand deviation for the width of the grid</span>
+<span class="c">% f is the error in the approximation</span>
+<span class="c">% x gives the location of the points</span>
+<span class="c">% p is probabilities</span>
+
+<span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="n">mu</span><span class="o">-</span><span class="nb">width</span><span class="o">*</span><span class="n">sigma</span><span class="p">,</span><span class="n">mu</span><span class="o">+</span><span class="nb">width</span><span class="o">*</span><span class="n">sigma</span><span class="p">,</span><span class="n">n</span><span class="p">)</span><span class="o">&#39;</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="n">n</span><span class="o">==</span><span class="mi">2</span>
+<span class="w">    </span><span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.5</span><span class="o">.*</span><span class="nb">ones</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">elseif</span><span class="w"> </span><span class="n">n</span><span class="o">&gt;</span><span class="mi">2</span><span class="w">    </span>
+<span class="w">    </span><span class="n">p</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">p</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">normcdf</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)),</span><span class="n">mu</span><span class="p">,</span><span class="n">sigma</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span>
+<span class="w">        </span><span class="n">p</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">normcdf</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">x</span><span class="p">(</span><span class="nb">i</span><span class="p">)),</span><span class="n">mu</span><span class="p">,</span><span class="n">sigma</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">normcdf</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">-</span><span class="n">x</span><span class="p">(</span><span class="nb">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)),</span><span class="n">mu</span><span class="p">,</span><span class="n">sigma</span><span class="p">);</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">    </span><span class="n">p</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">sum</span><span class="p">(</span><span class="n">p</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+<span class="k">end</span>
+
+<span class="n">Ex</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">x</span><span class="o">&#39;*</span><span class="n">p</span><span class="p">;</span>
+<span class="n">SDx</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">((</span><span class="n">x</span><span class="o">&#39;.^</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Ex</span><span class="o">.^</span><span class="mi">2</span><span class="p">);</span>
+
+<span class="n">f</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">SDx</span><span class="o">-</span><span class="n">sigma</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>File discrete_normal.m created successfully.</pre></body></html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span>
+<span class="n">mu</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">sigma</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="nb">width</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="p">[</span><span class="n">f</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">p</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">discrete_normal</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">sigma</span><span class="p">,</span><span class="nb">width</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>f = 0.1262</pre></body></html></div><div class="output text_html"><html><body><pre>x = 9×1 double
+  -10.0000
+   -7.5000
+   -5.0000
+   -2.5000
+         0
+    2.5000
+    5.0000
+    7.5000
+   10.0000
+</pre></body></html></div><div class="output text_html"><html><body><pre>p = 9×1 double
+    0.0000
+    0.0009
+    0.0295
+    0.2356
+    0.4680
+    0.2356
+    0.0295
+    0.0009
+    0.0000
+</pre></body></html></div></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="simulation">
+<h1>9. Simulation<a class="headerlink" href="#simulation" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<section id="random-number-generation">
+<h2>9.1 Random Number Generation<a class="headerlink" href="#random-number-generation" title="Link to this heading">#</a></h2>
+<p>By setting a specific seed value (in this case, 100), we ensure that the sequence of random numbers generated is the same every time we run the code..</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">rng</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w">   </span><span class="c">% Set a random seed</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>“rand”</strong> generates uniformly distributed random numbers in the interval (0, 1).</p>
+<p>The basic syntax is</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>rand generates a single random number
+rand(n) generates an n×n matrix of random numbers.
+rand(m, n) generates an m×n matrix of random numbers.
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">r1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">rand</span><span class="p">;</span><span class="w">           </span><span class="c">% Single random number</span>
+<span class="n">r2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span><span class="w">       </span><span class="c">% 3x3 matrix of random numbers</span>
+<span class="n">r3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">rand</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w">    </span><span class="c">% 2x4 matrix of random numbers</span>
+<span class="n">r1</span>
+<span class="s">r2</span>
+<span class="n">r3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>r1 = 0.5434</pre></body></html></div><div class="output text_html"><html><body><pre>r2 = 3×3 double
+    0.2784    0.0047    0.8259
+    0.4245    0.1216    0.1367
+    0.8448    0.6707    0.5751
+</pre></body></html></div><div class="output text_html"><html><body><pre>r3 = 2×4 double
+    0.8913    0.1853    0.2197    0.8117
+    0.2092    0.1084    0.9786    0.1719
+</pre></body></html></div></div>
+</div>
+<p><strong>“random”</strong> is a more general function that generates random numbers from various probability distributions, such as normal, binomial, Poisson, etc.</p>
+<p>The syntax depends on the distribution you want to use. For example:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>random(&#39;Normal&#39;, mu, sigma, m, n) 
+</pre></div>
+</div>
+<p>generates an m×n matrix of random numbers from a normal distribution with mean mu and standard deviation sigma.</p>
+<p>Generate a 3 by 2 matrix of random number.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">rng</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w">                              </span><span class="c">% Set a random seed</span>
+<span class="n">m</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">                                </span><span class="c">% Number of rows</span>
+<span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">                                </span><span class="c">% Number of columns</span>
+
+<span class="n">Matrix_Normal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="s">&#39;Normal&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">);</span><span class="w"> </span>
+<span class="n">Matrix_Normal</span>
+<span class="s">%</span><span class="w"> </span><span class="s">generates</span><span class="w"> </span><span class="s">a</span><span class="w"> </span><span class="s">3x2</span><span class="w"> </span><span class="s">matrix</span><span class="w"> </span><span class="s">named</span><span class="w"> </span><span class="s">Matrix_Normal</span><span class="w"> </span><span class="s">filled</span><span class="w"> </span><span class="s">with</span><span class="w"> </span><span class="s">random</span><span class="w"> </span><span class="s">numbers</span><span class="w"> </span>
+<span class="c">% drawn from a normal distribution.</span>
+<span class="c">% 0: The mean of the normal distribution.</span>
+<span class="c">% 1: The standard deviation of the normal distribution.</span>
+
+<span class="n">Matrix_Uniform</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="s">&#39;Uniform&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">);</span>
+<span class="n">Matrix_Uniform</span>
+<span class="s">%</span><span class="w"> </span><span class="s">generates</span><span class="w"> </span><span class="s">a</span><span class="w"> </span><span class="s">3x2</span><span class="w"> </span><span class="s">matrix</span><span class="w"> </span><span class="s">named</span><span class="w"> </span><span class="s">Matrix_Uniform</span><span class="w"> </span><span class="s">filled</span><span class="w"> </span><span class="s">with</span><span class="w"> </span><span class="s">random</span><span class="w"> </span><span class="s">numbers</span><span class="w"> </span>
+<span class="c">% drawn from a uniform distribution.</span>
+<span class="c">% 0: The lower bound of the uniform distribution.</span>
+<span class="c">% 1: The upper bound of the uniform distribution.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>Matrix_Normal = 3×2 double
+    0.1609    0.6150
+   -0.6151   -0.9014
+   -0.2390    0.3481
+</pre></body></html></div><div class="output text_html"><html><body><pre>Matrix_Uniform = 3×2 double
+    0.8259    0.8913
+    0.1367    0.2092
+    0.5751    0.1853
+</pre></body></html></div></div>
+</div>
+<p>Generate a 2 by 1 joint normal random vector with mean mu and variance omega.a</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">rng</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w">   </span>
+<span class="n">mu</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">;</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span><span class="w">                          </span><span class="c">% Define the mean vector</span>
+<span class="n">omega</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">;</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">];</span><span class="w">                    </span><span class="c">% Define the covariance matrix</span>
+<span class="n">P</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">chol</span><span class="p">(</span><span class="n">omega</span><span class="p">)</span><span class="o">&#39;</span><span class="p">;</span><span class="w">                     </span><span class="c">% Perform Cholesky decomposition</span>
+<span class="n">B1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">P</span><span class="o">*</span><span class="n">random</span><span class="p">(</span><span class="s">&#39;Normal&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mu</span><span class="p">;</span><span class="w"> </span><span class="c">% Generate a joint normal random vector</span>
+<span class="n">B1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>B1 = 2×1 double
+    2.2276
+   -1.0935
+</pre></body></html></div></div>
+</div>
+<p>Or, we can use the “mvnrnd” function to achieve the same result</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">rng</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w"> </span>
+<span class="n">B2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">mvnrnd</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span><span class="n">omega</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">&#39;</span><span class="p">;</span>
+<span class="n">B2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>B2 = 2×1 double
+    2.2276
+   -1.0935
+</pre></body></html></div></div>
+</div>
+<p>Generate a uniform distributed random number on interval [a,b]</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="n">b</span><span class="p">=</span><span class="mi">2</span><span class="p">;</span>
+<span class="n">C1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="s">&#39;Uniform&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is another way, which is pretty similar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">C2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="s">&#39;Uniform&#39;</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="reference">
+<h1>10. Reference<a class="headerlink" href="#reference" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<ol class="arabic simple">
+<li><p>MATLAB Help Center, <a class="reference external" href="https://ww2.mathworks.cn/help/matlab/index.html">https://ww2.mathworks.cn/help/matlab/index.html</a>.</p></li>
+</ol>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "jupyter_matlab_kernel"
+        },
+        kernelOptions: {
+            name: "jupyter_matlab_kernel",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'jupyter_matlab_kernel'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">ECON 5360 Tutorial 3</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-methods-in-matlab">Numerical Methods in MATLAB</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ding-minjie-spring-2025">DING Minjie, Spring 2025</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#set-working-directory">1.1 Set Working Directory</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#clear-work">1.2 Clear Work</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-type">2.1 Data Type</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-operations">2.2 Logical Operations</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#define-your-own-functions">2.3 Define Your Own Functions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-operator">Use @ operator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-local-function">Define local function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-function-file">Define function file</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing">3. Graphing</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-manipulation-and-calculation">4. Matrix Manipulation and Calculation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ndgrid">ndgrid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kron">kron</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reshape">reshape</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#permute">permute</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spdiags">spdiags</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#speye">speye</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backslash-operator-mldivide-and-division-operator">Backslash Operator <code class="docutils literal notranslate"><span class="pre">\</span></code> (mldivide) and Division Operator <code class="docutils literal notranslate"><span class="pre">/</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diff">diff</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repmat">repmat</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#solve-nonlinear-equations">5. Solve Nonlinear Equations</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fsolve">fsolve</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#fzero">fzero</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bisection-and-golden-section">bisection and golden section</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-optimization">6. Numerical Optimization</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#max">max</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fminunc">fminunc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fminsearch">fminsearch</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fminbnd">fminbnd</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fmincon">fmincon</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#function-approximation-with-interpolation">7. Function Approximation with Interpolation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interp1">interp1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#griddedinterpolant">griddedInterpolant</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#discretization">8. Discretization</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markov-chain-approximation-of-continuous-stochastic-process">8.1 Markov Chain Approximation of Continuous Stochastic Process</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-normal-distribution">8.2 Discrete normal distribution</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#simulation">9. Simulation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-number-generation">9.1 Random Number Generation</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">10. Reference</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,890 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>1.6 RBC Model in Python &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '1_Implement_Real_Business_Cycle_Model_in_Python';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1.7 RBC Model in Julia" href="1_Implement_Real_Business_Cycle_Model_in_Julia.html" />
+    <link rel="prev" title="1. Implement Real Business Cycle Model in MATLAB, Dynare, Python and Julia" href="1_Implement_Real_Business_Cycle_Model_in_MATLAB_and_Dynare.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="0_Tutorial_Introduction.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="My sample book - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="0_Tutorial_Introduction.html">
+                    Tutorial Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_Implement_Real_Business_Cycle_Model_in_MATLAB_and_Dynare.html">1. Implement Real Business Cycle Model in MATLAB, Dynare, Python and Julia</a></li>
+
+
+
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1.6 RBC Model in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_Implement_Real_Business_Cycle_Model_in_Julia.html">1.7 RBC Model in Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_New_Keynesian_Model_and_Tractable_Heterogneity.html">2. New Keynesian Model and Tractable Heterogeneity</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="3_Numerical_Method_in_MATLAB.html">3. Numerical Methods in MATLAB</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="4_Algorithm_Comparison_in_Optimal_Consumption_Problem.html">4. Algorithm Comparison in Optimal Consumption Problem</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="5_From_Optimal_Consumption_to_Aiyagari_Model.html">5. From Optimal Consumption to Aiyagari Model</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="6_Heterogeneous_Agent_Model_in_Continous_Time.html">6. Heterogeneous Agent Model in Continous Time</a></li>
+
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F1_Implement_Real_Business_Cycle_Model_in_Python.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/1_Implement_Real_Business_Cycle_Model_in_Python.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>1.6 RBC Model in Python</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-module">Import Module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing">Indexing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters">Parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-equations">Model equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-steady-state">Check steady state</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linearize">Linearize</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-an-impulse-response">Calculate an impulse response</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#print">Print</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="rbc-model-in-python">
+<h1>1.6 RBC Model in Python<a class="headerlink" href="#rbc-model-in-python" title="Link to this heading">#</a></h1>
+<p>The algorithm is the same as that we ues in MATLAB case.</p>
+<section id="import-module">
+<h2>Import Module<a class="headerlink" href="#import-module" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># !pip install autograd  # if you use autograd for the first time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">autograd.numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">autograd</span><span class="w"> </span><span class="kn">import</span> <span class="n">jacobian</span>
+<span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">suppress</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">precision</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>import autograd.numpy as np</strong>: This imports the numpy library but uses Autograd’s version, which allows for automatic differentiation. This is useful for optimization and sensitivity analysis.</p>
+<p><strong>np.set_printoptions(suppress=True, precision=4)</strong>: This sets the printing options for NumPy arrays, suppressing scientific notation and limiting the precision of printed numbers to 4 decimal places.</p>
+</section>
+<section id="indexing">
+<h2>Indexing<a class="headerlink" href="#indexing" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nX</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">nEps</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">iA</span><span class="p">,</span> <span class="n">iR</span><span class="p">,</span> <span class="n">iN</span><span class="p">,</span> <span class="n">iK</span><span class="p">,</span> <span class="n">iY</span><span class="p">,</span> <span class="n">iC</span><span class="p">,</span> <span class="n">iI</span><span class="p">,</span> <span class="n">iW</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">nX</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>nX = 8</strong>: This defines the number of state variables in the model (5 in this case).</p>
+<p><strong>nEps = 1</strong>: This defines the number of shocks (1 in this case).</p>
+<p><strong>iA, iR, iN, iK, iY, iC, iI, iW = range(nX)</strong>: This creates indices for the state variables:</p>
+<p>iA (technology level), iR (interest rate), iN (working hour), iK (capital), iY (output), iC (consumption), iI (investment), iW (wage).</p>
+</section>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.35</span>    <span class="c1"># capital share</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="mf">0.99</span>     <span class="c1"># discount factor</span>
+<span class="n">gamma</span> <span class="o">=</span> <span class="mi">1</span>       <span class="c1"># risk aversion</span>
+<span class="n">eta</span> <span class="o">=</span> <span class="mi">1</span>         <span class="c1"># labor elasticity</span>
+<span class="n">delta</span> <span class="o">=</span> <span class="mf">0.025</span>   <span class="c1"># depreciation rate</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="mf">0.95</span>      <span class="c1"># TFP persistency</span>
+<span class="n">phi</span> <span class="o">=</span> <span class="mf">7.8</span>       <span class="c1"># labor disutility</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Model parameters are defined:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>alpha: Output elasticity of capital.
+beta: Discount factor for future utility.
+gamma: Coefficient of relative risk aversion.
+delta: Depreciation rate of capital.
+rho: Persistence of technology shocks.
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">SteadyState</span><span class="p">():</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">R</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">beta</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">delta</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span>
+    <span class="n">K</span> <span class="o">=</span> <span class="n">N</span> <span class="o">*</span> <span class="p">(</span><span class="n">R</span><span class="o">/</span><span class="n">A</span><span class="o">/</span><span class="n">alpha</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">alpha</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">Y</span> <span class="o">=</span> <span class="n">A</span> <span class="o">*</span> <span class="n">K</span><span class="o">**</span><span class="n">alpha</span> <span class="o">*</span> <span class="n">N</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span>
+    <span class="n">C</span> <span class="o">=</span> <span class="n">Y</span> <span class="o">-</span> <span class="n">delta</span> <span class="o">*</span> <span class="n">K</span>
+    <span class="n">I</span> <span class="o">=</span> <span class="n">delta</span><span class="o">*</span><span class="n">K</span>
+    <span class="n">W</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span><span class="o">*</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span>
+
+    <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nX</span><span class="p">)</span>
+    <span class="n">X</span><span class="p">[[</span><span class="n">iA</span><span class="p">,</span> <span class="n">iR</span><span class="p">,</span> <span class="n">iN</span><span class="p">,</span> <span class="n">iK</span><span class="p">,</span> <span class="n">iY</span><span class="p">,</span> <span class="n">iC</span><span class="p">,</span> <span class="n">iI</span><span class="p">,</span> <span class="n">iW</span><span class="p">]]</span> <span class="o">=</span> <span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">X</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>def SteadyState()</strong>: This defines a function to calculate the steady state of the model.</p>
+<p><strong>A = 1.</strong>: Sets the technology level (Z) to 1.</p>
+<p><strong>R = 1 / beta - 1 + delta</strong>: Calculates the steady-state interest rate.</p>
+<p><strong>K = N * (R/A/alpha)^(1/(alpha-1))</strong>: Calculates the steady-state capital stock using the given parameters.</p>
+<p><strong>Y = A * K^alpha * N^(1-alpha)</strong>: Calculates output (Y) using the Cobb-Douglas production function.</p>
+<p><strong>C = Y - delta * K</strong>: Calculates consumption (C) as the output minus depreciation on capital.</p>
+<p><strong>X = np.zeros(nX)</strong>: Initializes a vector X of zeros to store state variables.</p>
+<p><strong>X[[iA, iR, iN, iK, iY, iC, iI, iW]] = (A, R, N, K, Y, C, I, W)</strong>: Assigns the calculated values to the corresponding indices in X.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_SS</span> <span class="o">=</span> <span class="n">SteadyState</span><span class="p">()</span>
+<span class="n">epsilon_SS</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Steady state: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">X_SS</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Steady state: [ 1.      0.0351  0.3333 11.4661  1.1499  0.8633  0.2867  2.2423]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>X_SS = SteadyState()</strong>: Calls the SteadyState function and stores the result in X_SS.</p>
+<p><strong>epsilon_SS = 0.0</strong>: Initializes the steady-state value of the shock to zero.</p>
+</section>
+<section id="model-equations">
+<h2>Model equations<a class="headerlink" href="#model-equations" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">F</span><span class="p">(</span><span class="n">X_Lag</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">X_Prime</span><span class="p">,</span> <span class="n">epsilon</span><span class="p">):</span>
+
+    <span class="c1"># Unpack. The state variables are unpacked from the input vectors X_Lag, X, and X_Prime.</span>
+    <span class="n">A</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="n">W</span> <span class="o">=</span> <span class="n">X</span>
+    <span class="n">A_L</span><span class="p">,</span> <span class="n">R_L</span><span class="p">,</span> <span class="n">N_L</span><span class="p">,</span> <span class="n">K_L</span><span class="p">,</span> <span class="n">Y_L</span><span class="p">,</span> <span class="n">C_L</span><span class="p">,</span> <span class="n">I_L</span><span class="p">,</span> <span class="n">W_L</span> <span class="o">=</span> <span class="n">X_Lag</span>
+    <span class="n">A_P</span><span class="p">,</span> <span class="n">R_P</span><span class="p">,</span> <span class="n">N_P</span><span class="p">,</span> <span class="n">K_P</span><span class="p">,</span> <span class="n">Y_P</span><span class="p">,</span> <span class="n">C_P</span><span class="p">,</span> <span class="n">I_P</span><span class="p">,</span> <span class="n">W_P</span> <span class="o">=</span> <span class="n">X_Prime</span>
+
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span>
+        <span class="n">beta</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">R</span><span class="o">-</span><span class="n">delta</span><span class="p">)</span> <span class="o">*</span> <span class="n">C_P</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">gamma</span><span class="p">)</span> <span class="o">*</span> <span class="n">C</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">gamma</span><span class="p">)</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">,</span> <span class="c1"># Euler equation</span>
+        <span class="n">phi</span> <span class="o">*</span> <span class="n">N</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">eta</span><span class="p">)</span> <span class="o">-</span> <span class="n">W</span><span class="o">*</span><span class="n">C</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">gamma</span><span class="p">),</span>   
+        <span class="n">A</span> <span class="o">*</span> <span class="n">K_L</span><span class="o">**</span><span class="n">alpha</span> <span class="o">*</span> <span class="n">N</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span> <span class="o">-</span> <span class="n">Y</span><span class="p">,</span> <span class="c1"># Production function</span>
+        <span class="n">alpha</span> <span class="o">*</span> <span class="n">A</span> <span class="o">*</span> <span class="n">K_L</span><span class="o">**</span><span class="p">(</span><span class="n">alpha</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">N</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span> <span class="o">-</span> <span class="n">R</span><span class="p">,</span> <span class="c1"># MPK</span>
+        <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span> <span class="o">*</span> <span class="n">A</span> <span class="o">*</span> <span class="n">K_L</span><span class="o">**</span><span class="n">alpha</span> <span class="o">*</span> <span class="n">N</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span> <span class="o">-</span> <span class="n">W</span><span class="p">,</span> <span class="c1"># MPN</span>
+        <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">delta</span><span class="p">)</span> <span class="o">*</span> <span class="n">K_L</span> <span class="o">+</span> <span class="n">I_L</span> <span class="o">-</span> <span class="n">K</span><span class="p">,</span> <span class="c1"># Aggregate resource constraint </span>
+        <span class="c1"># Do not use (1 - delta) * K + I - K_P</span>
+        <span class="n">Y</span> <span class="o">-</span> <span class="n">C</span> <span class="o">-</span> <span class="n">I</span><span class="p">,</span> <span class="c1"># Aggregate resource constraint</span>
+        <span class="n">rho</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">A_L</span><span class="p">)</span> <span class="o">+</span> <span class="n">epsilon</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="c1"># TFP evolution</span>
+        <span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To calculate power result, we use ^ in MATLAB, and use ** in Python.</p>
+<p>And to calculate log, we directly use log in MATLAB, and use np.log in Python.</p>
+<p><strong>def F(X_Lag, X, X_Prime, epsilon)</strong>: Defines a function F that contains the model equations.</p>
+<p>Returns a stacked array with the 8 equations we discussed above.</p>
+<p><strong>numpy.hstack()</strong> function is used to stack the sequence of input arrays horizontally (i.e. column wise) to make a single array.</p>
+</section>
+<section id="check-steady-state">
+<h2>Check steady state<a class="headerlink" href="#check-steady-state" title="Link to this heading">#</a></h2>
+<p>When we select a proper <span class="math notranslate nohighlight">\(\phi\)</span>, we should get an array consists of zeros, or close to zero.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="n">F</span><span class="p">(</span><span class="n">X_SS</span><span class="p">,</span><span class="n">X_SS</span><span class="p">,</span><span class="n">X_SS</span><span class="p">,</span><span class="n">epsilon_SS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.    , 0.0025, 0.    , 0.    , 0.    , 0.    , 0.    , 0.    ])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="linearize">
+<h2>Linearize<a class="headerlink" href="#linearize" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">jacobian</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">F</span><span class="p">(</span><span class="n">X_SS</span><span class="p">,</span><span class="n">X_SS</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">epsilon_SS</span><span class="p">))(</span><span class="n">X_SS</span><span class="p">)</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">jacobian</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">F</span><span class="p">(</span><span class="n">X_SS</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">X_SS</span><span class="p">,</span><span class="n">epsilon_SS</span><span class="p">))(</span><span class="n">X_SS</span><span class="p">)</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">jacobian</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">F</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">X_SS</span><span class="p">,</span><span class="n">X_SS</span><span class="p">,</span><span class="n">epsilon_SS</span><span class="p">))(</span><span class="n">X_SS</span><span class="p">)</span>
+<span class="n">E</span> <span class="o">=</span> <span class="n">jacobian</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">F</span><span class="p">(</span><span class="n">X_SS</span><span class="p">,</span><span class="n">X_SS</span><span class="p">,</span><span class="n">X_SS</span><span class="p">,</span><span class="n">x</span><span class="p">))(</span><span class="n">epsilon_SS</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;B: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">B</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;C: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">C</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;E: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">E</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A: [[ 0.      0.      0.      0.      0.     -1.1584  0.      0.    ]
+ [ 0.      0.      0.      0.      0.      0.      0.      0.    ]
+ [ 0.      0.      0.      0.      0.      0.      0.      0.    ]
+ [ 0.      0.      0.      0.      0.      0.      0.      0.    ]
+ [ 0.      0.      0.      0.      0.      0.      0.      0.    ]
+ [ 0.      0.      0.      0.      0.      0.      0.      0.    ]
+ [ 0.      0.      0.      0.      0.      0.      0.      0.    ]
+ [ 0.      0.      0.      0.      0.      0.      0.      0.    ]]
+B: [[ 0.      0.99    0.      0.      0.      1.1584  0.      0.    ]
+ [ 0.      0.      7.8     0.      0.      3.0089  0.     -1.1584]
+ [ 1.1499  0.      2.2423  0.     -1.      0.      0.      0.    ]
+ [ 0.0351 -1.      0.0684  0.      0.      0.      0.      0.    ]
+ [ 2.2423  0.     -2.3545  0.      0.      0.      0.     -1.    ]
+ [ 0.      0.      0.     -1.      0.      0.      0.      0.    ]
+ [ 0.      0.      0.      0.      1.     -1.     -1.      0.    ]
+ [-1.      0.      0.      0.      0.      0.      0.      0.    ]]
+C: [[ 0.      0.      0.      0.      0.      0.      0.      0.    ]
+ [ 0.      0.      0.      0.      0.      0.      0.      0.    ]
+ [ 0.      0.      0.      0.0351  0.      0.      0.      0.    ]
+ [ 0.      0.      0.     -0.002   0.      0.      0.      0.    ]
+ [ 0.      0.      0.      0.0684  0.      0.      0.      0.    ]
+ [ 0.      0.      0.      0.975   0.      0.      1.      0.    ]
+ [ 0.      0.      0.      0.      0.      0.      0.      0.    ]
+ [ 0.95    0.      0.      0.      0.      0.      0.      0.    ]]
+E: [0. 0. 0. 0. 0. 0. 0. 1.]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Calculate the Jacobian matrices for the model equations, which represent how the system responds to small changes in state variables.</p>
+<p>The last <strong>(X_SS)</strong> means evaluating the Jacobian at the point X_SS.</p>
+<p>A: How small change of future variables affect the system equilibrium, starting ananlysis from X_SS.</p>
+<p>B: How nowadays affect the system.</p>
+<p>C: How past affect the system.</p>
+<p>E: How exogenous shock affect the system, starting analysis from epsilon_SS.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">SolveSystem</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">E</span><span class="p">):</span>
+    <span class="c1"># Solve the system using linear time iteration as in Rendahl (2017)    </span>
+    <span class="n">MAXIT</span> <span class="o">=</span> <span class="mi">1000</span>    
+    <span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  
+
+    <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">MAXIT</span><span class="p">):</span>
+        <span class="n">P</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">lstsq</span><span class="p">(</span><span class="n">B</span><span class="o">+</span><span class="n">A</span><span class="nd">@P</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">rcond</span><span class="o">=</span><span class="kc">None</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>   <span class="c1"># (B+A⋅P)⋅(-P)=C        </span>
+        <span class="n">test</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">C</span><span class="o">+</span><span class="n">B</span><span class="nd">@P</span><span class="o">+</span><span class="n">A</span><span class="nd">@P@P</span><span class="p">))</span>        <span class="c1"># C+B*P+A*P*P=0</span>
+        <span class="k">if</span> <span class="n">test</span> <span class="o">&lt;</span> <span class="mf">1e-7</span><span class="p">:</span>
+            <span class="k">break</span>
+
+    <span class="c1"># Impact matrix</span>
+    <span class="c1">#  Solution is x_{t}=P*x_{t-1}+Q*eps_t</span>
+    <span class="n">Q</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">B</span><span class="o">+</span><span class="n">A</span><span class="nd">@P</span><span class="p">)</span> <span class="o">@</span> <span class="n">E</span>    <span class="c1"># Q = - E*(B+AP)</span>
+
+    <span class="k">return</span> <span class="n">P</span><span class="p">,</span> <span class="n">Q</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P</span><span class="p">,</span> <span class="n">Q</span> <span class="o">=</span> <span class="n">SolveSystem</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">E</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0.95   -0.     -0.     -0.     -0.     -0.     -0.     -0.    ]
+ [ 0.0444 -0.     -0.     -0.0023 -0.     -0.     -0.0008 -0.    ]
+ [ 0.1614 -0.     -0.     -0.0052 -0.     -0.     -0.0121 -0.    ]
+ [ 0.     -0.     -0.      0.975  -0.     -0.      1.     -0.    ]
+ [ 1.4543 -0.     -0.      0.0235 -0.     -0.     -0.0271 -0.    ]
+ [ 0.2554 -0.     -0.      0.0445 -0.     -0.      0.0423 -0.    ]
+ [ 1.1989 -0.     -0.     -0.0211 -0.     -0.     -0.0694 -0.    ]
+ [ 1.7502 -0.     -0.      0.0807 -0.     -0.      0.0285 -0.    ]]
+[1.     0.0467 0.1699 0.     1.5309 0.2689 1.262  1.8423]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Calls a function <strong>SolveSystem</strong> to solve the linearized system of equations, returning matrices P and Q.</p>
+</section>
+<section id="calculate-an-impulse-response">
+<h2>Calculate an impulse response<a class="headerlink" href="#calculate-an-impulse-response" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IRF_RBC</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">nX</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
+<span class="n">IRF_RBC</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">Q</span> <span class="o">*</span> <span class="mf">0.01</span>
+
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">):</span>
+    <span class="n">IRF_RBC</span><span class="p">[:,</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">P</span><span class="nd">@IRF_RBC</span><span class="p">[:,</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>IRF_RBC = np.zeros((nX, 100))</strong>: Initializes a matrix to store impulse response functions.</p>
+<p><strong>IRF_RBC[:, 0] = Q * 0.01</strong>: Sets the initial impulse response based on matrix Q.</p>
+<p>Loop: Iteratively calculates the impulse responses for 100 periods using the transition matrix P.</p>
+<p>In Python, the &#64; operator is used for matrix multiplication. To convert this line to MATLAB, you will use the * operator instead</p>
+</section>
+<section id="print">
+<h2>Print<a class="headerlink" href="#print" title="Link to this heading">#</a></h2>
+<p>Finally, we plot the impulse response function, which is the same as what we get in MATLAB and Dynare.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># create a 3x3 subplot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># subplot</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">IRF_RBC</span><span class="p">[</span><span class="n">iA</span><span class="p">,</span> <span class="p">:],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Impulse Response of Output&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;TFP shock&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span> 
+<span class="c1"># axs[0, 0].legend()</span>
+
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">IRF_RBC</span><span class="p">[</span><span class="n">iY</span><span class="p">,</span> <span class="p">:],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Impulse Response of Output&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Output&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span> 
+
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">IRF_RBC</span><span class="p">[</span><span class="n">iC</span><span class="p">,</span> <span class="p">:],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Impulse Response of Output&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Consumption&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span> 
+
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">IRF_RBC</span><span class="p">[</span><span class="n">iK</span><span class="p">,</span> <span class="p">:],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Impulse Response of Output&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Capital&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span> 
+
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">IRF_RBC</span><span class="p">[</span><span class="n">iN</span><span class="p">,</span> <span class="p">:],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Impulse Response of Output&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Labor&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span> 
+
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">IRF_RBC</span><span class="p">[</span><span class="n">iW</span><span class="p">,</span> <span class="p">:],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Impulse Response of Output&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Wage&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span> 
+
+<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">IRF_RBC</span><span class="p">[</span><span class="n">iI</span><span class="p">,</span> <span class="p">:],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Impulse Response of Output&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Investment&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span> 
+
+<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">IRF_RBC</span><span class="p">[</span><span class="n">iR</span><span class="p">,</span> <span class="p">:],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Impulse Response of Output&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Interest Rate&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span> 
+
+<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+
+<span class="c1"># layout adjustment </span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/3d20ad0e003f2c6ff867ef329d247ea3d6ac696628a00bfd2c78d8318ff8d41b.png" src="_images/3d20ad0e003f2c6ff867ef329d247ea3d6ac696628a00bfd2c78d8318ff8d41b.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="1_Implement_Real_Business_Cycle_Model_in_MATLAB_and_Dynare.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">1. Implement Real Business Cycle Model in MATLAB, Dynare, Python and Julia</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="1_Implement_Real_Business_Cycle_Model_in_Julia.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">1.7 RBC Model in Julia</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-module">Import Module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing">Indexing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters">Parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-equations">Model equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-steady-state">Check steady state</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linearize">Linearize</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-an-impulse-response">Calculate an impulse response</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#print">Print</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

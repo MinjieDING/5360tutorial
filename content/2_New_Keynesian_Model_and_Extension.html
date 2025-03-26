@@ -1,0 +1,1352 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ECON 5360 Tutorial 2 &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/2_New_Keynesian_Model_and_Extension';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../0_Tutorial_Introduction.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="My sample book - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../0_Tutorial_Introduction.html">
+                    Tutorial Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../1_Implement_Real_Business_Cycle_Model_in_MATLAB_and_Dynare.html">1. Implement Real Business Cycle Model in MATLAB, Dynare, Python and Julia</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../1_Implement_Real_Business_Cycle_Model_in_Python.html">1.6 RBC Model in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_Implement_Real_Business_Cycle_Model_in_Julia.html">1.7 RBC Model in Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_New_Keynesian_Model_and_Tractable_Heterogneity.html">2. New Keynesian Model and Tractable Heterogeneity</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../3_Numerical_Method_in_MATLAB.html">3. Numerical Methods in MATLAB</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../4_Algorithm_Comparison_in_Optimal_Consumption_Problem.html">4. Algorithm Comparison in Optimal Consumption Problem</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../5_From_Optimal_Consumption_to_Aiyagari_Model.html">5. From Optimal Consumption to Aiyagari Model</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../6_Heterogeneous_Agent_Model_in_Continous_Time.html">6. Heterogeneous Agent Model in Continous Time</a></li>
+
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/2_New_Keynesian_Model_and_Extension.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/content/2_New_Keynesian_Model_and_Extension.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ECON 5360 Tutorial 2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">ECON 5360 Tutorial 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#new-keynesian-model-and-its-extension">New Keynesian Model and its Extension</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ding-minjie-spring-2025">DING Minjie, Spring 2025</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#household">1. Household</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#final-goods-firms">2. Final Goods Firms</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#intermediate-goods-firms">3. Intermediate Goods Firms</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#policy-and-market-clearing">4. Policy and Market Clearing</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#equilibrium-and-steady-state-solution">5. Equilibrium and Steady State Solution</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dynare-code-for-nk-model">6. Dynare code for NK model</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#two-agent-new-keynesian-model">6. Two Agent New Keynesian Model</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">Reference</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="econ-5360-tutorial-2">
+<h1>ECON 5360 Tutorial 2<a class="headerlink" href="#econ-5360-tutorial-2" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="new-keynesian-model-and-its-extension">
+<h1>New Keynesian Model and its Extension<a class="headerlink" href="#new-keynesian-model-and-its-extension" title="Link to this heading">#</a></h1>
+<section id="ding-minjie-spring-2025">
+<h2>DING Minjie, Spring 2025<a class="headerlink" href="#ding-minjie-spring-2025" title="Link to this heading">#</a></h2>
+<hr class="docutils" />
+<p>In this tutorial, we will talk about model setting and dynare coding of New Keynesian model, then extend it to two-agent model.</p>
+<ol class="arabic simple">
+<li><p>Household</p></li>
+<li><p>Final goods firms</p></li>
+<li><p>Intermediate goods firms</p></li>
+<li><p>Policy and market clearing</p></li>
+<li><p>Equilibrium and steady state</p></li>
+<li><p>Dynare code for NK model</p></li>
+<li><p>Two-agent New Keynesian model</p></li>
+</ol>
+<hr class="docutils" />
+<p>In classical models, money is neutral both in the short term and long term, and monetary policy cannot affect the real economy.</p>
+<p>Howeverempiricalnd evidencshows e that monetary policdoes y has impact on the real economy.</p>
+<p>The idea of New Keynesian Model is to introduce some short-run frictions to induce short-run non-neutrality of money.</p>
+<p>There are two key elements of New Keynesian models:</p>
+<ul class="simple">
+<li><p>Monopolistic competition. Instead of perfect competition, we assume there is imperfect competition, firms are not price taker any more. Prices are set by firms to maximize their profit.</p></li>
+<li><p>Nominal rigidities. Firms cannot freely adjust prices. They are subject to some constraints on the frequency with which they can adjust the prices (Calvo-type sticky price), or they may face some costs of adjusting prices (Rotemberg sticky price).</p></li>
+</ul>
+<p>In other words, we can say that:</p>
+<div class="math notranslate nohighlight">
+\[
+New \space Keynesian \space  Model = RBC \space  Model + Monopolistic \space  Competition + Sticky \space  Price
+\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="household">
+<h1>1. Household<a class="headerlink" href="#household" title="Link to this heading">#</a></h1>
+<p>The representative household solves the following optimization problem:</p>
+<div class="math notranslate nohighlight">
+\[
+\max _{\{c_{t}, i_{t}, h_{t}, k_{t}, b_{t}\}_{t=0}^{\infty}} E_{0} \sum_{t=0}^{\infty} \beta^{t}\left(\frac{c_{t}^{1-\sigma}}{1-\sigma}-\kappa_{L} \frac{h_{t}^{1+\varphi}}{1+\varphi}\right)
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\text{s.t.}
+\left\{
+\begin{array}{l}
+p_{t}c_{t}+p_{t}i_{t}+b_{t}=r_{t}^{k}p_{t} k_{t-1}+r_{t-1} b_{t-1}+ p_{t}w_{t} h_{t}-p_{t}t_{t}+ p_{t}\Gamma_{t} \\
+k_{t}=(1-\delta) k_{t-1}+\left[1-\frac{\kappa_{I}}{2}\left(\frac{i_{t}}{i_{t-1}}-1\right)^{2}\right] i_{t}
+\end{array}
+\right.
+\end{split}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(c_t\)</span> is consumption</p></li>
+<li><p><span class="math notranslate nohighlight">\(h_t\)</span> is labor, or you can take it as hours for working</p></li>
+<li><p><span class="math notranslate nohighlight">\(i_t\)</span> is investment in new capital, which produce rental rate of <span class="math notranslate nohighlight">\(r_t^k\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(b_{t}\)</span> is the amount of a one-period nominal risk-free bond paying a nominal gross interest rate <span class="math notranslate nohighlight">\(r_{t}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\Gamma_t\)</span> is profit</p></li>
+<li><p><span class="math notranslate nohighlight">\(t_t\)</span> is tax</p></li>
+<li><p><span class="math notranslate nohighlight">\(p_{t}\)</span> is the price level</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma\)</span> is coefficient of relative risk aversion or intertemporal elasticity of substitution (IES)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\phi\)</span> is labor supply elasticity or disutility parameter, or the reciprocal of Frisch elasticity of labor supply</p></li>
+<li><p><span class="math notranslate nohighlight">\(\kappa_L\)</span> is disutility of labor</p></li>
+<li><p><span class="math notranslate nohighlight">\(\kappa_I\)</span> is adjustment cost of investment</p></li>
+</ul>
+<p>Compared with RBC model, we introduce <span class="math notranslate nohighlight">\(p_t\)</span> here, now the budget constraint is expressed in nominal terms</p>
+<p>The Lagrangian function as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathcal{L}= &amp; \mathbb{E}_{0}\left\{\sum_{t=0}^{\infty} \beta^{t} \left\{\left(\frac{c_{t}^{1-\sigma}}{1-\sigma}-\kappa_{L} \frac{h_{t}^{1+\varphi}}{1+\varphi}\right)-\lambda_{t}\left(c_{t}+i_{t}+\frac{b_{t}}{p_{t}}-r_{t}^{k} k_{t-1}-r_{t-1} \frac{b_{t-1}}{p_{t}}-w_{t} h_{t}+t_{t}-\Gamma_{t}\right)\right.\right. \\
+&amp; \left.\left.-q_{t} \lambda_{t}\left\{k_{t}-(1-\delta) k_{t-1}-\left[1-\frac{\kappa_{I}}{2}\left(\frac{i_{t}}{i_{t-1}}-1\right)^{2}\right] i_{t}\right\}\right\}\right\} .
+\end{aligned}
+\end{split}\]</div>
+<p>First order conditions (foc) with respect to (wrt) consumption:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{\partial \mathcal L}{\partial c_t}=0 \to \space \\
+c_{t}^{-\sigma}=\lambda_{t} . \tag{1}
+\end{split}\]</div>
+<p>Foc wrt labor:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial \mathcal L}{\partial h_t}=0 \to \space \kappa_{L} h_{t}^{\varphi}=\lambda_{t} w_{t} \tag{2}
+\]</div>
+<p>Foc wrt bonds:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial \mathcal L}{\partial b_t}=0 \to \space  \lambda_{t}=\beta \mathbb{E}_{t}\left(\lambda_{t+1} \frac{r_{t}}{\frac{p_{t+1}}{p_t}}\right)=\beta \mathbb{E}_{t}\left(\lambda_{t+1} \frac{r_{t}}{\pi_{t+1}}\right) \tag{3}
+\]</div>
+<p>Foc wrt capital:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\frac{\partial \mathcal L}{\partial k_t} &amp;=0 \to \space \\
+0 &amp; =-q_{t} \lambda_{t}+\beta \mathbb{E}_{t}\left[\lambda_{t+1} r_{t+1}^{k}+q_{t+1} \lambda_{t+1}(1-\delta)\right] \to \\
+q_{t} &amp; =\beta \mathbb{E}_{t}\left\{\frac{\lambda_{t+1}}{\lambda_{t}}\left[r_{t+1}^{k}+(1-\delta) q_{t+1}\right]\right\} \tag{4}
+\end{align*}
+\end{split}\]</div>
+<p>Foc wrt investment:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+0= &amp; -\lambda_{t}+q_{t} \lambda_{t}\left[1-\kappa_{I}\left(\frac{i_{t}}{i_{t-1}}\right)\left(\frac{i_{t}}{i_{t-1}}-1\right)-\frac{\kappa_{I}}{2}\left(\frac{i_{t}}{i_{t-1}}-1\right)^{2}\right]+ \beta \mathbb{E}_{t}\left\{q_{t+1} \lambda_{t+1}\left[\kappa_{I}\left(\frac{i_{t+1}}{i_{t}}\right)^{2}\left(\frac{i_{t+1}}{i_{t}}-1\right)\right]\right\} \to \\
+1= &amp; q_{t}\left[1-\frac{\kappa_{I}}{2}\left(\frac{i_{t}}{i_{t-1}}-1\right)^{2}-\kappa_{I}\left(\frac{i_{t}}{i_{t-1}}\right)\left(\frac{i_{t}}{i_{t-1}}-1\right)\right]+\kappa_{I} \beta \mathbb{E}_{t}\left\{q_{t+1} \frac{\lambda_{t+1}}{\lambda_{t}}\left[\left(\frac{i_{t+1}}{i_{t}}\right)^{2}\left(\frac{i_{t+1}}{i_{t}}-1\right)\right]\right\} \tag{5}
+\end{align*}
+\end{split}\]</div>
+<p>The real interest rate <span class="math notranslate nohighlight">\(r_{t}^{r}\)</span> is defined as follows:</p>
+<div class="math notranslate nohighlight">
+\[
+r_{t}^{r} \equiv \frac{r_{t}}{\mathbb{E}_{t}\left[\pi_{t+1}\right]} \tag{6}
+\]</div>
+<p>And remember law of motion of capital is:
+$<span class="math notranslate nohighlight">\(
+k_{t}=(1-\delta) k_{t-1}+\left[1-\frac{\kappa_{I}}{2}\left(\frac{i_{t}}{i_{t-1}}-1\right)^{2}\right] i_{t} \tag{7}
+\)</span>$</p>
+<p><strong>The 7 equations above is equilibrium conditions from households side.</strong></p>
+<p>You may wonder why we neglect budget constraint condition, the reason is that it is essentially same with market clearing condition. We only need one of them.</p>
+<p>The <strong>Dynare</strong> code of this 7 equations is:</p>
+<span style="color:green">
+<p>lambda=c^-sigma;</p>
+<p>kappaL<em>h^(phi)=w</em>lambda;</p>
+<p>1=beta<em>lambda(1)/lambda</em>r/pi(1);</p>
+<p>1=beta<em>lambda(1)/lambda</em>(rk(1)+(1-delta)*q(1))/q;</p>
+<p>1=q*(1-kappaI/2*(i/i(-1)-1)^2-kappaI*(i/i(-1)-1)<em>i/i(-1))+kappaI</em>beta<em>lambda(1)/lambda</em>q(1)<em>(i(1)/i-1)</em>(i(1)/i)^2;</p>
+<p>rr=r/pi(1);</p>
+<p>k=(1-delta)<em>k(-1)+(1-kappaI/2</em>(i/i(-1)-1)^2)*i;</p>
+</span> </section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="final-goods-firms">
+<h1>2. Final Goods Firms<a class="headerlink" href="#final-goods-firms" title="Link to this heading">#</a></h1>
+<p>The representative final-good firm produce goods following CES aggregator:
+$<span class="math notranslate nohighlight">\(
+y_{t}=\left[\int_{0}^{1} y_{t}(i)^{\frac{\varepsilon-1}{\varepsilon}} d i\right]^{\frac{\varepsilon}{\varepsilon-1}}
+\)</span><span class="math notranslate nohighlight">\(
+where \)</span>y_{t}(i)<span class="math notranslate nohighlight">\( is an intermediate input produced by the intermediate firm \)</span>i<span class="math notranslate nohighlight">\(, whose price is \)</span>p_{t}(i)$.</p>
+<p>The problem of the final-good firm is the following:</p>
+<p>\begin{equation*}
+\max <em>{y</em>{t},\left{y_{t}(i)\right}<em>{i \in[0,1]}} p</em>{t} y_{t}-\int_{0}^{1} p_{t}(i) y_{t}(i) d i
+\end{equation*}</p>
+<p>\begin{equation*}
+\text { s.t } y_{t}=\left[\int_{0}^{1} y_{t}(i)^{\frac{\varepsilon-1}{\varepsilon}} d i\right]^{\frac{\varepsilon}{\varepsilon-1}}
+\end{equation*}</p>
+<p>Plug the constraint in the objective function:
+$<span class="math notranslate nohighlight">\(
+\max _{\left\{y_{t}(i)\right\}_{i \in[0,1]}} p_{t}\left[\int_{0}^{1} y_{t}(i)^{\frac{\varepsilon-1}{\varepsilon}} d i\right]^{\frac{\varepsilon}{\varepsilon-1}}-\int_{0}^{1} p_{t}(i) y_{t}(i) d i
+\)</span>$</p>
+<p>Foc wrt the generic input <span class="math notranslate nohighlight">\(i\)</span>:</p>
+<p>\begin{align*}
+p_{t}\left[\int_{0}^{1} y_{t}(i)^{\frac{\varepsilon-1}{\varepsilon}} d i\right]^{\frac{1}{\varepsilon-1}} y_{t}(i)^{-\frac{1}{\varepsilon}} &amp; =p_{t}(i) \
+p_{t} y_{t}^{\frac{1}{\varepsilon}} y_{t}(i)^{-\frac{1}{\varepsilon}} &amp; =p_{t}(i) \
+y_{t}(i) &amp; =y_{t}\left(\frac{p_{t}(i)}{p_{t}}\right)^{-\varepsilon} \tag{}
+\end{align*}</p>
+<p>Since final goods firms produce identical goods, and they are in perfectly competitive market, then their profit is zero. So, we have:</p>
+<div class="math notranslate nohighlight">
+\[
+ p_{t}\left[\int_{0}^{1} y_{t}(i)^{\frac{\varepsilon-1}{\varepsilon}} d i\right]^{\frac{\varepsilon}{\varepsilon-1}} - \int_{0}^{1} p_{t}(i) y_{t}(i) d i = 0
+\]</div>
+<p>Rearrange and we get:</p>
+<div class="math notranslate nohighlight">
+\[
+ p_{t}=\left[\int_{0}^{1} p_{t}(i)^{1-\varepsilon} d i\right]^{\frac{1}{1-\varepsilon}} 
+\]</div>
+<p>There is no direct equilibiurm condition from final goods firms, so we will not give <strong>Dynare</strong> code in this section.</p>
+<p>NK model introduces final goods firms, mainly to get these two equations:</p>
+<div class="math notranslate nohighlight">
+\[
+y_{t}(i) =y_{t}\left(\frac{p_{t}(i)}{p_{t}}\right)^{-\varepsilon} 
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+p_{t}=\left[\int_{0}^{1} p_{t}(i)^{1-\varepsilon} d i\right]^{\frac{1}{1-\varepsilon}} 
+\]</div>
+<p>With these two equations, we can solve optimal equations for intermediate goods firms.</p>
+<p>Personally, I think this is the most counter-intuitive part of New Keynesian Model. How could it be that all final goods firms are perfectly competitive, and all intermediate goods firms are monopoly firms?</p>
+<p>Even in final goods industry like retail industry, there are monopoly firms such as Walmart. And for intermediate goods industry like plastic industry, it’s a perfectly competitive market in China. So, NK model seems to be an unplausible and factitious model, from this perspective.</p>
+<p>Let’s think the other way. There are always fully competitive firms and monopoly firms. Then we name monopoly firms as intermediate goods firms, even though they are not in intermediate goods industry. We name price takers as final goods firms, even though they are not in final goods industries. Under this definition, monopoly firms have power to export price change to fully competitive firms, even though monopoly firms are final goods firms.</p>
+<p>For example, Walmart is in final goods industry, but also monopoly firm. Under setting of NK model, we should name it as intermediate goods firms. And with its market power, Walmart can export price change to its suppliers.</p>
+<p>In this way, I convince myself that the fundamental model of monetary economics is plausible.</p>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="intermediate-goods-firms">
+<h1>3. Intermediate Goods Firms<a class="headerlink" href="#intermediate-goods-firms" title="Link to this heading">#</a></h1>
+<p>There is a continuum of firms of measure unity, indexed by <span class="math notranslate nohighlight">\(i\)</span>, producing a differentiated input through the following Cobb-Douglas function:</p>
+<div class="math notranslate nohighlight">
+\[
+y_{t}(i)=a_{t}\left(k_{t-1}(i)\right)^{\alpha}\left(h_{t}(i)\right)^{1-\alpha} \tag{8}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(a_{t}\)</span> is the total factor productivity, which follows an autoregressive process:</p>
+<div class="math notranslate nohighlight">
+\[
+\log \left(a_{t}\right)=\left(1-\rho_{a}\right) \log (\bar{a})+\rho_{a} \log \left(a_{t-1}\right)+v_{t}^{a} 
+\]</div>
+<p>and <span class="math notranslate nohighlight">\(v_{t}^{a} \sim N\left(0, \sigma_{a}^{2}\right)\)</span> is a technology shock.</p>
+<p>Firms set the price of their own good subject to the demand of the final good firm. In addition, firms pay quadratic adjustment costs <span class="math notranslate nohighlight">\(A C_{t}(i)\)</span> in nominal terms according to Rotemberg (1982), whenever they adjust prices with respect to the inflation target <span class="math notranslate nohighlight">\(\bar{\pi}\)</span>.</p>
+<p>\begin{equation*}
+A C_{t}(i)=\frac{\kappa_{P}}{2}\left(\frac{p_{t}(i)}{p_{t-1}(i)}-\bar{\pi}\right)^{2} p_{t} y_{t}
+\end{equation*}</p>
+<p>The profit maximization problem of the generic firm <span class="math notranslate nohighlight">\(i\)</span>, expressed in terms of the domestic price index, is the following:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\max _{\left\{p_{t}(i), h_{t}(i), k_{t-1}(i), y_{t}(i)\right\}_{t=0}^{\infty}} \mathbb{E}_{0}\left\{\sum_{t=0}^{\infty} \beta^{t} \frac{\lambda_{t}}{\lambda_{0}}\left[\frac{p_{t}(i)}{p_{t}} y_{t}(i)-w_{t} h_{t}(i)-r_{t}^{k} k_{t-1}(i)-\frac{\kappa_{P}}{2}\left(\frac{p_{t}(i)}{p_{t-1}(i)}-\bar{\pi}\right)^{2} y_{t}\right]\right\} \\
+\end{aligned}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+s.t.\left\{\begin{array}{l}
+y_{t}(i)=y_{t}\left(\frac{p_{t}(i)}{p_{t}}\right)^{-\varepsilon} \\
+y_{t}(i)=a_{t}\left(k_{t-1}(i)\right)^{\alpha}\left(h_{t}(i)\right)^{1-\alpha}
+\end{array}\right.
+\end{split}\]</div>
+<p>Eliminate one constraint and write the lagrangian as follows:
+$<span class="math notranslate nohighlight">\(
+\begin{aligned}
+\mathcal{L}^{I}= &amp; \mathbb{E}_{0}\left\{\sum _ { t = 0 } ^ { \infty } \beta ^ { t } \frac { \lambda _ { t } } { \lambda _ { 0 } } \left[\left(\frac{p_{t}(i)}{p_{t}}\right)^{1-\varepsilon} y_{t}-w_{t} h_{t}(i)-r_{t}^{k} k_{t-1}(i)-\frac{\kappa_{P}}{2}\left(\frac{p_{t}(i)}{p_{t-1}(i)}-\bar{\pi}\right)^{2} y_{t}+\right.\right. \\
+&amp; \left.\left.+m c_{t}(i)\left[a_{t}\left(k_{t-1}(i)\right)^{\alpha}\left(h_{t}(i)\right)^{1-\alpha}-y_{t}\left(\frac{p_{t}(i)}{p_{t}}\right)^{-\varepsilon}\right]\right]\right\}
+\end{aligned}
+\)</span>$</p>
+<p>where <span class="math notranslate nohighlight">\(m c_{t}(i)\)</span> is the lagrangian multiplier, which can be interpreted as the real marginal cost of producing an additional unit of output.</p>
+<p>Foc wrt capital:</p>
+<div class="math notranslate nohighlight">
+\[
+r_{t}^{k}* k_{t-1}(i) = m c_{t}(i) \space \alpha \space a_{t}\left(k_{t-1}(i)\right)^{\alpha}\left(h_{t}(i)\right)^{1-\alpha}
+\]</div>
+<p>Foc wrt to labor:
+$<span class="math notranslate nohighlight">\(
+w_{t} * h_t(i) =m c_{t}(i)(1-\alpha) a_{t}\left(k_{t-1}(i)\right)^{\alpha}\left(h_{t}(i)\right)^{1-\alpha}
+\)</span>$</p>
+<p>Foc wrt to <span class="math notranslate nohighlight">\(p_{t}(i)\)</span> :
+$<span class="math notranslate nohighlight">\(
+\begin{aligned}
+(1-\varepsilon)\left(\frac{p_{t}(i)}{p_{t}}\right)^{-\varepsilon} \frac{y_{t}}{p_{t}}-\frac{\kappa_{P}}{p_{t-1}(i)}  \left(\frac{p_{t}(i)}{p_{t-1}(i)}-\bar{\pi}\right) y_{t}+\varepsilon m c_{t}(i) \frac{y_{t}}{p_{t}}\left(\frac{p_{t}(i)}{p_{t}}\right)^{-\varepsilon-1}+ \beta \mathbb{E}_{t}\left[\frac{\lambda_{t+1}}{\lambda_{t}} \kappa_{P} \frac{p_{t+1}(i)}{p_{t}(i)^{2}}\left(\frac{p_{t+1}(i)}{p_{t}(i)}-\bar{\pi}\right)^{} y_{t+1}\right]=0
+\end{aligned}
+\)</span>$</p>
+<p>In a symmetric equilibrium, firms choose the same price, same inputs and same output. Using the production function it turns out:</p>
+<p>\begin{align*}
+r_{t}^{k} &amp; =m c_{t} \alpha \frac{y_{t}}{k_{t-1}}  \tag{9}\
+w_{t} &amp; =m c_{t}(1-\alpha) \frac{y_{t}}{h_{t}} \tag{10}
+\end{align*}</p>
+<p>Rearrange the pricing condition:</p>
+<p>\begin{align*}
+&amp; (1-\varepsilon) \frac{y_{t}}{p_{t}}-\frac{\kappa_{P}}{p_{t-1}}\left(\frac{p_{t}}{p_{t-1}}-\bar{\pi}\right) y_{t}+\varepsilon m c_{t} \frac{y_{t}}{p_{t}}+\beta \mathbb{E}<em>{t}\left[\frac{\lambda</em>{t+1}}{\lambda_{t}} \kappa_{P} \frac{p_{t+1}}{p_{t}^{2}}\left(\frac{p_{t+1}}{p_{t}}-\bar{\pi}\right) y_{t+1}\right]=0 \
+&amp; (\varepsilon-1)+\kappa_{P} \frac{p_{t}}{p_{t-1}}\left(\frac{p_{t}}{p_{t-1}}-\bar{\pi}\right)-\varepsilon m c_{t}-\beta \mathbb{E}<em>{t}\left[\frac{\lambda</em>{t+1}}{\lambda_{t}} \kappa_{P} \frac{p_{t+1}}{p_{t}}\left(\frac{p_{t+1}}{p_{t}}-\bar{\pi}\right) \frac{y_{t+1}}{y_{t}}\right]=0 \
+&amp; \frac{p_{t}}{p_{t-1}}\left(\frac{p_{t}}{p_{t-1}}-\bar{\pi}\right)=\beta \mathbb{E}<em>{t}\left[\frac{\lambda</em>{t+1}}{\lambda_{t}} \frac{p_{t+1}}{p_{t}}\left(\frac{p_{t+1}}{p_{t}}-\bar{\pi}\right) \frac{y_{t+1}}{y_{t}}\right]+\frac{1}{\kappa_{P}}\left(1-\varepsilon+\varepsilon m c_{t}\right) \
+&amp; \pi_{t}\left(\pi_{t}-\bar{\pi}\right)=\beta \mathbb{E}<em>{t}\left[\frac{\lambda</em>{t+1}}{\lambda_{t}} \pi_{t+1}\left(\pi_{t+1}-\bar{\pi}\right) \frac{y_{t+1}}{y_{t}}\right]+\frac{\varepsilon}{\kappa_{P}}\left(m c_{t}-\frac{\varepsilon-1}{\varepsilon}\right), \tag{11}
+\end{align*}</p>
+<p>And profit from monopoly firms are:</p>
+<p>\begin{align*}
+\Gamma_{t}^{I}=y_{t}\left[1-m c_{t}-\frac{\kappa_{P}}{2}\left(\pi_{t}-\bar{\pi}\right)^{2}\right] \tag{}
+\end{align*}</p>
+<p>As compared to profit from fully competitive firms are zero:
+\begin{align*}
+\Gamma_{t}^{C}=0 \tag{}
+\end{align*}</p>
+<p>Now we have 4 more equilibrium conditions from firms side. And write them in <strong>Dynare</strong> code.</p>
+<span style="color:green">
+<p>y=a<em>k(-1)^alpha</em>h^(1-alpha);</p>
+<p>alpha<em>mc</em>y=rk*k(-1);</p>
+<p>(1-alpha)<em>mc</em>y=w*h;</p>
+<p>(pi-steady_state(pi))<em>pi=beta</em>(lambda(1)/lambda<em>y(1)/y</em>pi(1)<em>(pi(1)-steady_state(pi)))+epsilon/kappaP</em>(mc-(epsilon-1)/epsilon);</p>
+</span></section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="policy-and-market-clearing">
+<h1>4. Policy and Market Clearing<a class="headerlink" href="#policy-and-market-clearing" title="Link to this heading">#</a></h1>
+<p>Clearing in the good market implies:</p>
+<p>\begin{equation*}
+y_{t}=c_{t}+i_{t}+g_{t}+\frac{\kappa_{P}}{2}\left(\pi_{t}-\bar{\pi}\right)^{2} y_{t} \tag{12}
+\end{equation*}</p>
+<p>Clearing in the bond market implies:</p>
+<p>\begin{equation*}
+b_{t}=0
+\end{equation*}</p>
+<p>The monetary authority sets the nominal interest rate according to the following Taylor rule:</p>
+<p>\begin{equation*}
+\frac{r_{t}}{r}=\left(\frac{r_{t-1}}{r}\right)^{\rho_{r}}\left[\left(\frac{\pi_{t}}{\bar{\pi}}\right)^{\phi_{\pi}}\left(\frac{y_{t}}{y}\right)^{\phi_{y}}\right]^{1-\rho_{r}} \exp \left(v_{t}^{m}\right) \tag{13}
+\end{equation*}</p>
+<p>where <span class="math notranslate nohighlight">\(v_{t}^{m} \sim N\left(0, \sigma_{m}^{2}\right)\)</span> is a monetary policy shock.</p>
+<p>Remember that, the total factor productivity <span class="math notranslate nohighlight">\(a_{t}\)</span> follows an autoregressive process:</p>
+<div class="math notranslate nohighlight">
+\[
+\log \left(a_{t}\right)=\left(1-\rho_{a}\right) \log (\bar{a})+\rho_{a} \log \left(a_{t-1}\right)+v_{t}^{a} \tag{14}
+\]</div>
+<p>and <span class="math notranslate nohighlight">\(v_{t}^{a} \sim N\left(0, \sigma_{a}^{2}\right)\)</span> is a technology shock.</p>
+<p>Moreover, the government finances public expenditure <span class="math notranslate nohighlight">\(g_{t}\)</span> by raising lump-sum taxes:</p>
+<p>\begin{equation*}
+g_{t}=t_{t}
+\end{equation*}</p>
+<p>where <span class="math notranslate nohighlight">\(g_{t}\)</span> follows an autoregressive process:</p>
+<p>\begin{equation*}
+\log \left(g_{t}\right)=\left(1-\rho_{g}\right) \log (\bar{g})+\rho_{g} \log \left(g_{t-1}\right)+v_{t}^{g} \tag{15}
+\end{equation*}</p>
+<p>and <span class="math notranslate nohighlight">\(v_{t}^{g} \sim N\left(0, \sigma_{g}^{2}\right)\)</span> is a public spending shock.</p>
+<p>We have the last 4 equiblirium conditions and write them down in <strong>Dynare</strong>.</p>
+<span style="color:green">
+<p>y=c+i+g+(kappaP/2*(pi-piss)^2)*y;</p>
+<p>r/(rss)=((pi/steady_state(pi))^(phipi)<em>(y)^(phiy))^(1-rhom)</em>(r(-1)/rss)^(rhom)*exp(vm);</p>
+<p>log(a)=(1-rhoa)<em>log(ass)+rhoa</em>log(a(-1))+va;  <br>
+log(g)=(1-rhog)<em>log(gss)+rhog</em>log(g(-1))+vg;</p>
+</span></section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="equilibrium-and-steady-state-solution">
+<h1>5. Equilibrium and Steady State Solution<a class="headerlink" href="#equilibrium-and-steady-state-solution" title="Link to this heading">#</a></h1>
+<p>The equilibrium conditions of the model are the following:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\lambda_{t}= &amp; c_{t}^{-\sigma} \tag{1} \\
+\kappa_{L} h_{t}^{\varphi}= &amp; \lambda_{t} w_{t} \tag{2} \\
+1= &amp; \beta \mathbb{E}_{t}\left(\frac{\lambda_{t+1}}{\lambda_{t}} \frac{r_{t}}{\pi_{t+1}}\right) \tag{3} \\
+1= &amp; \beta \mathbb{E}_{t}\left\{\frac{\lambda_{t+1}}{\lambda_{t}} \frac{\left[r_{t+1}^{k}+(1-\delta) q_{t+1}\right]}{q_{t}}\right\} \tag{4} \\
+1= &amp; q_{t}\left[1-\frac{\kappa_{I}}{2}\left(\frac{i_{t}}{i_{t-1}}-1\right)^{2}-\kappa_{I}\left(\frac{i_{t}}{i_{t-1}}\right)\left(\frac{i_{t}}{i_{t-1}}-1\right)\right] +\kappa_{I} \beta \mathbb{E}_{t}\left\{q_{t+1} \frac{\lambda_{t+1}}{\lambda_{t}}\left[\left(\frac{i_{t+1}}{i_{t}}\right)^{2}\left(\frac{i_{t+1}}{i_{t}}-1\right)\right]\right\} \tag{5} \\
+k_{t}= &amp; (1-\delta) k_{t-1}+\left[1-\frac{\kappa_{I}}{2}\left(\frac{i_{t}}{i_{t-1}}-1\right)^{2}\right] i_{t} \tag{6} \\
+r_{t}^{r} = &amp; \frac{r_{t}}{\mathbb{E}_{t}\left[\pi_{t+1}\right]} \tag{7} \\
+\end{align*}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+y_{t} &amp; =a_{t} k_{t-1}^{\alpha} h_{t}^{1-\alpha} \tag{8} \\
+(1-\alpha) m c_{t} y_{t} &amp; =w_{t} h_{t} \tag{9} \\
+\alpha m c_{t} y_{t} &amp; =r_{t}^{k} k_{t-1} \tag{10} \\
+\pi_{t}\left(\pi_{t}-\bar{\pi}\right) &amp; =\beta \mathbb{E}_{t}\left[\frac{\lambda_{t+1}}{\lambda_{t}} \pi_{t+1}\left(\pi_{t+1}-\bar{\pi}\right) \frac{y_{t+1}}{y_{t}}\right]+\frac{\varepsilon}{\kappa_{P}}\left(m c_{t}-\frac{\varepsilon-1}{\varepsilon}\right) \tag{11} \\
+\end{align*}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+y_{t} &amp; =c_{t}+i_{t}+g_{t}+\frac{\kappa_{P}}{2}\left(\pi_{t}-\bar{\pi}\right)^{2} y_{t} \tag{12} \\
+\frac{r_{t}}{r} &amp; =\left(\frac{r_{t-1}}{r}\right)^{\rho_{r}}\left[\left(\frac{\pi_{t}}{\bar{\pi}}\right)^{\phi_{\pi}}\left(\frac{y_{t}}{y}\right)^{\phi^{y}}\right]^{1-\rho_{r}} \exp \left(v_{t}^{m}\right) \tag{13} \\
+\log \left(a_{t}\right) &amp; =\left(1-\rho_{a}\right) \log (\bar{a})+\rho_{a} \log \left(a_{t-1}\right)+v_{t}^{a} \tag{14} \\
+\log \left(g_{t}\right) &amp; =\left(1-\rho_{g}\right) \log (\bar{g})+\rho_{g} \log \left(g_{t-1}\right)+v_{t}^{g} \tag{15}
+\end{align*}
+\end{split}\]</div>
+<p>Compared to traditional RBC model, there are 3 additional equations: the definition of the real interest rate (7), the Phillips curve (11), and the Taylor rule (13). The 3 additional variables are <span class="math notranslate nohighlight">\(r_{t}\)</span>, <span class="math notranslate nohighlight">\(m c_{t}\)</span>, and <span class="math notranslate nohighlight">\(\pi_{t}\)</span>. Notice that the price level <span class="math notranslate nohighlight">\(p_{t}\)</span>, together with inflation <span class="math notranslate nohighlight">\(\pi_{t} \equiv \frac{p_{t}}{p_{t}-1}\)</span> are not included in the set of equilibrium conditions because it would introduce a unit root in the model.</p>
+<p>In steady state, we can easily get:</p>
+<p>\begin{align*}
+a &amp; = \bar{a} \
+g &amp; = \bar{g} \
+\pi &amp; = \bar{\pi} \
+r &amp; = \frac{\bar{\pi}}{\beta} \
+r^r &amp; = \frac{1}{\beta} \
+q &amp; = 1\
+r^k &amp; = \frac{1}{\beta} - (1-\delta)\
+mc &amp; = \frac{\epsilon - 1}{\epsilon} \
+\end{align*}</p>
+<p>Assume we know <span class="math notranslate nohighlight">\(y\)</span>, then from equation (9) and (10), we can get:</p>
+<div class="math notranslate nohighlight">
+\[
+w = \frac{\epsilon-1}{\epsilon} \frac{(1-\alpha) y}{h}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+k = \frac{\epsilon-1}{\epsilon} \frac{\alpha y}{r^k}
+\]</div>
+<p>Then from equation (6), we have:
+$<span class="math notranslate nohighlight">\(
+i = \delta k 
+\)</span>$</p>
+<p>From equation (12), we have:
+$<span class="math notranslate nohighlight">\(
+c = y - i - \bar{g}
+\)</span>$</p>
+<p>Based on equation (1) and (2), we choose a <span class="math notranslate nohighlight">\(\kappa_L\)</span> so that <span class="math notranslate nohighlight">\(h=\frac{1}{3}\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\kappa_L = \frac{w}{c^\sigma h^\phi}
+\]</div>
+<p>And we choose a <span class="math notranslate nohighlight">\(\bar{a}\)</span> so that <span class="math notranslate nohighlight">\(y = 1\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+y = \bar{a} k^\alpha h^{1-\alpha}
+\]</div>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="dynare-code-for-nk-model">
+<h1>6. Dynare code for NK model<a class="headerlink" href="#dynare-code-for-nk-model" title="Link to this heading">#</a></h1>
+<p>Let’s see all <strong>Dynare</strong> code.</p>
+<p>Firstly, the variable part.</p>
+<span style="color:green">
+<p>var c, rk, rr, w, h, y, k, q, i, lambda, r, pi, mc, g, a,
+clog, wlog, hlog, klog, ilog;</p>
+<p>varexo va, vg, vm;</p>
+</span><p>Then, parameters part.</p>
+<span style="color:green">
+<p>parameters beta, alpha, delta, sigma, phi, kappaL, epsilon, gss, <br>
+ass, piss, rss, kappaI, kappaP, phipi, phiy, rhoa, rhog, rhom;<br></p>
+<p>beta     = 0.99;    % discount factor<br>
+alpha    = 0.33;    % capital share<br>
+delta    = 0.025;   % depreciation rate<br>
+sigma    = 2;       % relative risk aversion<br>
+phi      = 1;       % labor elasticity<br>
+kappaL   = 13.7;    % disutility of labor<br>
+epsilon  = 6;       % product elasticity<br>
+gss      = 0.2;     % steady state public spending<br>
+ass      = 1.06;    % steady state TFP  <br>
+piss     = 1;       % steady state inflation<br>
+rss      = 1.01;    % steady state interest rate<br>
+kappaI   = 2.48;    % adjustment cost<br>
+kappaP   = 28;      % inflation cost<br>
+phipi    = 1.5;     % Tylor rule coefficient of inflaton<br>
+phiy     = 0.125;   % Tylor rule coefficient of output<br>
+rhoa     = 0.9;     % persistence of TFP<br>
+rhog     = 0.9;     % persistence of public spending<br>
+rhom     = 0.8;     % persistence of monetary policy shock<br></p>
+</span><p>And model part:</p>
+<span style="color:green">
+<p>model;</p>
+<p>lambda=c^-sigma;                                        % equation 1<br>
+kappaL<em>h^(phi)=w</em>lambda;                                % equation 2<br>
+1=beta<em>lambda(1)/lambda</em>r/pi(1);                        % equation 3<br>
+1=beta<em>lambda(1)/lambda</em>(rk(1)+(1-delta)<em>q(1))/q;       % equation 4<br>
+1=q</em>(1-kappaI/2*(i/i(-1)-1)^2-kappaI*(i/i(-1)-1)<em>i/i(-1))+kappaI</em>beta<em>lambda(1)/lambda</em>q(1)<em>(i(1)/i-1)</em>(i(1)/i)^2; %equation 5<br>
+k=(1-delta)<em>k(-1)+(1-kappaI/2</em>(i/i(-1)-1)^2)*i;         % equation 6<br></p>
+<p>y=a<em>k(-1)^alpha</em>h^(1-alpha);      % equation 8<br>
+(1-alpha)<em>mc</em>y=w<em>h;               % equation 9<br>
+alpha</em>mc<em>y=rk</em>k(-1);              % equation 10 <br>
+(pi-steady_state(pi))<em>pi=beta</em>(lambda(1)/lambda<em>y(1)/y</em>pi(1)<em>(pi(1)-steady_state(pi)))+epsilon/kappaP</em>(mc-(epsilon-1)/epsilon); % equation 11<br></p>
+<p>y=c+i+g+(kappaP/2*(pi-piss)^2)*y; % equation 12<br></p>
+<p>r/(rss)=((pi/steady_state(pi))^(phipi)<em>(y)^(phiy))^(1-rhom)</em><br>
+(r(-1)/rss)^(rhom)*exp(vm);   % equation 13<br></p>
+<p>log(a)=(1-rhoa)<em>log(ass)+rhoa</em>log(a(-1))+va;  % equation 14<br>
+log(g)=(1-rhog)<em>log(gss)+rhog</em>log(g(-1))+vg;  % equation 15<br></p>
+<p>rr=r/pi(1);                       % equation 7<br>
+clog=log(c); <br>
+wlog=log(w); <br>
+hlog=log(h); <br>
+klog=log(k); <br>
+ilog=log(i);<br></p>
+<p>end;
+</span></p>
+<p>Set the initial value, which is usually the steady state value.</p>
+<span style="color:green">
+<p>initval;<br></p>
+<p>pi=1;<br />
+y=1;<br />
+h=1/3;<br />
+rr=1/beta;<br />
+r=pi/beta;<br />
+q=1;<br />
+rk=1/beta-(1-delta);<br />
+mc=(epsilon-1)/epsilon;<br />
+k=alpha<em>mc</em>y/rk;<br />
+w=(1-alpha)<em>mc</em>y/h;<br />
+i=delta*k;<br>
+g=gss;<br>
+a=ass;<br>
+c=y-i-g;<br />
+lambda=c^(-sigma);<br />
+clog=log(c); <br>
+wlog=log(w); <br>
+hlog=log(h); <br>
+klog=log(k); <br>
+ilog=log(i);<br></p>
+<p>end;
+</span></p>
+<p>The remaining part.</p>
+<span style="color:green">
+<p>steady; <br></p>
+<p>shocks;<br>
+var va; stderr 0.01; <br><br />
+var vg; stderr 0.01;  <br><br />
+var vm; stderr 0.0025; <br>
+end;<br></p>
+<p>stoch_simul(irf=40,order=1, hp_filter=1600,pruning,noprint)<br>
+y <br>
+clog<br>
+ilog<br>
+hlog<br>
+klog<br>
+wlog<br>
+q<br>
+pi<br>
+r;<br>
+</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="s">&quot;C:\Users\ading\A_TA_Notes&quot;</span>
+<span class="nb">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>ans = 'C:\Users\ading\A_TA_Notes'</pre></body></html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">dynare</span><span class="w"> </span><span class="s">newkeynesian.mod</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Starting Dynare (version 6.2).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ... 
+Found 20 equation(s). 
+Evaluating expressions... 
+Computing static model derivatives (order 1). 
+Normalizing the static model... 
+Finding the optimal block decomposition of the static model... 
+6 block(s) found: 
+  5 recursive block(s) and 1 simultaneous block(s). 
+  the largest simultaneous block has 10 equation(s) 
+                                 and 10 feedback variable(s). 
+Computing dynamic model derivatives (order 1). 
+Normalizing the dynamic model... 
+Finding the optimal block decomposition of the dynamic model... 
+4 block(s) found: 
+  3 recursive block(s) and 1 simultaneous block(s). 
+  the largest simultaneous block has 12 equation(s) 
+                                 and 12 feedback variable(s). 
+Preprocessing completed. 
+Preprocessing time: 0h00m00s.
+
+STEADY-STATE RESULTS:
+
+c      		 0.606219
+rk     		 0.035101
+rr     		 1.0101
+w      		 1.6788
+h      		 0.333441
+y      		 1.00259
+k      		 7.85482
+q      		 1
+i      		 0.196371
+lambda 		 2.72108
+r      		 1.01033
+pi     		 1.00022
+mc     		 0.833333
+g      		 0.2
+a      		 1.06
+clog   		 -0.500514
+wlog   		 0.518078
+hlog   		 -1.09829
+klog   		 2.06113
+ilog   		 -1.62775
+</pre></div>
+</div>
+<img alt="../_images/f420b1e543797404df7c7f169fdcc96ec24d681a2181fdca6249ee90ffa4ce52.png" src="../_images/f420b1e543797404df7c7f169fdcc96ec24d681a2181fdca6249ee90ffa4ce52.png" />
+<img alt="../_images/cd5ca8cb710a6a9dfe86675e4c8464b1567b414f735030f274365005af38e6b0.png" src="../_images/cd5ca8cb710a6a9dfe86675e4c8464b1567b414f735030f274365005af38e6b0.png" />
+<img alt="../_images/9af92c399bb13b89643553a10e568a094ea4f83538aecd420841cb8d6892bd1a.png" src="../_images/9af92c399bb13b89643553a10e568a094ea4f83538aecd420841cb8d6892bd1a.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total computing time : 0h00m09s
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="two-agent-new-keynesian-model">
+<h1>6. Two Agent New Keynesian Model<a class="headerlink" href="#two-agent-new-keynesian-model" title="Link to this heading">#</a></h1>
+<p>Now we introduce two types of households, which differ in the access to financial markets.</p>
+<ul class="simple">
+<li><p>household who can invest in bonds, this household is labeled as “Ricardian” or “Non hand to mouth”.</p></li>
+<li><p>household who does not have access to financial markets and just consumes disposable income, this household is typically labeled as “hand to mouth” or “rule-of-thumb”, or “non-ricardian”.</p></li>
+</ul>
+<p>Suppose percentage of hand-to-mouth household (HtM household) is <span class="math notranslate nohighlight">\(\eta\)</span>, percentage of ricardian household is <span class="math notranslate nohighlight">\(1-\eta\)</span>.</p>
+<p><strong>changes 1: HtM household</strong></p>
+<p>Since HtM household does not have access to financial market, their behavior has nothing to do with social investment <span class="math notranslate nohighlight">\(i_t\)</span>, bonds <span class="math notranslate nohighlight">\(b_t\)</span> and monopoly profit <span class="math notranslate nohighlight">\(\Gamma_t\)</span>. So, the behavior of ricardian households is the same as that in traditional New Keynesian model above. And for HtM households, they solve the following problem.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+\max _{\left\{c_{t}^{r}, h_{t}^{r}\right\}_{t=0}^{\infty}} \mathbb{E}_{0} \sum_{t=0}^{\infty} \beta^{t}\left(\frac{c_{t}^{r(1-\sigma)}}{1-\sigma}-\kappa_{L} \frac{h_{t}^{r(1+\varphi)}}{1+\varphi}\right) \\
+\text { s.t. } c_{t}^{r}=w_{t} h_{t}^{r}-t_{t}^{r}
+\end{gathered}
+\end{split}\]</div>
+<p>Foc with respect to labor:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+\kappa_{L}\left(h_{t}^{r}\right)^{\varphi}\left(c_{t}^{r}\right)^{\sigma}=w_{t} \tag{16}
+\end{align*}
+\]</div>
+<p>Also, from budget constraint:
+$<span class="math notranslate nohighlight">\(
+\begin{align*}
+c_{t}^{r}=w_{t} h_{t}^{r}-t_{t}^{r}  \tag{17}
+\end{align*}
+\)</span>$</p>
+<p><strong>change 2: market clear condition</strong></p>
+<p>Now we have two types of household, use superfix “r” for ricardian households, use superfix “h” for HtM households.</p>
+<p>Aggregate Consumption:
+$<span class="math notranslate nohighlight">\(
+\begin{align*}
+c_{t}=(1-\eta) c_{t}^{r}+\eta c_{t}^{h} \tag{18}
+\end{align*}
+\)</span>$</p>
+<p>Aggregate Labor:
+$<span class="math notranslate nohighlight">\(
+\begin{align*}
+h_{t}=(1-\eta) h_{t}^{r}+\eta h_{t}^{h} . \tag{19}
+\end{align*}
+\)</span>$</p>
+<p>Aggregate Capital and Investment:
+$<span class="math notranslate nohighlight">\(
+\begin{align*}
+k_{t} &amp; =(1-\eta) k_{t}^{o}  \tag{}\\
+i_{t} &amp; =(1-\eta) i_{t}^{o} \tag{}
+\end{align*}
+\)</span>$</p>
+<p>Aggregate Public Bonds (in Real Terms):
+$<span class="math notranslate nohighlight">\(
+\begin{equation*}
+d_{t}=(1-\eta) \frac{b_{t}}{p_{t}} \tag{}
+\end{equation*}
+\)</span>$</p>
+<p>Aggregate capital and investment and aggregate public bonds can introduced into equilibrium condition system.</p>
+<p>When introduced, we add one variable and one equation, since aggregate capital, investment and bonds only cover ricardian households.</p>
+<p>We can also ignore these variables, and delete them from equilibrium system. There is no difference essentially.</p>
+<p>Finally, the clearing in the good market implies:</p>
+<p>\begin{align*}
+y_{t}=c_{t}+i_{t}+g_{t}+\frac{\kappa_{P}}{2}\left(\pi_{t}-\bar{\pi}\right)^{2} y_{t} \tag{12}
+\end{align*}</p>
+<p>Again, this equation is essentially same as budget constraint for ricardian households, so we delete one of them. Here budget constraint is deleted.</p>
+<p><strong>change 3: tax policy</strong></p>
+<p>The government finances public expenditure <span class="math notranslate nohighlight">\( g_{t} \)</span> by raising lump-sum taxes and public debt <span class="math notranslate nohighlight">\( d_{t} \)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation*}
+g_{t}+\frac{r_{t-1}}{\pi_{t}} d_{t-1}=(1-\eta) t_{t}^{r}+\eta t_{t}^{h}+d_{t}  \tag{20}
+\end{equation*}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\( g_{t} \)</span> follows an autoregressive process:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation*}
+\log \left(g_{t}\right)=\left(1-\rho_{g}\right) \log (\bar{g})+\rho_{g} \log \left(g_{t-1}\right)+v_{t}^{g} \tag{15}
+\end{equation*}
+\]</div>
+<p>and <span class="math notranslate nohighlight">\( v_{t}^{g} \sim N\left(0, \sigma_{g}^{2}\right) \)</span> is a public spending shock.</p>
+<p>Lump-sum taxes are set according to the following rules:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp; t_{t}^{h}-\bar{t}^{h}=\phi_{d}\left(d_{t-1}-\bar{d}\right)+\phi_{g}\left(g_{t-1}-\bar{g}\right)  \tag{21}\\
+&amp; t_{t}^{r}-\bar{t}^{r}=\phi_{d}\left(d_{t-1}-\bar{d}\right)+\phi_{g}\left(g_{t-1}-\bar{g}\right) \tag{22}
+\end{align*}
+\end{split}\]</div>
+<p>Finally, we get an equilibrium system of 22 equations. The first 15 equations are almost the same as those in traditional New Keynesian model, except that superfix should be added for ricardian households only when talking about consumption and labor.</p>
+<p>The newly added 7 equations are:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+\kappa_{L}\left(h_{t}^{r}\right)^{\varphi}\left(c_{t}^{r}\right)^{\sigma}=w_{t} \tag{16}
+\end{align*}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+c_{t}^{r}=w_{t} h_{t}^{r}-t_{t}^{r}  \tag{17}
+\end{align*}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+c_{t}=(1-\eta) c_{t}^{r}+\eta c_{t}^{h} \tag{18}
+\end{align*}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+h_{t}=(1-\eta) h_{t}^{r}+\eta h_{t}^{h} . \tag{19}
+\end{align*}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation*}
+g_{t}+\frac{r_{t-1}}{\pi_{t}} d_{t-1}=(1-\eta) t_{t}^{r}+\eta t_{t}^{h}+d_{t}  \tag{20}
+\end{equation*}
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp; t_{t}^{h}-\bar{t}^{h}=\phi_{d}\left(d_{t-1}-\bar{d}\right)+\phi_{g}\left(g_{t-1}-\bar{g}\right)  \tag{21}\\
+&amp; t_{t}^{r}-\bar{t}^{r}=\phi_{d}\left(d_{t-1}-\bar{d}\right)+\phi_{g}\left(g_{t-1}-\bar{g}\right) \tag{22}
+\end{align*}
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">dynare</span><span class="w"> </span><span class="s">twoagent.mod</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Starting Dynare (version 6.2).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ... 
+WARNING: twoagent.mod:13.1-48.1: Symbol c_r declared twice. 
+Found 31 equation(s). 
+Evaluating expressions... 
+Computing static model derivatives (order 1). 
+Normalizing the static model... 
+Normalization failed with cutoff, trying symbolic normalization... 
+Finding the optimal block decomposition of the static model... 
+6 block(s) found: 
+  5 recursive block(s) and 1 simultaneous block(s). 
+  the largest simultaneous block has 17 equation(s) 
+                                 and 17 feedback variable(s). 
+Computing dynamic model derivatives (order 1). 
+Normalizing the dynamic model... 
+Finding the optimal block decomposition of the dynamic model... 
+4 block(s) found: 
+  3 recursive block(s) and 1 simultaneous block(s). 
+  the largest simultaneous block has 19 equation(s) 
+                                 and 18 feedback variable(s). 
+Preprocessing completed. 
+Preprocessing time: 0h00m00s.
+
+STEADY-STATE RESULTS:
+
+c       		 0.602158
+rk      		 0.035101
+rr      		 1.0101
+w       		 1.66667
+h       		 0.333333
+y       		 1
+k       		 7.91367
+q       		 1
+i       		 0.197842
+lambda  		 1.66069
+r       		 1.0101
+pi      		 1
+mc      		 0.833333
+g       		 0.2
+a       		 1.04381
+c_h     		 0.602158
+c_r     		 0.602158
+h_h     		 0.333333
+h_r     		 0.333333
+t_r     		 -0.0466027
+t_o     		 0.527411
+d       		 4
+clog    		 -0.507235
+wlog    		 0.510826
+hlog    		 -1.09861
+klog    		 2.06859
+ilog    		 -1.62029
+c_h_log 		 -0.507235
+c_r_log 		 -0.507235
+h_h_log 		 -1.09861
+h_r_log 		 -1.09861
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+          0.1366           0.1366                0
+           0.534            0.534                0
+          0.8595           0.8595                0
+             0.9              0.9                0
+             0.9              0.9                0
+          0.9383           0.9383                0
+           1.071            1.071                0
+            1.09            1.047           0.3041
+            1.09            1.047          -0.3041
+           1.238            1.238                0
+       2.536e+16        2.536e+16                0
+        8.51e+18         8.51e+18                0
+
+There are 6 eigenvalue(s) larger than 1 in modulus for 6 forward-looking variable(s)
+The rank condition is verified.
+</pre></div>
+</div>
+<img alt="../_images/2b90d98ca585a720d334a24ed47d0a64edffd8fdcb87ae1ff9b40480683ff203.png" src="../_images/2b90d98ca585a720d334a24ed47d0a64edffd8fdcb87ae1ff9b40480683ff203.png" />
+<img alt="../_images/70f2964466ca10e65bedc6706ac45d5ee7226525c6ae471cece419461b91cf00.png" src="../_images/70f2964466ca10e65bedc6706ac45d5ee7226525c6ae471cece419461b91cf00.png" />
+<img alt="../_images/433f43be8934ab0e75781c1dd813879138ba990ed160a13592476762d0724c93.png" src="../_images/433f43be8934ab0e75781c1dd813879138ba990ed160a13592476762d0724c93.png" />
+<img alt="../_images/7725d8dae773f6e9a9c3bbcae6b0c63c0e752fcac709b2727b6c5879f5dee48f.png" src="../_images/7725d8dae773f6e9a9c3bbcae6b0c63c0e752fcac709b2727b6c5879f5dee48f.png" />
+<img alt="../_images/ffe2a3a3d58e7731c5a15d2611f9cc26795f26c7c5d12d049e37da8e79c0851d.png" src="../_images/ffe2a3a3d58e7731c5a15d2611f9cc26795f26c7c5d12d049e37da8e79c0851d.png" />
+<img alt="../_images/b9415250ee08b3ab58ee51ddd4069dfec98a4910b7f41683917fcc59497f7654.png" src="../_images/b9415250ee08b3ab58ee51ddd4069dfec98a4910b7f41683917fcc59497f7654.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total computing time : 0h00m08s
+Note: 1 warning(s) encountered in the preprocessor
+</pre></div>
+</div>
+</div>
+</div>
+<p>With two agent New Keynesian model, we can check policy effect on different types of households.</p>
+<p>For example, when there is positive monetary policy shock, or an increase in interest rate, consumption of HtM households decreases more than that of ricardian households, due to no access to financial market. And HtM households have to work for more hours to compensate for this shock.</p>
+<p>Some literature explores three-agent New Keynesian model, which is similar to two-agent model.</p>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="reference">
+<h1>Reference<a class="headerlink" href="#reference" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>Valerio Nispi Landi, Note on NK Model and TANK Model, 2021</p></li>
+</ol>
+<ol class="arabic simple" start="2">
+<li><p>Gali, Monetary Policy, Inflation, and the Business Cycle, 2015</p></li>
+</ol>
+<ol class="arabic simple" start="3">
+<li><p>Gali, Lopez, Valles, Understanding the Effects of Government Spending on Consumption, Journal of the European Economic Association, 2007</p></li>
+</ol>
+<ol class="arabic simple" start="4">
+<li><p>李向阳,《动态随机一般均衡(DSGE)模型》,2018</p></li>
+</ol>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "jupyter_matlab_kernel"
+        },
+        kernelOptions: {
+            name: "jupyter_matlab_kernel",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'jupyter_matlab_kernel'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">ECON 5360 Tutorial 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#new-keynesian-model-and-its-extension">New Keynesian Model and its Extension</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ding-minjie-spring-2025">DING Minjie, Spring 2025</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#household">1. Household</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#final-goods-firms">2. Final Goods Firms</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#intermediate-goods-firms">3. Intermediate Goods Firms</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#policy-and-market-clearing">4. Policy and Market Clearing</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#equilibrium-and-steady-state-solution">5. Equilibrium and Steady State Solution</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dynare-code-for-nk-model">6. Dynare code for NK model</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#two-agent-new-keynesian-model">6. Two Agent New Keynesian Model</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">Reference</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

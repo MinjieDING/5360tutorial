@@ -1,0 +1,1531 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>4. Algorithm Comparison in Optimal Consumption Problem &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '4_Algorithm_Comparison_in_Optimal_Consumption_Problem';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5. From Optimal Consumption to Aiyagari Model" href="5_From_Optimal_Consumption_to_Aiyagari_Model.html" />
+    <link rel="prev" title="3. Numerical Methods in MATLAB" href="3_Numerical_Method_in_MATLAB.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="0_Tutorial_Introduction.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="My sample book - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="0_Tutorial_Introduction.html">
+                    Tutorial Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_Implement_Real_Business_Cycle_Model_in_MATLAB_and_Dynare.html">1. Implement Real Business Cycle Model in MATLAB, Dynare, Python and Julia</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="1_Implement_Real_Business_Cycle_Model_in_Python.html">1.6 RBC Model in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_Implement_Real_Business_Cycle_Model_in_Julia.html">1.7 RBC Model in Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_New_Keynesian_Model_and_Tractable_Heterogneity.html">2. New Keynesian Model and Tractable Heterogeneity</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="3_Numerical_Method_in_MATLAB.html">3. Numerical Methods in MATLAB</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Algorithm Comparison in Optimal Consumption Problem</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="5_From_Optimal_Consumption_to_Aiyagari_Model.html">5. From Optimal Consumption to Aiyagari Model</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="6_Heterogeneous_Agent_Model_in_Continous_Time.html">6. Heterogeneous Agent Model in Continous Time</a></li>
+
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F4_Algorithm_Comparison_in_Optimal_Consumption_Problem.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/4_Algorithm_Comparison_in_Optimal_Consumption_Problem.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>4. Algorithm Comparison in Optimal Consumption Problem</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4. Algorithm Comparison in Optimal Consumption Problem</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-example-to-show-computation-difference">1. A simple example to show computation difference</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parpool">parpool</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#optimal-consumption-solution-1-value-function-iteration-using-loop">2. Optimal Consumption Solution 1: Value Function Iteration using Loop</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#optimal-consumption-with-income-shock">3. Optimal Consumption with Income Shock</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#optimal-consumption-solution-2-speed-up-with-vectorization">4. Optimal Consumption Solution 2: Speed Up with Vectorization</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#endogenous-grid-method">5. Endogenous Grid Method</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#optimal-consumption-solution-3-speed-up-with-endogenous-grid-method">6. Optimal Consumption Solution 3: Speed Up with Endogenous Grid Method</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">Reference</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="algorithm-comparison-in-optimal-consumption-problem">
+<h1>4. Algorithm Comparison in Optimal Consumption Problem<a class="headerlink" href="#algorithm-comparison-in-optimal-consumption-problem" title="Link to this heading">#</a></h1>
+<p>DING Minjie, Spring 2025</p>
+<hr class="docutils" />
+<p>Differnet algorithm leads to different compuation speed. In this tutorial, I will firstly show computation difference with a simple example. Then, I will compare three methods to solve optimal consumption problem.</p>
+<ol class="arabic simple">
+<li><p>A simple example to show computation difference</p></li>
+<li><p>Optimal Consumption Solution 1: Value Function Iteration using Loop</p></li>
+<li><p>Optimal Consumption with Income Shock</p></li>
+<li><p>Optimal Consumption Solution 2: Speed Up with Vectorization</p></li>
+<li><p>Endogenous Grid Method</p></li>
+<li><p>Optimal Consumption Solution 3: Speed Up with Endogenous Grid Method</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="a-simple-example-to-show-computation-difference">
+<h1>1. A simple example to show computation difference<a class="headerlink" href="#a-simple-example-to-show-computation-difference" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<p>Some commonly used methods to speed up computation include:</p>
+<ol class="arabic simple">
+<li><p>Vectorization is faster than Loop.</p></li>
+<li><p>Endogenous grid method is faster than value exogenous grid method.</p></li>
+<li><p>Use parpool to handle large dataset.</p></li>
+</ol>
+<p>I use optimal consumption as an example to demonstrate speed difference.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="s">&quot;C:\Users\ading\A_TA_Notes&quot;</span>
+<span class="nb">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>ans = 'C:\Users\ading\A_TA_Notes'</pre></body></html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">clear</span><span class="w"> </span><span class="nb">all</span><span class="p">;</span><span class="w">  </span><span class="c">% Clears all variables from the workspace</span>
+<span class="nb">close</span><span class="w"> </span><span class="nb">all</span><span class="p">;</span><span class="w">  </span><span class="c">% Closes all open figure windows</span>
+<span class="nb">clc</span><span class="p">;</span><span class="w">        </span><span class="c">% Clears the Command Window</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We want to sum up all dot product of elements in a matrix.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">rng</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w">                    </span><span class="c">% Set random seed</span>
+<span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1200</span><span class="p">;</span>
+<span class="n">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="s">&#39;Normal&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">);</span><span class="w">  </span><span class="c">% Generate Matrix</span>
+<span class="n">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">A</span><span class="o">&#39;</span><span class="p">;</span><span class="w">                    </span><span class="c">% Make it symmetric</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The first method is to use nested loops</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Code 1: Nested Loops for Total Calculation</span>
+<span class="nb">tic</span><span class="p">;</span><span class="w"> </span><span class="c">% Start the timer</span>
+<span class="n">total_1</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span>
+<span class="w">        </span><span class="n">total_1</span><span class="p">=</span><span class="n">total_1</span><span class="o">+</span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">,:)</span><span class="o">*</span><span class="n">A</span><span class="p">(</span><span class="nb">j</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="k">end</span>
+<span class="nb">toc</span><span class="p">;</span><span class="w"> </span><span class="c">% End the timer</span>
+<span class="n">total_1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>历时 4.272858 秒。
+</pre></div>
+</div>
+<div class="output text_html"><html><body><pre>total_1 = 3.0207e+06</pre></body></html></div></div>
+</div>
+<p>We can also loop over another dimension.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Code 2: Another Nested Loop Approach</span>
+<span class="nb">tic</span><span class="p">;</span><span class="w"> </span>
+<span class="n">total_2</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span>
+<span class="w">        </span><span class="n">total_2</span><span class="p">=</span><span class="n">total_2</span><span class="o">+</span><span class="n">A</span><span class="p">(:,</span><span class="nb">i</span><span class="p">)</span><span class="o">&#39;*</span><span class="n">A</span><span class="p">(:,</span><span class="nb">j</span><span class="p">);</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="k">end</span>
+<span class="nb">toc</span><span class="p">;</span>
+<span class="n">total_2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>历时 1.985000 秒。
+</pre></div>
+</div>
+<div class="output text_html"><html><body><pre>total_2 = 3.0207e+06</pre></body></html></div></div>
+</div>
+<p>However, loop one by one is slow. We can speed up with vectors.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Code 3: Vectorized Approach</span>
+<span class="nb">tic</span><span class="p">;</span><span class="w"> </span>
+<span class="n">total_3</span><span class="p">=</span><span class="nb">sum</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="n">A</span><span class="o">&#39;</span><span class="p">));</span>
+<span class="nb">toc</span><span class="p">;</span>
+<span class="n">total_3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>历时 0.049618 秒。
+</pre></div>
+</div>
+<div class="output text_html"><html><body><pre>total_3 = 3.0207e+06</pre></body></html></div></div>
+</div>
+<p>As we can see, vectorized approach takes much less time.</p>
+<section id="parpool">
+<h2>parpool<a class="headerlink" href="#parpool" title="Link to this heading">#</a></h2>
+<p>parpool enables us to handle several process simultaneously.</p>
+<p>However, it needs initialization time. So, when dealing with small dataset, parpool may not be the fastest.</p>
+<p>I have 6 par working together, but the time is longer than 1/6 of normal loops.</p>
+<p>Use parpool when we encounter large dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Paralell Computing</span>
+<span class="n">parpool</span><span class="p">;</span>
+
+<span class="nb">tic</span><span class="p">;</span><span class="w"> </span><span class="c">% Start the timer</span>
+<span class="n">total_1</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">parfor</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span>
+<span class="w">        </span><span class="n">total_1</span><span class="p">=</span><span class="n">total_1</span><span class="o">+</span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">,:)</span><span class="o">*</span><span class="n">A</span><span class="p">(</span><span class="nb">j</span><span class="p">,:)</span><span class="o">&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="k">end</span>
+<span class="nb">toc</span><span class="p">;</span><span class="w"> </span><span class="c">% End the timer</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>正在使用 &#39;Processes&#39; 配置文件启动并行池(parpool)...
+已连接到具有 6 个工作进程的并行池。
+历时 1.518947 秒。
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="optimal-consumption-solution-1-value-function-iteration-using-loop">
+<h1>2. Optimal Consumption Solution 1: Value Function Iteration using Loop<a class="headerlink" href="#optimal-consumption-solution-1-value-function-iteration-using-loop" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<p>Optimal consumption is a classical dynamic programming problem in economics.</p>
+<p>The problem can be formally described as follows:</p>
+<ul>
+<li><p><strong>Objective</strong>: Maximize the expected utility over time:</p>
+<div class="math notranslate nohighlight">
+\[
+  V(A) = \max_{c} \left\{ U(c) + \beta E[V(A') | A] \right\}
+  \]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p>V(A): Value function representing the maximum utility achievable with current assets <span class="math notranslate nohighlight">\( A \)</span>.</p></li>
+<li><p>U(c): Utility derived from consumption <span class="math notranslate nohighlight">\( c \)</span>. For simplicity, assume <span class="math notranslate nohighlight">\(U(c) = log(c)\)</span>.</p></li>
+<li><p>A’: Future assets after consumption is made,</p></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Asset Transition</strong>: determined by the equation:</p>
+<div class="math notranslate nohighlight">
+\[
+  A' = (1 + r)A + Y - c
+  \]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p>r: is the interest rate</p></li>
+<li><p>Y: is the income.</p></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Constraints</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+  c \geq 0 \quad \text{and} \quad c \leq A + Y
+  \]</div>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Preparation</span>
+
+<span class="c">% Households</span>
+<span class="n">y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">              </span><span class="c">% Fixed income received by the agent</span>
+<span class="nb">gamma</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">        </span><span class="c">% risk aversion in consumption utility function </span>
+<span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.03</span><span class="p">;</span><span class="w">           </span><span class="c">% The rate at which savings grow</span>
+<span class="nb">beta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.95</span><span class="p">;</span><span class="w">        </span><span class="c">% How much future utility is worth today</span>
+
+
+<span class="c">% Assets grids</span>
+<span class="n">a_grid_size</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span><span class="w">      </span><span class="c">% Number of asset grid</span>
+<span class="n">a_max</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w">        </span><span class="c">% Maximum value of asset</span>
+<span class="n">borrow_limit</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="c">% Borrowing limit</span>
+<span class="n">a_grid_power</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">           </span><span class="c">% Power of grid interval, 1 for linear, 0 for L-shaped</span>
+
+<span class="n">a_grid</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">a_grid_size</span><span class="p">)</span><span class="o">&#39;</span><span class="p">;</span>
+<span class="n">a_grid</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a_grid</span><span class="o">.^</span><span class="p">(</span><span class="mi">1</span><span class="o">./</span><span class="n">a_grid_power</span><span class="p">);</span>
+<span class="n">a_grid</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">borrow_limit</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a_max</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">borrow_limit</span><span class="p">)</span><span class="o">.*</span><span class="n">a_grid</span><span class="p">;</span>
+
+
+<span class="c">% Iteration setting</span>
+<span class="n">iter_max</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">          </span><span class="c">% maxium iteration</span>
+<span class="n">iter_counter</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">        </span><span class="c">% iteration counting   </span>
+
+<span class="n">iter_tolerance</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.01</span><span class="p">;</span><span class="w">   </span><span class="c">% Tolerance for convergence </span>
+<span class="n">iter_diff</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">           </span><span class="c">% initial difference </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Local Function to Facilitate Expression</span>
+
+<span class="c">% Utility function</span>
+<span class="k">if</span><span class="w"> </span><span class="nb">gamma</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="n">u</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@(</span><span class="n">c</span><span class="p">)</span><span class="nb">log</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+<span class="k">else</span><span class="w">    </span>
+<span class="w">    </span><span class="n">u</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@(</span><span class="n">c</span><span class="p">)(</span><span class="n">c</span><span class="o">.^</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="nb">gamma</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">./</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="nb">gamma</span><span class="p">);</span>
+<span class="k">end</span><span class="w">    </span>
+
+<span class="c">% Derivative of utility function to consumption</span>
+<span class="n">u1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="n">c</span><span class="o">.^</span><span class="p">(</span><span class="o">-</span><span class="nb">gamma</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Initialize value functions and consumption function</span>
+<span class="n">V_guess</span><span class="w">        </span><span class="p">=</span><span class="w"> </span><span class="n">u</span><span class="p">(</span><span class="n">r</span><span class="o">.*</span><span class="n">a_grid</span><span class="o">+</span><span class="n">y</span><span class="p">)</span><span class="o">./</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="nb">beta</span><span class="p">);</span><span class="w">     </span><span class="c">% initial guess of value function</span>
+<span class="n">V_current</span><span class="w">      </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">a_grid_size</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w">              </span><span class="c">% current value functions from iteration</span>
+<span class="n">V_next</span><span class="w">         </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">a_grid_size</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w">              </span><span class="c">% new value functions from iteration</span>
+<span class="n">C</span><span class="w">              </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">a_grid_size</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w">              </span><span class="c">% consumption policy</span>
+<span class="n">V_intermediate</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">a_grid_size</span><span class="p">,</span><span class="w"> </span><span class="n">iter_max</span><span class="p">);</span><span class="w">      </span><span class="c">% intermediate value functions</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Iteration using fmincon</span>
+
+<span class="n">options</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">optimoptions</span><span class="p">(</span><span class="s">&#39;fmincon&#39;</span><span class="p">,</span><span class="s">&#39;Display&#39;</span><span class="p">,</span><span class="s">&#39;off&#39;</span><span class="p">,</span><span class="s">&#39;TolX&#39;</span><span class="p">,</span><span class="mf">1.0e-8</span><span class="p">);</span><span class="w">  </span><span class="c">% Options for the optimizer</span>
+
+<span class="nb">tic</span>
+<span class="k">while</span><span class="w"> </span><span class="n">iter_counter</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">iter_max</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">iter_diff</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">iter_tolerance</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">a_grid_size</span>
+<span class="w">        </span><span class="n">utility_function</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">u</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">beta</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">interp1</span><span class="p">(</span><span class="n">a_grid</span><span class="p">,</span><span class="w"> </span><span class="n">V_current</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">r</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">a_grid</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="p">));</span>
+<span class="w">        </span><span class="c">% we need to find maximum utility, and we have fmincon</span>
+<span class="w">        </span><span class="c">% so we try to find minimum negative utility</span>
+<span class="w">        </span><span class="c">% interpolated from the current value function.</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="p">[</span><span class="n">C</span><span class="p">(</span><span class="nb">i</span><span class="p">),</span><span class="w"> </span><span class="n">V_next</span><span class="p">(</span><span class="nb">i</span><span class="p">)]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">fmincon</span><span class="p">(</span><span class="n">utility_function</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a_grid</span><span class="p">(</span><span class="nb">i</span><span class="p">),[],[],[],[],</span><span class="nb">eps</span><span class="p">,</span><span class="n">a_grid</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="n">options</span><span class="p">);</span>
+<span class="w">        </span><span class="c">% [x,fval] = fmincon(fun,x0,A,b,Aeq,beq,lb,ub,nonlcon,options)</span>
+<span class="w">        </span><span class="c">% find c(i) and V&#39;(i) that maximize utility</span>
+<span class="w">        </span><span class="c">% x0 = income+0.5*assetGrid(i) </span>
+<span class="w">        </span><span class="c">% upper bound =  assetGrid(i)+income</span>
+<span class="w">    </span><span class="k">end</span>
+
+<span class="w">    </span><span class="c">% Update value function</span>
+<span class="w">    </span><span class="n">V_next</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="n">V_next</span><span class="p">;</span>
+<span class="w">    </span><span class="n">V_intermediate</span><span class="p">(:,</span><span class="n">iter_counter</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">V_next</span><span class="p">;</span>
+<span class="w">    </span><span class="n">iter_diff</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">V_current</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">V_next</span><span class="p">));</span><span class="w"> </span>
+<span class="w">    </span><span class="n">V_current</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">V_next</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">iter_counter</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">iter_counter</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span>
+
+<span class="k">end</span>
+
+<span class="c">% Displays the total number of iterations and the time taken</span>
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;Total iteration: %3i, Time: %2.6f \n&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">iter_counter</span><span class="p">,</span><span class="w"> </span><span class="nb">toc</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total iteration:  31, Time: 48.294024 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here are parameters which will affect total running time of iteration.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a_grid_size: number of total grid
+a_grid_power: interval difference of grid
+gamma: type of utility function, when gamma doesn&#39;t equal to 1, the computation is more complicated. 
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Plotting</span>
+<span class="nb">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">a_grid</span><span class="p">,</span><span class="n">V_current</span><span class="p">)</span>
+<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;Value Function&#39;</span><span class="p">)</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Asset&#39;</span><span class="p">)</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Value&#39;</span><span class="p">)</span>
+
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">a_grid</span><span class="p">,</span><span class="n">C</span><span class="p">)</span>
+<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;Policy Function&#39;</span><span class="p">)</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Asset&#39;</span><span class="p">)</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Consumption&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/044b98d33ba81805124097fb81641fa31ba96422efd0420decb7ab77c6f5606e.png" src="_images/044b98d33ba81805124097fb81641fa31ba96422efd0420decb7ab77c6f5606e.png" />
+</div>
+</div>
+<p>Sometimes, people use <strong>“max”</strong> to find value function.</p>
+<p>Let’s re-run clear code cell, and parameters code cell.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">clear</span><span class="w"> </span><span class="nb">all</span><span class="p">;</span><span class="w">  </span><span class="c">% Clears all variables from the workspace</span>
+<span class="nb">close</span><span class="w"> </span><span class="nb">all</span><span class="p">;</span><span class="w">  </span><span class="c">% Closes all open figure windows</span>
+<span class="nb">clc</span><span class="p">;</span><span class="w">        </span><span class="c">% Clears the Command Window</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Preparation</span>
+
+<span class="c">% Households</span>
+<span class="n">y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">              </span><span class="c">% Fixed income received by the agent</span>
+<span class="nb">gamma</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">        </span><span class="c">% risk aversion in consumption utility function </span>
+<span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.03</span><span class="p">;</span><span class="w">           </span><span class="c">% The rate at which savings grow</span>
+<span class="nb">beta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.95</span><span class="p">;</span><span class="w">        </span><span class="c">% How much future utility is worth today</span>
+
+
+<span class="c">% Assets grids</span>
+<span class="n">a_grid_size</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span><span class="w">      </span><span class="c">% Number of asset grid</span>
+<span class="n">a_max</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w">        </span><span class="c">% Maximum value of asset</span>
+<span class="n">borrow_limit</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="c">% Borrowing limit</span>
+<span class="n">a_grid_power</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">           </span><span class="c">% Power of grid interval, 1 for linear, 0 for L-shaped</span>
+
+<span class="n">a_grid</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">a_grid_size</span><span class="p">)</span><span class="o">&#39;</span><span class="p">;</span>
+<span class="n">a_grid</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a_grid</span><span class="o">.^</span><span class="p">(</span><span class="mi">1</span><span class="o">./</span><span class="n">a_grid_power</span><span class="p">);</span>
+<span class="n">a_grid</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">borrow_limit</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a_max</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">borrow_limit</span><span class="p">)</span><span class="o">.*</span><span class="n">a_grid</span><span class="p">;</span>
+
+
+<span class="c">% Iteration setting</span>
+<span class="n">iter_max</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">          </span><span class="c">% maxium iteration</span>
+<span class="n">iter_counter</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">        </span><span class="c">% iteration counting   </span>
+
+<span class="n">iter_tolerance</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.01</span><span class="p">;</span><span class="w">   </span><span class="c">% Tolerance for convergence </span>
+<span class="n">iter_diff</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">           </span><span class="c">% initial difference </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Initialize value functions and consumption function</span>
+<span class="n">V_guess</span><span class="w">        </span><span class="p">=</span><span class="w"> </span><span class="n">u</span><span class="p">(</span><span class="n">r</span><span class="o">.*</span><span class="n">a_grid</span><span class="o">+</span><span class="n">y</span><span class="p">)</span><span class="o">./</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="nb">beta</span><span class="p">);</span><span class="w">     </span><span class="c">% initial guess of value function</span>
+<span class="n">V_current</span><span class="w">      </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">a_grid_size</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w">              </span><span class="c">% current value functions from iteration</span>
+<span class="n">V_next</span><span class="w">          </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">a_grid_size</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w">              </span><span class="c">% new value functions from iteration</span>
+<span class="n">V_intermediate</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">a_grid_size</span><span class="p">,</span><span class="w"> </span><span class="n">iter_max</span><span class="p">);</span><span class="w">      </span><span class="c">% intermediate value functions</span>
+<span class="n">C</span><span class="w">              </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">a_grid_size</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w">              </span><span class="c">% consumption policy</span>
+<span class="n">S</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">a_grid_size</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w">                   </span><span class="c">% saving function</span>
+<span class="n">S_index</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">a_grid_size</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w">              </span><span class="c">% saving choice index function</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Local Function to Facilitate Expression</span>
+
+<span class="c">% Utility function</span>
+<span class="k">if</span><span class="w"> </span><span class="nb">gamma</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="n">u</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@(</span><span class="n">c</span><span class="p">)</span><span class="nb">log</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+<span class="k">else</span><span class="w">    </span>
+<span class="w">    </span><span class="n">u</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@(</span><span class="n">c</span><span class="p">)(</span><span class="n">c</span><span class="o">.^</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="nb">gamma</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">./</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="nb">gamma</span><span class="p">);</span>
+<span class="k">end</span><span class="w">    </span>
+
+<span class="c">% Derivative of utility function to consumption</span>
+<span class="n">u1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="n">c</span><span class="o">.^</span><span class="p">(</span><span class="o">-</span><span class="nb">gamma</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We use “max” here to find optimal choice.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Iteration using max</span>
+
+<span class="n">V_next</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">V_guess</span><span class="p">;</span>
+
+<span class="nb">tic</span><span class="p">;</span><span class="w"> </span>
+
+<span class="k">while</span><span class="w"> </span><span class="n">iter_counter</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">iter_max</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">iter_diff</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">iter_tolerance</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">iter_counter</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">iter_counter</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">V_current</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">V_next</span><span class="p">;</span><span class="w">   </span><span class="c">% pass the old value to current value</span>
+
+<span class="w">    </span>
+<span class="w">    </span><span class="c">% loop over assets</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">a_grid_size</span><span class="w">        </span>
+<span class="w">        </span><span class="n">cash</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">r</span><span class="p">)</span><span class="o">.*</span><span class="n">a_grid</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">        </span><span class="n">V_choice</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">u</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">cash</span><span class="o">-</span><span class="n">a_grid</span><span class="p">,</span><span class="mf">1.0e-10</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">beta</span><span class="o">.*</span><span class="n">V_current</span><span class="p">;</span><span class="w">           </span>
+<span class="w">        </span><span class="p">[</span><span class="n">V_next</span><span class="p">(</span><span class="nb">i</span><span class="p">),</span><span class="n">S_index</span><span class="p">(</span><span class="nb">i</span><span class="p">)]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="n">V_choice</span><span class="p">);</span>
+<span class="w">        </span><span class="n">S</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a_grid</span><span class="p">(</span><span class="n">S_index</span><span class="p">(</span><span class="nb">i</span><span class="p">));</span><span class="w">      </span><span class="c">% Saving = i_th a_grid which maximize value function </span>
+<span class="w">        </span><span class="n">C</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">cash</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">S</span><span class="p">(</span><span class="nb">i</span><span class="p">);</span><span class="w">            </span><span class="c">% Consumption = cash - saving</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">    </span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">iter_diff</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">V_next</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">V_current</span><span class="p">)));</span>
+<span class="w">   </span>
+<span class="w">    </span><span class="c">% disp([&#39;Iteration no. &#39; int2str(iter_counter), &#39; max val fn diff is &#39; num2str(iter_diff)]);</span>
+<span class="k">end</span><span class="w">    </span>
+
+<span class="c">% Displays the total number of iterations and the time taken</span>
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;Total iteration: %3i, Time: %2.6f \n&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">iter_counter</span><span class="p">,</span><span class="w"> </span><span class="nb">toc</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total iteration:  32, Time: 0.266263 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Plotting</span>
+<span class="nb">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">a_grid</span><span class="p">,</span><span class="n">V_current</span><span class="p">)</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Value Function&#39;</span><span class="p">)</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Asset&#39;</span><span class="p">)</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Value&#39;</span><span class="p">)</span>
+
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">a_grid</span><span class="p">,</span><span class="n">C</span><span class="p">)</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Consumption Policy Function&#39;</span><span class="p">)</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Asset&#39;</span><span class="p">)</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Consumption&#39;</span><span class="p">)</span>
+
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">a_grid</span><span class="p">,</span><span class="n">S</span><span class="o">-</span><span class="n">a_grid</span><span class="p">)</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Savings Policy Function (a&#39;&#39;-a)&#39;</span><span class="p">)</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Asset&#39;</span><span class="p">)</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Saving&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/1e71714b6f231c21d1af80786107cbc0b57db4cd7be33215cc1ec1c84f78796d.png" src="_images/1e71714b6f231c21d1af80786107cbc0b57db4cd7be33215cc1ec1c84f78796d.png" />
+</div>
+</div>
+<p>This method is much more faster. But there is no interpolation, only find certain index. So, there is zig-zag thing in policy function.</p>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="optimal-consumption-with-income-shock">
+<h1>3. Optimal Consumption with Income Shock<a class="headerlink" href="#optimal-consumption-with-income-shock" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<p>Now we introduce new changes to the problem.</p>
+<ul>
+<li><p>The agent faces three possible income levels:
+$<span class="math notranslate nohighlight">\(  Y = [0.5, 1.0, 1.5] \)</span>$</p></li>
+<li><p>Each income level has an equal probability:
+$<span class="math notranslate nohighlight">\( Pi_Y = [\frac{1}{3}, \frac{1}{3}, \frac{1}{3}] \)</span>$</p></li>
+<li><p>For each combination of asset levels and income states, we need to uses the <code class="docutils literal notranslate"><span class="pre">fmincon</span></code> optimization function to determine the optimal consumption level  C that maximizes the expected utility:</p>
+<div class="math notranslate nohighlight">
+\[
+  \max_{c} \left\{ -\log(c) - \beta \sum_{j=1}^{3} \Pi_Y(j) V_0(A', Y(j)) \right\}
+  \]</div>
+</li>
+<li><p>The future assets A’ after consumption are calculated based on the current assets, income, and chosen consumption.</p></li>
+</ul>
+<p>In parameter section, here are newly added code lines:</p>
+<ul class="simple">
+<li><p>Y = [0.5;1.0;1.5];       % Income levels</p></li>
+<li><p>Pi_Y = [1/3; 1/3; 1/3];  % Income probabilitie</p></li>
+<li><p>N_Y = length(Y);         % Number of income levels</p></li>
+</ul>
+<p>Others are the same, except for more abbreviation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Preparation</span>
+
+<span class="c">% Households</span>
+<span class="n">Y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.5</span><span class="p">;</span><span class="mf">1.0</span><span class="p">;</span><span class="mf">1.5</span><span class="p">];</span><span class="w">       </span><span class="c">% Income levels</span>
+<span class="n">Pi_Y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">];</span><span class="w">  </span><span class="c">% Income probabilities  </span>
+<span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.02</span><span class="p">;</span><span class="w">                </span><span class="c">% The rate at which savings grow</span>
+<span class="nb">beta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.96</span><span class="p">;</span><span class="w">             </span><span class="c">% How much future utility is worth today</span>
+
+<span class="c">% Asset grid</span>
+<span class="n">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="mf">0.05</span><span class="p">:</span><span class="mi">10</span><span class="p">)</span><span class="o">&#39;</span><span class="p">;</span><span class="w">        </span><span class="c">% Grid of asset from 0 to 10, increments of 0.05</span>
+<span class="n">N_A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">length</span><span class="p">(</span><span class="n">A</span><span class="p">);</span><span class="w">         </span><span class="c">% Number of points in the asset grid</span>
+<span class="n">N_Y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">length</span><span class="p">(</span><span class="n">Y</span><span class="p">);</span><span class="w">         </span><span class="c">% Number of income levels</span>
+
+<span class="c">% Maximum iterations</span>
+<span class="n">Max_iter</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">          </span><span class="c">% maxium iteration</span>
+<span class="n">iter</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">                </span><span class="c">% iteration start from 1</span>
+
+<span class="c">% Tolerance for convergence</span>
+<span class="n">tol</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.01</span><span class="p">;</span><span class="w">              </span><span class="c">% tolerance, larger to shorten time</span>
+<span class="n">max_diff</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">            </span><span class="c">% difference start</span>
+
+<span class="c">% Options for fmincon optimization</span>
+<span class="n">opts</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">optimoptions</span><span class="p">(</span><span class="s">&#39;fmincon&#39;</span><span class="p">,</span><span class="s">&#39;Display&#39;</span><span class="p">,</span><span class="s">&#39;off&#39;</span><span class="p">,</span><span class="s">&#39;TolX&#39;</span><span class="p">,</span><span class="mf">1.0e-6</span><span class="p">);</span>
+
+<span class="c">% Initialize value function and consumption</span>
+<span class="n">V_0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">N_A</span><span class="p">,</span><span class="w"> </span><span class="n">N_Y</span><span class="p">);</span><span class="w">   </span><span class="c">% current value functions</span>
+<span class="n">V_1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">N_A</span><span class="p">,</span><span class="w"> </span><span class="n">N_Y</span><span class="p">);</span><span class="w">   </span><span class="c">% next value functions </span>
+<span class="n">C</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">N_A</span><span class="p">,</span><span class="w"> </span><span class="n">N_Y</span><span class="p">);</span><span class="w">     </span><span class="c">% consumption policy</span>
+<span class="n">V_save</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">N_A</span><span class="p">,</span><span class="w"> </span><span class="n">N_Y</span><span class="p">,</span><span class="w"> </span><span class="n">Max_iter</span><span class="p">);</span><span class="w">  </span><span class="c">% intermediate value functions</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In iteration section, the changes are:</p>
+<ul class="simple">
+<li><p>Introduce another loop because of 3 income level.</p></li>
+<li><p>Future value in Bellman function now is expected value weighted by income probability.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Iteration</span>
+<span class="nb">tic</span>
+<span class="k">while</span><span class="w"> </span><span class="n">max_diff</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">tol</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">N_Y</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">N_A</span>
+<span class="w">            </span><span class="c">% Optimize consumption and update value function</span>
+<span class="w">            </span><span class="n">utility_function</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="nb">log</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                </span><span class="o">-</span><span class="w"> </span><span class="nb">beta</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">Pi_Y</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="nb">interp1</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">V_0</span><span class="p">(:,</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">r</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Y</span><span class="p">(</span><span class="nb">j</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="p">))</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                </span><span class="o">+</span><span class="w"> </span><span class="n">Pi_Y</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="nb">interp1</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">V_0</span><span class="p">(:,</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">r</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Y</span><span class="p">(</span><span class="nb">j</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="p">))</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                </span><span class="o">+</span><span class="w"> </span><span class="n">Pi_Y</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="nb">interp1</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">V_0</span><span class="p">(:,</span><span class="mi">3</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">r</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Y</span><span class="p">(</span><span class="nb">j</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="p">)));</span>
+
+<span class="w">            </span><span class="p">[</span><span class="n">C</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">j</span><span class="p">),</span><span class="w"> </span><span class="n">V_1</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">j</span><span class="p">)]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">fmincon</span><span class="p">(</span><span class="n">utility_function</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                </span><span class="mf">0.5</span><span class="o">*</span><span class="n">Y</span><span class="p">(</span><span class="nb">j</span><span class="p">)</span><span class="o">+</span><span class="mf">0.5</span><span class="o">*</span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">),[],[],[],[],</span><span class="nb">eps</span><span class="p">,</span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">+</span><span class="n">Y</span><span class="p">(</span><span class="nb">j</span><span class="p">),[],</span><span class="n">opts</span><span class="p">);</span><span class="w"> </span>
+<span class="w">        </span><span class="k">end</span>
+<span class="w">    </span><span class="k">end</span>
+
+<span class="w">    </span><span class="c">% Update the value function and check for convergence</span>
+<span class="w">    </span><span class="n">V_1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="n">V_1</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">V_save</span><span class="p">(:,:,</span><span class="n">iter</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">V_1</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">max_diff</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">V_0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">V_1</span><span class="p">)));</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nb">mod</span><span class="p">(</span><span class="n">iter</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">        </span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;Iteration: %d, Max difference: %.8f\n&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">iter</span><span class="p">,</span><span class="w"> </span><span class="n">max_diff</span><span class="p">);</span>
+<span class="w">    </span><span class="k">end</span>
+
+<span class="w">    </span><span class="n">V_0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">V_1</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">iter</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">iter</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">end</span>
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;Total iteration: %3i, Time: %2.6f \n&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">iter</span><span class="p">,</span><span class="w"> </span><span class="nb">toc</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iteration: 1, Max difference: 2.44234702
+Iteration: 11, Max difference: 0.10095394
+Iteration: 21, Max difference: 0.01114086
+Total iteration:  25, Time: 46.076386 
+</pre></div>
+</div>
+</div>
+</div>
+<p>The plotting section is the same.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Plotting the value function for each income level</span>
+<span class="nb">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">V_1</span><span class="p">(:,</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">V_1</span><span class="p">(:,</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">V_1</span><span class="p">(:,</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;Y=0.5&#39;</span><span class="p">,</span><span class="s">&#39;Y=1.0&#39;</span><span class="p">,</span><span class="s">&#39;Y=1.5&#39;</span><span class="p">)</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;A&#39;</span><span class="p">)</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;V&#39;</span><span class="p">)</span>
+
+<span class="c">% Plotting the optimal consumption level for each income level</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">C</span><span class="p">(:,</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">C</span><span class="p">(:,</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">C</span><span class="p">(:,</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;Y=0.5&#39;</span><span class="p">,</span><span class="s">&#39;Y=1.0&#39;</span><span class="p">,</span><span class="s">&#39;Y=1.5&#39;</span><span class="p">)</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;A&#39;</span><span class="p">)</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;C&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/26c47172efed9053142b93cbfabeb3736cd6fe82492d62aac84cc6f9d97901cd.png" src="_images/26c47172efed9053142b93cbfabeb3736cd6fe82492d62aac84cc6f9d97901cd.png" />
+</div>
+</div>
+<p>Now, there are many asset grid and several income levels, so we have a nested loop inside a loop.</p>
+<p>The computation takes much longer time than the case with constant income.</p>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="optimal-consumption-solution-2-speed-up-with-vectorization">
+<h1>4. Optimal Consumption Solution 2: Speed Up with Vectorization<a class="headerlink" href="#optimal-consumption-solution-2-speed-up-with-vectorization" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<p>Now we solve the model with value function iteration which is vertorized.</p>
+<p>In preparation section, the key difference is how to initialize grids.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Preparation</span>
+
+<span class="c">% Households</span>
+<span class="n">ygrid</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.5</span><span class="p">;</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w"> </span><span class="mf">1.5</span><span class="p">];</span><span class="w"> </span><span class="c">% Income levels</span>
+<span class="n">pi_y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">repmat</span><span class="p">([</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c">% Income probabilities  </span>
+<span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.02</span><span class="p">;</span><span class="w">                </span><span class="c">% The rate at which savings grow</span>
+<span class="nb">beta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.96</span><span class="p">;</span><span class="w">             </span><span class="c">% How much future utility is worth today</span>
+
+<span class="c">% Asset grid</span>
+<span class="n">agrid</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="mf">0.05</span><span class="p">:</span><span class="mi">10</span><span class="p">)</span><span class="o">&#39;</span><span class="p">;</span><span class="w">    </span><span class="c">% Grid of asset from 0 to 10, increments of 0.05</span>
+<span class="n">NA_grid</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">length</span><span class="p">(</span><span class="n">agrid</span><span class="p">);</span><span class="w"> </span><span class="c">% Number of points in the asset grid </span>
+<span class="n">NY_grid</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">length</span><span class="p">(</span><span class="n">ygrid</span><span class="p">);</span><span class="w">  </span><span class="c">% Number of income levels</span>
+
+<span class="c">% Maximum iterations</span>
+<span class="n">maxiter</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="o">^</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span><span class="w">        </span><span class="c">% maxium iteration</span>
+<span class="n">iter</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">                </span><span class="c">% iteration start from 1</span>
+
+<span class="c">% Tolerance for convergence</span>
+<span class="n">tol_in</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1e-4</span><span class="p">;</span><span class="w">           </span><span class="c">% tolerance</span>
+<span class="n">max_diff</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tol_in</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">   </span><span class="c">% difference start</span>
+
+<span class="c">% Initialize grids</span>
+<span class="n">V_0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">NA_grid</span><span class="p">,</span><span class="w"> </span><span class="n">NY_grid</span><span class="p">);</span><span class="w">  </span><span class="c">% current value functions</span>
+<span class="p">[</span><span class="n">AIND</span><span class="p">,</span><span class="n">YIND</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">ndgrid</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">NA_grid</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="n">NY_grid</span><span class="p">);</span>
+<span class="n">Amat</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">agrid</span><span class="p">(</span><span class="n">AIND</span><span class="p">);</span><span class="w"> </span>
+<span class="n">Ymat</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ygrid</span><span class="p">(</span><span class="n">YIND</span><span class="p">);</span>
+<span class="c">% ndgrid creates matrices AIND and YIND for indexing purposes, </span>
+<span class="c">% helping to construct matrices of asset and income levels.</span>
+
+<span class="c">% Remember that in previous version, we use following code</span>
+<span class="c">% to initialize value function and consumption</span>
+<span class="c">% V_0 = zeros(N_A, N_Y);   % current value functions</span>
+<span class="c">% V_1 = zeros(N_A, N_Y);   % next value functions </span>
+<span class="c">% C = zeros(N_A, N_Y);     % consumption policy</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In iteration, we use Golden section method and a function written by Professor Jinhui Bai.</p>
+<p>Note that in previous version, we use two loops to check each income level (N_Y) and each asset grids (N_A), one by one.</p>
+<p>Here we use vectors, Amat(:)+Ymat(:), to avoid loops. In a single N_Y*N_A matrix, all income level and all asset grids are checked.</p>
+<p>Which means, we can check N_Y*N_A element everytime.</p>
+<p>So, the computation is much faster.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Iteration</span>
+<span class="nb">disp</span><span class="p">(</span><span class="s">&#39;vfi loop, running...&#39;</span><span class="p">);</span>
+<span class="n">tic</span>
+<span class="s">while</span><span class="w"> </span><span class="s">(max_diff</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">tol_in</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">iter</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">maxiter</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c">% Objective function for goldenx</span>
+<span class="w">    </span><span class="n">objFun</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="nb">log</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">beta</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sum</span><span class="p">(</span><span class="n">pi_y</span><span class="p">(</span><span class="n">YIND</span><span class="p">(:),</span><span class="w"> </span><span class="p">:)</span><span class="w"> </span><span class="o">.*</span><span class="w"> </span><span class="k">...</span>
+<span class="w">        </span><span class="nb">interp1</span><span class="p">(</span><span class="n">agrid</span><span class="p">,</span><span class="w"> </span><span class="n">V_0</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">r</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">Amat</span><span class="p">(:)</span><span class="o">+</span><span class="n">Ymat</span><span class="p">(:)</span><span class="o">-</span><span class="n">x</span><span class="p">),</span><span class="s">&#39;spline&#39;</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c">% Optimization</span>
+<span class="w">    </span><span class="p">[</span><span class="n">C</span><span class="p">,</span><span class="w"> </span><span class="n">V_1</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">GoldenVec</span><span class="p">(</span><span class="n">objFun</span><span class="p">,</span><span class="w"> </span><span class="nb">eps</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">ones</span><span class="p">(</span><span class="n">NA_grid</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">NY_grid</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="k">...</span>
+<span class="w">        </span><span class="n">Amat</span><span class="p">(:)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Ymat</span><span class="p">(:),</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="mf">1e-8</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">V_1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="n">V_1</span><span class="p">,</span><span class="w"> </span><span class="n">NA_grid</span><span class="p">,</span><span class="w"> </span><span class="n">NY_grid</span><span class="p">);</span>
+<span class="w">    </span><span class="n">max_diff</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">V_0</span><span class="p">(:)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">V_1</span><span class="p">(:)));</span>
+<span class="w">    </span><span class="n">V_0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">V_1</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c">% Display progress every 50 iterations</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nb">mod</span><span class="p">(</span><span class="n">iter</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">        </span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;Iteration: %d, Max difference: %.8f\n&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">iter</span><span class="p">,</span><span class="w"> </span><span class="n">max_diff</span><span class="p">);</span>
+<span class="w">    </span><span class="k">end</span>
+
+<span class="w">    </span><span class="n">iter</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">iter</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">end</span>
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;vertorized vfi total iteration: %3i, time: %2.6f \n&#39;</span><span class="p">,</span><span class="n">iter</span><span class="p">,</span><span class="nb">toc</span><span class="p">);</span>
+
+
+<span class="c">%% GoldenVec function by Professor Jinhui Bai</span>
+<span class="k">function</span><span class="w"> </span><span class="nf">[x1, f1, exitflag] = GoldenVec</span><span class="p">(</span>f, a, b, maxiter, tol, varargin<span class="p">)</span>
+<span class="c">% GOLDENX computes the local maximum of a univariate function on an interval using Golden Search.</span>
+<span class="c">% This function is a vectorized version of the Golden Search method.</span>
+<span class="c">%</span>
+<span class="c">% Inputs:</span>
+<span class="c">%   f       : name of the function to be maximized. The function should be in the form fval=f(x).</span>
+<span class="c">%   a, b    : left and right endpoints of the interval.</span>
+<span class="c">%   maxiter : maximum number of iterations.</span>
+<span class="c">%   tol     : convergence tolerance.</span>
+<span class="c">%   varargin: optional additional arguments for the function f.</span>
+<span class="c">%</span>
+<span class="c">% Outputs:</span>
+<span class="c">%   x1      : local maximum of the function f.</span>
+<span class="c">%   f1      : function value at the local maximum.</span>
+<span class="c">%   exitflag: condition of exit (1 = converged, 0 = maximum iteration reached).</span>
+
+<span class="c">% Copyright (c) 1997-2002, Paul L. Fackler &amp; Mario J. Miranda</span>
+<span class="c">% paul_fackler@ncsu.edu, miranda.4@osu.edu</span>
+
+<span class="c">% Revised by Jinhui Bai, January 15, 2005</span>
+
+<span class="c">% Check if bracketing points have correct sizes and values</span>
+<span class="k">if</span><span class="w"> </span><span class="o">~</span><span class="nb">isequal</span><span class="p">(</span><span class="nb">size</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="w"> </span><span class="nb">size</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<span class="w">    </span><span class="nb">error</span><span class="p">(</span><span class="s">&#39;Bracketing vectors must be of the same length.&#39;</span><span class="p">);</span>
+<span class="k">end</span>
+
+<span class="k">if</span><span class="w"> </span><span class="nb">any</span><span class="p">((</span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">error</span><span class="p">(</span><span class="s">&#39;Lower and upper interval points are not in the correct sequence.&#39;</span><span class="p">);</span>
+<span class="k">end</span>
+
+<span class="c">% Define the Golden Section coefficients</span>
+<span class="n">alpha1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="n">alpha2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">alpha1</span><span class="p">;</span>
+
+<span class="c">% Initialize section points and function evaluations</span>
+<span class="n">d</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">                 </span><span class="c">% Length of the interval</span>
+<span class="n">x1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">alpha1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w">       </span><span class="c">% Left section point</span>
+<span class="n">x2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">alpha2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w">       </span><span class="c">% Right section point</span>
+<span class="n">s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">ones</span><span class="p">(</span><span class="nb">size</span><span class="p">(</span><span class="n">x1</span><span class="p">));</span>
+<span class="n">f1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">feval</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="nb">varargin</span><span class="p">{:});</span>
+<span class="n">f2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">feval</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="nb">varargin</span><span class="p">{:});</span>
+
+<span class="c">% Iteration until convergence or maximum iteration is reached</span>
+<span class="n">iter</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="nb">any</span><span class="p">(</span><span class="n">d</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">tol</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">iter</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">maxiter</span><span class="p">)</span>
+<span class="w">    </span><span class="n">d</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">alpha2</span><span class="p">;</span>
+<span class="w">    </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">f2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">f1</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">x1</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">x2</span><span class="p">(</span><span class="nb">i</span><span class="p">);</span>
+<span class="w">    </span><span class="n">f1</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">f2</span><span class="p">(</span><span class="nb">i</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">d12</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">alpha2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">alpha1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w">       </span><span class="c">% Distance between two section points</span>
+<span class="w">    </span><span class="n">x2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">x1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">.*</span><span class="w"> </span><span class="p">(</span><span class="nb">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="o">~</span><span class="nb">i</span><span class="p">))</span><span class="w"> </span><span class="o">.*</span><span class="w"> </span><span class="n">d12</span><span class="p">;</span>
+<span class="w">    </span><span class="n">s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sign</span><span class="p">(</span><span class="n">x2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">f2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">feval</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="nb">varargin</span><span class="p">{:});</span>
+
+<span class="w">    </span><span class="n">iter</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">iter</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">end</span>
+
+<span class="c">% Return the larger of the two</span>
+<span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">f2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">f1</span><span class="p">;</span>
+<span class="n">x1</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">x2</span><span class="p">(</span><span class="nb">i</span><span class="p">);</span>
+<span class="n">f1</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">f2</span><span class="p">(</span><span class="nb">i</span><span class="p">);</span>
+
+<span class="c">% Define the exit flag</span>
+<span class="k">if</span><span class="w"> </span><span class="nb">all</span><span class="p">(</span><span class="n">d</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">tol</span><span class="p">)</span>
+<span class="w">    </span><span class="n">exitflag</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="n">exitflag</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>vfi loop, running...
+Iteration: 1, Max difference: 2.44234704
+Iteration: 51, Max difference: 0.00319405
+Iteration: 101, Max difference: 0.00041483
+vertorized vfi total iteration: 137, time: 0.366026 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Plotting</span>
+<span class="n">C</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="w"> </span><span class="n">NA_grid</span><span class="p">,</span><span class="w"> </span><span class="n">NY_grid</span><span class="p">);</span>
+
+<span class="nb">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">agrid</span><span class="p">,</span><span class="w"> </span><span class="n">V_1</span><span class="p">(:,</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">agrid</span><span class="p">,</span><span class="w"> </span><span class="n">V_1</span><span class="p">(:,</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">agrid</span><span class="p">,</span><span class="w"> </span><span class="n">V_1</span><span class="p">(:,</span><span class="mi">3</span><span class="p">));</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;A&#39;</span><span class="p">);</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;V&#39;</span><span class="p">);</span>
+<span class="nb">legend</span><span class="p">(</span><span class="nb">arrayfun</span><span class="p">(@(</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="nb">sprintf</span><span class="p">(</span><span class="s">&#39;Y=%.1f&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">),</span><span class="w"> </span><span class="n">ygrid</span><span class="p">,</span><span class="s">&#39;UniformOutput&#39;</span><span class="p">,</span><span class="nb">false</span><span class="p">));</span>
+
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">agrid</span><span class="p">,</span><span class="w"> </span><span class="n">C</span><span class="p">);</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;A&#39;</span><span class="p">);</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;C&#39;</span><span class="p">);</span>
+<span class="nb">legend</span><span class="p">(</span><span class="nb">arrayfun</span><span class="p">(@(</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="nb">sprintf</span><span class="p">(</span><span class="s">&#39;Y=%.1f&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">),</span><span class="w"> </span><span class="n">ygrid</span><span class="p">,</span><span class="s">&#39;UniformOutput&#39;</span><span class="p">,</span><span class="nb">false</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/25133830bf45848743cf0cc260564fc20b9695d7f3650bbc85563246dbb5578d.png" src="_images/25133830bf45848743cf0cc260564fc20b9695d7f3650bbc85563246dbb5578d.png" />
+<img alt="_images/d0cf9129b1fae5fb74cbdf2f15fbf6376a1afc529de70e3be2e49cacd3db3c4c.png" src="_images/d0cf9129b1fae5fb74cbdf2f15fbf6376a1afc529de70e3be2e49cacd3db3c4c.png" />
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="endogenous-grid-method">
+<h1>5. Endogenous Grid Method<a class="headerlink" href="#endogenous-grid-method" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<p>We need to find the consumption policy function (blue arrow) and asset policy function (red arrow).</p>
+<p>That is, given <span class="math notranslate nohighlight">\(A_t\)</span>, we need to know <span class="math notranslate nohighlight">\(C_t\)</span> and <span class="math notranslate nohighlight">\(A_{t+1}\)</span>.</p>
+<div style="text-align: center;">
+    <img src="./Figures/EGM_1.jpg" width="500"/>
+</div><p>We have a guess value for <span class="math notranslate nohighlight">\(C_t\)</span>. Or a guess value for <span class="math notranslate nohighlight">\(A_t\)</span>, they are connected by budget constraint.</p>
+<p>With Euler equation, we solve for an endogenou <span class="math notranslate nohighlight">\(C_{endo}\)</span>. And with budget constraint, we ge <span class="math notranslate nohighlight">\(C_{endo}\)</span>.</p>
+<p>The calculation is in the black arrows.</p>
+<div style = 'text-align: center'>
+    <img src = './Figures/EGM_2.jpg' width = '700'>
+</div><p>Now we have relation between <span class="math notranslate nohighlight">\(A_{endo}\)</span> and <span class="math notranslate nohighlight">\(A_{guess}\)</span>.</p>
+<p>We can get a new guess value <span class="math notranslate nohighlight">\(A_{guessnew}\)</span> with this relation using interpolation, and a new guess value <span class="math notranslate nohighlight">\(A_{guessnew}\)</span> by budget constraint.</p>
+<p>Then iterate, until two guess values are close enough.</p>
+<div style = 'text-align: center'>
+    <img src = './Figures/EGM_3.jpg' width = '500'>
+</div><p>Sometimes, people interpolate the consumption function.</p>
+<p>Using the relation betwee <span class="math notranslate nohighlight">\(C_{endo}\)</span> an <span class="math notranslate nohighlight">\(A_{endo}\)</span>, we can get a new guess valu <span class="math notranslate nohighlight">\(C_{guessnew}\)</span> starting fro <span class="math notranslate nohighlight">\(A_{guess}\)</span>, and then ge <span class="math notranslate nohighlight">\(A_{guessnew}\)</span> by budget constraint.</p>
+<p>Then iterate, until new guess values are close enough.</p>
+<div style = 'text-align: center'>
+    <img src = './Figures/EGM_4.jpg' width = '500'>
+</div><p>You may ask why we use backward induction, why not forward induction like in the graph.</p>
+<p>The main reason is that,<span class="math notranslate nohighlight">\(C_{endo}\)</span> can be written explicitly in backward induction, which is computationally fast.</p>
+<p>If we use forward induction, we still need to solve a nonlinear function.</p>
+<div style="text-align: center;">
+    <img src="./Figures/EGM_5.jpg" width="500">
+</div>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="optimal-consumption-solution-3-speed-up-with-endogenous-grid-method">
+<h1>6. Optimal Consumption Solution 3: Speed Up with Endogenous Grid Method<a class="headerlink" href="#optimal-consumption-solution-3-speed-up-with-endogenous-grid-method" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<p>In preparation section, it’s the same.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Preparation</span>
+
+<span class="c">% Households</span>
+<span class="n">ygrid</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.5</span><span class="p">;</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w"> </span><span class="mf">1.5</span><span class="p">];</span><span class="w"> </span><span class="c">% Income levels</span>
+<span class="n">pi_y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">repmat</span><span class="p">([</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c">% Income probabilities  </span>
+<span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.02</span><span class="p">;</span><span class="w">                </span><span class="c">% The rate at which savings grow</span>
+<span class="nb">beta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.96</span><span class="p">;</span><span class="w">             </span><span class="c">% How much future utility is worth today</span>
+
+<span class="c">% Asset grid</span>
+<span class="n">agrid</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="mf">0.05</span><span class="p">:</span><span class="mi">10</span><span class="p">)</span><span class="o">&#39;</span><span class="p">;</span><span class="w">    </span><span class="c">% Grid of asset from 0 to 10, increments of 0.05</span>
+<span class="n">NA_grid</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">length</span><span class="p">(</span><span class="n">agrid</span><span class="p">);</span><span class="w"> </span><span class="c">% Number of points in the asset grid </span>
+<span class="n">NY_grid</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">length</span><span class="p">(</span><span class="n">ygrid</span><span class="p">);</span><span class="w">  </span><span class="c">% Number of income levels</span>
+
+<span class="c">% Maximum iterations</span>
+<span class="n">maxiter</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="o">^</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span><span class="w">        </span><span class="c">% maxium iteration</span>
+<span class="n">iter</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">                </span><span class="c">% iteration start from 1</span>
+
+<span class="c">% Tolerance for convergence</span>
+<span class="n">tol_in</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1e-4</span><span class="p">;</span><span class="w">           </span><span class="c">% tolerance</span>
+<span class="n">max_diff</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tol_in</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">   </span><span class="c">% difference start</span>
+
+<span class="c">% Initialize grids</span>
+<span class="n">V_0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">NA_grid</span><span class="p">,</span><span class="w"> </span><span class="n">NY_grid</span><span class="p">);</span><span class="w">   </span><span class="c">% current value functions</span>
+<span class="p">[</span><span class="n">AIND</span><span class="p">,</span><span class="n">YIND</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">ndgrid</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">NA_grid</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="n">NY_grid</span><span class="p">);</span>
+<span class="n">Amat</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">agrid</span><span class="p">(</span><span class="n">AIND</span><span class="p">);</span><span class="w"> </span>
+<span class="n">Ymat</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ygrid</span><span class="p">(</span><span class="n">YIND</span><span class="p">);</span>
+<span class="c">% ndgrid creates matrices AIND and YIND for indexing purposes, </span>
+<span class="c">% helping to construct matrices of asset and income levels.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here in iteration, we don’t have to deal with optimization problem, just pure iteration.</p>
+<p>We have:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>interp1(a0(:,i),c0(:,i),Amat(:,i),&#39;spline&#39;)
+</pre></div>
+</div>
+<p>a0 and c0 is endogenous changed, this is why it’s called endogenous grid method.</p>
+<p>Remember that in Value function iteration, the code is:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>interp1(agrid, V_0, (1+r)*(Amat(:)+Ymat(:)-x)
+</pre></div>
+</div>
+<p>The grids are exogenous there.</p>
+<p>Also, in EGM (endogenous grid method), interpolation is used to get optimal policy function,</p>
+<p>while, in VFI (value function iteration), interpolation is used to fit data to existing exogenous grid, optimal value function is achieved by fmincon or other opizationmal function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Iteration</span>
+
+<span class="c">% Initial guess on future consumption.</span>
+<span class="n">cp0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">r</span><span class="o">*</span><span class="n">Amat</span><span class="o">+</span><span class="n">Ymat</span><span class="p">;</span><span class="w">  </span><span class="c">% cp is consumption projected</span>
+<span class="n">cpnext</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">cp0</span><span class="p">;</span>
+
+<span class="nb">disp</span><span class="p">(</span><span class="s">&#39;endogenous grid loop, running...&#39;</span><span class="p">);</span>
+<span class="n">tic</span>
+<span class="s">while</span><span class="w"> </span><span class="s">(max_diff</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">tol_in</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">iter</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">maxiter</span><span class="p">)</span>
+<span class="w">    </span><span class="c">% Derive current consumption and current assets    </span>
+<span class="w">    </span><span class="c">% Given guessed future consumption, we can get current consumption</span>
+<span class="w">    </span><span class="c">% and current asset, thus their mapping relation,</span>
+<span class="w">    </span><span class="c">% or consumption policy function.</span>
+<span class="w">    </span><span class="n">c0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="nb">beta</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">r</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">cp0</span><span class="o">.^</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">*</span><span class="n">pi_y</span><span class="o">&#39;</span><span class="p">)</span><span class="o">.^</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c">% from Euler equation</span>
+<span class="w">    </span><span class="n">a0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Amat</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">r</span><span class="p">)</span><span class="o">+</span><span class="n">c0</span><span class="o">-</span><span class="n">Ymat</span><span class="p">;</span><span class="w">         </span><span class="c">% from budget constraint</span>
+<span class="w">    </span><span class="n">V</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">log</span><span class="p">(</span><span class="n">c0</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c">% Update the guess for the consumption decision</span>
+<span class="w">    </span><span class="c">% Interpolation conditional on productivity realization</span>
+<span class="w">    </span><span class="c">% use default option for outbounders (no extrapolation)</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span>
+<span class="w">        </span><span class="n">cpnext</span><span class="p">(:,</span><span class="nb">i</span><span class="p">)</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="nb">interp1</span><span class="p">(</span><span class="n">a0</span><span class="p">(:,</span><span class="nb">i</span><span class="p">),</span><span class="n">c0</span><span class="p">(:,</span><span class="nb">i</span><span class="p">),</span><span class="n">Amat</span><span class="p">(:,</span><span class="nb">i</span><span class="p">),</span><span class="s">&#39;spline&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">end</span>
+
+<span class="w">    </span><span class="c">% Consumption decision rule for a binding borrowing constraint</span>
+<span class="w">    </span><span class="n">idcon</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">Amat</span><span class="o">+</span><span class="n">Ymat</span><span class="o">-</span><span class="n">cpnext</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cpnext</span><span class="p">(</span><span class="n">idcon</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Amat</span><span class="p">(</span><span class="n">idcon</span><span class="p">)</span><span class="o">+</span><span class="n">Ymat</span><span class="p">(</span><span class="n">idcon</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c">% Compute and display distance</span>
+<span class="w">    </span><span class="n">max_diff</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">cpnext</span><span class="p">(:)</span><span class="o">-</span><span class="n">cp0</span><span class="p">(:)));</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nb">mod</span><span class="p">(</span><span class="n">iter</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">        </span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;Iteration: %d, Max difference: %.8f\n&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">iter</span><span class="p">,</span><span class="w"> </span><span class="n">max_diff</span><span class="p">);</span>
+<span class="w">    </span><span class="k">end</span>
+
+<span class="w">    </span><span class="c">% Update iteration parameters</span>
+<span class="w">    </span><span class="n">iter</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">iter</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cp0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">cpnext</span><span class="p">;</span>
+<span class="w">    </span><span class="n">c0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">cpnext</span><span class="p">;</span>
+<span class="k">end</span>
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;endogenous grid total iteration: %3i, time: %2.6f \n&#39;</span><span class="p">,</span><span class="n">iter</span><span class="p">,</span><span class="nb">toc</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>endogenous grid loop, running...
+Iteration: 1, Max difference: 0.64808303
+Iteration: 51, Max difference: 0.00021198
+endogenous grid total iteration:  56, time: 0.019076 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Plot results</span>
+<span class="nb">figure</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+
+<span class="nb">plot</span><span class="p">(</span><span class="n">agrid</span><span class="p">,</span><span class="w"> </span><span class="n">cp0</span><span class="p">);</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;A&#39;</span><span class="p">);</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;C&#39;</span><span class="p">);</span>
+<span class="nb">legend</span><span class="p">(</span><span class="nb">arrayfun</span><span class="p">(@(</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="nb">sprintf</span><span class="p">(</span><span class="s">&#39;Y=%.1f&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">),</span><span class="w"> </span><span class="n">ygrid</span><span class="p">,</span><span class="s">&#39;UniformOutput&#39;</span><span class="p">,</span><span class="nb">false</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/d9884938081e582141b69517b4c9f9fa5d480d4703bdca5c9df68d2b6711c4d9.png" src="_images/d9884938081e582141b69517b4c9f9fa5d480d4703bdca5c9df68d2b6711c4d9.png" />
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="reference">
+<h1>Reference<a class="headerlink" href="#reference" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<ol class="arabic simple">
+<li><p>Benjamin Moll,
+“Solving the Income Fluctuation Problem: Numerical Dynamic Programming”,
+<a class="reference external" href="https://benjaminmoll.com/wp-content/uploads/2021/04/Lecture2_EC442_Moll.pdf">https://benjaminmoll.com/wp-content/uploads/2021/04/Lecture2_EC442_Moll.pdf</a></p></li>
+</ol>
+<ol class="arabic simple" start="2">
+<li><p>Benjamin Moll, “Heterogeneous-Agent Models and Methods”, <a class="reference external" href="https://benjaminmoll.com/wp-content/uploads/2021/04/STEG_course.pdf">https://benjaminmoll.com/wp-content/uploads/2021/04/STEG_course.pdf</a></p></li>
+</ol>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "jupyter_matlab_kernel"
+        },
+        kernelOptions: {
+            name: "jupyter_matlab_kernel",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'jupyter_matlab_kernel'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="3_Numerical_Method_in_MATLAB.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">3. Numerical Methods in MATLAB</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="5_From_Optimal_Consumption_to_Aiyagari_Model.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">5. From Optimal Consumption to Aiyagari Model</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4. Algorithm Comparison in Optimal Consumption Problem</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-example-to-show-computation-difference">1. A simple example to show computation difference</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parpool">parpool</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#optimal-consumption-solution-1-value-function-iteration-using-loop">2. Optimal Consumption Solution 1: Value Function Iteration using Loop</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#optimal-consumption-with-income-shock">3. Optimal Consumption with Income Shock</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#optimal-consumption-solution-2-speed-up-with-vectorization">4. Optimal Consumption Solution 2: Speed Up with Vectorization</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#endogenous-grid-method">5. Endogenous Grid Method</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#optimal-consumption-solution-3-speed-up-with-endogenous-grid-method">6. Optimal Consumption Solution 3: Speed Up with Endogenous Grid Method</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">Reference</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

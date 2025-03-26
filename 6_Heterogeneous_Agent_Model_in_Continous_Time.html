@@ -1,0 +1,1650 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>6. Heterogeneous Agent Model in Continous Time &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '6_Heterogeneous_Agent_Model_in_Continous_Time';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="5. From Optimal Consumption to Aiyagari Model" href="5_From_Optimal_Consumption_to_Aiyagari_Model.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="0_Tutorial_Introduction.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="My sample book - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="0_Tutorial_Introduction.html">
+                    Tutorial Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_Implement_Real_Business_Cycle_Model_in_MATLAB_and_Dynare.html">1. Implement Real Business Cycle Model in MATLAB, Dynare, Python and Julia</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="1_Implement_Real_Business_Cycle_Model_in_Python.html">1.6 RBC Model in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_Implement_Real_Business_Cycle_Model_in_Julia.html">1.7 RBC Model in Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_New_Keynesian_Model_and_Tractable_Heterogneity.html">2. New Keynesian Model and Tractable Heterogeneity</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="3_Numerical_Method_in_MATLAB.html">3. Numerical Methods in MATLAB</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="4_Algorithm_Comparison_in_Optimal_Consumption_Problem.html">4. Algorithm Comparison in Optimal Consumption Problem</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="5_From_Optimal_Consumption_to_Aiyagari_Model.html">5. From Optimal Consumption to Aiyagari Model</a></li>
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Heterogeneous Agent Model in Continous Time</a></li>
+
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F6_Heterogeneous_Agent_Model_in_Continous_Time.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/6_Heterogeneous_Agent_Model_in_Continous_Time.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>6. Heterogeneous Agent Model in Continous Time</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6. Heterogeneous Agent Model in Continous Time</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-idea-in-continous-time">1. Basic Idea in Continous Time</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#income-in-ornstein-uhlenbeck-process">2. Income in Ornstein-Uhlenbeck Process</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#evolution-matrix-of-productivity-a-ornstein-uhlenbeck-process">3. Evolution Matrix of Productivity (a Ornstein-Uhlenbeck Process)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#evolution-matrix-of-asset">4. Evolution Matrix of Asset</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hamiltonjacobibellman-equation">5. Hamilton–Jacobi–Bellman equation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kolmogorov-forward-equation-fokker-planck-equation">6. Kolmogorov Forward Equation/ Fokker-Planck Equation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#income-in-poisson-process">7. Income in Poisson Process</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">Reference</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="heterogeneous-agent-model-in-continous-time">
+<h1>6. Heterogeneous Agent Model in Continous Time<a class="headerlink" href="#heterogeneous-agent-model-in-continous-time" title="Link to this heading">#</a></h1>
+<p>DING Minjie, Spring 2025</p>
+<hr class="docutils" />
+<p>We will discuss Aiyagari model in continous time in this tutorial. The main reference is “<em>Income and Wealth Distribution in Macroeconomics: A Continuous-Time Approach</em>”.</p>
+<ol class="arabic simple">
+<li><p>Basic Idea in Continous Time</p></li>
+<li><p>Income in Ornstein-Uhlenbeck Process</p></li>
+<li><p>Evolution Matrix of Productivity (a Ornstein-Uhlenbeck Process)</p></li>
+<li><p>Evolution Matrix of Asset</p></li>
+<li><p>Hamilton–Jacobi–Bellman equation</p></li>
+<li><p>Kolmogorov Forward Equation/ Fokker-Planck Equation</p></li>
+<li><p>Income in Poisson Process</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="basic-idea-in-continous-time">
+<h1>1. Basic Idea in Continous Time<a class="headerlink" href="#basic-idea-in-continous-time" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<p>In discrete case, we have income grid and income transition on one dimension. On the other dimension, we have asset grid, combined with income process, we get: asset transition (asset policy function), and know how asset and consumption affect value function.</p>
+<p>Similarly, in continous case, we need both.</p>
+<p>On the one dimension, we need income grid and its transition. Sometimes, income is determined by labor productivity, so we use productivity <span class="math notranslate nohighlight">\(z\)</span> here, in consistent with literature. Two popular methods to construct continous income are: Poisson Process and Ornstein-Uhlenbeck Process.</p>
+<p>On the other dimension, we need to know how productivity and asset affect value function. In continous case, we use Differential.</p>
+<p>When asset increase from low to high, value function is expected to increase, and we use forward difference to approximate it. That is, use high value function and current value function difference to approximate the increasing process:
+$<span class="math notranslate nohighlight">\(    
+    v'_j(a_i) \approx \frac{v_{i+1,j} - v_{i,j}}{\Delta a}
+    \)</span>$</p>
+<p>When asset decrease from high to low, value function is expected to decrease, we use backward difference to approximate it. That is, use current value and a low value to approximate the decreasing process:
+$<span class="math notranslate nohighlight">\(
+    v'_j(a_i) \approx \frac{v_{i,j} - v_{i-1,j}}{\Delta a}
+    \)</span>$</p>
+<p>It the same for productivity.</p>
+<p>When productivity increase from low to high, value function is expected to increase, and we use forward difference to approximate it:
+$<span class="math notranslate nohighlight">\(    
+    v'_i(z_j) \approx \frac{v_{i,j+1} - v_{i,j}}{\Delta z}
+    \)</span>$</p>
+<p>When productivity decrease from high to low, value function is expected to decrease, we use backward difference to approximate it:
+$<span class="math notranslate nohighlight">\(
+    v'_i(z_j) \approx \frac{v_{i,j} - v_{i,j-1}}{\Delta z}
+    \)</span>$</p>
+<p>Note the subscript here, <span class="math notranslate nohighlight">\(i\)</span> is for different asset <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(j\)</span> is for different productivity <span class="math notranslate nohighlight">\(z\)</span>.</p>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="income-in-ornstein-uhlenbeck-process">
+<h1>2. Income in Ornstein-Uhlenbeck Process<a class="headerlink" href="#income-in-ornstein-uhlenbeck-process" title="Link to this heading">#</a></h1>
+<p>The Ornstein-Uhlenbeck (O-U) process is a type of stochastic process often used to model mean-reverting behavior. It can be described by the following stochastic differential equation (SDE):</p>
+<div class="math notranslate nohighlight">
+\[
+dX_t = \theta(\mathbb{E}(X_t) - X_t)dt + \sigma dW_t
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(X_t\)</span> is the value of the process at time <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(dW_t\)</span> represents the increment of a Wiener process (or Brownian motion).</p></li>
+</ul>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(E(X_t)\)</span>: The long-term mean level to which the process reverts.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta\)</span>: The speed of mean reversion, indicating how quickly the process returns to the mean after a disturbance.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma\)</span>: The volatility of the process, representing the intensity of random fluctuations.</p></li>
+</ul>
+<p>The O-U process can be solved analytically. The solution to the SDE is given by:</p>
+<div class="math notranslate nohighlight">
+\[ 
+   X_t = X_0 e^{-\theta t} + \mathbb{E}(X_t)(1 - e^{-\theta t}) + \sigma \int_0^t e^{-\theta(t-s)} dW_s 
+   \]</div>
+<p>Here, <span class="math notranslate nohighlight">\(X_0\)</span> is the initial value of the process.</p>
+<p>To find the variance, we need to calculate <span class="math notranslate nohighlight">\(\text{Var}(X_t)\)</span>, which is defined as:</p>
+<div class="math notranslate nohighlight">
+\[
+   \text{Var}(X_t) = \mathbb{E}[(X_t - \mathbb{E}[X_t])^2] 
+   \]</div>
+<p>The stochastic integral term <span class="math notranslate nohighlight">\(\int_0^t e^{-\theta(t-s)} dW_s\)</span> is a key component. The variance of this term can be calculated using the properties of Itô integrals:</p>
+<div class="math notranslate nohighlight">
+\[
+   \text{Var}\left(\int_0^t e^{-\theta(t-s)} dW_s\right) = \int_0^t e^{-2\theta(t-s)} ds 
+   \]</div>
+<p>Evaluating this integral gives:</p>
+<div class="math notranslate nohighlight">
+\[ 
+   = \frac{1}{2\theta}(1 - e^{-2\theta t}) 
+   \]</div>
+<p>Hence, the variance of <span class="math notranslate nohighlight">\(X_t\)</span> can be derived as:</p>
+<div class="math notranslate nohighlight">
+\[
+   \text{Var}(X_t) = \sigma^2 \frac{1 - e^{-2\theta t}}{2\theta} 
+   \]</div>
+<p>As <span class="math notranslate nohighlight">\(t \to \infty\)</span>, the term <span class="math notranslate nohighlight">\(e^{-2\theta t}\)</span> approaches zero, leading to the steady-state variance:</p>
+<div class="math notranslate nohighlight">
+\[ 
+   \text{Var}(X_t) = \frac{\sigma^2}{2\theta} 
+   \]</div>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="evolution-matrix-of-productivity-a-ornstein-uhlenbeck-process">
+<h1>3. Evolution Matrix of Productivity (a Ornstein-Uhlenbeck Process)<a class="headerlink" href="#evolution-matrix-of-productivity-a-ornstein-uhlenbeck-process" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<p>Now suppose the productivity <span class="math notranslate nohighlight">\(z_t\)</span> follows Ornstein-Uhlenbeck process.</p>
+<div class="math notranslate nohighlight">
+\[
+dz_t = \theta (\mathbb{E}(z_t) - z_t)dt + \sigma dW_t
+\]</div>
+<p>For the convenience of expression, define the drift term as:</p>
+<div class="math notranslate nohighlight">
+\[
+\mu = \theta (\mathbb{E}(z_t)-z_t)
+\]</div>
+<p>Then the Ornstein-Uhlenbeck process can be written as:</p>
+<div class="math notranslate nohighlight">
+\[
+dz_t = \mu dt + \sigma dW_t
+\]</div>
+<p>For the convenience of expression, we call variance as:</p>
+<div class="math notranslate nohighlight">
+\[
+s^2 = \sigma^2
+\]</div>
+<p><strong>1. When <span class="math notranslate nohighlight">\(z_t\)</span> is larger than <span class="math notranslate nohighlight">\(\mathbb{E}(z_t)\)</span></strong>,</p>
+<p><span class="math notranslate nohighlight">\(\mu = \theta (\mathbb{E}(z_t)-z_t) &lt; 0\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(dz_t = \mu dt + \sigma dW_t\)</span> has high possibility to be negative, and <span class="math notranslate nohighlight">\(z_t\)</span> tends to decrease from high to low.</p>
+<p>Define <strong>Chi (<span class="math notranslate nohighlight">\(\chi \)</span>)</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+\chi = -\frac{\min(\mu, 0)}{\Delta z} + \frac{s^2}{2 \Delta z^2}
+\]</div>
+<p>The first term, <span class="math notranslate nohighlight">\(-\frac{\min(\mu, 0)}{\Delta z}\)</span>, when productivity <span class="math notranslate nohighlight">\( z \)</span> is above its mean, this term is positively large.</p>
+<p>When put it in lower diagonal, it reflect tendency to change from higher to lower index of grid, or from high productivity to lower productivity, that is to revert back to the mean.</p>
+<p><strong>2. When <span class="math notranslate nohighlight">\(z_t\)</span> is smaller than <span class="math notranslate nohighlight">\(\mathbb{E}(z_t)\)</span></strong>,</p>
+<p><span class="math notranslate nohighlight">\(\mu = \theta (\mathbb{E}(z_t)-z_t) &gt; 0\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(dz_t = \mu dt + \sigma dW_t\)</span> has high possibility to be positive, and <span class="math notranslate nohighlight">\(z_t\)</span> tends to increase from low to high.</p>
+<p>Define <strong>Zeta (<span class="math notranslate nohighlight">\( \zeta \)</span>)</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+\zeta = \frac{\max(\mu, 0)}{\Delta z} + \frac{s^2}{2 \Delta z^2}
+\]</div>
+<p>When put upper lower diagonal, it reflect tendency to change from low to high index of grid, or from lower productivity to higher productivity, that is to revert back to the mean.</p>
+<p><strong>3. When <span class="math notranslate nohighlight">\(z_t\)</span> is close to <span class="math notranslate nohighlight">\(\mathbb{E}(z_t) \)</span></strong>:</p>
+<p>Suppose the difference interval is not small enough to capture the difference between <span class="math notranslate nohighlight">\(z_t\)</span> and <span class="math notranslate nohighlight">\(\mathbb{E}(z_t)\)</span>, <span class="math notranslate nohighlight">\(z_t\)</span> stay at the original state.</p>
+<p>Define <strong>YY (<span class="math notranslate nohighlight">\( \text{yy} \)</span>)</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\text{yy} = -\chi - \zeta = \frac{\min(\mu, 0)}{\Delta z} - \frac{\max(\mu, 0)}{\Delta z} - \frac{s^2}{\Delta z^2}
+\]</div>
+<p>When put it in the diagonal, it means <span class="math notranslate nohighlight">\(z_t\)</span> stay at the original state.</p>
+<p>Finally, we can construct a sparse matrix to show transition of productivity.</p>
+<ol class="arabic simple">
+<li><p><strong>Chi (<span class="math notranslate nohighlight">\( \chi \)</span>)</strong>: used for the lower diagonal of the sparse matrix.</p></li>
+<li><p><strong>YY (<span class="math notranslate nohighlight">\( \text{yy} \)</span>)</strong>: forms the main diagonal of the sparse matrix.</p></li>
+<li><p><strong>Zeta (<span class="math notranslate nohighlight">\( \zeta \)</span>)</strong>: used for the upper diagonal of the sparse matrix.</p></li>
+</ol>
+<p>Remember the <strong>spdiags</strong> function introduced before, we can use ‘spdiags’ to get sparse matrix.</p>
+<p>Before construct the sparse matrix, we set parameters, and the grids. The following three code cells are:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Parameters
+Grids
+Sparse Matrix for Productivity
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="s">&quot;C:\Users\ading\A_TA_Notes&quot;</span>
+<span class="nb">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>ans = 'C:\Users\ading\A_TA_Notes'</pre></body></html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">clear</span><span class="w"> </span><span class="nb">all</span><span class="p">;</span><span class="w"> </span>
+<span class="n">close</span><span class="w"> </span><span class="s">all</span><span class="p">;</span><span class="w"> </span>
+<span class="n">format</span><span class="w"> </span><span class="s">long</span><span class="p">;</span><span class="w"> </span><span class="c">% Set long format for outputs</span>
+<span class="nb">tic</span><span class="p">;</span><span class="w"> </span><span class="c">% Start timing the execution</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% PARAMETERS</span>
+<span class="c">% household and firm</span>
+<span class="n">ga</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">       </span><span class="c">% CRRA utility with parameter gamma</span>
+<span class="n">rho</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span><span class="w">   </span><span class="c">% Discount rate</span>
+<span class="nb">alpha</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.35</span><span class="p">;</span><span class="w"> </span><span class="c">% Capital share of production function F = K^alpha * L^(1-alpha) </span>
+<span class="n">delta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.1</span><span class="p">;</span><span class="w">  </span><span class="c">% Capital depreciation rate</span>
+
+<span class="c">% productivity and O-U process</span>
+<span class="n">zmean</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w">  </span><span class="c">% Mean of the Ornstein-Uhlenbeck (O-U) process (in levels)</span>
+<span class="n">sig2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mf">0.10</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c">% Variance of the O-U process (sigma^2)</span>
+<span class="n">Corr</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.3</span><span class="p">);</span><span class="w">  </span><span class="c">% Persistence of the O-U process (-log(Corr))</span>
+<span class="n">the</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="nb">log</span><span class="p">(</span><span class="n">Corr</span><span class="p">);</span><span class="w"> </span><span class="c">% Calculate the rate of mean reversion</span>
+<span class="n">Var</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sig2</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">the</span><span class="p">);</span><span class="w"> </span><span class="c">% Variance for the O-U process</span>
+
+
+<span class="c">% Iteration parameters</span>
+<span class="n">maxit</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">     </span><span class="c">% Maximum number of iterations in the HJB loop</span>
+<span class="n">maxitK</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">     </span><span class="c">% Maximum number of iterations in the K loop</span>
+<span class="n">crit</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="o">^</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">);</span><span class="w">   </span><span class="c">% Convergence criterion for HJB loop</span>
+<span class="n">critK</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1e-5</span><span class="p">;</span><span class="w">     </span><span class="c">% Convergence criterion for K loop</span>
+<span class="n">Delta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w">     </span><span class="c">% Delta in HJB algorithm</span>
+<span class="n">K</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">3.8</span><span class="p">;</span><span class="w">      </span><span class="c">% Initial aggregate capital; should be close to the solution for convergence</span>
+<span class="n">relax</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.99</span><span class="p">;</span><span class="w"> </span><span class="c">% Relaxation parameter for the algorithm</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Grid</span>
+<span class="c">% grid dimension</span>
+<span class="n">J</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">40</span><span class="p">;</span><span class="w">       </span><span class="c">% Number of points for productivity (z)</span>
+<span class="n">I</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">      </span><span class="c">% Number of points for wealth (a)</span>
+
+<span class="c">% productivity </span>
+<span class="n">zmin</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span><span class="w">   </span><span class="c">% Minimum value of z</span>
+<span class="n">zmax</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1.5</span><span class="p">;</span><span class="w">   </span><span class="c">% Maximum value of z</span>
+<span class="n">z</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="n">zmin</span><span class="p">,</span><span class="w"> </span><span class="n">zmax</span><span class="p">,</span><span class="w"> </span><span class="n">J</span><span class="p">);</span><span class="w">    </span><span class="c">% Productivity vector (row vector of productivity values)</span>
+<span class="n">dz</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">zmax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zmin</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">J</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">    </span><span class="c">% Step size for productivity</span>
+<span class="n">dz2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">dz</span><span class="o">^</span><span class="mi">2</span><span class="p">;</span><span class="w">                       </span><span class="c">% Square of the step size for productivity</span>
+<span class="n">zz</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">ones</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">z</span><span class="p">;</span><span class="w">             </span><span class="c">% Replicate productivity vector for matrix operations</span>
+
+<span class="c">% asset</span>
+<span class="n">amin</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w">    </span><span class="c">% Borrowing constraint (minimum wealth)</span>
+<span class="n">amax</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span><span class="w">    </span><span class="c">% Maximum wealth</span>
+<span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="n">amin</span><span class="p">,</span><span class="w"> </span><span class="n">amax</span><span class="p">,</span><span class="w"> </span><span class="n">I</span><span class="p">)</span><span class="o">&#39;</span><span class="p">;</span><span class="w">  </span><span class="c">% Wealth vector (column vector of wealth values)</span>
+<span class="n">da</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">amax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">amin</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">I</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">   </span><span class="c">% Step size for wealth</span>
+<span class="n">aa</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">J</span><span class="p">);</span><span class="w">             </span><span class="c">% Replicate wealth vector for matrix operations</span>
+
+<span class="c">% Preallocation</span>
+<span class="c">% Finite difference approximation of the partial derivatives</span>
+<span class="n">Vaf</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="n">J</span><span class="p">);</span><span class="w">               </span><span class="c">% Forward difference value function</span>
+<span class="n">Vab</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="n">J</span><span class="p">);</span><span class="w">               </span><span class="c">% Backward difference value function</span>
+<span class="n">Vzf</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="n">J</span><span class="p">);</span><span class="w">               </span><span class="c">% Forward difference for z</span>
+<span class="n">Vzb</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="n">J</span><span class="p">);</span><span class="w">               </span><span class="c">% Backward difference for z</span>
+<span class="n">Vzz</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="n">J</span><span class="p">);</span><span class="w">               </span><span class="c">% Second derivative for z</span>
+<span class="n">c</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="n">J</span><span class="p">);</span><span class="w">                 </span><span class="c">% Consumption matrix</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Construct Matrix Aswitch summarizing evolution of z</span>
+<span class="n">mu</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">zmean</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">z</span><span class="p">);</span><span class="w">          </span><span class="c">% Drift term (calculated from Itô&#39;s lemma)</span>
+<span class="n">s2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sig2</span><span class="w"> </span><span class="o">.*</span><span class="w"> </span><span class="nb">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">J</span><span class="p">);</span><span class="w">         </span><span class="c">% Variance term (constant for all z)</span>
+
+<span class="n">chi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="nb">min</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dz</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dz2</span><span class="p">);</span><span class="w"> </span><span class="c">% Coefficient for upward diffusion</span>
+<span class="n">yy</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">min</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dz</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dz</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dz2</span><span class="p">;</span><span class="w"> </span><span class="c">% Coefficient for the drift term</span>
+<span class="n">zeta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dz</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dz2</span><span class="p">);</span><span class="w"> </span><span class="c">% Coefficient for downward diffusion</span>
+
+<span class="c">% This will be the upper diagonal of the matrix Aswitch</span>
+<span class="n">updiag</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c">% Initialize upper diagonal</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">J</span>
+<span class="w">    </span><span class="n">updiag</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">updiag</span><span class="p">;</span><span class="w"> </span><span class="nb">repmat</span><span class="p">(</span><span class="n">zeta</span><span class="p">(</span><span class="nb">j</span><span class="p">),</span><span class="w"> </span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)];</span><span class="w"> </span><span class="c">% Fill upper diagonal with zeta values</span>
+<span class="k">end</span>
+
+<span class="c">% This will be the center diagonal of the matrix Aswitch</span>
+<span class="n">centdiag</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">repmat</span><span class="p">(</span><span class="n">chi</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">yy</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c">% Initialize center diagonal</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="n">J</span><span class="o">-</span><span class="mi">1</span>
+<span class="w">    </span><span class="n">centdiag</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">centdiag</span><span class="p">;</span><span class="w"> </span><span class="nb">repmat</span><span class="p">(</span><span class="n">yy</span><span class="p">(</span><span class="nb">j</span><span class="p">),</span><span class="w"> </span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)];</span><span class="w"> </span><span class="c">% Fill center diagonal with yy values</span>
+<span class="k">end</span>
+<span class="n">centdiag</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">centdiag</span><span class="p">;</span><span class="w"> </span><span class="nb">repmat</span><span class="p">(</span><span class="n">yy</span><span class="p">(</span><span class="n">J</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">zeta</span><span class="p">(</span><span class="n">J</span><span class="p">),</span><span class="w"> </span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)];</span><span class="w"> </span><span class="c">% Add last entry</span>
+
+<span class="c">% This will be the lower diagonal of the matrix Aswitch</span>
+<span class="n">lowdiag</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">repmat</span><span class="p">(</span><span class="n">chi</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c">% Initialize lower diagonal</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span><span class="n">J</span>
+<span class="w">    </span><span class="n">lowdiag</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">lowdiag</span><span class="p">;</span><span class="w"> </span><span class="nb">repmat</span><span class="p">(</span><span class="n">chi</span><span class="p">(</span><span class="nb">j</span><span class="p">),</span><span class="w"> </span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)];</span><span class="w"> </span><span class="c">% Fill lower diagonal with chi values</span>
+<span class="k">end</span>
+
+<span class="c">% Add up the upper, center, and lower diagonal into a sparse matrix</span>
+<span class="n">Aswitch</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">spdiags</span><span class="p">(</span><span class="n">centdiag</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">I</span><span class="o">*</span><span class="n">J</span><span class="p">,</span><span class="w"> </span><span class="n">I</span><span class="o">*</span><span class="n">J</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">spdiags</span><span class="p">(</span><span class="n">lowdiag</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="n">I</span><span class="o">*</span><span class="n">J</span><span class="p">,</span><span class="w"> </span><span class="n">I</span><span class="o">*</span><span class="n">J</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">spdiags</span><span class="p">(</span><span class="n">updiag</span><span class="p">,</span><span class="w"> </span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="n">I</span><span class="o">*</span><span class="n">J</span><span class="p">,</span><span class="w"> </span><span class="n">I</span><span class="o">*</span><span class="n">J</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="evolution-matrix-of-asset">
+<h1>4. Evolution Matrix of Asset<a class="headerlink" href="#evolution-matrix-of-asset" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<p>Given a guessed value function, we can construct evolution matrix of asset, similar to that of productivity.</p>
+<p>An important distinction between continous case and discrete case lie in FOC condition.</p>
+<p>Assume CRRA utility, so the two first order conditions are</p>
+<p><strong>continuous time</strong></p>
+<div class="math notranslate nohighlight">
+\[
+c^{-\gamma} = v'_j(a), j = 1,2 
+\]</div>
+<p><strong>discrete time</strong></p>
+<div class="math notranslate nohighlight">
+\[
+c^{-\gamma} ≥ \beta \sum_{k=1}^{2} \pi_{jk} v'_k(a'),   \quad a' = y_j +(1+r)a-c,
+\]</div>
+<p>The first-order condition of continous time is “static” in the sense that it only involves contemporaneous variables. Given (a guess for) the value function <span class="math notranslate nohighlight">\(v_j(a)\)</span> it can be solved by hand. In contrast, the discrete-time condition defines the optimal choice only implicitly.</p>
+<p>From the FOC condition, we can get <span class="math notranslate nohighlight">\(c\)</span>, since value function is given.</p>
+<p>Then we can get saving <span class="math notranslate nohighlight">\(s\)</span> from budget constraint.</p>
+<p>And <span class="math notranslate nohighlight">\(s\)</span> is exactly the change of asset, or “drift item” of asset, if analogous to productivity.</p>
+<p>Then, construct the transition matrix similar to that of productivity.</p>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="hamiltonjacobibellman-equation">
+<h1>5. Hamilton–Jacobi–Bellman equation<a class="headerlink" href="#hamiltonjacobibellman-equation" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<p>The HJB equation in this case is:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{v_{i, j}^{n+1}-v_{i, j}^n}{\Delta}+\rho v_{i, j}^{n+1}= u\left(c_{i, j}^n\right)+\frac{v_{i+1, j}^{n+1}-v_{i, j}^{n+1}}{\Delta a}\left(s_{i, j, F}^n\right)^{+}+\frac{v_{i, j}^{n+1}-v_{i-1, j}^{n+1}}{\Delta a}\left(s_{i, j, B}^n\right)^{-} +\frac{v_{i, j+1}^{n+1}-v_{i, j}^{n+1}}{\Delta z} \mu_j^{+}+\frac{v_{i, j}^{n+1}-v_{i, j-1}^{n+1}}{\Delta z} \mu_j^{-}+\frac{\sigma_j^2}{2} \frac{v_{i, j+1}^{n+1}-2 v_{i, j}^{n+1}+v_{i, j-1}^{n+1}}{(\Delta z)^2}
+\]</div>
+<p><span class="math notranslate nohighlight">\(\frac{1}{\Delta}\)</span> : a very small interval</p>
+<p><span class="math notranslate nohighlight">\(v^{n}_{i,j}\)</span> : old guessed value function</p>
+<p><span class="math notranslate nohighlight">\(v^{n+1}_{i,j}\)</span>: new value function from iteration</p>
+<p><span class="math notranslate nohighlight">\(\rho\)</span> : discount rate</p>
+<p><span class="math notranslate nohighlight">\(\frac{v_{i+1, j}^{n+1}-v_{i, j}^{n+1}}{\Delta a}\)</span> : forward difference with respect to asset</p>
+<p><span class="math notranslate nohighlight">\((s_{i, j, F}^n)^{+}\)</span> : positive change of asset (positive saving)</p>
+<p><span class="math notranslate nohighlight">\(\frac{v_{i+1, j}^{n+1}-v_{i, j}^{n+1}}{\Delta a}(s_{i, j, F}^n)^{+}\)</span> : value gained from increasing saving</p>
+<p><span class="math notranslate nohighlight">\(\frac{v_{i, j}^{n+1}-v_{i-1, j}^{n+1}}{\Delta a}(s_{i, j, B}^n)^{-}\)</span> : value gained from decreasing saving</p>
+<p><span class="math notranslate nohighlight">\(\frac{v_{i+1, j}^{n+1}-v_{i, j}^{n+1}}{\Delta z}(\mu_{i, j, F}^n)^{+}\)</span> : value gained from increasing productivity</p>
+<p><span class="math notranslate nohighlight">\(\frac{v_{i, j}^{n+1}-v_{i-1, j}^{n+1}}{\Delta z}(\mu_{i, j, B}^n)^{-}\)</span> : value gained from decreasing productivity</p>
+<p><span class="math notranslate nohighlight">\(\frac{\sigma_j^2}{2} \frac{v_{i, j+1}^{n+1}-2 v_{i, j}^{n+1}+v_{i, j-1}^{n+1}}{(\Delta z)^2}\)</span> : value gained from volatility</p>
+<p>Rearrange HJB equation, and collect terms with the same subscripts on the right-hand side.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp; \frac{v_{i, j}^{n+1}-v_{i, j}^n}{\Delta}+\rho v_{i, j}^{n+1}=u\left(c_{i, j}^n\right)+v_{i-1, j}^{n+1} x_{i, j}+v_{i, j}^{n+1}\left(y_{i, j}+v_j\right)+v_{i+1, j}^{n+1} z_{i, j}+v_{i, j-1}^{n+1} \chi_j+v_{i, j+1}^{n+1} \zeta_j \\
+&amp; x_{i, j}=-\frac{\left(s_{i, j, B}^n\right)^{-}}{\Delta a} \\
+&amp; y_{i, j}=-\frac{\left(s_{i, j, F}^n\right)^{+}}{\Delta a}+\frac{\left(s_{i, j, B}^n\right)^{-}}{\Delta a} \\
+&amp; z_{i, j}=\frac{\left(s_{i, j, F}^n\right)^{+}}{\Delta a} \\
+&amp; \chi_j=-\frac{\mu_j^{-}}{\Delta z}+\frac{\sigma_j^2}{2(\Delta z)^2} \\
+&amp; v_j=\frac{\mu_j^{-}}{\Delta z}-\frac{\mu_j^{+}}{\Delta z}-\frac{\sigma_j^2}{(\Delta z)^2} \\
+&amp; \zeta_j=\frac{\mu_j^{+}}{\Delta z}+\frac{\sigma_j^2}{2(\Delta z)^2}
+\end{aligned}
+\end{split}\]</div>
+<p>Let:
+$<span class="math notranslate nohighlight">\(
+AA = x_{i,j} + y_{i,j} + z_{i,j}
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+Aswitch = \chi_{j} + v_j + \zeta_j
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+A = AA + Aswitch
+\)</span>$</p>
+<p>Then put <span class="math notranslate nohighlight">\(v^n_{i,j}\)</span> and <span class="math notranslate nohighlight">\(v^{n+1}_{i,j}\)</span> on different hand, we get:</p>
+<div class="math notranslate nohighlight">
+\[
+(\frac{1}{\Delta} + \rho - A) v^{n+1}_{i,j} = u(c^n_{i,j}) + \frac{1}{\Delta} v^n_{i,j}
+\]</div>
+<p>Given guessed value function <span class="math notranslate nohighlight">\(v^n_{i,j}\)</span> and solved <span class="math notranslate nohighlight">\(c_{i,j}^n\)</span> from it, we can then get new value function.</p>
+<p>Then iterate, until value function converge.</p>
+<p>Let:
+$<span class="math notranslate nohighlight">\(
+b = u(c^n_{i,j}) + \frac{1}{\Delta} v^n_{i,j}
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+B = (\frac{1}{\Delta} + \rho - A)
+\)</span><span class="math notranslate nohighlight">\(
+Then: 
+\)</span><span class="math notranslate nohighlight">\(
+B  v^{n+1}_{i,j} = b
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+v^{n+1}_{i,j} = B^{-1} b
+\)</span>$</p>
+<p>Until:</p>
+<div class="math notranslate nohighlight">
+\[
+abs (v^{n+1}_{i,j} - v^{n}_{i,j}) \to \epsilon
+\]</div>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="kolmogorov-forward-equation-fokker-planck-equation">
+<h1>6. Kolmogorov Forward Equation/ Fokker-Planck Equation<a class="headerlink" href="#kolmogorov-forward-equation-fokker-planck-equation" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<p>The Kolmogorov Equation describes the time evolution of the probability density function of a stochastic process.</p>
+<p>In stationary equilibrium, changes from productivity or saving will not affect the distribution of asset, (will not change probability density function of asset). Let <span class="math notranslate nohighlight">\(gg\)</span> be the distribution, then:</p>
+<div class="math notranslate nohighlight">
+\[
+gg * A' = 0
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> is what we defined above, denoting effect on value function from productivity change and saving change.</p>
+<p>Here comes the main loop code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%INITIAL GUESS</span>
+<span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">alpha</span><span class="w">     </span><span class="o">*</span><span class="w"> </span><span class="n">K</span><span class="o">^</span><span class="p">(</span><span class="nb">alpha</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="n">delta</span><span class="p">;</span><span class="w"> </span><span class="c">%interest rates</span>
+<span class="n">w</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="nb">alpha</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">K</span><span class="o">^</span><span class="p">(</span><span class="nb">alpha</span><span class="p">);</span><span class="w">          </span><span class="c">%wages</span>
+<span class="n">v0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="n">zz</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="o">.*</span><span class="n">aa</span><span class="p">)</span><span class="o">.^</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">ga</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">ga</span><span class="p">)</span><span class="o">/</span><span class="n">rho</span><span class="p">;</span>
+<span class="n">v</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">v0</span><span class="p">;</span>
+<span class="n">dist</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">maxit</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="n">iter</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">maxitK</span>
+<span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Main loop iteration&#39;</span><span class="p">)</span>
+<span class="nb">disp</span><span class="p">(</span><span class="n">iter</span><span class="p">)</span>
+
+<span class="w">        </span><span class="c">% HAMILTON-JACOBI-BELLMAN EQUATION %</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">n</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">maxit</span>
+<span class="w">        </span><span class="n">V</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<span class="w">        </span><span class="c">% forward difference</span>
+<span class="w">        </span><span class="n">Vaf</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">I</span><span class="o">-</span><span class="mi">1</span><span class="p">,:)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">V</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">I</span><span class="p">,:)</span><span class="o">-</span><span class="n">V</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">I</span><span class="o">-</span><span class="mi">1</span><span class="p">,:))</span><span class="o">/</span><span class="n">da</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Vaf</span><span class="p">(</span><span class="n">I</span><span class="p">,:)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="n">z</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="o">.*</span><span class="n">amax</span><span class="p">)</span><span class="o">.^</span><span class="p">(</span><span class="o">-</span><span class="n">ga</span><span class="p">);</span><span class="w"> </span><span class="c">%will never be used, but impose state constraint a&lt;=amax just in case</span>
+<span class="w">        </span><span class="c">% backward difference</span>
+<span class="w">        </span><span class="n">Vab</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">I</span><span class="p">,:)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">V</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">I</span><span class="p">,:)</span><span class="o">-</span><span class="n">V</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">I</span><span class="o">-</span><span class="mi">1</span><span class="p">,:))</span><span class="o">/</span><span class="n">da</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Vab</span><span class="p">(</span><span class="mi">1</span><span class="p">,:)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="n">z</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="o">.*</span><span class="n">amin</span><span class="p">)</span><span class="o">.^</span><span class="p">(</span><span class="o">-</span><span class="n">ga</span><span class="p">);</span><span class="w">  </span><span class="c">%state constraint boundary condition</span>
+
+<span class="w">        </span><span class="n">I_concave</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Vab</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Vaf</span><span class="p">;</span><span class="w">              </span><span class="c">%indicator whether value function is concave (problems arise if this is not the case)</span>
+
+<span class="w">        </span><span class="c">%consumption and savings with forward difference</span>
+<span class="w">        </span><span class="n">cf</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Vaf</span><span class="o">.^</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">ga</span><span class="p">);</span>
+<span class="w">        </span><span class="n">sf</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">w</span><span class="o">*</span><span class="n">zz</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="o">.*</span><span class="n">aa</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cf</span><span class="p">;</span>
+<span class="w">        </span><span class="c">%consumption and savings with backward difference</span>
+<span class="w">        </span><span class="n">cb</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Vab</span><span class="o">.^</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">ga</span><span class="p">);</span>
+<span class="w">        </span><span class="n">sb</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">w</span><span class="o">*</span><span class="n">zz</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="o">.*</span><span class="n">aa</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cb</span><span class="p">;</span>
+<span class="w">        </span><span class="c">%consumption and derivative of value function at steady state</span>
+<span class="w">        </span><span class="n">c0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">w</span><span class="o">*</span><span class="n">zz</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="o">.*</span><span class="n">aa</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Va0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">c0</span><span class="o">.^</span><span class="p">(</span><span class="o">-</span><span class="n">ga</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c">% dV_upwind makes a choice of forward or backward differences based on</span>
+<span class="w">        </span><span class="c">% the sign of the drift</span>
+<span class="w">        </span><span class="n">If</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sf</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c">%positive drift --&gt; forward difference</span>
+<span class="w">        </span><span class="n">Ib</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c">%negative drift --&gt; backward difference</span>
+<span class="w">        </span><span class="n">I0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">If</span><span class="o">-</span><span class="n">Ib</span><span class="p">);</span><span class="w"> </span><span class="c">%at steady state</span>
+<span class="w">        </span><span class="c">%make sure backward difference is used at amax</span>
+<span class="w">        </span><span class="c">%     Ib(I,:) = 1; If(I,:) = 0;</span>
+<span class="w">        </span><span class="c">%STATE CONSTRAINT at amin: USE BOUNDARY CONDITION UNLESS sf &gt; 0:</span>
+<span class="w">        </span><span class="c">%already taken care of automatically</span>
+
+<span class="w">        </span><span class="n">Va_Upwind</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Vaf</span><span class="o">.*</span><span class="n">If</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Vab</span><span class="o">.*</span><span class="n">Ib</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Va0</span><span class="o">.*</span><span class="n">I0</span><span class="p">;</span><span class="w"> </span><span class="c">%important to include third term</span>
+
+<span class="w">        </span><span class="n">c</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Va_Upwind</span><span class="o">.^</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">ga</span><span class="p">);</span>
+<span class="w">        </span><span class="n">u</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">c</span><span class="o">.^</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">ga</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">ga</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c">%CONSTRUCT MATRIX A</span>
+<span class="w">        </span><span class="n">X</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">min</span><span class="p">(</span><span class="n">sb</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="n">da</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="n">sf</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="n">da</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">min</span><span class="p">(</span><span class="n">sb</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="n">da</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Z</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="n">sf</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="n">da</span><span class="p">;</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="n">updiag</span><span class="p">=[</span><span class="mi">0</span><span class="p">];</span><span class="w"> </span><span class="c">%This is needed because of the peculiarity of spdiags.</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">J</span>
+<span class="w">            </span><span class="n">updiag</span><span class="p">=[</span><span class="n">updiag</span><span class="p">;</span><span class="n">Z</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">I</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="nb">j</span><span class="p">);</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">        </span><span class="k">end</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="n">centdiag</span><span class="p">=</span><span class="nb">reshape</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">I</span><span class="o">*</span><span class="n">J</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="n">lowdiag</span><span class="p">=</span><span class="n">X</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">I</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="p">=</span><span class="mi">2</span><span class="p">:</span><span class="n">J</span>
+<span class="w">            </span><span class="n">lowdiag</span><span class="p">=[</span><span class="n">lowdiag</span><span class="p">;</span><span class="mi">0</span><span class="p">;</span><span class="n">X</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">I</span><span class="p">,</span><span class="nb">j</span><span class="p">)];</span>
+<span class="w">        </span><span class="k">end</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="n">AA</span><span class="p">=</span><span class="nb">spdiags</span><span class="p">(</span><span class="n">centdiag</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">I</span><span class="o">*</span><span class="n">J</span><span class="p">,</span><span class="n">I</span><span class="o">*</span><span class="n">J</span><span class="p">)</span><span class="o">+</span><span class="nb">spdiags</span><span class="p">([</span><span class="n">updiag</span><span class="p">;</span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">,</span><span class="n">I</span><span class="o">*</span><span class="n">J</span><span class="p">,</span><span class="n">I</span><span class="o">*</span><span class="n">J</span><span class="p">)</span><span class="o">+</span><span class="nb">spdiags</span><span class="p">([</span><span class="n">lowdiag</span><span class="p">;</span><span class="mi">0</span><span class="p">],</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">I</span><span class="o">*</span><span class="n">J</span><span class="p">,</span><span class="n">I</span><span class="o">*</span><span class="n">J</span><span class="p">);</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="n">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">AA</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Aswitch</span><span class="p">;</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span><span class="o">&gt;</span><span class="mi">10</span><span class="o">^</span><span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">)</span>
+<span class="w">           </span><span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Improper Transition Matrix&#39;</span><span class="p">)</span>
+<span class="w">           </span><span class="k">break</span>
+<span class="w">        </span><span class="k">end</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="n">B</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">Delta</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rho</span><span class="p">)</span><span class="o">*</span><span class="nb">speye</span><span class="p">(</span><span class="n">I</span><span class="o">*</span><span class="n">J</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">A</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">u_stacked</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">I</span><span class="o">*</span><span class="n">J</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">V_stacked</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="n">V</span><span class="p">,</span><span class="n">I</span><span class="o">*</span><span class="n">J</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">u_stacked</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">V_stacked</span><span class="o">/</span><span class="n">Delta</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">V_stacked</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">B</span><span class="o">\</span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c">%SOLVE SYSTEM OF EQUATIONS</span>
+
+<span class="w">        </span><span class="n">V</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="n">V_stacked</span><span class="p">,</span><span class="n">I</span><span class="p">,</span><span class="n">J</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">Vchange</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<span class="w">        </span><span class="n">v</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">V</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">dist</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">Vchange</span><span class="p">)));</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">dist</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">&lt;</span><span class="n">crit</span>
+<span class="w">            </span><span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Value Function Converged, Iteration = &#39;</span><span class="p">)</span>
+<span class="w">            </span><span class="nb">disp</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="w">            </span><span class="k">break</span>
+<span class="w">        </span><span class="k">end</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">    </span><span class="nb">toc</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c">% FOKKER-PLANCK EQUATION %</span>
+<span class="w">    </span><span class="n">AT</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">A</span><span class="o">&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">I</span><span class="o">*</span><span class="n">J</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c">%need to fix one value, otherwise matrix is singular</span>
+<span class="w">    </span><span class="n">i_fix</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">b</span><span class="p">(</span><span class="n">i_fix</span><span class="p">)=</span><span class="mf">.1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">row</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">i_fix</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">I</span><span class="o">*</span><span class="n">J</span><span class="o">-</span><span class="n">i_fix</span><span class="p">)];</span>
+<span class="w">    </span><span class="n">AT</span><span class="p">(</span><span class="n">i_fix</span><span class="p">,:)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">row</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c">%Solve linear system</span>
+<span class="w">    </span><span class="n">gg</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">AT</span><span class="o">\</span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="n">g_sum</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">gg</span><span class="o">&#39;*</span><span class="nb">ones</span><span class="p">(</span><span class="n">I</span><span class="o">*</span><span class="n">J</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">da</span><span class="o">*</span><span class="n">dz</span><span class="p">;</span>
+<span class="w">    </span><span class="n">gg</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">gg</span><span class="o">./</span><span class="n">g_sum</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">g</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="n">gg</span><span class="p">,</span><span class="n">I</span><span class="p">,</span><span class="n">J</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">% Update aggregate capital</span>
+<span class="w">    </span><span class="n">S</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sum</span><span class="p">(</span><span class="n">g</span><span class="o">&#39;*</span><span class="n">a</span><span class="o">*</span><span class="n">da</span><span class="o">*</span><span class="n">dz</span><span class="p">);</span>
+<span class="w">    </span><span class="nb">disp</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+<span class="w">   </span>
+<span class="w">    </span><span class="nb">clear</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">AA</span><span class="w"> </span><span class="n">AT</span><span class="w"> </span><span class="n">B</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">K</span><span class="o">-</span><span class="n">S</span><span class="p">)</span><span class="o">&lt;</span><span class="n">critK</span>
+<span class="w">        </span><span class="k">break</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">%update prices</span>
+<span class="w">    </span><span class="n">K</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">relax</span><span class="o">*</span><span class="n">K</span><span class="w"> </span><span class="o">+</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">relax</span><span class="p">)</span><span class="o">*</span><span class="n">S</span><span class="p">;</span><span class="w">           </span><span class="c">%relaxation algorithm (to ensure convergence)</span>
+<span class="w">    </span><span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">alpha</span><span class="w">     </span><span class="o">*</span><span class="w"> </span><span class="n">K</span><span class="o">^</span><span class="p">(</span><span class="nb">alpha</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="n">delta</span><span class="p">;</span><span class="w"> </span><span class="c">%interest rates</span>
+<span class="w">    </span><span class="n">w</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="nb">alpha</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">K</span><span class="o">^</span><span class="p">(</span><span class="nb">alpha</span><span class="p">);</span><span class="w">          </span><span class="c">%wages</span>
+<span class="w"> </span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Main loop iteration
+     1
+
+Value Function Converged, Iteration = 
+     6
+
+历时 132.078659 秒。
+   1.460525943026954
+
+Main loop iteration
+     2
+
+Value Function Converged, Iteration = 
+     4
+
+历时 132.195904 秒。
+   2.020815936779077
+
+Main loop iteration
+     3
+
+Value Function Converged, Iteration = 
+     4
+
+历时 132.340333 秒。
+   2.660255904062295
+
+Main loop iteration
+     4
+
+Value Function Converged, Iteration = 
+     4
+
+历时 132.462327 秒。
+   3.225918298182704
+
+Main loop iteration
+     5
+
+Value Function Converged, Iteration = 
+     4
+
+历时 132.586729 秒。
+   3.561827701523755
+
+Main loop iteration
+     6
+
+Value Function Converged, Iteration = 
+     4
+
+历时 132.726711 秒。
+   3.691463823642045
+
+Main loop iteration
+     7
+
+Value Function Converged, Iteration = 
+     3
+
+历时 132.846288 秒。
+   3.728256585425100
+
+Main loop iteration
+     8
+
+Value Function Converged, Iteration = 
+     3
+
+历时 132.934235 秒。
+   3.737474350115293
+
+Main loop iteration
+     9
+
+Value Function Converged, Iteration = 
+     3
+
+历时 133.043068 秒。
+   3.739684114624203
+
+Main loop iteration
+    10
+
+Value Function Converged, Iteration = 
+     2
+
+历时 133.111246 秒。
+   3.740200299833476
+
+Main loop iteration
+    11
+
+Value Function Converged, Iteration = 
+     2
+
+历时 133.189599 秒。
+   3.740336725672957
+
+Main loop iteration
+    12
+
+Value Function Converged, Iteration = 
+     1
+
+历时 133.240274 秒。
+   3.740342716315000
+
+Main loop iteration
+    13
+
+Value Function Converged, Iteration = 
+     1
+
+历时 133.277754 秒。
+   3.740367790362063
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% GRAPHS </span>
+
+<span class="c">% SAVINGS POLICY FUNCTION</span>
+<span class="nb">figure</span>
+<span class="n">ss</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">zz</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">.*</span><span class="w"> </span><span class="n">aa</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"> </span><span class="c">% Calculate savings policy function</span>
+<span class="n">icut</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span><span class="w"> </span><span class="c">% Cut-off index for plotting</span>
+<span class="n">acut</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">icut</span><span class="p">);</span><span class="w"> </span><span class="c">% Wealth values to plot</span>
+<span class="n">sscut</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ss</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">icut</span><span class="p">,</span><span class="w"> </span><span class="p">:);</span><span class="w"> </span><span class="c">% Savings values to plot</span>
+<span class="nb">set</span><span class="p">(</span><span class="nb">gca</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">)</span><span class="w"> </span><span class="c">% Set font size for axes</span>
+<span class="nb">surf</span><span class="p">(</span><span class="n">acut</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="n">sscut</span><span class="o">&#39;</span><span class="p">)</span><span class="w"> </span><span class="c">% Create surface plot of savings policy</span>
+<span class="nb">view</span><span class="p">([</span><span class="mi">45</span><span class="w"> </span><span class="mi">25</span><span class="p">])</span><span class="w"> </span><span class="c">% Set view angle</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Wealth, $a$&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;interpreter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;latex&#39;</span><span class="p">)</span><span class="w"> </span><span class="c">% Label x-axis</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Productivity, $z$&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;interpreter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;latex&#39;</span><span class="p">)</span><span class="w"> </span><span class="c">% Label y-axis</span>
+<span class="nb">zlabel</span><span class="p">(</span><span class="s">&#39;Savings $s(a,z)$&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;interpreter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;latex&#39;</span><span class="p">)</span><span class="w"> </span><span class="c">% Label z-axis</span>
+<span class="nb">xlim</span><span class="p">([</span><span class="n">amin</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="n">acut</span><span class="p">)])</span><span class="w"> </span><span class="c">% Set x-axis limits</span>
+<span class="nb">ylim</span><span class="p">([</span><span class="n">zmin</span><span class="w"> </span><span class="n">zmax</span><span class="p">])</span><span class="w"> </span><span class="c">% Set y-axis limits</span>
+
+<span class="c">% WEALTH DISTRIBUTION</span>
+<span class="nb">figure</span>
+<span class="n">icut</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span><span class="w"> </span><span class="c">% Cut-off index for plotting</span>
+<span class="n">acut</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">icut</span><span class="p">);</span><span class="w"> </span><span class="c">% Wealth values to plot</span>
+<span class="n">gcut</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">g</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">icut</span><span class="p">,</span><span class="w"> </span><span class="p">:);</span><span class="w"> </span><span class="c">% Density values to plot</span>
+<span class="nb">set</span><span class="p">(</span><span class="nb">gca</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">)</span><span class="w"> </span><span class="c">% Set font size for axes</span>
+<span class="nb">surf</span><span class="p">(</span><span class="n">acut</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="n">gcut</span><span class="o">&#39;</span><span class="p">)</span><span class="w"> </span><span class="c">% Create surface plot of wealth distribution</span>
+<span class="nb">view</span><span class="p">([</span><span class="mi">45</span><span class="w"> </span><span class="mi">25</span><span class="p">])</span><span class="w"> </span><span class="c">% Set view angle</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Wealth, $a$&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;interpreter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;latex&#39;</span><span class="p">)</span><span class="w"> </span><span class="c">% Label x-axis</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Productivity, $z$&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;interpreter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;latex&#39;</span><span class="p">)</span><span class="w"> </span><span class="c">% Label y-axis</span>
+<span class="nb">zlabel</span><span class="p">(</span><span class="s">&#39;Density $f(a,z)$&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;interpreter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;latex&#39;</span><span class="p">)</span><span class="w"> </span><span class="c">% Label z-axis</span>
+<span class="nb">xlim</span><span class="p">([</span><span class="n">amin</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="n">acut</span><span class="p">)])</span><span class="w"> </span><span class="c">% Set x-axis limits</span>
+<span class="nb">ylim</span><span class="p">([</span><span class="n">zmin</span><span class="w"> </span><span class="n">zmax</span><span class="p">])</span><span class="w"> </span><span class="c">% Set y-axis limits</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/e407bbb14afae940248539efb62d63bf9f86fcd7a71d9f567175cc4e4e92da6a.png" src="_images/e407bbb14afae940248539efb62d63bf9f86fcd7a71d9f567175cc4e4e92da6a.png" />
+<img alt="_images/ca8418cd79007fa0b08a9a0c31510f79bff3a3f3d36b9f27b6d245409e89db59.png" src="_images/ca8418cd79007fa0b08a9a0c31510f79bff3a3f3d36b9f27b6d245409e89db59.png" />
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="income-in-poisson-process">
+<h1>7. Income in Poisson Process<a class="headerlink" href="#income-in-poisson-process" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<p>Another commonly used process to simulate productivity is Poisson Process.</p>
+<p>We assume that income follows a two-state Poisson process <span class="math notranslate nohighlight">\(z_t \in {z_1,z_2}\)</span> with <span class="math notranslate nohighlight">\(z_2&gt;z_1\)</span>.</p>
+<p>The process jumps from state 1 to state 2 with intensity <span class="math notranslate nohighlight">\(\lambda_1\)</span> and vice versa with intensity <span class="math notranslate nohighlight">\(\lambda_2\)</span>. The two states can be interpreted as employment and unemployment so that <span class="math notranslate nohighlight">\(\lambda_1\)</span> is the job-finding rate and <span class="math notranslate nohighlight">\(\lambda_2\)</span> the job destruction rate.</p>
+<p><strong>New change 1: two dimension continuity <span class="math notranslate nohighlight">\(\to\)</span> one continuity plus one discrete</strong></p>
+<p>Compared with O-U process, <strong>Poisson Process is easier</strong>, since productivity/income process now is discrete, so:</p>
+<ul class="simple">
+<li><p>we don’t need to use <strong>Upwind Differential</strong> to analyze how productivity process affect value function.</p></li>
+<li><p>there are only two states, compared to infinite continous O-U process. So, <strong>Grid construction</strong> is different, just use what we do in discrete case.</p></li>
+<li><p><strong>Transition matrix</strong> is also easier.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="s">&quot;C:\Users\ading\A_TA_Notes&quot;</span>
+<span class="nb">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>ans = 'C:\Users\ading\A_TA_Notes'</pre></body></html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">clear</span><span class="w"> </span><span class="nb">all</span><span class="p">;</span>
+<span class="nb">clc</span><span class="p">;</span><span class="w"> </span>
+<span class="n">close</span><span class="w"> </span><span class="s">all</span><span class="p">;</span>
+<span class="nb">tic</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Parameters</span>
+
+<span class="c">% households and firms</span>
+<span class="n">ga</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">            </span><span class="c">% risk aversion</span>
+<span class="n">rho</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span><span class="w">        </span><span class="c">% discount factor</span>
+<span class="n">d</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span><span class="w">          </span><span class="c">% depreciation rate   </span>
+<span class="n">al</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">;</span><span class="w">          </span><span class="c">% share for capital</span>
+<span class="n">Aprod</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.1</span><span class="p">;</span><span class="w">       </span><span class="c">% A parameter for production function</span>
+
+<span class="c">% poisson income process</span>
+<span class="n">z1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">            </span><span class="c">% wage state 1</span>
+<span class="n">z2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">z1</span><span class="p">;</span><span class="w">         </span><span class="c">% wage state 2</span>
+<span class="n">z</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">z1</span><span class="p">,</span><span class="n">z2</span><span class="p">];</span>
+<span class="n">la1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">;</span><span class="w">         </span><span class="c">% transfer probability</span>
+<span class="n">la2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">;</span>
+<span class="n">la</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">la1</span><span class="p">,</span><span class="n">la2</span><span class="p">];</span>
+<span class="n">z_ave</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">z1</span><span class="o">*</span><span class="n">la2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z2</span><span class="o">*</span><span class="n">la1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">la1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">la2</span><span class="p">);</span>
+
+<span class="c">%% iteration preparation</span>
+<span class="n">maxit</span><span class="p">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">            </span><span class="c">% max iteration</span>
+<span class="n">crit</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="o">^</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">);</span><span class="w">        </span><span class="c">% criterion</span>
+<span class="n">Delta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span>
+
+<span class="n">Ir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">40</span><span class="p">;</span>
+<span class="n">crit_S</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="o">^</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">);</span>
+
+<span class="n">rmax</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.049</span><span class="p">;</span>
+<span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.04</span><span class="p">;</span>
+<span class="n">w</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span>
+
+<span class="n">r0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.03</span><span class="p">;</span>
+<span class="n">rmin</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.01</span><span class="p">;</span>
+<span class="n">rmax</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.99</span><span class="o">*</span><span class="n">rho</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% set grids</span>
+
+<span class="c">% asset</span>
+<span class="n">I</span><span class="p">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span>
+<span class="n">amin</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">amax</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="n">amin</span><span class="p">,</span><span class="n">amax</span><span class="p">,</span><span class="n">I</span><span class="p">)</span><span class="o">&#39;</span><span class="p">;</span>
+<span class="n">da</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">amax</span><span class="o">-</span><span class="n">amin</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">I</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">aa</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">a</span><span class="p">,</span><span class="n">a</span><span class="p">];</span>
+
+<span class="c">% productivity/income</span>
+<span class="n">z</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">z1</span><span class="p">,</span><span class="n">z2</span><span class="p">];</span>
+<span class="n">zz</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">ones</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">z</span><span class="p">;</span>
+
+<span class="c">% Preallocation</span>
+<span class="c">% Finite difference approximation of partial derivatives</span>
+<span class="c">% now we only provide this for asset, just one dimension</span>
+<span class="c">% no more approximation for productivity/income</span>
+<span class="n">dVf</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="w">      </span><span class="c">% derivative value forward</span>
+<span class="n">dVb</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="w">      </span><span class="c">% derivative value backward</span>
+<span class="n">c</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Transiton matrix</span>
+<span class="n">Aswitch</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="nb">speye</span><span class="p">(</span><span class="n">I</span><span class="p">)</span><span class="o">*</span><span class="n">la</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="nb">speye</span><span class="p">(</span><span class="n">I</span><span class="p">)</span><span class="o">*</span><span class="n">la</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="nb">speye</span><span class="p">(</span><span class="n">I</span><span class="p">)</span><span class="o">*</span><span class="n">la</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="o">-</span><span class="nb">speye</span><span class="p">(</span><span class="n">I</span><span class="p">)</span><span class="o">*</span><span class="n">la</span><span class="p">(</span><span class="mi">2</span><span class="p">)];</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>New change 2: Adjusment to HJB equation</strong></p>
+<p>This change also results from Poisson process.</p>
+<p>Now the HJB equation is:
+$<span class="math notranslate nohighlight">\(
+\begin{aligned}
+&amp; \frac{v_{i, j}^{n+1}-v_{i, j}^n}{\Delta}+\rho v_{i, j}^{n+1}=u\left(c_{i, j}^n\right)+v_{i-1, j}^{n+1} x_{i, j}+v_{i, j}^{n+1} y_{i, j}+v_{i+1, j}^{n+1} z_{i, j}+v_{i,-j}^{n+1} \lambda_j \quad \text { where } \\
+&amp; x_{i, j}=-\frac{\left(s_{i, j, B}^n\right)^{-}}{\Delta a} \\
+&amp; y_{i, j}=-\frac{\left(s_{i, j, F}^n\right)^{+}}{\Delta a}+\frac{\left(s_{i, j, B}^n\right)^{-}}{\Delta a}-\lambda_j \\
+&amp; z_{i, j}=\frac{\left(s_{i, j, F}^n\right)^{+}}{\Delta a}
+\end{aligned}
+\)</span>$</p>
+<p>Note that importantly <span class="math notranslate nohighlight">\(x_{1, j}=z_{I, j}=0, j=1,2\)</span> so <span class="math notranslate nohighlight">\(v_{0, j}^{n+1}\)</span> and <span class="math notranslate nohighlight">\(v_{I+1, j}^{n+1}\)</span> are never used aboveation (14) is a system of <span class="math notranslate nohighlight">\(2 \times I\)</span> linear equations which can be written in matrix notation as:
+$<span class="math notranslate nohighlight">\(
+\frac{1}{\Delta}\left(v^{n+1}-v^n\right)+\rho v^{n+1}=u^n+\mathbf{A}^n v^{n+1}
+\)</span>$</p>
+<p>where <span class="math notranslate nohighlight">\(A = x_{i,j} + y_{i,j} + z_{i,j}\)</span></p>
+<p>Here is the iteration, the code iterate on interest rate.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% iteration</span>
+
+<span class="k">for</span><span class="w"> </span><span class="n">ir</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">Ir</span><span class="p">;</span>
+
+<span class="n">r_r</span><span class="p">(</span><span class="n">ir</span><span class="p">)=</span><span class="n">r</span><span class="p">;</span>
+<span class="n">rmin_r</span><span class="p">(</span><span class="n">ir</span><span class="p">)=</span><span class="n">rmin</span><span class="p">;</span>
+<span class="n">rmax_r</span><span class="p">(</span><span class="n">ir</span><span class="p">)=</span><span class="n">rmax</span><span class="p">;</span>
+
+<span class="n">KD</span><span class="p">(</span><span class="n">ir</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">al</span><span class="o">*</span><span class="n">Aprod</span><span class="o">/</span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="p">))</span><span class="o">^</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">al</span><span class="p">))</span><span class="o">*</span><span class="n">z_ave</span><span class="p">;</span><span class="w">    </span>
+<span class="c">% K(r+d) = alpha * A * K^alpha * Z^(1-alpha)</span>
+<span class="n">w</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">al</span><span class="p">)</span><span class="o">*</span><span class="n">Aprod</span><span class="o">*</span><span class="n">KD</span><span class="p">(</span><span class="n">ir</span><span class="p">)</span><span class="o">.^</span><span class="n">al</span><span class="o">*</span><span class="n">z_ave</span><span class="o">^</span><span class="p">(</span><span class="o">-</span><span class="n">al</span><span class="p">);</span>
+<span class="c">% w*Z = (1-alpha) * A * K^alpha * Z^(1-alpha)</span>
+
+<span class="k">if</span><span class="w"> </span><span class="n">w</span><span class="o">*</span><span class="n">z</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="o">*</span><span class="n">amin</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nb">disp</span><span class="p">(</span><span class="s">&#39;CAREFUL: borrowing constraint too loose&#39;</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="n">v0</span><span class="p">(:,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="n">z</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="o">.*</span><span class="n">a</span><span class="p">)</span><span class="o">.^</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">ga</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">ga</span><span class="p">)</span><span class="o">/</span><span class="n">rho</span><span class="p">;</span>
+<span class="n">v0</span><span class="p">(:,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="n">z</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="o">.*</span><span class="n">a</span><span class="p">)</span><span class="o">.^</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">ga</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">ga</span><span class="p">)</span><span class="o">/</span><span class="n">rho</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="n">ir</span><span class="o">&gt;</span><span class="mi">1</span>
+<span class="n">v0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">V_r</span><span class="p">(:,:,</span><span class="n">ir</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">end</span>
+
+<span class="n">v</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">v0</span><span class="p">;</span>
+
+<span class="k">for</span><span class="w"> </span><span class="n">n</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">maxit</span>
+<span class="w">    </span><span class="n">V</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<span class="w">    </span><span class="n">V_n</span><span class="p">(:,:,</span><span class="n">n</span><span class="p">)=</span><span class="n">V</span><span class="p">;</span>
+<span class="w">    </span><span class="c">% forward difference</span>
+<span class="w">    </span><span class="n">dVf</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">I</span><span class="o">-</span><span class="mi">1</span><span class="p">,:)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">V</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">I</span><span class="p">,:)</span><span class="o">-</span><span class="n">V</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">I</span><span class="o">-</span><span class="mi">1</span><span class="p">,:))</span><span class="o">/</span><span class="n">da</span><span class="p">;</span>
+<span class="w">    </span><span class="n">dVf</span><span class="p">(</span><span class="n">I</span><span class="p">,:)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="n">z</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="o">.*</span><span class="n">amax</span><span class="p">)</span><span class="o">.^</span><span class="p">(</span><span class="o">-</span><span class="n">ga</span><span class="p">);</span><span class="w"> </span>
+<span class="w">    </span><span class="c">%will never be used, but impose state constraint a&lt;=amax just in case</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">% backward difference</span>
+<span class="w">    </span><span class="n">dVb</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">I</span><span class="p">,:)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">V</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">I</span><span class="p">,:)</span><span class="o">-</span><span class="n">V</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">I</span><span class="o">-</span><span class="mi">1</span><span class="p">,:))</span><span class="o">/</span><span class="n">da</span><span class="p">;</span>
+<span class="w">    </span><span class="n">dVb</span><span class="p">(</span><span class="mi">1</span><span class="p">,:)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="n">z</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="o">.*</span><span class="n">amin</span><span class="p">)</span><span class="o">.^</span><span class="p">(</span><span class="o">-</span><span class="n">ga</span><span class="p">);</span><span class="w"> </span>
+<span class="w">    </span><span class="c">%state constraint boundary condition</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">%consumption and savings with forward difference</span>
+<span class="w">    </span><span class="n">cf</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">dVf</span><span class="o">.^</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">ga</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ssf</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">w</span><span class="o">*</span><span class="n">zz</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="o">.*</span><span class="n">aa</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cf</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c">%consumption and savings with backward difference</span>
+<span class="w">    </span><span class="n">cb</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">dVb</span><span class="o">.^</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">ga</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ssb</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">w</span><span class="o">*</span><span class="n">zz</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="o">.*</span><span class="n">aa</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cb</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c">%consumption and derivative of value function at steady state</span>
+<span class="w">    </span><span class="n">c0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">w</span><span class="o">*</span><span class="n">zz</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="o">.*</span><span class="n">aa</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">% dV_upwind makes a choice of forward or backward differences based on</span>
+<span class="w">    </span><span class="c">% the sign of the drift    </span>
+<span class="w">    </span><span class="n">If</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ssf</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c">%positive drift --&gt; forward difference</span>
+<span class="w">    </span><span class="n">Ib</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ssb</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c">%negative drift --&gt; backward difference</span>
+<span class="w">    </span><span class="n">I0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">If</span><span class="o">-</span><span class="n">Ib</span><span class="p">);</span><span class="w"> </span><span class="c">%at steady state</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">c</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">cf</span><span class="o">.*</span><span class="n">If</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cb</span><span class="o">.*</span><span class="n">Ib</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c0</span><span class="o">.*</span><span class="n">I0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">u</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">c</span><span class="o">.^</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">ga</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">ga</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">% Construct Matrix </span>
+<span class="w">    </span><span class="n">X</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="nb">min</span><span class="p">(</span><span class="n">ssb</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="n">da</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="nb">max</span><span class="p">(</span><span class="n">ssf</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="n">da</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">min</span><span class="p">(</span><span class="n">ssb</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="n">da</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Z</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="n">ssf</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="n">da</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">A1</span><span class="p">=</span><span class="nb">spdiags</span><span class="p">(</span><span class="n">Y</span><span class="p">(:,</span><span class="mi">1</span><span class="p">),</span><span class="mi">0</span><span class="p">,</span><span class="n">I</span><span class="p">,</span><span class="n">I</span><span class="p">)</span><span class="o">+</span><span class="nb">spdiags</span><span class="p">(</span><span class="n">X</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">I</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">I</span><span class="p">,</span><span class="n">I</span><span class="p">)</span><span class="o">+</span><span class="nb">spdiags</span><span class="p">([</span><span class="mi">0</span><span class="p">;</span><span class="n">Z</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">I</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)],</span><span class="mi">1</span><span class="p">,</span><span class="n">I</span><span class="p">,</span><span class="n">I</span><span class="p">);</span>
+<span class="w">    </span><span class="n">A2</span><span class="p">=</span><span class="nb">spdiags</span><span class="p">(</span><span class="n">Y</span><span class="p">(:,</span><span class="mi">2</span><span class="p">),</span><span class="mi">0</span><span class="p">,</span><span class="n">I</span><span class="p">,</span><span class="n">I</span><span class="p">)</span><span class="o">+</span><span class="nb">spdiags</span><span class="p">(</span><span class="n">X</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">I</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">I</span><span class="p">,</span><span class="n">I</span><span class="p">)</span><span class="o">+</span><span class="nb">spdiags</span><span class="p">([</span><span class="mi">0</span><span class="p">;</span><span class="n">Z</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">I</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)],</span><span class="mi">1</span><span class="p">,</span><span class="n">I</span><span class="p">,</span><span class="n">I</span><span class="p">);</span>
+<span class="w">    </span><span class="n">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">A1</span><span class="p">,</span><span class="nb">sparse</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="n">I</span><span class="p">);</span><span class="nb">sparse</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="n">I</span><span class="p">),</span><span class="n">A2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Aswitch</span><span class="p">;</span>
+<span class="w">    </span><span class="c">% S = spdiags( Bin , d , m , n ) creates an m -by- n sparse matrix S </span>
+<span class="w">    </span><span class="c">% by taking the columns of Bin and placing them along the diagonals </span>
+<span class="w">    </span><span class="c">% specified by d </span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span><span class="o">&gt;</span><span class="mi">10</span><span class="o">^</span><span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">)</span>
+<span class="w">       </span><span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Improper Transition Matrix&#39;</span><span class="p">)</span>
+<span class="w">       </span><span class="c">%break</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">B</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">Delta</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rho</span><span class="p">)</span><span class="o">*</span><span class="nb">speye</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">I</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">A</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">u_stacked</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">u</span><span class="p">(:,</span><span class="mi">1</span><span class="p">);</span><span class="n">u</span><span class="p">(:,</span><span class="mi">2</span><span class="p">)];</span>
+<span class="w">    </span><span class="n">V_stacked</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">V</span><span class="p">(:,</span><span class="mi">1</span><span class="p">);</span><span class="n">V</span><span class="p">(:,</span><span class="mi">2</span><span class="p">)];</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">u_stacked</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">V_stacked</span><span class="o">/</span><span class="n">Delta</span><span class="p">;</span>
+<span class="w">    </span><span class="n">V_stacked</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">B</span><span class="o">\</span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c">% Solve system of equations</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">V</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">V_stacked</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">I</span><span class="p">),</span><span class="w"> </span><span class="n">V_stacked</span><span class="p">(</span><span class="n">I</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span><span class="n">I</span><span class="p">)];</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">Vchange</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<span class="w">    </span><span class="n">v</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">V</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">dist</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">Vchange</span><span class="p">)));</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">dist</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">&lt;</span><span class="n">crit</span>
+<span class="w">        </span><span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Value Function Converged, Iteration = &#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">disp</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="w">        </span><span class="k">break</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="k">end</span>
+<span class="nb">toc</span><span class="p">;</span>
+
+
+<span class="c">%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+<span class="c">% FOKKER-PLANCK EQUATION %</span>
+<span class="c">%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+<span class="c">% Fokker–Planck equation is a partial differential equation that </span>
+<span class="c">% describes the time evolution of the probability density function </span>
+
+<span class="n">AT</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">A</span><span class="o">&#39;</span><span class="p">;</span>
+<span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">I</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="c">% need to fix one value, otherwise matrix is singular</span>
+<span class="n">i_fix</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">b</span><span class="p">(</span><span class="n">i_fix</span><span class="p">)=</span><span class="mf">.1</span><span class="p">;</span>
+<span class="n">row</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">i_fix</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">I</span><span class="o">-</span><span class="n">i_fix</span><span class="p">)];</span>
+<span class="n">AT</span><span class="p">(</span><span class="n">i_fix</span><span class="p">,:)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">row</span><span class="p">;</span>
+
+<span class="c">% Solve linear system</span>
+<span class="n">gg</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">AT</span><span class="o">\</span><span class="n">b</span><span class="p">;</span>
+<span class="n">g_sum</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">gg</span><span class="o">&#39;*</span><span class="nb">ones</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">I</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">da</span><span class="p">;</span>
+<span class="n">gg</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">gg</span><span class="o">./</span><span class="n">g_sum</span><span class="p">;</span>
+
+<span class="n">g</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">gg</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">I</span><span class="p">),</span><span class="n">gg</span><span class="p">(</span><span class="n">I</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span><span class="n">I</span><span class="p">)];</span>
+
+<span class="n">check1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">g</span><span class="p">(:,</span><span class="mi">1</span><span class="p">)</span><span class="o">&#39;*</span><span class="nb">ones</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">da</span><span class="p">;</span>
+<span class="n">check2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">g</span><span class="p">(:,</span><span class="mi">2</span><span class="p">)</span><span class="o">&#39;*</span><span class="nb">ones</span><span class="p">(</span><span class="n">I</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">da</span><span class="p">;</span>
+
+<span class="n">g_r</span><span class="p">(:,:,</span><span class="n">ir</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">g</span><span class="p">;</span>
+<span class="n">adot</span><span class="p">(:,:,</span><span class="n">ir</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">w</span><span class="o">*</span><span class="n">zz</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="o">.*</span><span class="n">aa</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<span class="n">V_r</span><span class="p">(:,:,</span><span class="n">ir</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">V</span><span class="p">;</span>
+
+<span class="n">KS</span><span class="p">(</span><span class="n">ir</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">g</span><span class="p">(:,</span><span class="mi">1</span><span class="p">)</span><span class="o">&#39;*</span><span class="n">a</span><span class="o">*</span><span class="n">da</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">g</span><span class="p">(:,</span><span class="mi">2</span><span class="p">)</span><span class="o">&#39;*</span><span class="n">a</span><span class="o">*</span><span class="n">da</span><span class="p">;</span>
+<span class="n">S</span><span class="p">(</span><span class="n">ir</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">KS</span><span class="p">(</span><span class="n">ir</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">KD</span><span class="p">(</span><span class="n">ir</span><span class="p">);</span>
+
+<span class="c">% Update interest rate</span>
+<span class="k">if</span><span class="w"> </span><span class="n">S</span><span class="p">(</span><span class="n">ir</span><span class="p">)</span><span class="o">&gt;</span><span class="n">crit_S</span>
+<span class="w">    </span><span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Excess Supply&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">rmax</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">r</span><span class="p">;</span>
+<span class="w">    </span><span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">r</span><span class="o">+</span><span class="n">rmin</span><span class="p">);</span>
+<span class="k">elseif</span><span class="w"> </span><span class="n">S</span><span class="p">(</span><span class="n">ir</span><span class="p">)</span><span class="o">&lt;-</span><span class="n">crit_S</span><span class="p">;</span>
+<span class="w">    </span><span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Excess Demand&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">rmin</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">r</span><span class="p">;</span>
+<span class="w">    </span><span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">r</span><span class="o">+</span><span class="n">rmax</span><span class="p">);</span>
+<span class="k">elseif</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">S</span><span class="p">(</span><span class="n">ir</span><span class="p">))</span><span class="o">&lt;</span><span class="n">crit_S</span><span class="p">;</span>
+<span class="w">    </span><span class="nb">display</span><span class="p">(</span><span class="s">&#39;Equilibrium Found, Interest rate =&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">disp</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<span class="w">    </span><span class="k">break</span>
+<span class="k">end</span>
+
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Value Function Converged, Iteration = 
+     7
+
+历时 2559.207783 秒。
+Excess Demand
+Value Function Converged, Iteration = 
+     6
+
+历时 2559.284936 秒。
+Excess Demand
+Value Function Converged, Iteration = 
+     5
+
+历时 2559.329921 秒。
+Excess Supply
+Value Function Converged, Iteration = 
+     5
+
+历时 2559.365684 秒。
+Excess Supply
+Value Function Converged, Iteration = 
+     5
+
+历时 2559.407666 秒。
+Excess Supply
+Value Function Converged, Iteration = 
+     5
+
+历时 2559.474438 秒。
+Excess Supply
+Value Function Converged, Iteration = 
+     5
+
+历时 2559.512612 秒。
+Excess Demand
+Value Function Converged, Iteration = 
+     4
+
+历时 2559.540382 秒。
+Excess Demand
+Value Function Converged, Iteration = 
+     4
+
+历时 2559.561689 秒。
+Excess Supply
+Value Function Converged, Iteration = 
+     4
+
+历时 2559.587406 秒。
+Excess Demand
+Value Function Converged, Iteration = 
+     4
+
+历时 2559.615126 秒。
+Excess Supply
+Value Function Converged, Iteration = 
+     4
+
+历时 2559.639559 秒。
+Excess Supply
+Value Function Converged, Iteration = 
+     4
+
+历时 2559.671812 秒。
+Excess Supply
+Value Function Converged, Iteration = 
+     3
+
+历时 2559.697452 秒。
+Excess Supply
+Value Function Converged, Iteration = 
+     3
+
+历时 2559.719571 秒。
+Excess Demand
+Value Function Converged, Iteration = 
+     3
+
+历时 2559.741214 秒。
+Equilibrium Found, Interest rate =
+   0.044992080688477
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then plot the figure.</p>
+<p>There are only two states in income/productivity, so we only have two lines, which is different from three-dimension figure in O-U process case.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% plot</span>
+<span class="n">amax1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="n">amin1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">amin</span><span class="o">-</span><span class="mf">0.1</span><span class="p">;</span>
+
+<span class="nb">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">h1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">plot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">adot</span><span class="p">(:,</span><span class="mi">1</span><span class="p">,</span><span class="n">ir</span><span class="p">),</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">adot</span><span class="p">(:,</span><span class="mi">2</span><span class="p">,</span><span class="n">ir</span><span class="p">),</span><span class="s">&#39;r&#39;</span><span class="p">,</span><span class="nb">linspace</span><span class="p">(</span><span class="n">amin1</span><span class="p">,</span><span class="n">amax1</span><span class="p">,</span><span class="n">I</span><span class="p">),</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">I</span><span class="p">),</span><span class="s">&#39;k--&#39;</span><span class="p">,</span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+<span class="nb">legend</span><span class="p">(</span><span class="n">h1</span><span class="p">,</span><span class="s">&#39;s_1(a)&#39;</span><span class="p">,</span><span class="s">&#39;s_2(a)&#39;</span><span class="p">,</span><span class="s">&#39;Location&#39;</span><span class="p">,</span><span class="s">&#39;NorthEast&#39;</span><span class="p">);</span>
+<span class="nb">text</span><span class="p">(</span><span class="o">-</span><span class="mf">0.155</span><span class="p">,</span><span class="o">-</span><span class="mf">.105</span><span class="p">,</span><span class="s">&#39;$\underline{a}$&#39;</span><span class="p">,</span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="s">&#39;interpreter&#39;</span><span class="p">,</span><span class="s">&#39;latex&#39;</span><span class="p">);</span>
+<span class="nb">line</span><span class="p">([</span><span class="n">amin</span><span class="w"> </span><span class="n">amin</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mf">.1</span><span class="w"> </span><span class="mf">.08</span><span class="p">],</span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="s">&#39;Black&#39;</span><span class="p">,</span><span class="s">&#39;LineStyle&#39;</span><span class="p">,</span><span class="s">&#39;--&#39;</span><span class="p">);</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Wealth, $a$&#39;</span><span class="p">,</span><span class="s">&#39;interpreter&#39;</span><span class="p">,</span><span class="s">&#39;latex&#39;</span><span class="p">);</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Savings, $s_i(a)$&#39;</span><span class="p">,</span><span class="s">&#39;interpreter&#39;</span><span class="p">,</span><span class="s">&#39;latex&#39;</span><span class="p">);</span>
+<span class="nb">xlim</span><span class="p">([</span><span class="n">amin1</span><span class="w"> </span><span class="n">amax1</span><span class="p">]);</span>
+<span class="nb">ylim</span><span class="p">([</span><span class="o">-</span><span class="mf">0.03</span><span class="w"> </span><span class="mf">0.05</span><span class="p">]);</span>
+<span class="nb">set</span><span class="p">(</span><span class="nb">gca</span><span class="p">,</span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="mi">16</span><span class="p">);</span>
+
+<span class="nb">figure</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">h1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">plot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">g_r</span><span class="p">(:,</span><span class="mi">1</span><span class="p">,</span><span class="n">ir</span><span class="p">),</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">g_r</span><span class="p">(:,</span><span class="mi">2</span><span class="p">,</span><span class="n">ir</span><span class="p">),</span><span class="s">&#39;r&#39;</span><span class="p">,</span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+<span class="nb">legend</span><span class="p">(</span><span class="n">h1</span><span class="p">,</span><span class="s">&#39;g_1(a)&#39;</span><span class="p">,</span><span class="s">&#39;g_2(a)&#39;</span><span class="p">);</span>
+<span class="nb">text</span><span class="p">(</span><span class="o">-</span><span class="mf">0.155</span><span class="p">,</span><span class="o">-</span><span class="mf">.12</span><span class="p">,</span><span class="s">&#39;$\underline{a}$&#39;</span><span class="p">,</span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="s">&#39;interpreter&#39;</span><span class="p">,</span><span class="s">&#39;latex&#39;</span><span class="p">);</span>
+<span class="nb">line</span><span class="p">([</span><span class="n">amin</span><span class="w"> </span><span class="n">amin</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">g_r</span><span class="p">(:,:,</span><span class="n">ir</span><span class="p">)))],</span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="s">&#39;Black&#39;</span><span class="p">,</span><span class="s">&#39;LineStyle&#39;</span><span class="p">,</span><span class="s">&#39;--&#39;</span><span class="p">);</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Wealth, $a$&#39;</span><span class="p">,</span><span class="s">&#39;interpreter&#39;</span><span class="p">,</span><span class="s">&#39;latex&#39;</span><span class="p">);</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Densities, $g_i(a)$&#39;</span><span class="p">,</span><span class="s">&#39;interpreter&#39;</span><span class="p">,</span><span class="s">&#39;latex&#39;</span><span class="p">);</span>
+<span class="nb">xlim</span><span class="p">([</span><span class="n">amin1</span><span class="w"> </span><span class="n">amax1</span><span class="p">]);</span>
+<span class="c">%ylim([0 0.5])</span>
+<span class="nb">set</span><span class="p">(</span><span class="nb">gca</span><span class="p">,</span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="mi">16</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/3b87d7cd21c4a474e6aa25eccc31d5d5c0ab4adbb55906e14334c9494278e991.png" src="_images/3b87d7cd21c4a474e6aa25eccc31d5d5c0ab4adbb55906e14334c9494278e991.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>警告: 忽略额外的图例条目。
+</pre></div>
+</div>
+<img alt="_images/ea6ee0b65708bd8300e338e2b59ebf7cdacd5aa0498ce233cadda74984eda5e4.png" src="_images/ea6ee0b65708bd8300e338e2b59ebf7cdacd5aa0498ce233cadda74984eda5e4.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="reference">
+<h1>Reference<a class="headerlink" href="#reference" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>Yves Achdou, Jiequn Han, Jean-Michel Lasry, Pierre-Louis Lions, Benjamin Moll, “<em>Income and Wealth Distribution in Macroeconomics: A Continuous-Time Approach</em>”, The Review of Economic Studies, 2022.</p></li>
+</ol>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "jupyter_matlab_kernel"
+        },
+        kernelOptions: {
+            name: "jupyter_matlab_kernel",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'jupyter_matlab_kernel'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="5_From_Optimal_Consumption_to_Aiyagari_Model.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">5. From Optimal Consumption to Aiyagari Model</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6. Heterogeneous Agent Model in Continous Time</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-idea-in-continous-time">1. Basic Idea in Continous Time</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#income-in-ornstein-uhlenbeck-process">2. Income in Ornstein-Uhlenbeck Process</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#evolution-matrix-of-productivity-a-ornstein-uhlenbeck-process">3. Evolution Matrix of Productivity (a Ornstein-Uhlenbeck Process)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#evolution-matrix-of-asset">4. Evolution Matrix of Asset</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hamiltonjacobibellman-equation">5. Hamilton–Jacobi–Bellman equation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kolmogorov-forward-equation-fokker-planck-equation">6. Kolmogorov Forward Equation/ Fokker-Planck Equation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#income-in-poisson-process">7. Income in Poisson Process</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">Reference</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
