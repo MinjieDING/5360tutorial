@@ -1,0 +1,811 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="6.000in" height="9.000in" viewBox="0 0 4320 6480">
+	<desc>Stata Graph - Graph</desc>
+	<rect x="0" y="0" width="4320" height="6480" style="fill:#FFFFFF;stroke:none"/>
+	<rect x="0.00" y="0.00" width="4320.00" height="6480.00" style="fill:#FFFFFF"/>
+	<rect x="4.32" y="4.32" width="4311.36" height="6471.36" style="fill:none;stroke:#FFFFFF;stroke-width:8.64"/>
+	<rect x="94.97" y="312.05" width="688.31" height="1012.10" style="fill:#FFFFFF"/>
+	<rect x="96.77" y="313.85" width="684.71" height="1008.50" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="316.31" y="871.56" width="156.33" height="168.68" style="fill:#808080"/>
+	<rect x="318.11" y="873.36" width="152.73" height="165.08" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="524.69" y="788.53" width="156.13" height="251.71" style="fill:#808080"/>
+	<rect x="526.49" y="790.33" width="152.53" height="248.11" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="394.48" y1="769.90" x2="394.48" y2="973.42" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="602.65" y1="736.49" x2="602.65" y2="840.58" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="394.27" cy="803.11" r="24.57" style="fill:#000000"/>
+	<circle cx="394.27" cy="803.11" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="602.65" cy="790.97" r="24.57" style="fill:#000000"/>
+	<circle cx="602.65" cy="790.97" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="276.82" y1="1079.93" x2="276.82" y2="533.99" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="276.82" y1="1040.24" x2="251.71" y2="1040.24" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="220.49" y="1040.24" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 220.49,1040.24)" text-anchor="middle">-.5</text>
+	<line x1="276.82" y1="806.96" x2="251.71" y2="806.96" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="220.49" y="806.96" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 220.49,806.96)" text-anchor="middle">0</text>
+	<line x1="276.82" y1="573.68" x2="251.71" y2="573.68" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="220.49" y="573.68" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 220.49,573.68)" text-anchor="middle">.5</text>
+	<line x1="276.82" y1="1079.93" x2="720.30" y2="1079.93" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="394.48" y1="1079.93" x2="394.48" y2="1104.84" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="394.48" y="1161.09" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="602.65" y1="1079.93" x2="602.65" y2="1104.84" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="602.65" y="1161.09" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="498.56" y="1229.74" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2007 intro.</text>
+	<text x="498.56" y="433.92" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="498.56" y="502.56" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="783.28" y="312.05" width="688.31" height="1012.10" style="fill:#FFFFFF"/>
+	<rect x="785.08" y="313.85" width="684.71" height="1008.50" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="972.62" y="929.88" width="169.90" height="110.36" style="fill:#808080"/>
+	<rect x="974.42" y="931.68" width="166.30" height="106.76" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="1199.22" y="701.06" width="169.90" height="339.19" style="fill:#808080"/>
+	<rect x="1201.02" y="702.86" width="166.30" height="335.59" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="1057.67" y1="836.53" x2="1057.67" y2="1023.44" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="1284.07" y1="632.81" x2="1284.07" y2="769.30" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="1057.47" cy="799.06" r="24.57" style="fill:#000000"/>
+	<circle cx="1057.47" cy="799.06" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="1284.07" cy="789.35" r="24.57" style="fill:#000000"/>
+	<circle cx="1284.07" cy="789.35" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="933.13" y1="1079.93" x2="1408.61" y2="1079.93" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="1057.67" y1="1079.93" x2="1057.67" y2="1104.84" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1057.67" y="1161.09" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="1284.07" y1="1079.93" x2="1284.07" y2="1104.84" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1284.07" y="1161.09" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="1170.87" y="1229.74" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2008 intro.</text>
+	<text x="1170.87" y="433.92" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle">A: Trust in</text>
+	<text x="1170.87" y="502.56" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle">government officials</text>
+	<rect x="1471.59" y="312.05" width="688.31" height="1012.10" style="fill:#FFFFFF"/>
+	<rect x="1473.39" y="313.85" width="684.71" height="1008.50" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="1692.93" y="852.93" width="156.33" height="187.31" style="fill:#808080"/>
+	<rect x="1694.73" y="854.73" width="152.73" height="183.71" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="1901.30" y="746.21" width="156.13" height="294.03" style="fill:#808080"/>
+	<rect x="1903.10" y="748.01" width="152.53" height="290.43" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="1771.09" y1="769.30" x2="1771.09" y2="936.36" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="1979.27" y1="625.12" x2="1979.27" y2="867.31" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="1771.09" cy="810.61" r="24.57" style="fill:#000000"/>
+	<circle cx="1771.09" cy="810.61" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="1979.27" cy="755.53" r="24.57" style="fill:#000000"/>
+	<circle cx="1979.27" cy="755.53" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="1653.44" y1="1079.93" x2="2096.92" y2="1079.93" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="1771.09" y1="1079.93" x2="1771.09" y2="1104.84" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1771.09" y="1161.09" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="1979.27" y1="1079.93" x2="1979.27" y2="1104.84" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1979.27" y="1161.09" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="1875.18" y="1229.74" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2009 intro.</text>
+	<text x="1875.18" y="433.92" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="1875.18" y="502.56" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="2160.10" y="312.05" width="688.31" height="1012.10" style="fill:#FFFFFF"/>
+	<rect x="2161.90" y="313.85" width="684.71" height="1008.50" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="2381.44" y="864.88" width="156.13" height="175.37" style="fill:#808080"/>
+	<rect x="2383.24" y="866.68" width="152.53" height="171.77" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="2589.61" y="755.32" width="156.13" height="284.92" style="fill:#808080"/>
+	<rect x="2591.41" y="757.12" width="152.53" height="281.32" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="2459.40" y1="765.65" x2="2459.40" y2="964.31" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="2667.57" y1="706.73" x2="2667.57" y2="804.13" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="2459.40" cy="802.91" r="24.57" style="fill:#000000"/>
+	<circle cx="2459.40" cy="802.91" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="2667.57" cy="793.40" r="24.57" style="fill:#000000"/>
+	<circle cx="2667.57" cy="793.40" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="2341.75" y1="1079.93" x2="2341.75" y2="533.99" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="2341.75" y1="1040.24" x2="2316.84" y2="1040.24" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2285.41" y="1040.24" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 2285.41,1040.24)" text-anchor="middle">-.5</text>
+	<line x1="2341.75" y1="806.96" x2="2316.84" y2="806.96" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2285.41" y="806.96" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 2285.41,806.96)" text-anchor="middle">0</text>
+	<line x1="2341.75" y1="573.68" x2="2316.84" y2="573.68" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2285.41" y="573.68" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 2285.41,573.68)" text-anchor="middle">.5</text>
+	<line x1="2341.75" y1="1079.93" x2="2785.23" y2="1079.93" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="2459.40" y1="1079.93" x2="2459.40" y2="1104.84" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2459.40" y="1161.09" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="2667.57" y1="1079.93" x2="2667.57" y2="1104.84" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2667.57" y="1161.09" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="2563.49" y="1229.74" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2007 intro.</text>
+	<text x="2563.49" y="433.92" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="2563.49" y="502.56" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="2848.41" y="312.05" width="688.31" height="1012.10" style="fill:#FFFFFF"/>
+	<rect x="2850.21" y="313.85" width="684.71" height="1008.50" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="3049.09" y="908.01" width="165.04" height="132.23" style="fill:#808080"/>
+	<rect x="3050.89" y="909.81" width="161.44" height="128.63" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="3269.01" y="803.93" width="165.04" height="236.32" style="fill:#808080"/>
+	<rect x="3270.81" y="805.73" width="161.44" height="232.72" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="3131.71" y1="822.96" x2="3131.71" y2="993.06" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="3351.63" y1="731.02" x2="3351.63" y2="877.03" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="3131.51" cy="819.31" r="24.57" style="fill:#000000"/>
+	<circle cx="3131.51" cy="819.31" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="3351.43" cy="779.42" r="24.57" style="fill:#000000"/>
+	<circle cx="3351.43" cy="779.42" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="3009.60" y1="1079.93" x2="3473.74" y2="1079.93" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="3131.71" y1="1079.93" x2="3131.71" y2="1104.84" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="3131.71" y="1161.09" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="3351.63" y1="1079.93" x2="3351.63" y2="1104.84" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="3351.63" y="1161.09" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="3241.67" y="1229.74" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2008 intro.</text>
+	<text x="3241.67" y="433.92" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle">B: Bribery and</text>
+	<text x="3241.67" y="502.56" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle">civic-mindedness</text>
+	<rect x="3536.72" y="312.05" width="688.31" height="1012.10" style="fill:#FFFFFF"/>
+	<rect x="3538.52" y="313.85" width="684.71" height="1008.50" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="3758.05" y="887.96" width="156.13" height="152.28" style="fill:#808080"/>
+	<rect x="3759.85" y="889.76" width="152.53" height="148.68" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="3966.23" y="781.85" width="156.13" height="258.39" style="fill:#808080"/>
+	<rect x="3968.03" y="783.65" width="152.53" height="254.79" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="3836.02" y1="818.30" x2="3836.02" y2="957.82" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="4044.19" y1="666.43" x2="4044.19" y2="897.28" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="3836.02" cy="813.24" r="24.57" style="fill:#000000"/>
+	<circle cx="3836.02" cy="813.24" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="4044.19" cy="755.93" r="24.57" style="fill:#000000"/>
+	<circle cx="4044.19" cy="755.93" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="3718.36" y1="1079.93" x2="4162.05" y2="1079.93" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="3836.02" y1="1079.93" x2="3836.02" y2="1104.84" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="3836.02" y="1161.09" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="4044.19" y1="1079.93" x2="4044.19" y2="1104.84" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="4044.19" y="1161.09" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="3940.10" y="1229.74" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2009 intro.</text>
+	<text x="3940.10" y="433.92" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="3940.10" y="502.56" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="94.97" y="1324.15" width="688.31" height="1012.10" style="fill:#FFFFFF"/>
+	<rect x="96.77" y="1325.95" width="684.71" height="1008.50" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="316.31" y="1926.79" width="156.33" height="125.75" style="fill:#808080"/>
+	<rect x="318.11" y="1928.59" width="152.73" height="122.15" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="524.69" y="1774.71" width="156.13" height="277.83" style="fill:#808080"/>
+	<rect x="526.49" y="1776.51" width="152.53" height="274.23" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="394.48" y1="1822.10" x2="394.48" y2="2031.48" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="602.65" y1="1723.27" x2="602.65" y2="1826.15" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="394.27" cy="1844.37" r="24.57" style="fill:#000000"/>
+	<circle cx="394.27" cy="1844.37" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="602.65" cy="1803.87" r="24.57" style="fill:#000000"/>
+	<circle cx="602.65" cy="1803.87" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="276.82" y1="2092.03" x2="276.82" y2="1546.29" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="276.82" y1="2052.54" x2="251.71" y2="2052.54" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="220.49" y="2052.54" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 220.49,2052.54)" text-anchor="middle">-.5</text>
+	<line x1="276.82" y1="1819.06" x2="251.71" y2="1819.06" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="220.49" y="1819.06" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 220.49,1819.06)" text-anchor="middle">0</text>
+	<line x1="276.82" y1="1585.78" x2="251.71" y2="1585.78" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="220.49" y="1585.78" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 220.49,1585.78)" text-anchor="middle">.5</text>
+	<line x1="276.82" y1="2092.03" x2="720.30" y2="2092.03" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="394.48" y1="2092.03" x2="394.48" y2="2117.14" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="394.48" y="2173.19" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="602.65" y1="2092.03" x2="602.65" y2="2117.14" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="602.65" y="2173.19" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="498.56" y="2241.84" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2007 intro.</text>
+	<text x="498.56" y="1446.01" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="498.56" y="1514.66" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="783.28" y="1324.15" width="688.31" height="1012.10" style="fill:#FFFFFF"/>
+	<rect x="785.08" y="1325.95" width="684.71" height="1008.50" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="973.84" y="1897.83" width="169.29" height="154.71" style="fill:#808080"/>
+	<rect x="975.64" y="1899.63" width="165.69" height="151.11" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="1199.63" y="1771.88" width="169.50" height="280.66" style="fill:#808080"/>
+	<rect x="1201.43" y="1773.68" width="165.90" height="277.06" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="1058.48" y1="1807.92" x2="1058.48" y2="1987.74" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="1284.28" y1="1700.60" x2="1284.28" y2="1843.15" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="1058.28" cy="1820.27" r="24.57" style="fill:#000000"/>
+	<circle cx="1058.28" cy="1820.27" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="1284.28" cy="1805.29" r="24.57" style="fill:#000000"/>
+	<circle cx="1284.28" cy="1805.29" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="934.15" y1="2092.03" x2="1408.61" y2="2092.03" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="1058.48" y1="2092.03" x2="1058.48" y2="2117.14" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1058.48" y="2173.19" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="1284.28" y1="2092.03" x2="1284.28" y2="2117.14" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1284.28" y="2173.19" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="1171.48" y="2241.84" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2008 intro.</text>
+	<text x="1171.48" y="1446.01" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle">C: Perception of</text>
+	<text x="1171.48" y="1514.66" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle">Chinese democracy</text>
+	<rect x="1471.59" y="1324.15" width="688.31" height="1012.10" style="fill:#FFFFFF"/>
+	<rect x="1473.39" y="1325.95" width="684.71" height="1008.50" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="1692.93" y="1889.53" width="156.33" height="163.01" style="fill:#808080"/>
+	<rect x="1694.73" y="1891.33" width="152.73" height="159.41" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="1901.30" y="1744.13" width="156.13" height="308.41" style="fill:#808080"/>
+	<rect x="1903.10" y="1745.93" width="152.53" height="304.81" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="1771.09" y1="1814.40" x2="1771.09" y2="1964.65" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="1979.27" y1="1633.77" x2="1979.27" y2="1854.50" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="1771.09" cy="1832.83" r="24.57" style="fill:#000000"/>
+	<circle cx="1771.09" cy="1832.83" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="1979.27" cy="1833.84" r="24.57" style="fill:#000000"/>
+	<circle cx="1979.27" cy="1833.84" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="1653.44" y1="2092.03" x2="2096.92" y2="2092.03" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="1771.09" y1="2092.03" x2="1771.09" y2="2117.14" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1771.09" y="2173.19" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="1979.27" y1="2092.03" x2="1979.27" y2="2117.14" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1979.27" y="2173.19" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="1875.18" y="2241.84" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2009 intro.</text>
+	<text x="1875.18" y="1446.01" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="1875.18" y="1514.66" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="2160.10" y="1324.15" width="688.31" height="1012.10" style="fill:#FFFFFF"/>
+	<rect x="2161.90" y="1325.95" width="684.71" height="1008.50" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="2381.44" y="1740.89" width="156.13" height="311.65" style="fill:#808080"/>
+	<rect x="2383.24" y="1742.69" width="152.53" height="308.05" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="2589.61" y="1825.54" width="156.13" height="227.00" style="fill:#808080"/>
+	<rect x="2591.41" y="1827.34" width="152.53" height="223.40" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="2459.40" y1="1638.63" x2="2459.40" y2="1843.15" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="2667.57" y1="1767.42" x2="2667.57" y2="1883.86" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="2459.40" cy="1740.08" r="24.57" style="fill:#000000"/>
+	<circle cx="2459.40" cy="1740.08" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="2667.57" cy="1838.30" r="24.57" style="fill:#000000"/>
+	<circle cx="2667.57" cy="1838.30" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="2341.75" y1="2092.03" x2="2341.75" y2="1546.29" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="2341.75" y1="2052.54" x2="2316.84" y2="2052.54" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2285.41" y="2052.54" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 2285.41,2052.54)" text-anchor="middle">-.5</text>
+	<line x1="2341.75" y1="1819.06" x2="2316.84" y2="1819.06" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2285.41" y="1819.06" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 2285.41,1819.06)" text-anchor="middle">0</text>
+	<line x1="2341.75" y1="1585.78" x2="2316.84" y2="1585.78" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2285.41" y="1585.78" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 2285.41,1585.78)" text-anchor="middle">.5</text>
+	<line x1="2341.75" y1="2092.03" x2="2785.23" y2="2092.03" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="2459.40" y1="2092.03" x2="2459.40" y2="2117.14" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2459.40" y="2173.19" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="2667.57" y1="2092.03" x2="2667.57" y2="2117.14" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2667.57" y="2173.19" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="2563.49" y="2241.84" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2007 intro.</text>
+	<text x="2563.49" y="1446.01" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="2563.49" y="1514.66" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="2848.41" y="1324.15" width="688.31" height="1012.10" style="fill:#FFFFFF"/>
+	<rect x="2850.21" y="1325.95" width="684.71" height="1008.50" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="3065.70" y="1812.38" width="157.95" height="240.16" style="fill:#808080"/>
+	<rect x="3067.50" y="1814.18" width="154.35" height="236.56" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="3276.30" y="1867.66" width="157.75" height="184.88" style="fill:#808080"/>
+	<rect x="3278.10" y="1869.46" width="154.15" height="181.28" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="3144.67" y1="1727.73" x2="3144.67" y2="1897.22" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="3355.07" y1="1798.40" x2="3355.07" y2="1936.91" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="3144.67" cy="1774.10" r="24.57" style="fill:#000000"/>
+	<circle cx="3144.67" cy="1774.10" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="3355.07" cy="1849.64" r="24.57" style="fill:#000000"/>
+	<circle cx="3355.07" cy="1849.64" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="3026.21" y1="2092.03" x2="3473.74" y2="2092.03" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="3144.67" y1="2092.03" x2="3144.67" y2="2117.14" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="3144.67" y="2173.19" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="3355.07" y1="2092.03" x2="3355.07" y2="2117.14" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="3355.07" y="2173.19" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="3249.97" y="2241.84" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2008 intro.</text>
+	<text x="3249.97" y="1446.01" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle">D: Wisdom</text>
+	<text x="3249.97" y="1514.66" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle">of the masses</text>
+	<rect x="3536.72" y="1324.15" width="688.31" height="1012.10" style="fill:#FFFFFF"/>
+	<rect x="3538.52" y="1325.95" width="684.71" height="1008.50" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="3758.05" y="1864.42" width="156.13" height="188.12" style="fill:#808080"/>
+	<rect x="3759.85" y="1866.22" width="152.53" height="184.52" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="3966.23" y="1798.20" width="156.13" height="254.34" style="fill:#808080"/>
+	<rect x="3968.03" y="1800.00" width="152.53" height="250.74" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="3836.02" y1="1780.99" x2="3836.02" y2="1947.65" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="4044.19" y1="1698.17" x2="4044.19" y2="1898.23" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="3836.02" cy="1792.94" r="24.57" style="fill:#000000"/>
+	<circle cx="3836.02" cy="1792.94" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="4044.19" cy="1878.19" r="24.57" style="fill:#000000"/>
+	<circle cx="4044.19" cy="1878.19" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="3718.36" y1="2092.03" x2="4162.05" y2="2092.03" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="3836.02" y1="2092.03" x2="3836.02" y2="2117.14" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="3836.02" y="2173.19" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="4044.19" y1="2092.03" x2="4044.19" y2="2117.14" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="4044.19" y="2173.19" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="3940.10" y="2241.84" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2009 intro.</text>
+	<text x="3940.10" y="1446.01" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="3940.10" y="1514.66" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="94.97" y="2336.24" width="688.31" height="1012.30" style="fill:#FFFFFF"/>
+	<rect x="96.77" y="2338.04" width="684.71" height="1008.70" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="316.31" y="2954.27" width="156.33" height="110.36" style="fill:#808080"/>
+	<rect x="318.11" y="2956.07" width="152.73" height="106.76" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="524.69" y="2873.48" width="156.13" height="191.16" style="fill:#808080"/>
+	<rect x="526.49" y="2875.28" width="152.53" height="187.56" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="394.48" y1="2913.17" x2="394.48" y2="2995.38" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="602.65" y1="2847.56" x2="602.65" y2="2899.19" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="394.27" cy="2912.15" r="24.57" style="fill:#000000"/>
+	<circle cx="394.27" cy="2912.15" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="602.65" cy="2869.02" r="24.57" style="fill:#000000"/>
+	<circle cx="602.65" cy="2869.02" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="276.82" y1="3104.33" x2="276.82" y2="2558.39" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="276.82" y1="3064.64" x2="251.71" y2="3064.64" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="220.49" y="3064.64" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 220.49,3064.64)" text-anchor="middle">0</text>
+	<line x1="276.82" y1="2831.36" x2="251.71" y2="2831.36" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="220.49" y="2831.36" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 220.49,2831.36)" text-anchor="middle">.5</text>
+	<line x1="276.82" y1="2598.07" x2="251.71" y2="2598.07" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="220.49" y="2598.07" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 220.49,2598.07)" text-anchor="middle">1</text>
+	<line x1="276.82" y1="3104.33" x2="720.30" y2="3104.33" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="394.48" y1="3104.33" x2="394.48" y2="3129.23" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="394.48" y="3185.49" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="602.65" y1="3104.33" x2="602.65" y2="3129.23" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="602.65" y="3185.49" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="498.56" y="3254.13" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2007 intro.</text>
+	<text x="498.56" y="2458.11" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="498.56" y="2526.96" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="783.28" y="2336.24" width="688.31" height="1012.30" style="fill:#FFFFFF"/>
+	<rect x="785.08" y="2338.04" width="684.71" height="1008.70" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="981.74" y="2920.66" width="166.05" height="143.98" style="fill:#808080"/>
+	<rect x="983.54" y="2922.46" width="162.45" height="140.38" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="1203.07" y="2846.95" width="166.05" height="217.69" style="fill:#808080"/>
+	<rect x="1204.87" y="2848.75" width="162.45" height="214.09" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="1064.76" y1="2881.58" x2="1064.76" y2="2959.94" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="1286.10" y1="2810.90" x2="1286.10" y2="2882.79" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="1064.56" cy="2891.70" r="24.57" style="fill:#000000"/>
+	<circle cx="1064.56" cy="2891.70" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="1285.90" cy="2867.40" r="24.57" style="fill:#000000"/>
+	<circle cx="1285.90" cy="2867.40" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="942.04" y1="3104.33" x2="1408.61" y2="3104.33" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="1064.76" y1="3104.33" x2="1064.76" y2="3129.23" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1064.76" y="3185.49" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="1286.10" y1="3104.33" x2="1286.10" y2="3129.23" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1286.10" y="3185.49" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="1175.33" y="3254.13" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2008 intro.</text>
+	<text x="1175.33" y="2458.11" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle">E: Characteristics</text>
+	<text x="1175.33" y="2526.96" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle">of democracy</text>
+	<rect x="1471.59" y="2336.24" width="688.31" height="1012.30" style="fill:#FFFFFF"/>
+	<rect x="1473.39" y="2338.04" width="684.71" height="1008.70" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="1692.93" y="2877.93" width="156.33" height="186.71" style="fill:#808080"/>
+	<rect x="1694.73" y="2879.73" width="152.73" height="183.11" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="1901.30" y="2875.10" width="156.13" height="189.54" style="fill:#808080"/>
+	<rect x="1903.10" y="2876.90" width="152.53" height="185.94" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="1771.09" y1="2838.85" x2="1771.09" y2="2917.01" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="1979.27" y1="2817.38" x2="1979.27" y2="2932.81" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="1771.09" cy="2883.40" r="24.57" style="fill:#000000"/>
+	<circle cx="1771.09" cy="2883.40" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="1979.27" cy="2862.74" r="24.57" style="fill:#000000"/>
+	<circle cx="1979.27" cy="2862.74" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="1653.44" y1="3104.33" x2="2096.92" y2="3104.33" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="1771.09" y1="3104.33" x2="1771.09" y2="3129.23" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1771.09" y="3185.49" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="1979.27" y1="3104.33" x2="1979.27" y2="3129.23" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1979.27" y="3185.49" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="1875.18" y="3254.13" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2009 intro.</text>
+	<text x="1875.18" y="2458.11" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="1875.18" y="2526.96" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="2160.10" y="2336.24" width="688.31" height="1012.30" style="fill:#FFFFFF"/>
+	<rect x="2161.90" y="2338.04" width="684.71" height="1008.70" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="2381.44" y="2786.81" width="156.13" height="277.83" style="fill:#808080"/>
+	<rect x="2383.24" y="2788.61" width="152.53" height="274.23" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="2589.61" y="2741.45" width="156.13" height="323.19" style="fill:#808080"/>
+	<rect x="2591.41" y="2743.25" width="152.53" height="319.59" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="2459.40" y1="2738.21" x2="2459.40" y2="2835.20" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="2667.57" y1="2716.13" x2="2667.57" y2="2766.76" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="2459.40" cy="2737.40" r="24.57" style="fill:#000000"/>
+	<circle cx="2459.40" cy="2737.40" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="2667.57" cy="2740.84" r="24.57" style="fill:#000000"/>
+	<circle cx="2667.57" cy="2740.84" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="2341.75" y1="3104.33" x2="2341.75" y2="2558.39" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="2341.75" y1="3064.64" x2="2316.84" y2="3064.64" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2285.41" y="3064.64" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 2285.41,3064.64)" text-anchor="middle">0</text>
+	<line x1="2341.75" y1="2831.36" x2="2316.84" y2="2831.36" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2285.41" y="2831.36" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 2285.41,2831.36)" text-anchor="middle">.5</text>
+	<line x1="2341.75" y1="2598.07" x2="2316.84" y2="2598.07" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2285.41" y="2598.07" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 2285.41,2598.07)" text-anchor="middle">1</text>
+	<line x1="2341.75" y1="3104.33" x2="2785.23" y2="3104.33" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="2459.40" y1="3104.33" x2="2459.40" y2="3129.23" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2459.40" y="3185.49" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="2667.57" y1="3104.33" x2="2667.57" y2="3129.23" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2667.57" y="3185.49" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="2563.49" y="3254.13" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2007 intro.</text>
+	<text x="2563.49" y="2458.11" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="2563.49" y="2526.96" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="2848.41" y="2336.24" width="688.31" height="1012.30" style="fill:#FFFFFF"/>
+	<rect x="2850.21" y="2338.04" width="684.71" height="1008.70" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="3069.75" y="2745.29" width="156.13" height="319.34" style="fill:#808080"/>
+	<rect x="3071.55" y="2747.09" width="152.53" height="315.74" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="3277.92" y="2708.24" width="156.13" height="356.40" style="fill:#808080"/>
+	<rect x="3279.72" y="2710.04" width="152.53" height="352.80" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="3147.71" y1="2705.00" x2="3147.71" y2="2785.79" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="3355.88" y1="2677.25" x2="3355.88" y2="2739.02" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="3147.71" cy="2731.93" r="24.57" style="fill:#000000"/>
+	<circle cx="3147.71" cy="2731.93" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="3355.88" cy="2745.70" r="24.57" style="fill:#000000"/>
+	<circle cx="3355.88" cy="2745.70" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="3030.05" y1="3104.33" x2="3473.74" y2="3104.33" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="3147.71" y1="3104.33" x2="3147.71" y2="3129.23" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="3147.71" y="3185.49" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="3355.88" y1="3104.33" x2="3355.88" y2="3129.23" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="3355.88" y="3185.49" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="3251.80" y="3254.13" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2008 intro.</text>
+	<text x="3251.80" y="2458.11" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle">F: Skeptical</text>
+	<text x="3251.80" y="2526.96" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle">of markets</text>
+	<rect x="3536.72" y="2336.24" width="688.31" height="1012.30" style="fill:#FFFFFF"/>
+	<rect x="3538.52" y="2338.04" width="684.71" height="1008.70" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="3758.05" y="2739.02" width="156.13" height="325.62" style="fill:#808080"/>
+	<rect x="3759.85" y="2740.82" width="152.53" height="322.02" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="3966.23" y="2726.66" width="156.13" height="337.97" style="fill:#808080"/>
+	<rect x="3968.03" y="2728.46" width="152.53" height="334.37" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="3836.02" y1="2701.55" x2="3836.02" y2="2776.48" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="4044.19" y1="2671.38" x2="4044.19" y2="2781.95" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="3836.02" cy="2740.64" r="24.57" style="fill:#000000"/>
+	<circle cx="3836.02" cy="2740.64" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="4044.19" cy="2739.62" r="24.57" style="fill:#000000"/>
+	<circle cx="4044.19" cy="2739.62" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="3718.36" y1="3104.33" x2="4162.05" y2="3104.33" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="3836.02" y1="3104.33" x2="3836.02" y2="3129.23" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="3836.02" y="3185.49" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="4044.19" y1="3104.33" x2="4044.19" y2="3129.23" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="4044.19" y="3185.49" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="3940.10" y="3254.13" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2009 intro.</text>
+	<text x="3940.10" y="2458.11" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="3940.10" y="2526.96" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="94.97" y="3348.54" width="688.31" height="1012.10" style="fill:#FFFFFF"/>
+	<rect x="96.77" y="3350.34" width="684.71" height="1008.50" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="316.31" y="3849.32" width="156.33" height="227.41" style="fill:#808080"/>
+	<rect x="318.11" y="3851.12" width="152.73" height="223.81" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="524.69" y="3830.69" width="156.13" height="246.04" style="fill:#808080"/>
+	<rect x="526.49" y="3832.49" width="152.53" height="242.44" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="394.48" y1="3750.91" x2="394.48" y2="3947.74" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="602.65" y1="3781.69" x2="602.65" y2="3879.50" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="394.27" cy="3867.75" r="24.57" style="fill:#000000"/>
+	<circle cx="394.27" cy="3867.75" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="602.65" cy="3839.40" r="24.57" style="fill:#000000"/>
+	<circle cx="602.65" cy="3839.40" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="276.82" y1="4116.42" x2="276.82" y2="3570.48" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="276.82" y1="4076.73" x2="251.71" y2="4076.73" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="220.49" y="4076.73" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 220.49,4076.73)" text-anchor="middle">-.5</text>
+	<line x1="276.82" y1="3843.45" x2="251.71" y2="3843.45" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="220.49" y="3843.45" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 220.49,3843.45)" text-anchor="middle">0</text>
+	<line x1="276.82" y1="3610.17" x2="251.71" y2="3610.17" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="220.49" y="3610.17" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 220.49,3610.17)" text-anchor="middle">.5</text>
+	<line x1="276.82" y1="4116.42" x2="720.30" y2="4116.42" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="394.48" y1="4116.42" x2="394.48" y2="4141.33" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="394.48" y="4197.58" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="602.65" y1="4116.42" x2="602.65" y2="4141.33" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="602.65" y="4197.58" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="498.56" y="4266.23" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2007 intro.</text>
+	<text x="498.56" y="3470.40" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="498.56" y="3539.05" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="783.28" y="3348.54" width="688.31" height="1012.10" style="fill:#FFFFFF"/>
+	<rect x="785.08" y="3350.34" width="684.71" height="1008.50" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="984.37" y="3942.47" width="164.84" height="134.26" style="fill:#808080"/>
+	<rect x="986.17" y="3944.27" width="161.24" height="130.66" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="1204.08" y="3790.19" width="165.04" height="286.54" style="fill:#808080"/>
+	<rect x="1205.88" y="3791.99" width="161.44" height="282.94" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="1066.79" y1="3845.88" x2="1066.79" y2="4038.86" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="1286.71" y1="3722.76" x2="1286.71" y2="3857.63" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="1066.58" cy="3866.33" r="24.57" style="fill:#000000"/>
+	<circle cx="1066.58" cy="3866.33" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="1286.50" cy="3830.69" r="24.57" style="fill:#000000"/>
+	<circle cx="1286.50" cy="3830.69" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="944.68" y1="4116.42" x2="1408.61" y2="4116.42" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="1066.79" y1="4116.42" x2="1066.79" y2="4141.33" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1066.79" y="4197.58" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="1286.71" y1="4116.42" x2="1286.71" y2="4141.33" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1286.71" y="4197.58" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="1176.75" y="4266.23" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2008 intro.</text>
+	<text x="1176.75" y="3470.40" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="1176.75" y="3539.05" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle">G: Ethnic identity</text>
+	<rect x="1471.59" y="3348.54" width="688.31" height="1012.10" style="fill:#FFFFFF"/>
+	<rect x="1473.39" y="3350.34" width="684.71" height="1008.50" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="1692.93" y="3826.04" width="156.33" height="250.70" style="fill:#808080"/>
+	<rect x="1694.73" y="3827.84" width="152.73" height="247.10" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="1901.30" y="3750.50" width="156.13" height="326.23" style="fill:#808080"/>
+	<rect x="1903.10" y="3752.30" width="152.53" height="322.63" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="1771.09" y1="3739.97" x2="1771.09" y2="3912.10" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="1979.27" y1="3660.59" x2="1979.27" y2="3840.21" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="1771.09" cy="3870.99" r="24.57" style="fill:#000000"/>
+	<circle cx="1771.09" cy="3870.99" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="1979.27" cy="3787.56" r="24.57" style="fill:#000000"/>
+	<circle cx="1979.27" cy="3787.56" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="1653.44" y1="4116.42" x2="2096.92" y2="4116.42" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="1771.09" y1="4116.42" x2="1771.09" y2="4141.33" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1771.09" y="4197.58" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="1979.27" y1="4116.42" x2="1979.27" y2="4141.33" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1979.27" y="4197.58" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="1875.18" y="4266.23" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2009 intro.</text>
+	<text x="1875.18" y="3470.40" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="1875.18" y="3539.05" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="2160.10" y="3348.54" width="688.31" height="1012.10" style="fill:#FFFFFF"/>
+	<rect x="2161.90" y="3350.34" width="684.71" height="1008.50" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="2381.44" y="3807.20" width="156.13" height="269.53" style="fill:#808080"/>
+	<rect x="2383.24" y="3809.00" width="152.53" height="265.93" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="2589.61" y="3845.07" width="156.13" height="231.66" style="fill:#808080"/>
+	<rect x="2591.41" y="3846.87" width="152.53" height="228.06" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="2459.40" y1="3745.04" x2="2459.40" y2="3869.37" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="2667.57" y1="3805.18" x2="2667.57" y2="3884.96" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="2459.40" cy="3787.56" r="24.57" style="fill:#000000"/>
+	<circle cx="2459.40" cy="3787.56" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="2667.57" cy="3833.93" r="24.57" style="fill:#000000"/>
+	<circle cx="2667.57" cy="3833.93" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="2341.75" y1="4116.42" x2="2341.75" y2="3570.48" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="2341.75" y1="4076.73" x2="2316.84" y2="4076.73" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2285.41" y="4076.73" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 2285.41,4076.73)" text-anchor="middle">3</text>
+	<line x1="2341.75" y1="3843.45" x2="2316.84" y2="3843.45" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2285.41" y="3843.45" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 2285.41,3843.45)" text-anchor="middle">3.5</text>
+	<line x1="2341.75" y1="3610.17" x2="2316.84" y2="3610.17" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2285.41" y="3610.17" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 2285.41,3610.17)" text-anchor="middle">4</text>
+	<line x1="2341.75" y1="4116.42" x2="2785.23" y2="4116.42" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="2459.40" y1="4116.42" x2="2459.40" y2="4141.33" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2459.40" y="4197.58" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="2667.57" y1="4116.42" x2="2667.57" y2="4141.33" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2667.57" y="4197.58" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="2563.49" y="4266.23" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2007 intro.</text>
+	<text x="2563.49" y="3470.40" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="2563.49" y="3539.05" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="2848.41" y="3348.54" width="688.31" height="1012.10" style="fill:#FFFFFF"/>
+	<rect x="2850.21" y="3350.34" width="684.71" height="1008.50" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="3041.60" y="3794.45" width="168.08" height="282.28" style="fill:#808080"/>
+	<rect x="3043.40" y="3796.25" width="164.48" height="278.68" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="3265.77" y="3768.53" width="168.28" height="308.20" style="fill:#808080"/>
+	<rect x="3267.57" y="3770.33" width="164.68" height="304.60" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="3125.64" y1="3727.22" x2="3125.64" y2="3861.68" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="3350.01" y1="3714.86" x2="3350.01" y2="3822.19" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="3125.64" cy="3819.15" r="24.57" style="fill:#000000"/>
+	<circle cx="3125.64" cy="3819.15" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="3349.81" cy="3829.88" r="24.57" style="fill:#000000"/>
+	<circle cx="3349.81" cy="3829.88" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="3001.91" y1="4116.42" x2="3473.74" y2="4116.42" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="3125.64" y1="4116.42" x2="3125.64" y2="4141.33" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="3125.64" y="4197.58" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="3350.01" y1="4116.42" x2="3350.01" y2="4141.33" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="3350.01" y="4197.58" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="3237.82" y="4266.23" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2008 intro.</text>
+	<text x="3237.82" y="3470.40" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="3237.82" y="3539.05" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle">H: National identity</text>
+	<rect x="3536.72" y="3348.54" width="688.31" height="1012.10" style="fill:#FFFFFF"/>
+	<rect x="3538.52" y="3350.34" width="684.71" height="1008.50" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="3758.05" y="3799.71" width="156.13" height="277.02" style="fill:#808080"/>
+	<rect x="3759.85" y="3801.51" width="152.53" height="273.42" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="3966.23" y="3836.16" width="156.13" height="240.57" style="fill:#808080"/>
+	<rect x="3968.03" y="3837.96" width="152.53" height="236.97" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="3836.02" y1="3743.82" x2="3836.02" y2="3855.40" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="4044.19" y1="3748.07" x2="4044.19" y2="3924.25" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="3836.02" cy="3826.04" r="24.57" style="fill:#000000"/>
+	<circle cx="3836.02" cy="3826.04" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="4044.19" cy="3825.02" r="24.57" style="fill:#000000"/>
+	<circle cx="4044.19" cy="3825.02" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="3718.36" y1="4116.42" x2="4162.05" y2="4116.42" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="3836.02" y1="4116.42" x2="3836.02" y2="4141.33" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="3836.02" y="4197.58" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="4044.19" y1="4116.42" x2="4044.19" y2="4141.33" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="4044.19" y="4197.58" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="3940.10" y="4266.23" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2009 intro.</text>
+	<text x="3940.10" y="3470.40" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="3940.10" y="3539.05" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="94.97" y="4360.64" width="688.31" height="1012.09" style="fill:#FFFFFF"/>
+	<rect x="96.77" y="4362.44" width="684.71" height="1008.49" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="316.31" y="4801.88" width="156.33" height="287.15" style="fill:#808080"/>
+	<rect x="318.11" y="4803.68" width="152.73" height="283.55" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="524.69" y="4832.87" width="156.13" height="256.16" style="fill:#808080"/>
+	<rect x="526.49" y="4834.67" width="152.53" height="252.56" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="394.48" y1="4702.46" x2="394.48" y2="4901.31" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="602.65" y1="4780.22" x2="602.65" y2="4885.52" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="394.27" cy="5004.59" r="24.57" style="fill:#000000"/>
+	<circle cx="394.27" cy="5004.59" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="602.65" cy="4856.96" r="24.57" style="fill:#000000"/>
+	<circle cx="602.65" cy="4856.96" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="276.82" y1="5128.52" x2="276.82" y2="4582.78" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="276.82" y1="5089.03" x2="251.71" y2="5089.03" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="220.49" y="5089.03" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 220.49,5089.03)" text-anchor="middle">-.5</text>
+	<line x1="276.82" y1="4855.55" x2="251.71" y2="4855.55" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="220.49" y="4855.55" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 220.49,4855.55)" text-anchor="middle">0</text>
+	<line x1="276.82" y1="4622.27" x2="251.71" y2="4622.27" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="220.49" y="4622.27" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 220.49,4622.27)" text-anchor="middle">.5</text>
+	<line x1="276.82" y1="5128.52" x2="720.30" y2="5128.52" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="394.48" y1="5128.52" x2="394.48" y2="5153.63" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="394.48" y="5209.68" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="602.65" y1="5128.52" x2="602.65" y2="5153.63" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="602.65" y="5209.68" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="498.56" y="5278.53" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2007 intro.</text>
+	<text x="498.56" y="4482.50" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="498.56" y="4551.15" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="783.28" y="4360.64" width="688.31" height="1012.09" style="fill:#FFFFFF"/>
+	<rect x="785.08" y="4362.44" width="684.71" height="1008.49" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="978.70" y="4871.14" width="167.27" height="217.89" style="fill:#808080"/>
+	<rect x="980.50" y="4872.94" width="163.67" height="214.29" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="1201.86" y="4784.47" width="167.27" height="304.56" style="fill:#808080"/>
+	<rect x="1203.66" y="4786.27" width="163.67" height="300.96" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="1062.33" y1="4787.30" x2="1062.33" y2="4954.97" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="1285.49" y1="4718.86" x2="1285.49" y2="4850.08" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="1062.33" cy="4947.28" r="24.57" style="fill:#000000"/>
+	<circle cx="1062.33" cy="4947.28" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="1285.29" cy="4842.99" r="24.57" style="fill:#000000"/>
+	<circle cx="1285.29" cy="4842.99" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="939.01" y1="5128.52" x2="1408.61" y2="5128.52" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="1062.33" y1="5128.52" x2="1062.33" y2="5153.63" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1062.33" y="5209.68" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="1285.49" y1="5128.52" x2="1285.49" y2="5153.63" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1285.49" y="5209.68" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="1173.91" y="5278.53" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2008 intro.</text>
+	<text x="1173.91" y="4482.50" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle">I: Attitudes</text>
+	<text x="1173.91" y="4551.15" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle">about environment</text>
+	<rect x="1471.59" y="4360.64" width="688.31" height="1012.09" style="fill:#FFFFFF"/>
+	<rect x="1473.39" y="4362.44" width="684.71" height="1008.49" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="1692.93" y="4877.42" width="156.33" height="211.61" style="fill:#808080"/>
+	<rect x="1694.73" y="4879.22" width="152.73" height="208.01" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="1901.30" y="4787.51" width="156.13" height="301.52" style="fill:#808080"/>
+	<rect x="1903.10" y="4789.31" width="152.53" height="297.92" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="1771.09" y1="4792.16" x2="1771.09" y2="4962.67" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="1979.27" y1="4670.26" x2="1979.27" y2="4904.75" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="1771.09" cy="4930.07" r="24.57" style="fill:#000000"/>
+	<circle cx="1771.09" cy="4930.07" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="1979.27" cy="4843.40" r="24.57" style="fill:#000000"/>
+	<circle cx="1979.27" cy="4843.40" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="1653.44" y1="5128.52" x2="2096.92" y2="5128.52" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="1771.09" y1="5128.52" x2="1771.09" y2="5153.63" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1771.09" y="5209.68" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="1979.27" y1="5128.52" x2="1979.27" y2="5153.63" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1979.27" y="5209.68" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="1875.18" y="5278.53" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2009 intro.</text>
+	<text x="1875.18" y="4482.50" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="1875.18" y="4551.15" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="2160.10" y="4360.64" width="688.31" height="1012.09" style="fill:#FFFFFF"/>
+	<rect x="2161.90" y="4362.44" width="684.71" height="1008.49" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="2381.44" y="4716.63" width="156.13" height="372.40" style="fill:#808080"/>
+	<rect x="2383.24" y="4718.43" width="152.53" height="368.80" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="2589.61" y="4898.88" width="156.13" height="190.15" style="fill:#808080"/>
+	<rect x="2591.41" y="4900.68" width="152.53" height="186.55" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="2459.40" y1="4622.27" x2="2459.40" y2="4811.00" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="2667.57" y1="4843.80" x2="2667.57" y2="4954.16" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="2459.40" cy="4741.34" r="24.57" style="fill:#000000"/>
+	<circle cx="2459.40" cy="4741.34" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="2667.57" cy="4874.18" r="24.57" style="fill:#000000"/>
+	<circle cx="2667.57" cy="4874.18" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="2341.75" y1="5128.52" x2="2341.75" y2="4582.78" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="2341.75" y1="5089.03" x2="2316.84" y2="5089.03" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2285.41" y="5089.03" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 2285.41,5089.03)" text-anchor="middle">-.5</text>
+	<line x1="2341.75" y1="4863.04" x2="2316.84" y2="4863.04" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2285.41" y="4863.04" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 2285.41,4863.04)" text-anchor="middle">0</text>
+	<line x1="2341.75" y1="4637.25" x2="2316.84" y2="4637.25" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2285.41" y="4637.25" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 2285.41,4637.25)" text-anchor="middle">.5</text>
+	<line x1="2341.75" y1="5128.52" x2="2785.23" y2="5128.52" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="2459.40" y1="5128.52" x2="2459.40" y2="5153.63" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2459.40" y="5209.68" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="2667.57" y1="5128.52" x2="2667.57" y2="5153.63" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2667.57" y="5209.68" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="2563.49" y="5278.53" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2007 intro.</text>
+	<text x="2563.49" y="4482.50" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="2563.49" y="4551.15" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="2848.41" y="4360.64" width="688.31" height="1012.09" style="fill:#FFFFFF"/>
+	<rect x="2850.21" y="4362.44" width="684.71" height="1008.49" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="3039.37" y="4869.52" width="169.09" height="219.51" style="fill:#808080"/>
+	<rect x="3041.17" y="4871.32" width="165.49" height="215.91" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="3264.96" y="4866.28" width="169.09" height="222.75" style="fill:#808080"/>
+	<rect x="3266.76" y="4868.08" width="165.49" height="219.15" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="3124.02" y1="4790.54" x2="3124.02" y2="4948.49" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="3349.40" y1="4785.28" x2="3349.40" y2="4947.28" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="3123.81" cy="4736.27" r="24.57" style="fill:#000000"/>
+	<circle cx="3123.81" cy="4736.27" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="3349.40" cy="4910.63" r="24.57" style="fill:#000000"/>
+	<circle cx="3349.40" cy="4910.63" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="2999.88" y1="5128.52" x2="3473.74" y2="5128.52" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="3124.02" y1="5128.52" x2="3124.02" y2="5153.63" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="3124.02" y="5209.68" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="3349.40" y1="5128.52" x2="3349.40" y2="5153.63" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="3349.40" y="5209.68" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="3236.81" y="5278.53" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2008 intro.</text>
+	<text x="3236.81" y="4482.50" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="3236.81" y="4551.15" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle">J: Political behavior</text>
+	<rect x="3536.72" y="4360.64" width="688.31" height="1012.09" style="fill:#FFFFFF"/>
+	<rect x="3538.52" y="4362.44" width="684.71" height="1008.49" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="3758.05" y="4831.45" width="156.13" height="257.58" style="fill:#808080"/>
+	<rect x="3759.85" y="4833.25" width="152.53" height="253.98" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="3966.23" y="5046.50" width="156.13" height="42.52" style="fill:#808080"/>
+	<rect x="3968.03" y="5048.30" width="152.53" height="38.92" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="3836.02" y1="4756.52" x2="3836.02" y2="4906.37" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="4044.19" y1="4962.67" x2="4044.19" y2="5079.71" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="3836.02" cy="4761.79" r="24.57" style="fill:#000000"/>
+	<circle cx="3836.02" cy="4761.79" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="4044.19" cy="5015.32" r="24.57" style="fill:#000000"/>
+	<circle cx="4044.19" cy="5015.32" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="3718.36" y1="5128.52" x2="4162.05" y2="5128.52" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="3836.02" y1="5128.52" x2="3836.02" y2="5153.63" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="3836.02" y="5209.68" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="4044.19" y1="5128.52" x2="4044.19" y2="5153.63" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="4044.19" y="5209.68" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="3940.10" y="5278.53" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2009 intro.</text>
+	<text x="3940.10" y="4482.50" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="3940.10" y="4551.15" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="94.97" y="5372.73" width="688.31" height="1012.30" style="fill:#FFFFFF"/>
+	<rect x="96.77" y="5374.53" width="684.71" height="1008.70" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="316.31" y="5987.72" width="156.33" height="113.40" style="fill:#808080"/>
+	<rect x="318.11" y="5989.52" width="152.73" height="109.80" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="524.69" y="5848.61" width="156.13" height="252.52" style="fill:#808080"/>
+	<rect x="526.49" y="5850.41" width="152.53" height="248.92" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="394.48" y1="5868.45" x2="394.48" y2="6101.12" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="602.65" y1="5799.20" x2="602.65" y2="5898.02" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="394.27" cy="5870.48" r="24.57" style="fill:#000000"/>
+	<circle cx="394.27" cy="5870.48" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="602.65" cy="5860.15" r="24.57" style="fill:#000000"/>
+	<circle cx="602.65" cy="5860.15" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="276.82" y1="6140.81" x2="276.82" y2="5594.87" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="276.82" y1="6101.12" x2="251.71" y2="6101.12" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="220.49" y="6101.12" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 220.49,6101.12)" text-anchor="middle">-.5</text>
+	<line x1="276.82" y1="5867.84" x2="251.71" y2="5867.84" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="220.49" y="5867.84" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 220.49,5867.84)" text-anchor="middle">0</text>
+	<line x1="276.82" y1="5634.56" x2="251.71" y2="5634.56" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="220.49" y="5634.56" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 220.49,5634.56)" text-anchor="middle">.5</text>
+	<line x1="276.82" y1="6140.81" x2="720.30" y2="6140.81" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="394.48" y1="6140.81" x2="394.48" y2="6165.72" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="394.48" y="6221.97" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="602.65" y1="6140.81" x2="602.65" y2="6165.72" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="602.65" y="6221.97" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="498.56" y="6290.62" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2007 intro.</text>
+	<text x="498.56" y="5494.59" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="498.56" y="5563.44" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="783.28" y="5372.73" width="688.31" height="1012.30" style="fill:#FFFFFF"/>
+	<rect x="785.08" y="5374.53" width="684.71" height="1008.70" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="989.03" y="5911.79" width="162.81" height="189.34" style="fill:#808080"/>
+	<rect x="990.83" y="5913.59" width="159.21" height="185.74" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="1206.11" y="5840.91" width="163.02" height="260.21" style="fill:#808080"/>
+	<rect x="1207.91" y="5842.71" width="159.42" height="256.61" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="1070.43" y1="5812.76" x2="1070.43" y2="6011.01" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="1287.72" y1="5773.68" x2="1287.72" y2="5908.34" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="1070.43" cy="5878.17" r="24.57" style="fill:#000000"/>
+	<circle cx="1070.43" cy="5878.17" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="1287.52" cy="5851.64" r="24.57" style="fill:#000000"/>
+	<circle cx="1287.52" cy="5851.64" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="949.33" y1="6140.81" x2="1408.61" y2="6140.81" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="1070.43" y1="6140.81" x2="1070.43" y2="6165.72" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1070.43" y="6221.97" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="1287.72" y1="6140.81" x2="1287.72" y2="6165.72" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1287.72" y="6221.97" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="1178.97" y="6290.62" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2008 intro.</text>
+	<text x="1178.97" y="5494.59" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle">K: Avoiding</text>
+	<text x="1178.97" y="5563.44" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle">risky investment</text>
+	<rect x="1471.59" y="5372.73" width="688.31" height="1012.30" style="fill:#FFFFFF"/>
+	<rect x="1473.39" y="5374.53" width="684.71" height="1008.70" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="1692.93" y="5892.35" width="156.33" height="208.78" style="fill:#808080"/>
+	<rect x="1694.73" y="5894.15" width="152.73" height="205.18" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="1901.30" y="5751.61" width="156.13" height="349.52" style="fill:#808080"/>
+	<rect x="1903.10" y="5753.41" width="152.53" height="345.92" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="1771.09" y1="5808.51" x2="1771.09" y2="5976.18" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="1979.27" y1="5699.97" x2="1979.27" y2="5803.25" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="1771.09" cy="5875.54" r="24.57" style="fill:#000000"/>
+	<circle cx="1771.09" cy="5875.54" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="1979.27" cy="5833.01" r="24.57" style="fill:#000000"/>
+	<circle cx="1979.27" cy="5833.01" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="1653.44" y1="6140.81" x2="2096.92" y2="6140.81" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="1771.09" y1="6140.81" x2="1771.09" y2="6165.72" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1771.09" y="6221.97" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="1979.27" y1="6140.81" x2="1979.27" y2="6165.72" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="1979.27" y="6221.97" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="1875.18" y="6290.62" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2009 intro.</text>
+	<text x="1875.18" y="5494.59" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="1875.18" y="5563.44" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="2160.10" y="5372.73" width="688.31" height="1012.30" style="fill:#FFFFFF"/>
+	<rect x="2161.90" y="5374.53" width="684.71" height="1008.70" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="2381.44" y="5676.48" width="156.13" height="424.64" style="fill:#808080"/>
+	<rect x="2383.24" y="5678.28" width="152.53" height="421.04" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="2589.61" y="5693.90" width="156.13" height="407.23" style="fill:#808080"/>
+	<rect x="2591.41" y="5695.70" width="152.53" height="403.63" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="2459.40" y1="5648.13" x2="2459.40" y2="5704.63" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="2667.57" y1="5676.08" x2="2667.57" y2="5711.51" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="2459.40" cy="5715.97" r="24.57" style="fill:#000000"/>
+	<circle cx="2459.40" cy="5715.97" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="2667.57" cy="5715.16" r="24.57" style="fill:#000000"/>
+	<circle cx="2667.57" cy="5715.16" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="2341.75" y1="6140.81" x2="2341.75" y2="5594.87" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="2341.75" y1="6101.12" x2="2316.84" y2="6101.12" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2285.41" y="6101.12" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 2285.41,6101.12)" text-anchor="middle">0</text>
+	<line x1="2341.75" y1="5867.84" x2="2316.84" y2="5867.84" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2285.41" y="5867.84" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 2285.41,5867.84)" text-anchor="middle">.5</text>
+	<line x1="2341.75" y1="5634.56" x2="2316.84" y2="5634.56" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2285.41" y="5634.56" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" transform="rotate(-90 2285.41,5634.56)" text-anchor="middle">1</text>
+	<line x1="2341.75" y1="6140.81" x2="2785.23" y2="6140.81" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="2459.40" y1="6140.81" x2="2459.40" y2="6165.72" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2459.40" y="6221.97" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="2667.57" y1="6140.81" x2="2667.57" y2="6165.72" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="2667.57" y="6221.97" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="2563.49" y="6290.62" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2007 intro.</text>
+	<text x="2563.49" y="5494.59" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="2563.49" y="5563.44" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<rect x="2848.41" y="5372.73" width="688.31" height="1012.30" style="fill:#FFFFFF"/>
+	<rect x="2850.21" y="5374.53" width="684.71" height="1008.70" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="3061.44" y="5712.93" width="159.77" height="388.19" style="fill:#808080"/>
+	<rect x="3063.24" y="5714.73" width="156.17" height="384.59" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="3274.48" y="5741.08" width="159.57" height="360.05" style="fill:#808080"/>
+	<rect x="3276.28" y="5742.88" width="155.97" height="356.45" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="3141.43" y1="5681.14" x2="3141.43" y2="5744.72" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="3354.26" y1="5710.50" x2="3354.26" y2="5771.45" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="3141.23" cy="5710.70" r="24.57" style="fill:#000000"/>
+	<circle cx="3141.23" cy="5710.70" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="3354.06" cy="5718.40" r="24.57" style="fill:#000000"/>
+	<circle cx="3354.06" cy="5718.40" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="3021.95" y1="6140.81" x2="3473.74" y2="6140.81" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="3141.43" y1="6140.81" x2="3141.43" y2="6165.72" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="3141.43" y="6221.97" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="3354.26" y1="6140.81" x2="3354.26" y2="6165.72" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="3354.26" y="6221.97" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="3247.75" y="6290.62" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2008 intro.</text>
+	<text x="3247.75" y="5494.59" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle">L: Cooperation</text>
+	<text x="3247.75" y="5563.44" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle">with minority</text>
+	<rect x="3536.72" y="5372.73" width="688.31" height="1012.30" style="fill:#FFFFFF"/>
+	<rect x="3538.52" y="5374.53" width="684.71" height="1008.70" style="fill:none;stroke:#FFFFFF;stroke-width:3.60"/>
+	<rect x="3758.05" y="5701.19" width="156.13" height="399.94" style="fill:#808080"/>
+	<rect x="3759.85" y="5702.99" width="152.53" height="396.34" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<rect x="3966.23" y="5663.72" width="156.13" height="437.40" style="fill:#808080"/>
+	<rect x="3968.03" y="5665.52" width="152.53" height="433.80" style="fill:none;stroke:#606060;stroke-width:3.60"/>
+	<line x1="3836.02" y1="5673.04" x2="3836.02" y2="5729.33" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<line x1="4044.19" y1="5635.17" x2="4044.19" y2="5692.07" style="stroke:#A0A0A0;stroke-width:5.40"/>
+	<circle cx="3836.02" cy="5711.11" r="24.57" style="fill:#000000"/>
+	<circle cx="3836.02" cy="5711.11" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<circle cx="4044.19" cy="5724.47" r="24.57" style="fill:#000000"/>
+	<circle cx="4044.19" cy="5724.47" r="21.87" style="fill:none;stroke:#000000;stroke-width:5.40"/>
+	<line x1="3718.36" y1="6140.81" x2="4162.05" y2="6140.81" style="stroke:#000000;stroke-width:3.60"/>
+	<line x1="3836.02" y1="6140.81" x2="3836.02" y2="6165.72" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="3836.02" y="6221.97" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">Old</text>
+	<line x1="4044.19" y1="6140.81" x2="4044.19" y2="6165.72" style="stroke:#000000;stroke-width:3.60"/>
+	<text x="4044.19" y="6221.97" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">New Curr.</text>
+	<text x="3940.10" y="6290.62" style="font-family:'Helvetica';font-size:62.57px;fill:#000000" text-anchor="middle">  2009 intro.</text>
+	<text x="3940.10" y="5494.59" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="3940.10" y="5563.44" style="font-family:'Helvetica';font-size:68.65px;fill:#000000" text-anchor="middle"> </text>
+	<text x="2159.90" y="236.52" style="font-family:'Helvetica';font-size:165.04px;fill:#000000" text-anchor="middle"> </text>
+</svg>

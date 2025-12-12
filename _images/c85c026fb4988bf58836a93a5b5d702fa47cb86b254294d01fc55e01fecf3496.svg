@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="5.500in" height="4.000in" viewBox="0 0 3960 2880">
+	<desc>Stata Graph - hist_foreign_purpose_info_top</desc>
+	<rect x="0" y="0" width="3960" height="2880" style="fill:#FFFFFF;stroke:none"/>
+	<rect x="0.00" y="0.00" width="3959.88" height="2880.00" style="fill:#FFFFFF"/>
+	<rect x="2.88" y="2.88" width="3954.12" height="2874.24" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<rect x="393.68" y="278.23" width="3462.46" height="2208.07" style="fill:none;stroke:#000000;stroke-width:5.76"/>
+	<rect x="505.52" y="2117.92" width="102.84" height="371.26" style="fill:#CAC27E"/>
+	<rect x="509.84" y="2122.24" width="94.20" height="362.62" style="fill:none;stroke:#D7D29E;stroke-width:8.64"/>
+	<rect x="3692.95" y="384.63" width="102.71" height="2104.56" style="fill:#CAC27E"/>
+	<rect x="3697.27" y="388.95" width="94.07" height="2095.92" style="fill:none;stroke:#D7D29E;stroke-width:8.64"/>
+	<line x1="390.80" y1="2489.19" x2="390.80" y2="275.35" style="stroke:#000000;stroke-width:5.76"/>
+	<line x1="390.80" y1="2489.19" x2="350.83" y2="2489.19" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="300.72" y="2489.19" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" transform="rotate(-90 300.72,2489.19)" text-anchor="middle">0</text>
+	<line x1="390.80" y1="1772.40" x2="350.83" y2="1772.40" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="300.72" y="1772.40" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" transform="rotate(-90 300.72,1772.40)" text-anchor="middle">500</text>
+	<line x1="390.80" y1="1055.50" x2="350.83" y2="1055.50" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="300.72" y="1055.50" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" transform="rotate(-90 300.72,1055.50)" text-anchor="middle">1000</text>
+	<line x1="390.80" y1="338.71" x2="350.83" y2="338.71" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="300.72" y="338.71" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" transform="rotate(-90 300.72,338.71)" text-anchor="middle">1500</text>
+	<text x="190.71" y="1382.33" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" transform="rotate(-90 190.71,1382.33)" text-anchor="middle">Frequency</text>
+	<line x1="390.80" y1="2489.19" x2="3859.02" y2="2489.19" style="stroke:#000000;stroke-width:5.76"/>
+	<line x1="505.52" y1="2489.19" x2="505.52" y2="2529.16" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="505.52" y="2619.14" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="middle">0</text>
+	<line x1="1163.62" y1="2489.19" x2="1163.62" y2="2529.16" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="1163.62" y="2619.14" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="middle">.2</text>
+	<line x1="1821.60" y1="2489.19" x2="1821.60" y2="2529.16" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="1821.60" y="2619.14" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="middle">.4</text>
+	<line x1="2479.70" y1="2489.19" x2="2479.70" y2="2529.16" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="2479.70" y="2619.14" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="middle">.6</text>
+	<line x1="3137.68" y1="2489.19" x2="3137.68" y2="2529.16" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="3137.68" y="2619.14" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="middle">.8</text>
+	<line x1="3795.66" y1="2489.19" x2="3795.66" y2="2529.16" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="3795.66" y="2619.14" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="middle">1</text>
+	<text x="2124.91" y="2729.16" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="middle">foreign_purpose_info_top</text>
+	<text x="2124.91" y="215.98" style="font-family:'Helvetica';font-size:139.96px;fill:#000000" text-anchor="middle">Histogram of foreign_purpose_info_top</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="5.500in" height="4.000in" viewBox="0 0 3960 2880">
+	<desc>Stata Graph - hist_a26</desc>
+	<rect x="0" y="0" width="3960" height="2880" style="fill:#FFFFFF;stroke:none"/>
+	<rect x="0.00" y="0.00" width="3959.88" height="2880.00" style="fill:#FFFFFF"/>
+	<rect x="2.88" y="2.88" width="3954.12" height="2874.24" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<rect x="393.68" y="278.23" width="3462.46" height="2208.07" style="fill:none;stroke:#000000;stroke-width:5.76"/>
+	<rect x="504.03" y="2236.23" width="99.74" height="252.95" style="fill:#CAC27E"/>
+	<rect x="508.35" y="2240.55" width="91.10" height="244.31" style="fill:none;stroke:#D7D29E;stroke-width:8.64"/>
+	<rect x="1301.97" y="1985.14" width="99.74" height="504.05" style="fill:#CAC27E"/>
+	<rect x="1306.29" y="1989.46" width="91.10" height="495.41" style="fill:none;stroke:#D7D29E;stroke-width:8.64"/>
+	<rect x="2100.04" y="1306.59" width="99.74" height="1182.59" style="fill:#CAC27E"/>
+	<rect x="2104.36" y="1310.91" width="91.10" height="1173.95" style="fill:none;stroke:#D7D29E;stroke-width:8.64"/>
+	<rect x="2897.98" y="1896.90" width="99.74" height="592.29" style="fill:#CAC27E"/>
+	<rect x="2902.30" y="1901.22" width="91.10" height="583.65" style="fill:none;stroke:#D7D29E;stroke-width:8.64"/>
+	<rect x="3695.92" y="338.71" width="99.74" height="2150.47" style="fill:#CAC27E"/>
+	<rect x="3700.24" y="343.03" width="91.10" height="2141.83" style="fill:none;stroke:#D7D29E;stroke-width:8.64"/>
+	<line x1="390.80" y1="2489.19" x2="390.80" y2="275.35" style="stroke:#000000;stroke-width:5.76"/>
+	<line x1="390.80" y1="2489.19" x2="350.83" y2="2489.19" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="300.72" y="2489.19" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" transform="rotate(-90 300.72,2489.19)" text-anchor="middle">0</text>
+	<line x1="390.80" y1="1530.84" x2="350.83" y2="1530.84" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="300.72" y="1530.84" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" transform="rotate(-90 300.72,1530.84)" text-anchor="middle">500</text>
+	<line x1="390.80" y1="572.61" x2="350.83" y2="572.61" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="300.72" y="572.61" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" transform="rotate(-90 300.72,572.61)" text-anchor="middle">1000</text>
+	<text x="190.71" y="1382.33" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" transform="rotate(-90 190.71,1382.33)" text-anchor="middle">Frequency</text>
+	<line x1="390.80" y1="2489.19" x2="3859.02" y2="2489.19" style="stroke:#000000;stroke-width:5.76"/>
+	<line x1="504.03" y1="2489.19" x2="504.03" y2="2529.16" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="504.03" y="2619.14" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="middle">1</text>
+	<line x1="1326.97" y1="2489.19" x2="1326.97" y2="2529.16" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="1326.97" y="2619.14" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="middle">2</text>
+	<line x1="2149.91" y1="2489.19" x2="2149.91" y2="2529.16" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="2149.91" y="2619.14" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="middle">3</text>
+	<line x1="2972.85" y1="2489.19" x2="2972.85" y2="2529.16" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="2972.85" y="2619.14" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="middle">4</text>
+	<line x1="3795.66" y1="2489.19" x2="3795.66" y2="2529.16" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="3795.66" y="2619.14" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="middle">5</text>
+	<text x="2124.91" y="2729.16" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="middle">news_foreign_website</text>
+	<text x="2124.91" y="215.98" style="font-family:'Helvetica';font-size:139.96px;fill:#000000" text-anchor="middle">Histogram of a26</text>
+</svg>
